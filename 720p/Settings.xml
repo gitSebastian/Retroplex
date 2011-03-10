@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<window id="4000">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<controls>
+		<!-- settings screen -->
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<include>transition2</include>
+			<texture background="true" flipx="true">backgrounds/settings02.jpg</texture>
+		</control>
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<texture background="true">backgrounds/background9.png</texture>
+			<animation effect="fade" start="85" end="85" time="0" condition="True">Conditional</animation>
+			<include>transition2</include>
+		</control>
+		<include>allscreens</include>
+		<control type="group">
+			<control type="label">
+				<include>PageLabel</include>
+				<label>Plex [COLOR=greenlime]$LOCALIZE[10004][/COLOR]</label>
+			</control>
+			<control type="panel" id="50">
+				<posx>150</posx>
+				<posy>140</posy>
+				<width>1200</width>
+				<height>500</height>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<scrolltime>200</scrolltime>
+				<include>transition3</include>
+				<itemlayout width="550" height="100">
+					<control type="image">
+						<width>48</width>
+						<height>48</height>
+						<posx>10</posx>
+						<posy>22</posy>
+						<info>ListItem.thumb</info>
+					</control>
+					<control type="label">
+						<posx>90</posx>
+						<posy>10</posy>
+						<width>420</width>
+						<height>40</height>
+						<font>lobsterMedium</font>
+						<align>left</align>
+						<textcolor>Color4</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>90</posx>
+						<posy>52</posy>
+						<width min="29" max="420">auto</width>
+						<height>34</height>
+						<font>qlassikSmallBold</font>
+						<textcolor>ivory3</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout width="550" height="100">
+					<control type="image">
+						<posx>70</posx>
+						<posy>0</posy>
+						<width>460</width>
+						<height>94</height>
+						<posx>0</posx>
+						<posy>0</posy>
+						<texture border="23">dialogs/square_dialog_background.png</texture>
+						<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<posx>10</posx>
+						<posy>22</posy>
+						<width>48</width>
+						<height>48</height>
+						<info>ListItem.thumb</info>
+					</control>
+					<control type="label">
+						<posx>90</posx>
+						<posy>10</posy>
+						<width>530</width>
+						<height>40</height>
+						<font>lobsterMedium</font>
+						<align>left</align>
+						<textcolor>greenlime</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>90</posx>
+						<posy>52</posy>
+						<width>420</width>
+						<height>34</height>
+						<font>qlassikSmallBold</font>
+						<align>left</align>
+						<textcolor>ivory3</textcolor>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>3</label>
+						<thumb>settings/video.png</thumb>
+						<onclick>ActivateWindow(MyVideosSettings)</onclick>
+						<label2>$LOCALIZE[31120]</label2>
+					</item>
+					<item id="2">
+						<label>2</label>
+						<label2>$LOCALIZE[31120]</label2>
+						<thumb>settings/music.png</thumb>
+						<onclick>ActivateWindow(MyMusicSettings)</onclick>
+					</item>
+					<item id="3">
+						<label>1</label>
+						<label2>$LOCALIZE[108] &#xB7; $LOCALIZE[31979]</label2>
+						<thumb>settings/pictures.png</thumb>
+						<onclick>ActivateWindow(MyPicturesSettings)</onclick>
+					</item>
+					<item id="5">
+						<label>8</label>
+						<label2>$LOCALIZE[396]</label2>
+						<thumb>settings/weather.png</thumb>
+						<onclick>ActivateWindow(MyWeatherSettings)</onclick>
+					</item>
+					<item id="7">
+						<label>13000</label>
+						<label2>$LOCALIZE[31982] &#xB7; $LOCALIZE[31983] &#xB7; $LOCALIZE[31984] &#xB7; $LOCALIZE[31985]</label2>
+						<thumb>settings/system.png</thumb>
+						<onclick>ActivateWindow(SystemSettings)</onclick>
+					</item>
+					<item id="8">
+						<label>480</label>
+						<label2>$LOCALIZE[166] &#xB7; $LOCALIZE[248] &#xB7; $LOCALIZE[360]</label2>
+						<thumb>settings/appearance.png</thumb>
+						<onclick>ActivateWindow(AppearanceSettings)</onclick>
+					</item>
+					<item id="10">
+						<label>20077</label>
+						<label2>$LOCALIZE[31124] &#xB7; $LOCALIZE[31015] &#xB7; $LOCALIZE[31986]</label2>
+						<thumb>settings/skin.png</thumb>
+						<onclick>ActivateWindow(59)</onclick>
+					</item>
+					<item id="11">
+						<label>Done</label>
+						<label2>Exit settings</label2>
+						<thumb>-</thumb>
+						<onclick>ActivateWindow(0)</onclick>
+					</item>
+				</content>
+			</control>
+		</control>
+	</controls>
+</window>

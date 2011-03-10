@@ -1,0 +1,27 @@
+<window id="113">
+	<defaultcontrol>-</defaultcontrol>
+	<controls>
+		<control type="image">
+			<posx>65r</posx>
+			<posy>100</posy>
+            <width>30</width>
+			<height>30</height>
+			<texture>dialogs/mutedicon.png</texture>
+
+<animation effect="fade" start="0" end="100" time="2000" condition="true">Conditional</animation>
+		</control>
+		<control type="label" id="0">
+			<posx>70r</posx>
+            <posy>97</posy>
+            <description>Label</description>
+			<label>MUTE</label>
+            <height>35</height>
+            <width>110</width>
+			<align>right</align>
+		<font>smallCaps</font>
+		<height>40</height>
+		<aligny>center</aligny>
+			<animation effect="fade" start="0" end="100" time="2000" condition="true">Conditional</animation>
+		</control>
+	</controls>
+</window>

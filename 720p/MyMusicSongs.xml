@@ -1,0 +1,290 @@
+<?xml version="1.0"?>
+<window id="502">
+	<defaultcontrol always="true">555</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<views>555</views>
+	<controls>
+		<include>themeBackground2</include>
+		<include>grainyeditionback</include>
+		<include>allscreens</include>
+		<include>AllViewCommonPageControls</include>
+		<!-- FAKE INFO BUTTON -->
+		<control type="button" id="8000">
+			<label>SHOULD NOT SEE ME</label>
+			<onup>54</onup>
+			<ondown>54</ondown>
+			<onleft>54</onleft>
+			<onright>54</onright>
+			<width>200</width>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+		<include>videoFanartPageLabels</include>
+		<include>LibraryVideoMenu</include>
+		<include>videoLibPageLabels</include>
+			<!-- horiz bar -->
+			<control type="image">
+				<posx>0</posx>
+				<posy>330</posy>
+				<width>1300</width>
+				<height>100</height>
+				<include>transition2</include>
+				<include>infoDialogHide</include>
+				<include>contextMenuHide</include>
+				<include>grainypagefade</include>
+				<include>ListHorizBarLeftMenuSlide</include>
+				<texture flipx="true">dialogs/square_menu_background.png</texture>
+				<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
+				<visible>Control.IsVisible(555)</visible>
+			</control>
+			<control type="group">
+			<include>ListLeftMenuSlide</include>
+			<!-- vertical separator -->
+			<control type="group">
+				<animation effect="fade" start="100" end="20" time="350" condition="Control.HasFocus(40) | Control.HasFocus(1110) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
+				<control type="image">
+					<posx>745</posx>
+					<posy>-200</posy>
+					<height>1120</height>
+					<width>29</width>
+					<texture flipx="true">settings/separator.png</texture>
+					<aspectratio align="right">stretch</aspectratio>
+					<include>transition2</include>
+					<include>contextMenuHide</include>
+					<include>infoDialogHide</include>
+				</control>
+			</control>
+			<!-- Shadow layer for right side bg -->
+			<control type="group">
+				<animation effect="fade" start="100" end="100" time="350" condition="Control.HasFocus(300)">Conditional</animation>
+				<animation effect="slide" start="162" end="0" time="500" condition="Control.HasFocus(300)">Conditional</animation>
+				<animation effect="slide" start="0" end="162" time="500" condition="!Control.HasFocus(300)">Conditional</animation>			
+				<control type="image">
+					<posx>583</posx>
+					<posy>-50</posy>
+					<height>800</height>
+					<width>540</width>
+					<include>transition2</include>
+					<include>infoDialogHide</include>
+					<include>contextMenuHide</include>
+					<texture flipx="true">dialogs/square_menu_background.png</texture>
+					<aspectratio align="right">stretch</aspectratio>
+					<animation type="Conditional" condition="true">
+						<effect type="fade" start="0" end="50"/>
+					</animation>
+				</control>
+			</control>
+			<!-- menu -->
+			<control type="fixedlist" id="555">
+				<viewtype label="555">list</viewtype>
+				<posx>0</posx>
+				<posy>115</posy>
+				<height>520</height>
+				<width>1260</width>
+				<onup>555</onup>
+				<ondown>555</ondown>
+				<onleft>300</onleft>
+				<onright>23</onright>
+				<orientation>vertical</orientation>
+				<focusposition>4</focusposition>
+				<pagecontrol>23</pagecontrol>
+				<wraparound>true</wraparound>
+				<include>transition2</include>
+				<include>infoDialogHide</include>
+				<include>contextMenuHide</include>
+				<include>grainypagefade</include>
+				<!-- music non-focused -->
+				<itemlayout width="1240" height="46">
+					<control type="label">
+						<posx>710</posx>
+						<posy>-3</posy>
+						<width>740</width>
+						<height>46</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>qlassikMedium2</font>
+						<label>$INFO[ListItem.Label]</label>
+						<selectedcolor>greenlime</selectedcolor>
+						<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
+					</control>
+				</itemlayout>
+				<!-- music focused -->
+				<focusedlayout width="1240" height="160">
+					<!-- singles & songs listing -->
+					<control type="label">
+						<posx>710</posx>
+						<posy>35</posy>
+						<width>730</width>
+						<height>50</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>lobsterMedium</font>
+						<textcolor>ivory3</textcolor>
+						<selectedcolor>ivory3</selectedcolor>
+						<label>$INFO[ListItem.Title]</label>
+						<scroll>true</scroll>
+						<visible>!IsEmpty(ListItem.Artist)</visible>
+					</control>
+					<control type="label">
+						<posx>710</posx>
+						<posy>35</posy>
+						<width>730</width>
+						<height>50</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>lobsterMedium</font>
+						<textcolor>greenlime</textcolor>
+						<selectedcolor>ivory3</selectedcolor>
+						<label>$INFO[ListItem.Title]</label>
+						<scroll>true</scroll>
+						<visible>!IsEmpty(ListItem.Artist)</visible>
+						<animation effect="fade" start="20" end="20" time="0" condition="true">Conditional</animation>
+					</control>
+					<control type="label">
+						<posx>710</posx>
+						<posy>93</posy>
+						<width>1000</width>
+						<font>qlassikMedium2</font>
+						<label>$INFO[ListItem.Artist]</label>
+						<textcolor>ivory3</textcolor>
+						<selectedcolor>ivory3</selectedcolor>
+						<align>right</align>
+						<visible>!IsEmpty(ListItem.Artist)</visible>
+					</control>
+					<!-- other listings -->
+					<control type="label">
+						<posx>710</posx>
+						<posy>55</posy>
+						<width>930</width>
+						<height>50</height>
+						<aligny>center</aligny>
+						<align>right</align>
+						<font>lobsterMedium</font>
+						<textcolor>ivory3</textcolor>
+						<selectedcolor>ivory3</selectedcolor>
+						<label>$INFO[ListItem.Title]</label>
+						<scroll>true</scroll>
+						<visible>IsEmpty(ListItem.Artist)</visible>
+					</control>
+					<control type="label">
+						<posx>710</posx>
+						<posy>55</posy>
+						<width>930</width>
+						<height>50</height>
+						<aligny>center</aligny>
+						<align>right</align>
+						<font>lobsterMedium</font>
+						<textcolor>greenlime</textcolor>
+						<selectedcolor>ivory3</selectedcolor>
+						<label>$INFO[ListItem.Title]</label>
+						<scroll>true</scroll>
+						<visible>IsEmpty(ListItem.Artist)</visible>
+						<animation effect="fade" start="20" end="20" time="0" condition="true">Conditional</animation>
+					</control>
+					<control type="label">
+						<posx>710</posx>
+						<posy>35</posy>
+						<width>730</width>
+						<height>50</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>lobsterMedium</font>
+						<textcolor>ivory3</textcolor>
+						<selectedcolor>ivory3</selectedcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<scroll>true</scroll>
+						<visible>IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Artist)</visible>
+					</control>
+					<control type="label">
+						<posx>710</posx>
+						<posy>35</posy>
+						<width>730</width>
+						<height>50</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>lobsterMedium</font>
+						<textcolor>greenlime</textcolor>
+						<selectedcolor>ivory3</selectedcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<scroll>true</scroll>
+						<visible>IsEmpty(ListItem.Title) + !IsEmpty(ListItem.Artist)</visible>
+						<animation effect="fade" start="20" end="20" time="0" condition="true">Conditional</animation>
+					</control>
+				</focusedlayout>			
+			</control>
+			<!-- frame -->
+			<control type="image" id="5555">
+				<posx>827</posx>
+				<posy>200</posy>
+				<width>378</width>
+				<height>381</height>
+				<include>transition2</include>
+				<include>infoDialogHide</include>
+				<include>contextMenuHide</include>
+				<include>grainypagefade</include>
+				<aspectratio align="right" aligny="center">stretch</aspectratio>
+				<texture border="20" background="true">frames/bannerFrame.png</texture>
+				<animation effect="fade" start="80" end="80" time="0" condition="true">Conditional</animation>
+				<visible>!ControlGroup(300).HasFocus + !Window.IsActive(progressdialog) + Control.IsVisible(555) + [Container.Content(albums) | Container.Content(artists) | Container.Content(singles) | Container.Content(songs)]</visible>
+			</control>
+			<!-- item image -->
+			<control type="image" id="99">
+				<posx>854</posx>
+				<posy>217</posy>
+				<width>324</width>
+				<height>324</height>
+				<fadetime>400</fadetime>
+				<include>transition2</include>
+				<include>infoDialogHide</include>
+				<include>contextMenuHide</include>
+				<include>grainypagefade</include>
+				<aspectratio align="right" aligny="center">stretch</aspectratio>
+				<texture diffuse="frames/slideBigPosterMask.png" background="true">$INFO[Container(555).ListItem.Icon]</texture>
+				<visible>!ControlGroup(300).HasFocus + Control.IsVisible(555) + !Window.IsActive(musicplaylist) + !Control.IsVisible(100)</visible>
+			</control>
+			<!-- iTunes image hack -->
+			<control type="image" id="100">
+				<posx>850</posx>
+				<posy>213</posy>
+				<width>332</width>
+				<height>332</height>
+				<fadetime>400</fadetime>
+				<include>transition2</include>
+				<include>infoDialogHide</include>
+				<include>contextMenuHide</include>
+				<include>grainypagefade</include>
+				<aspectratio align="right" aligny="center">stretch</aspectratio>
+				<texture>logos/itunes-icon.png</texture>
+				<visible>!ControlGroup(300).HasFocus + Control.IsVisible(555) + !Window.IsActive(musicplaylist) + ![Container.Content(albums) | Container.Content(artists) | Container.Content(singles) | Container.Content(songs)]</visible>
+			</control>
+			<!-- song infos -->
+			<control type="label">
+				<posx>855</posx>
+				<posy>180</posy>
+				<width>330</width>
+				<font>qlassikSmall</font>
+				<label>$INFO[ListItem.Album]</label>
+				<textcolor>ivory3</textcolor>
+				<align>left</align>
+				<include>transition2</include>
+				<include>infoDialogHide</include>
+				<include>contextMenuHide</include>
+				<include>grainypagefade</include>
+				<visible>[Container.Content(albums) | Container.Content(artists) | Container.Content(singles) | Container.Content(songs)]</visible>
+			</control>
+			<control type="label">
+				<posx>1175</posx>
+				<posy>553</posy>
+				<width>360</width>
+				<font>qlassikSmall</font>
+				<label>$INFO[ListItem.Duration]</label>
+				<textcolor>ivory3</textcolor>
+				<align>right</align>
+				<include>transition2</include>
+				<include>infoDialogHide</include>
+				<include>contextMenuHide</include>
+				<include>grainypagefade</include>
+				<visible>[Container.Content(albums) | Container.Content(artists) | Container.Content(singles) | Container.Content(songs)]</visible>
+			</control>
+		</control>	
+	</controls>
+</window>

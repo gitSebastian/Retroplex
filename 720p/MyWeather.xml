@@ -1,0 +1,440 @@
+<?xml version="1.0"?>
+<!--ReFocus-->
+<window id="2600">
+	<defaultcontrol always="true">8000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<!-- bg image -->
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<texture>backgrounds/weather03.jpg</texture>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="200" delay="300"/>
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="40" end="0" time="200"/>
+			</animation>
+		</control>
+		<include>grainyeditionback</include>
+		<!-- fake info trigger button -->
+		<control type="button" id="8000">
+			<label>SHOULD NOT SEE ME</label>
+			<onup>53</onup>
+			<ondown>53</ondown>
+			<onleft>300</onleft>
+			<onright>53</onright>
+			<width>200</width>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+		<!-- location -->
+		<control type="label">
+			<posx>34</posx>
+			<posy>19</posy>
+			<label>$INFO[Weather.Location]</label>			
+			<font>lobsterMediumSmall</font>
+			<textcolor>greenlime</textcolor>
+			<include>transition2</include>
+			<include>WeatherLeftMenuSlide</include>
+		</control>
+		<!-- last updated -->
+		<control type="group">
+			<control type="label">
+				<posx>20r</posx>
+				<posy>19</posy>
+				<align>right</align>
+				<width>300</width>
+				<label>$LOCALIZE[40018]</label>
+				<font>qlassikSmallBold</font>
+				<textcolor>ivory3</textcolor>
+				<visible>Weather.IsFetched</visible>
+			</control>
+			<control type="label">
+				<posx>20r</posx>
+				<posy>39</posy>
+				<align>right</align>
+				<width>300</width>
+				<label>$INFO[System.Date] : $INFO[System.Time]</label>				
+				<font>qlassikSmallBold</font>
+				<textcolor>ivory3</textcolor>
+			</control>
+		</control>
+		<!-- THE WEATHER -->
+		<control type="group" id="5000">
+			<include>transition2</include>
+			<include>contextMenuHide</include>
+			<onleft>300</onleft>
+			<animation effect="slide" start="0,0" end="0,-150" time="0" condition="!Skin.HasSetting(weatherFanart) | Skin.HasSetting(weatherFanart)">Conditional</animation>
+			<!-- everything is wrapped in grouplists to enable dynamic sizing of labels -->
+			<!-- the main wrapper is for the four days (which are then in their own wrappers) -->
+			<!-- THE MAIN WRAPPER -->
+			<control type="grouplist">
+				<include>WeatherLeftMenuSlide</include>
+				<orientation>horizontal</orientation>
+				<posx>90</posx>
+				<posy>370</posy>
+				<width min="29" max="1100">auto</width>
+				<height>520</height>
+				<font>qlassikMedium1</font>
+				<textcolor>ivory3</textcolor>
+				<!-- WRAPPER TODAY -->
+				<!-- separator -->
+				<control type="image">
+					<width>1</width>
+					<height>480</height>
+					<texture>dialogs/separator-y.png</texture>
+				</control>
+				<control type="grouplist">
+					<!-- each day wrapper is 275 in width -->
+					<width min="29" max="275">auto</width>
+					<orientation>vertical</orientation>
+					<!-- condition icon -->
+					<control type="image" id="21">
+						<height>80</height>
+						<aspectratio align="right">keep</aspectratio>
+					</control>
+					<!-- TITLE today -->
+					<control type="label">
+						<label>$LOCALIZE[33006]</label>
+						<font>lobsterMediumSmall</font>
+						<textcolor>greenlime</textcolor>
+						<height>100</height>
+						<animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
+					</control>
+					<!-- separator -->
+					<control type="image">
+						<width>480</width>
+						<height>1</height>
+						<texture>dialogs/separator.png</texture>
+					</control>
+					<!-- current condition -->
+					<control type="grouplist">
+						<height>60</height>
+						<aligny>center</aligny>
+						<orientation>horizontal</orientation>
+						<control type="label" id="22">
+							<font>qlassikMediumBold</font>
+							<textcolor>ivory1</textcolor>
+							<width min="29" max="280">auto</width>
+						</control>
+					</control>
+					<!-- current temp -->
+					<control type="grouplist">
+						<height>30</height>
+						<aligny>center</aligny>
+						<orientation>horizontal</orientation>
+						<control type="label">
+							<label>$LOCALIZE[31101]:</label>
+							<font>qlassikSmallBold2</font>
+							<textcolor>ivory3</textcolor>
+							<width min="29" max="250">auto</width>							
+						</control>
+						<control type="label" id="23">
+							<font>qlassikSmallBold2</font>
+							<textcolor>ivory1</textcolor>
+							<width min="29" max="500">auto</width>
+						</control>
+					</control>
+					<!-- feels like -->
+					<control type="grouplist">
+						<height>30</height>
+						<aligny>center</aligny>
+						<orientation>horizontal</orientation>
+						<control type="label">
+							<label>$LOCALIZE[402]:</label>
+							<font>qlassikSmallBold2</font>
+							<textcolor>ivory3</textcolor>
+							<width min="29" max="500">auto</width>							
+						</control>
+						<control type="label" id="24">
+							<font>qlassikSmallBold2</font>
+							<textcolor>ivory1</textcolor>
+							<width min="29" max="500">auto</width>
+						</control>
+					</control>
+					<!-- humidity -->
+					<control type="grouplist">
+						<height>30</height>
+						<aligny>center</aligny>
+						<orientation>horizontal</orientation>
+						<control type="label">
+							<label>$LOCALIZE[406]:</label>
+							<font>qlassikSmallBold2</font>
+							<textcolor>ivory3</textcolor>
+							<width min="29" max="500">auto</width>							
+						</control>
+						<control type="label" id="28">
+							<font>qlassikSmallBold2</font>
+							<textcolor>ivory1</textcolor>
+							<width min="29" max="500">auto</width>
+						</control>
+					</control>
+					<!-- uv index -->
+					<control type="grouplist">
+						<height>30</height>
+						<aligny>center</aligny>
+						<orientation>horizontal</orientation>
+						<control type="label">
+							<label>$LOCALIZE[403]:</label>
+							<font>qlassikSmallBold2</font>
+							<textcolor>ivory3</textcolor>
+							<width min="29" max="500">auto</width>							
+						</control>
+						<control type="label" id="25">
+							<font>qlassikSmallBold2</font>
+							<textcolor>ivory1</textcolor>
+							<width min="29" max="500">auto</width>
+						</control>
+					</control>
+					<!-- wind -->
+					<control type="grouplist">
+						<height>30</height>
+						<aligny>center</aligny>
+						<orientation>horizontal</orientation>
+						<control type="label">
+							<label>$LOCALIZE[404]:</label>
+							<font>qlassikSmallBold2</font>
+							<textcolor>ivory3</textcolor>
+							<width min="29" max="500">auto</width>							
+						</control>
+						<control type="label" id="26">
+							<font>qlassikSmallBold2</font>
+							<textcolor>ivory1</textcolor>
+							<width min="29" max="500">auto</width>
+						</control>
+					</control>
+				</control>
+				<!-- WRAPPER DAY 1 -->
+				<!-- separator -->
+				<control type="image">
+					<width>1</width>
+					<height>480</height>
+					<texture>dialogs/separator-y.png</texture>
+				</control>
+				<control type="grouplist">
+					<width min="29" max="275">auto</width>
+					<orientation>vertical</orientation>
+					<!-- condition icon -->
+					<control type="image" id="45">
+						<height>80</height>
+						<aspectratio align="right">keep</aspectratio>
+					</control>
+					<!-- day label -->
+					<control type="label" id="41">
+						<font>lobsterMediumSmall</font>
+						<textcolor>greenlime</textcolor>
+						<height>100</height>
+						<animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
+					</control>
+					<!-- separator -->
+					<control type="image">
+						<width>480</width>
+						<height>1</height>
+						<texture>dialogs/separator.png</texture>
+					</control>
+					<!-- condition -->
+					<control type="grouplist">
+						<height>60</height>
+						<aligny>center</aligny>
+						<orientation>horizontal</orientation>
+						<control type="label" id="44">
+							<font>qlassikMediumBold</font>
+							<textcolor>ivory1</textcolor>
+							<width min="29" max="280">auto</width>
+						</control>
+					</control>
+					<!-- high temp -->
+					<control type="grouplist">
+						<height>30</height>
+						<aligny>center</aligny>
+						<orientation>horizontal</orientation>
+						<control type="label">
+							<label>$LOCALIZE[393]:</label>
+							<font>qlassikSmallBold2</font>
+							<textcolor>ivory3</textcolor>
+							<width min="29" max="500">auto</width>							
+						</control>
+						<control type="label" id="42">
+							<font>qlassikMedium1</font>
+							<textcolor>ivory1</textcolor>
+							<width min="29" max="500">auto</width>
+						</control>
+					</control>
+					<!-- low temp -->
+					<control type="grouplist">
+						<height>30</height>
+						<aligny>center</aligny>
+						<orientation>horizontal</orientation>
+						<control type="label">
+							<label>$LOCALIZE[391]:</label>
+							<font>qlassikSmallBold2</font>
+							<textcolor>ivory3</textcolor>
+							<width min="29" max="500">auto</width>							
+						</control>
+						<control type="label" id="43">
+							<font>qlassikSmallBold2</font>
+							<textcolor>ivory1</textcolor>
+							<width min="29" max="500">auto</width>
+						</control>
+					</control>
+				</control>
+				<!-- WRAPPER DAY 2 -->
+				<!-- separator -->
+				<control type="image">
+					<width>1</width>
+					<height>480</height>
+					<texture>dialogs/separator-y.png</texture>
+				</control>
+				<control type="grouplist">
+					<width min="29" max="275">auto</width>
+					<orientation>vertical</orientation>
+					<!-- condition icon -->
+					<control type="image" id="55">
+						<height>80</height>
+						<aspectratio align="right">keep</aspectratio>
+					</control>
+					<!-- day label -->
+					<control type="label" id="51">
+						<font>lobsterMediumSmall</font>
+						<textcolor>greenlime</textcolor>
+						<height>100</height>
+						<animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
+					</control>
+					<!-- separator -->
+					<control type="image">
+						<width>480</width>
+						<height>1</height>
+						<texture>dialogs/separator.png</texture>
+					</control>
+					<!-- condition -->
+					<control type="grouplist">
+						<height>60</height>
+						<aligny>center</aligny>
+						<orientation>horizontal</orientation>
+						<control type="label" id="54">
+							<font>qlassikMediumBold</font>
+							<textcolor>ivory1</textcolor>
+							<width min="29" max="280">auto</width>
+						</control>
+					</control>
+					<!-- high temp -->
+					<control type="grouplist">
+						<height>30</height>
+						<aligny>center</aligny>
+						<orientation>horizontal</orientation>
+						<control type="label">
+							<label>$LOCALIZE[393]:</label>
+							<font>qlassikSmallBold2</font>
+							<textcolor>ivory3</textcolor>
+							<width min="29" max="500">auto</width>							
+						</control>
+						<control type="label" id="52">
+							<font>qlassikSmallBold2</font>
+							<textcolor>ivory1</textcolor>
+							<width min="29" max="500">auto</width>
+						</control>
+					</control>
+					<!-- low temp -->
+					<control type="grouplist">
+						<height>30</height>
+						<aligny>center</aligny>
+						<orientation>horizontal</orientation>
+						<control type="label">
+							<label>$LOCALIZE[391]:</label>
+							<font>qlassikSmallBold2</font>
+							<textcolor>ivory3</textcolor>
+							<width min="29" max="500">auto</width>							
+						</control>
+						<control type="label" id="53">
+							<font>qlassikSmallBold2</font>
+							<textcolor>ivory1</textcolor>
+							<width min="29" max="500">auto</width>
+						</control>
+					</control>
+				</control>
+				<!-- WRAPPER DAY 3 -->
+				<!-- separator -->
+				<control type="image">
+					<width>1</width>
+					<height>480</height>
+					<texture>dialogs/separator-y.png</texture>
+				</control>
+				<control type="grouplist">
+					<width min="29" max="275">auto</width>
+					<orientation>vertical</orientation>
+					<!-- condition icon -->
+					<control type="image" id="65">
+						<height>80</height>
+						<aspectratio align="right">keep</aspectratio>
+					</control>
+					<!-- day label -->
+					<control type="label" id="61">
+						<font>lobsterMediumSmall</font>
+						<textcolor>greenlime</textcolor>
+						<height>100</height>
+						<animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
+					</control>
+					<!-- separator -->
+					<control type="image">
+						<width>480</width>
+						<height>1</height>
+						<texture>dialogs/separator.png</texture>
+					</control>
+					<!-- condition -->
+					<control type="grouplist">
+						<height>60</height>
+						<aligny>center</aligny>
+						<orientation>horizontal</orientation>
+						<control type="label" id="64">
+							<font>qlassikMediumBold</font>
+							<textcolor>ivory1</textcolor>
+							<width min="29" max="280">auto</width>
+						</control>
+					</control>
+					<!-- high temp -->
+					<control type="grouplist">
+						<height>30</height>
+						<aligny>center</aligny>
+						<orientation>horizontal</orientation>
+						<control type="label">
+							<label>$LOCALIZE[393]:</label>
+							<font>qlassikSmallBold2</font>
+							<textcolor>ivory3</textcolor>
+							<width min="29" max="500">auto</width>						
+						</control>
+						<control type="label" id="62">
+							<font>qlassikSmallBold2</font>
+							<textcolor>ivory1</textcolor>
+							<width min="29" max="500">auto</width>
+						</control>
+					</control>
+					<!-- low temp -->
+					<control type="grouplist">
+						<height>30</height>
+						<aligny>center</aligny>
+						<orientation>horizontal</orientation>
+						<control type="label">
+							<label>$LOCALIZE[391]:</label>
+							<font>qlassikSmallBold2</font>
+							<textcolor>ivory3</textcolor>
+							<width min="29" max="500">auto</width>							
+						</control>
+						<control type="label" id="63">
+							<font>qlassikSmallBold2</font>
+							<textcolor>ivory1</textcolor>
+							<width min="29" max="500">auto</width>
+						</control>
+					</control>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>361</posy>
+					<height>32</height>
+					<width>32</width>
+					<include>scrollLeftView</include>
+				</control>
+			</control>
+		</control>
+		<include>WeatherMenu</include>
+	</controls>
+</window>

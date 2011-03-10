@@ -1,0 +1,93 @@
+<window id="0">
+	<defaultcontrol always="true">300</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<!-- BACKGROUND MEDIA -->
+		<include>slideshows</include>		
+		<!-- grainy bg for home screen only -->
+		<include>nostalgiaOverlay</include>
+		<!-- fanart slides and other overlays -->
+		<!--<control type="multiimage" id="1">
+			<include>screentype</include>
+			<aspectratio>scale</aspectratio>
+			<imagepath background="true">$INFO[Skin.String(weatherFanartPath)]/$INFO[Weather.FanartCode]</imagepath>
+			<timeperimage>7000</timeperimage>
+			<fadetime>850</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<include>fadeinout</include>
+			<visible allowhiddenfocus="true">Container(300).HasFocus(6) + Skin.HasSetting(weatherFanart)</visible>
+		</control>
+		<control type="largeimage">
+			<include>screentype</include>
+			<aspectratio>scale</aspectratio>
+			<texture>$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+			<fadetime>850</fadetime>
+			<visible allowhiddenfocus="true">Container(300).HasFocus(12) + Skin.HasSetting(homemenuNP)</visible>
+			<include>fadeinout</include>
+		</control>
+		<control type="largeimage">
+			<include>screentype</include>
+			<aspectratio>scale</aspectratio>
+			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<fadetime>1400</fadetime>
+			<include>fadeinout</include>
+		</control>
+		<control type="image">
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio align="left">stretch</aspectratio>
+			<texture>home/menuBackground.png</texture>
+		</control>
+		<control type="image" id="1">
+			<include>screentype</include>
+			<texture>home/homeOverlay.png</texture>
+			<include>fadeinout</include>
+			<visible>Window.IsActive(133) | Window.IsActive(112)</visible>
+		</control>
+		<control type="image" id="1">
+			<include>screentype</include>
+			<texture>home/homeOverlay.png</texture>
+			<include>fadeinout</include>
+			<visible>Window.IsActive(133) | Window.IsActive(112) | Window.IsActive(107)</visible>
+		</control>-->
+		<!-- time and date -->
+		<include condition="![Window.IsActive(10112) | Window.IsActive(10133) | Window.IsActive(107)]">libClock</include>
+		<!-- HOME MENU -->
+		<include>HomeMenu</include>	
+		<!-- now playing for new home screen -->	
+		<include>nowplayinghome</include>
+		<!-- RSS FEED -->
+		<control type="group">
+			<posy>687</posy>
+			<visible>!Skin.HasSetting(enableRSSFeed) + ![Window.IsActive(10133) | Window.IsActive(10112)]</visible>			
+			<animation effect="slide" start="0,100" end="0,0" time="200" tween="Quadratic" easing="In">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,100" time="200" tween="Quadratic" easing="Out">WindowClose</animation>
+			<control type="image">
+				<animation effect="fade" start="0" end="50" time="250" delay="0" condition="true">Conditional</animation>
+				<height>38</height>
+				<texture border="9">home/rssBackground.png</texture>
+				<include>screenwidth</include>
+				<visible>!Skin.HasSetting(enableRSSFeed)</visible>
+			</control>
+			<control type="rss" id="1">
+				<posy>7</posy>
+				<include>screenwidth</include>
+				<font>qlassikSmall</font>
+				<urlset>1</urlset>
+				<height>32</height>
+				<aligny>bottom</aligny>
+				<textcolor>ivory3</textcolor>
+				<titlecolor>ffA1927F</titlecolor>
+				<headlinecolor>Color1</headlinecolor>
+				<highlightcolor>Focused</highlightcolor>
+				<include>fadeinout</include>
+			</control>
+		</control>
+		<!-- logo -->
+		<control type="image">
+		<include>retroplexLogo</include>
+		<include>HomeScreenLeftMenuLogoSlide</include>
+		</control>		
+	</controls>
+</window>

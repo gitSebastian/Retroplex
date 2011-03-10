@@ -1,0 +1,272 @@
+<?xml version="1.0"?>
+<window type="dialog" id="142">
+	<defaultcontrol always="true">603</defaultcontrol>
+	<controls>		
+		<!-- video player -->
+		<control type="image" id="1">
+			<posx>-50</posx>
+			<posy>490</posy>
+			<width>1500</width>
+			<height>250</height>
+			<texture border="10">dialogs/square_dialog_background.png</texture>
+			<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + ![Window.IsActive(2901)]</visible>
+			<include>videoFullScreenInfo</include>
+		</control>
+		<!-- audio player -->
+		<control type="image" id="1">
+			<posx>-50</posx>
+			<posy>490</posy>
+			<width>1500</width>
+			<height>250</height>
+			<texture border="10">dialogs/square_dialog_background.png</texture>
+			<visible>VideoPlayer.Content(files) + ![Window.IsActive(2901)]</visible>
+			<animation effect="fade" start="0" end="90" time="250">WindowOpen</animation>
+			<include>videoFullScreenInfo</include>
+		</control>
+		<control type="image" id="1">
+			<posx>-50</posx>
+			<posy>490</posy>
+			<width>1500</width>
+			<height>250</height>
+			<texture border="10">dialogs/square_dialog_background.png</texture>
+			<visible>VideoPlayer.Content(musicvideos) + ![Window.IsActive(2901)]</visible>
+			<animation effect="fade" start="0" end="90" time="250">WindowOpen</animation>
+			<include>videoFullScreenInfo</include>
+		</control>
+		<!-- MOVIES & TV SHOWS -->
+		<control type="group" id="1">
+			<posx>30</posx>
+			<posy>515</posy>
+			<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + ![Window.IsActive(2901)]</visible>
+			<include>videoFullScreenInfo</include>
+			<control type="group">
+				<posx>30r</posx>
+				<posy>-10</posy>
+				<control type="label" id="200">
+						<width>110</width>
+						<height>34</height>
+						<label>$INFO[System.Time]</label>
+						<align>right</align>
+						<font>qlassikSmallBold2</font>
+						<textcolor>ivory3</textcolor>
+					</control>
+			</control>
+			<control type="label" id="1">
+				<width>1000</width>
+				<label>$INFO[VideoPlayer.Title]</label>
+				<align>left</align>
+				<textcolor>greenlime</textcolor>
+				<font>lobsterMediumSmall</font>
+			</control>
+			<!-- movies : remaining time deleted, finish time separated and moved to right end -->
+			<control type="label" id="1">
+				<posy>35</posy>
+				<width>800</width>
+				<align>left</align>
+				<label>$INFO[VideoPlayer.Year] &#xB7; $INFO[Player.Time] / $INFO[Player.Duration]</label>
+				<textcolor>ivory3</textcolor>
+				<font>qlassikSmallBold2</font>
+				<visible>VideoPlayer.Content(movies)</visible>
+			</control>
+			<control type="label" id="1">
+				<posy>35</posy>
+				<posx>30r</posx>
+				<width>500</width>
+				<align>right</align>
+				<label>$LOCALIZE[31068]</label>
+				<textcolor>ivory3</textcolor>
+				<font>qlassikSmallBold2</font>
+				<visible>VideoPlayer.Content(movies)</visible>
+			</control>
+			<!-- tv shows : remaining time deleted, finish time separated and moved to right end -->
+			<control type="label" id="1">
+				<posy>35</posy>
+				<width>800</width>
+				<align>left</align>
+				<label>$LOCALIZE[31096] &#xB7; $INFO[Player.Duration]</label>
+				<textcolor>ivory3</textcolor>
+				<font>qlassikSmallBold2</font>
+				<visible>VideoPlayer.Content(episodes)</visible>
+			</control>
+			<control type="label" id="1">
+				<posy>35</posy>
+				<posx>30r</posx>
+				<width>500</width>
+				<align>right</align>
+				<label>$LOCALIZE[31068]</label>
+				<textcolor>ivory3</textcolor>
+				<font>qlassikSmallBold2</font>
+				<visible>VideoPlayer.Content(episodes)</visible>
+			</control>
+			<control type="label" id="1">
+				<posy>30</posy>
+				<width>1000</width>
+				<align>left</align>
+				<label>$INFO[VideoPlayer.Artist]</label>
+				<textcolor>ivory3</textcolor>
+				<font>qlassikSmallBold2</font>
+				<visible>VideoPlayer.Content(musicvideos)</visible>
+			</control>
+			<control type="label" id="1">
+				<posy>54</posy>
+				<width>1000</width>
+				<align>left</align>
+				<label>$INFO[VideoPlayer.Album,, ] ($INFO[VideoPlayer.Year])</label>
+				<textcolor>ivory3</textcolor>
+				<font>qlassikSmallBold2</font>
+				<visible>VideoPlayer.Content(musicvideos)</visible>
+			</control>
+			<!-- plot separator -->
+			<control type="image">
+				<posx>0</posx>
+				<posy>64</posy>
+				<width>1220</width>
+				<height>3</height>
+				<texture>dialogs/whiteline_h.png</texture>
+				<colordiffuse>Color4</colordiffuse>
+			</control>
+			<!-- second plot separator -->
+			<control type="image">
+				<posx>0</posx>
+				<posy>180</posy>
+				<width>1220</width>
+				<height>1</height>
+				<texture>dialogs/whiteline_h.png</texture>
+				<colordiffuse>Color4</colordiffuse>
+			</control>
+			<control type="textbox" id="8">
+				<posy>65</posy>
+				<width>1210</width>
+				<height>115</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<label>$INFO[VideoPlayer.PlotOutline]</label>
+				<visible>!IsEmpty(VideoPlayer.PlotOutline)</visible>
+				<textcolor>ivory3</textcolor>
+				<font>fontinSmall</font>
+			</control>
+			<control type="textbox" id="8">
+				<posy>65</posy>
+				<width>1210</width>
+				<height>115</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<label>$INFO[VideoPlayer.Plot]</label>
+				<visible>IsEmpty(VideoPlayer.PlotOutline)</visible>
+				<textcolor>ivory3</textcolor>
+				<font>fontinSmall</font>
+			</control>
+			<!-- <control type="progress" id="1">
+				<description>Progressbar</description>
+				<posy>140</posy>
+				<width>1220</width>
+				<height>2</height>
+				<info>Player.Progress</info>
+			</control> -->
+		</control>
+		<!-- MUSIC VIDEOS -->
+		<control type="group" id="1">
+			<posx>30</posx>
+			<posy>585</posy>
+			<visible>VideoPlayer.Content(musicvideos) + ![Window.IsActive(2901)]</visible>
+			<include>videoFullScreenInfo</include>
+			<control type="group">
+				<posx>280r</posx>
+				<posy>5</posy>
+				<include>typeFlagsFS</include>
+			</control>
+			<control type="label" id="1">
+				<width>1140</width>
+				<label>$INFO[VideoPlayer.Title]</label>
+				<align>left</align>
+				<textcolor>Color4</textcolor>
+				<font>osd1</font>
+			</control>
+			<control type="label" id="1">
+				<posy>30</posy>
+				<width>1140</width>
+				<align>left</align>
+				<label>$INFO[VideoPlayer.Artist]</label>
+				<textcolor>Color4</textcolor>
+				<font>osd2</font>
+			</control>
+			<control type="label" id="1">
+				<posx>1220</posx>
+				<posy>54</posy>
+				<width>1320</width>
+				<align>right</align>
+				<label>$INFO[Player.Duration] / $INFO[Player.TimeRemaining]</label>
+				<textcolor>Color4</textcolor>
+				<font>osd3</font>
+			</control>
+			<control type="label" id="1">
+				<posy>54</posy>
+				<width>1290</width>
+				<align>left</align>
+				<label>$INFO[VideoPlayer.Album,, ] ($INFO[VideoPlayer.Year])</label>
+				<textcolor>Color4</textcolor>
+				<font>osd3</font>
+			</control>
+			<control type="progress" id="1">
+				<description>Progressbar</description>
+				<posy>95</posy>
+				<width>1220</width>
+				<height>2</height>
+				<info>Player.Progress</info>
+			</control>
+		</control>
+		<!-- MUSIC (audio) -->
+		<control type="group" id="1">
+			<posy>580</posy>
+			<visible>[VideoPlayer.Content(files)] + ![Window.IsActive(2901)]</visible>
+			<include>videoFullScreenInfo</include>
+			<control type="grouplist">
+				<posx>30</posx>
+				<posy>40</posy>
+				<height>40</height>
+				<width>1250</width>
+				<aligny>center</aligny>
+				<align>left</align>
+				<orientation>horizontal</orientation>
+				<control type="label" id="1">
+					<label>$INFO[MusicPlayer.Artist] &#xB7; $INFO[MusicPlayer.Title]</label>
+					<width min="29" max="1120">auto</width>
+					<textcolor>Color4</textcolor>
+					<font>osd1</font>
+					<scroll>true</scroll>
+				</control>
+				<control type="label" id="1">
+					<label>&#xB7; $INFO[MusicPlayer.Duration]</label>
+					<width min="29" max="120">auto</width>
+					<textcolor>Color4</textcolor>
+					<font>osd1</font>
+				</control>
+			</control>			
+			<!-- plot separator -->
+			<control type="image">
+				<posx>-200</posx>
+				<posy>85</posy>
+				<width>1530</width>
+				<height>1</height>
+				<texture>views/separatorFaded.png</texture>
+				<colordiffuse>Color4</colordiffuse>
+			</control>
+			<!--<control type="label" id="1">
+				<posx>30</posx>
+				<posy>30</posy>
+				<width>1320</width>
+				<align>left</align>
+				<label>$INFO[Player.TimeRemaining] / $INFO[Player.Duration]</label>
+				<textcolor>Color4</textcolor>
+			</control>-->
+			<!--<control type="progress" id="1">
+				<description>Progressbar</description>
+				<posx>30</posx>
+				<posy>75</posy>
+				<width>1220</width>
+				<height>2</height>
+				<info>Player.Progress</info>
+			</control>-->
+		</control>
+	</controls>
+</window>

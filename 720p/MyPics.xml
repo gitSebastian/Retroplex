@@ -1,0 +1,453 @@
+<?xml version="1.0"?>
+<window id="2">
+	<defaultcontrol always="false">555</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<views>555,572</views>
+	<controls>
+		<include>themeBackground2</include>
+		<include>grainyeditionback</include>
+		<include>LibraryVideoMenu</include>
+		<include>transition2</include>
+		<control type="label">
+			<label>$LOCALIZE[1] [COLOR=greenlime]$INFO[Container.FirstTitle] $INFO[Container.SecondTitle][/COLOR]</label>
+			<include>PageLabel</include>
+			<include>PageLabelsLeftMenuSlide</include>
+			<visible>!Container.Scrolling</visible>
+		</control>
+		<!-- FAKE INFO BUTTON -->
+		<control type="button" id="8000">
+			<label>SHOULD NOT SEE ME</label>
+			<onup>53</onup>
+			<ondown>53</ondown>
+			<onleft>53</onleft>
+			<onright>53</onright>
+			<width>200</width>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+		<!-- LIST VIEW -->
+		<control type="group">
+			<!-- horiz bar -->
+			<control type="image">
+				<posx>0</posx>
+				<posy>330</posy>
+				<width>1300</width>
+				<height>100</height>
+				<include>transition2</include>
+				<include>infoDialogHide</include>
+				<include>contextMenuHide</include>
+				<include>grainypagefade</include>
+				<include>ListHorizBarLeftMenuSlide</include>
+				<texture flipx="true">dialogs/square_menu_background.png</texture>
+				<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
+				<visible>Control.IsVisible(555)</visible>
+			</control>
+			<control type="group">
+				<include>ListLeftMenuSlide</include>
+				<!-- vertical separator -->
+				<control type="group">
+					<animation effect="fade" start="100" end="20" time="350" condition="Control.HasFocus(40) | Control.HasFocus(1110) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
+					<control type="image">
+						<posx>745</posx>
+						<posy>-200</posy>
+						<height>1120</height>
+						<width>29</width>
+						<texture flipx="true">settings/separator.png</texture>
+						<aspectratio align="right">stretch</aspectratio>
+						<visible>Control.IsVisible(555)</visible>
+						<include>transition2</include>
+						<include>contextMenuHide</include>
+						<include>infoDialogHide</include>
+					</control>
+				</control>
+				<!-- Shadow layer for right side bg -->
+				<control type="group">
+					<animation effect="fade" start="100" end="100" time="350" condition="Control.HasFocus(300)">Conditional</animation>
+					<animation effect="slide" start="162" end="0" time="500" condition="Control.HasFocus(300)">Conditional</animation>
+					<animation effect="slide" start="0" end="162" time="500" condition="!Control.HasFocus(300)">Conditional</animation>
+					<control type="image">
+						<posx>583</posx>
+						<posy>-50</posy>
+						<height>800</height>
+						<width>540</width>
+						<visible>Control.IsVisible(555)</visible>
+						<include>transition2</include>
+						<include>infoDialogHide</include>
+						<include>contextMenuHide</include>
+						<texture flipx="true">dialogs/square_menu_background.png</texture>
+						<aspectratio align="right">stretch</aspectratio>
+						<animation type="Conditional" condition="true">
+							<effect type="fade" start="0" end="50"/>
+						</animation>
+					</control>
+				</control>
+				<!-- menu -->
+				<control type="fixedlist" id="555">
+					<viewtype label="555">list</viewtype>
+					<posx>0</posx>
+					<posy>120</posy>
+					<height>520</height>
+					<width>1260</width>
+					<onup>555</onup>
+					<ondown>555</ondown>
+					<onleft>300</onleft>
+					<onright>23</onright>
+					<orientation>vertical</orientation>
+					<focusposition>4</focusposition>
+					<pagecontrol>23</pagecontrol>
+					<wraparound>true</wraparound>
+					<include>transition2</include>
+					<include>infoDialogHide</include>
+					<include>contextMenuHide</include>
+					<include>grainypagefade</include>
+					<!-- photos non-focused -->
+					<itemlayout width="1240" height="50">
+						<control type="label">
+							<posx>710</posx>
+							<posy>0</posy>
+							<width>740</width>
+							<height>46</height>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>qlassikMedium2</font>
+							<label>$INFO[ListItem.Label]</label>
+							<selectedcolor>ivory3</selectedcolor>
+							<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
+						</control>
+					</itemlayout>
+					<!-- photos focused -->
+					<focusedlayout width="800" height="120">
+						<control type="label">
+							<posx>710</posx>
+							<posy>30</posy>
+							<width>690</width>
+							<height>50</height>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>lobsterMedium</font>
+							<label>$INFO[ListItem.Label]</label>
+							<textcolor>ivory3</textcolor>
+							<selectedcolor>ivory3</selectedcolor>
+							<scroll>true</scroll>
+						</control>
+						<control type="label">
+							<posx>710</posx>
+							<posy>30</posy>
+							<width>690</width>
+							<height>50</height>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>lobsterMedium</font>
+							<label>$INFO[ListItem.Label]</label>
+							<textcolor>greenlime</textcolor>
+							<selectedcolor>ivory3</selectedcolor>
+							<scroll>true</scroll>
+							<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
+						</control>
+					</focusedlayout>
+				</control>
+				<!-- frame -->
+				<control type="image" id="5555">
+					<animation type="WindowOpen">
+						<effect type="fade" start="0" end="90" time="1000" delay="0"/>
+					</animation>
+					<posx>810</posx>
+					<posy>175</posy>
+					<width>411</width>
+					<height>414</height>
+					<include>transition2</include>
+					<include>infoDialogHide</include>
+					<include>contextMenuHide</include>
+					<include>grainypagefade</include>
+					<aspectratio>stretch</aspectratio>
+					<texture border="20" background="true">frames/bannerFrame.png</texture>
+					<visible>Control.IsVisible(555) + !IsEmpty(ListItem.Thumb) + !IsEmpty(Container.SecondTitle)</visible>
+				</control>
+				<!-- image with faux-frame -->
+				<control type="image" id="99">
+					<posx>835</posx>
+					<posy>190</posy>
+					<width>360</width>
+					<height>360</height>
+					<fadetime>400</fadetime>
+					<include>transition2</include>
+					<include>infoDialogHide</include>
+					<include>contextMenuHide</include>
+					<include>grainypagefade</include>
+					<texture diffuse="frames/slideBigPosterMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+					<include>thumbFadeTime</include>
+					<visible>Control.IsVisible(555) + !IsEmpty(ListItem.Thumb) + Control.IsVisible(5555)</visible>
+				</control>
+				<!-- faux-frame -->
+				<control type="image" id="99">
+					<posx>830</posx>
+					<posy>185</posy>
+					<width>370</width>
+					<height>370</height>
+					<fadetime>400</fadetime>
+					<include>transition2</include>
+					<include>infoDialogHide</include>
+					<include>contextMenuHide</include>
+					<include>grainypagefade</include>
+					<texture diffuse="frames/slideBigPosterMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio scalediffuse="false" align="center" aligny="top">keep</aspectratio>
+					<include>thumbFadeTime</include>
+					<animation effect="fade" start="20" end="20" time="0" condition="true">Conditional</animation>
+					<visible>Control.IsVisible(555) + !IsEmpty(ListItem.Thumb) + !Control.IsVisible(5555)</visible>
+				</control>
+				<!-- image with faux-frame -->
+				<control type="image" id="99">
+					<posx>835</posx>
+					<posy>190</posy>
+					<width>360</width>
+					<height>360</height>
+					<fadetime>400</fadetime>
+					<include>transition2</include>
+					<include>infoDialogHide</include>
+					<include>contextMenuHide</include>
+					<include>grainypagefade</include>
+					<texture diffuse="frames/slideBigPosterMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio scalediffuse="false" align="center" aligny="top">keep</aspectratio>
+					<include>thumbFadeTime</include>
+					<visible>Control.IsVisible(555) + !IsEmpty(ListItem.Thumb) + !Control.IsVisible(5555)</visible>
+				</control>
+			</control>
+		</control>
+		<!-- THUMBNAILS VIEW -->
+		<control type="panel" id="572">
+			<viewtype label="Thumbnails">bigicons</viewtype>
+			<posx>22</posx>
+			<posy>70</posy>
+			<width>1280</width>
+			<height>588</height>
+			<onleft>300</onleft>
+			<onright>572</onright>
+			<onup>572</onup>
+			<ondown>572</ondown>
+			<preloaditems>4</preloaditems>
+			<scrolltime>200</scrolltime>
+			<!--<pagecontrol>75</pagecontrol>-->
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<include>ThumbnailsPhotosLeftMenuThumbsSlide</include>
+			<visible>!IsEmpty(Container.FirstTitle)</visible>
+			<itemlayout height="195" width="205">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>212</width>
+					<height>215</height>
+					<texture border="10">frames/bannerFrame.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<include>focus_PhotosThumbs</include>
+					<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>18</posx>
+					<posy>15</posy>
+					<width>176</width>
+					<height>133</height>
+					<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+					<texture background="true" diffuse="frames/slideBigPosterMask.png" fallback="thumbs/pictureSmall.png">$INFO[ListItem.Thumb]</texture>
+					<include>focus_PhotosThumbs</include>
+				</control>
+			</itemlayout>
+			<focusedlayout height="195" width="210">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>212</width>
+					<height>215</height>
+					<texture border="10">frames/bannerFrame.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<include>focus_PhotosThumbs</include>
+					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>18</posx>
+					<posy>15</posy>
+					<width>176</width>
+					<height>133</height>
+					<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+					<texture background="true" diffuse="frames/white.png" fallback="thumbs/pictureSmall.png">$INFO[ListItem.Thumb]</texture>
+					<include>focus_PhotosThumbs</include>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>160</posy>
+					<label>$INFO[ListItem.Label]</label>
+					<font>fontinSmallest</font>
+					<textcolor>Color6</textcolor>
+					<align>left</align>
+					<width>215</width>
+					<include>focus_PhotosThumbsText</include>
+				</control>
+			</focusedlayout>
+		</control>
+		<!-- INFOS BOTTOM -->
+		<!-- thumbnails -->
+		<control type="group">
+			<visible>Control.IsVisible(572)</visible>
+			<include>transition2</include>
+			<include>contextMenuHide</include>
+			<include>PageLabelsLeftMenuSlide</include>
+			<posx>35</posx>
+			<posy>650</posy>
+			<!--<control type="label">
+				<label>$INFO[ListItem.Label]</label>
+				<font>lobsterSmall</font>
+				<textcolor>greenlime</textcolor>
+				<align>left</align>
+				<width>900</width>
+			</control>-->
+			<control type="label">
+				<posy>25</posy>
+				<label>N/A</label>
+				<font>qlassikSmallBold</font>
+				<textcolor>ivory3</textcolor>
+				<align>left</align>
+				<width>750</width>
+				<visible>IsEmpty(ListItem.PictureResolution)</visible>
+			</control>
+			<control type="label">
+				<posy>25</posy>
+				<label>$INFO[ListItem.PictureResolution,$LOCALIZE[21805] - ]</label>
+				<font>qlassikSmallBold</font>
+				<textcolor>ivory3</textcolor>
+				<align>left</align>
+				<width>750</width>
+				<visible>!IsEmpty(ListItem.PictureResolution)</visible>
+			</control>
+			<control type="label">
+				<posx>1075</posx>
+				<posy>25</posy>
+				<label>N/A</label>
+				<font>qlassikSmallBold</font>
+				<textcolor>ivory3</textcolor>
+				<align>right</align>
+				<width>750</width>
+				<visible>IsEmpty(ListItem.PictureDateTime)</visible>
+			</control>
+			<control type="label">
+				<posx>1075</posx>
+				<posy>25</posy>
+				<label>$INFO[ListItem.PictureDateTime]</label>
+				<font>qlassikSmallBold</font>
+				<textcolor>ivory3</textcolor>
+				<align>right</align>
+				<width>750</width>
+				<visible>!IsEmpty(ListItem.PictureDateTime)</visible>
+			</control>
+		</control>		
+		<!-- list -->
+		<control type="group">
+			<posx>265</posx>
+			<posy>585</posy>
+			<visible>Control.IsVisible(53)</visible>
+			<include>transition3</include>
+			<include>contextMenuHide</include>
+			<include>infoDialogHide</include>
+			<control type="label">
+				<label>N/A</label>
+				<font>normalCaps</font>
+				<textcolor>Color1</textcolor>
+				<align>left</align>
+				<width>940</width>
+				<visible>IsEmpty(ListItem.PictureResolution)</visible>
+			</control>
+			<control type="label">
+				<label>[UPPERCASE]$INFO[ListItem.PictureResolution][/UPPERCASE]</label>
+				<font>normalCaps</font>
+				<textcolor>Color1</textcolor>
+				<align>left</align>
+				<width>940</width>
+				<visible>!IsEmpty(ListItem.PictureResolution)</visible>
+			</control>
+			<control type="label">
+				<posy>23</posy>
+				<label>N/A</label>
+				<font>normalCaps</font>
+				<textcolor>Color2</textcolor>
+				<align>left</align>
+				<width>750</width>
+				<visible>IsEmpty(ListItem.PictureDateTime)</visible>
+			</control>
+			<control type="label">
+				<posy>23</posy>
+				<label>[UPPERCASE]$INFO[ListItem.PictureDateTime][/UPPERCASE]</label>
+				<font>normalCaps</font>
+				<textcolor>Color2</textcolor>
+				<align>left</align>
+				<width>750</width>
+				<visible>!IsEmpty(ListItem.PictureDateTime)</visible>
+			</control>
+			<control type="label">
+				<posy>46</posy>
+				<label>N/A</label>
+				<font>normalCaps</font>
+				<textcolor>Color2</textcolor>
+				<align>left</align>
+				<width>750</width>
+				<visible>IsEmpty(ListItem.Size)</visible>
+			</control>
+			<control type="label">
+				<posy>46</posy>
+				<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
+				<font>normalCaps</font>
+				<textcolor>Color2</textcolor>
+				<align>left</align>
+				<width>750</width>
+				<visible>!IsEmpty(ListItem.Size)</visible>
+			</control>
+		</control>
+		<control type="image">
+			<include>screentype</include>
+			<aspectratio align="left">stretch</aspectratio>
+			<texture>home/menuBackground.png</texture>
+			<include>fadeinout</include>
+			<visible>Control.IsVisible(56) + ControlGroup(300).HasFocus()</visible>
+		</control>
+		<control type="image" id="1">
+			<posx>0</posx>
+			<posy>665</posy>
+			<include>screenwidth</include>
+			<height>55</height>
+			<texture flipy="false">OSD/fullscreenInfo.png</texture>
+			<include>videoFullScreenInfo</include>
+			<visible>Control.IsVisible(56)</visible>
+		</control>
+		<control type="image">
+			<posx>10</posx>
+			<posy>684</posy>
+			<width>32</width>
+			<height>24</height>
+			<aspectratio>keep</aspectratio>
+			<texture>dialogs/scrollLeftIndicator.png</texture>
+			<visible>Control.IsVisible(56)</visible>
+			<include>videoFullScreenInfo</include>
+		</control>
+		<control type="image">
+			<posx>42r</posx>
+			<posy>684</posy>
+			<width>32</width>
+			<height>24</height>
+			<aspectratio>keep</aspectratio>
+			<texture>dialogs/scrollRightIndicator.png</texture>
+			<visible>Control.IsVisible(56)</visible>
+			<include>videoFullScreenInfo</include>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>684</posy>
+			<label>$INFO[ListItem.Label]</label>
+			<font>geoSmall3</font>
+			<textcolor>ivory3</textcolor>
+			<align>center</align>
+			<width>1200</width>
+			<visible>Control.IsVisible(56)</visible>
+			<include>videoFullScreenInfo</include>
+		</control>
+		<include>allscreens</include>
+	</controls>
+</window>

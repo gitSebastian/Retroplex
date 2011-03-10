@@ -1,0 +1,515 @@
+<?xml version="1.0"?>
+<window id="2003">
+	<defaultcontrol always="true">8000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<!-- FAKE INFO BUTTONS -->
+		<!--<control type="button" id="8000">
+			<label>SHOULD NOT SEE ME</label>
+			<onleft>300</onleft>
+			<onright>-</onright>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<width>200</width>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+		<control type="button" id="7000">
+			<label>SHOULD NOT SEE ME</label>
+			<onleft>300</onleft>
+			<onright>-</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<width>200</width>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+		<control type="button" id="5000">
+			<label>SHOULD NOT SEE ME</label>
+			<onleft>300</onleft>
+			<onright>-</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<width>200</width>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>-->
+		<!-- horiz bar -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>308</posy>
+			<width>1300</width>
+			<height>300</height>
+			<include>transition2</include>
+			<include>grainypagefade</include>
+			<texture flipx="true">dialogs/square_menu_background.png</texture>
+			<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
+		</control>
+		<!-- MOVIES -->
+		<control type="grouplist" id="1000">
+			<visible>Container.Content(movies) + !Window.IsActive(101)</visible>
+			<include>transition2</include>
+			<include>contextMenuHide</include>
+			<posx>470</posx>
+			<posy>100</posy>
+			<itemgap>6</itemgap>
+			<control type="label" id="1">
+				<width>740</width>
+				<label>$LOCALIZE[345] [COLOR=Color1]$INFO[ListItem.Year][/COLOR]</label>
+				<include>infoDialogMeta</include>
+				<visible>!IsEmpty(ListItem.Genre)</visible>
+			</control>
+			<control type="label" id="1">
+				<width>740</width>
+				<label>$LOCALIZE[515] [COLOR=Color1]$INFO[ListItem.Genre][/COLOR]</label>
+				<include>infoDialogMeta</include>
+				<visible>!IsEmpty(ListItem.Genre)</visible>
+			</control>
+			<control type="label" id="1">
+				<width>740</width>
+				<label>$LOCALIZE[20417] [COLOR=Color1]$INFO[ListItem.Writer][/COLOR]</label>
+				<include>infoDialogMeta</include>
+				<visible>!IsEmpty(ListItem.Writer)</visible>
+			</control>
+			<control type="label" id="1">
+				<width>740</width>
+				<label>$LOCALIZE[20339] [COLOR=Color1]$INFO[ListItem.Director][/COLOR]</label>
+				<include>infoDialogMeta</include>
+				<visible>!IsEmpty(ListItem.Director)</visible>
+			</control>
+			<control type="label" id="1">
+				<width>740</width>
+				<label>$LOCALIZE[572] [COLOR=Color1]$INFO[Listitem.Property(mediaTag-Studio)][/COLOR]</label>
+				<include>infoDialogMeta</include>
+				<visible>!IsEmpty(Listitem.Property(mediaTag-Studio))</visible>
+			</control>
+			<control type="label" id="1">
+				<width>740</width>
+				<label>$LOCALIZE[180] [COLOR=Color1]$INFO[ListItem.Duration][/COLOR]</label>
+				<scroll>true</scroll>
+				<include>infoDialogMeta</include>
+				<visible>!IsEmpty(ListItem.Duration)</visible>
+			</control>
+			<control type="label" id="1">
+				<width>740</width>
+				<label>$LOCALIZE[563] [COLOR=Color1]$INFO[ListItem.MPAA][/COLOR]</label>
+				<include>infoDialogMeta</include>
+				<visible>!IsEmpty(ListItem.MPAA)</visible>
+			</control>
+			<control type="label" id="1">
+				<width>740</width>
+				<label/>
+				<include>infoDialogMeta</include>
+			</control>
+			<control type="label" id="1">
+				<width>740</width>
+				<label/>
+				<include>infoDialogMeta</include>
+				<visible>IsEmpty(ListItem.MPAA)</visible>
+			</control>
+			<!-- PLOT -->
+			<control type="textbox" id="4">
+				<width>740</width>
+				<height>270</height>
+				<label>$INFO[ListItem.PlotOutline]</label>
+				<font>fontinSmall</font>
+				<textcolor>ivory3</textcolor>
+			</control>
+			<!-- END MOD -->
+		</control>
+		<!-- TVSHOWS -->
+		<control type="grouplist" id="1000">
+			<visible>Container.Content(tvshows) + !Window.IsActive(101)</visible>
+			<include>transition2</include>
+			<include>contextMenuHide</include>
+			<posx>470</posx>
+			<posy>100</posy>
+			<itemgap>6</itemgap>
+			<control type="label" id="1">
+				<width>740</width>
+				<label>$LOCALIZE[345] [COLOR=Color1]$INFO[ListItem.Year][/COLOR]</label>
+				<include>infoDialogMeta</include>
+				<visible>!IsEmpty(ListItem.Genre)</visible>
+			</control>
+			<control type="label" id="1">
+				<width>740</width>
+				<label>$LOCALIZE[515] [COLOR=Color1]$INFO[ListItem.Genre][/COLOR]</label>
+				<include>infoDialogMeta</include>
+				<visible>!IsEmpty(ListItem.Genre)</visible>
+			</control>
+			<control type="label" id="1">
+				<width>770</width>
+				<label>$LOCALIZE[31089] [COLOR=Color1]$INFO[ListItem.Episode] $LOCALIZE[20360][/COLOR]</label>
+				<include>infoDialogMeta</include>
+			</control>
+			<control type="label" id="1">
+				<width>770</width>
+				<label>$LOCALIZE[16101] [COLOR=Color1]$INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[20360][/COLOR]</label>
+				<include>infoDialogMeta</include>
+			</control>
+			<control type="label" id="1">
+				<width>770</width>
+				<label>$LOCALIZE[572] [COLOR=Color1]$INFO[ListItem.Studio][/COLOR]</label>
+				<include>infoDialogMeta</include>
+				<visible>!IsEmpty(ListItem.Studio)</visible>
+			</control>
+			<control type="label" id="1">
+				<width>770</width>
+				<label>$LOCALIZE[563] [COLOR=Color1]$INFO[ListItem.MPAA][/COLOR]</label>
+				<include>infoDialogMeta</include>
+				<visible>!IsEmpty(ListItem.MPAA)</visible>
+			</control>
+			<!-- <control type="label" id="1">
+			<width>770</width>
+			<label>$LOCALIZE[573] [COLOR=Color1]$INFO[ListItem.Path][/COLOR]</label>
+			<include>infoDialogMeta</include>
+		</control> -->
+			<control type="label" id="1">
+				<width>770</width>
+				<label/>
+				<include>infoDialogMeta</include>
+			</control>
+			<control type="label" id="1">
+				<width>770</width>
+				<label/>
+				<include>infoDialogMeta</include>
+			</control>
+			<control type="textbox" id="4">
+				<width>740</width>
+				<height>270</height>
+				<label>$INFO[ListItem.Plot]</label>
+				<font>fontinSmall</font>
+				<textcolor>ivory3</textcolor>
+			</control>
+			<!-- END MOD -->
+		</control>
+		<!-- EPISODES -->
+		<control type="group">
+			<posx>520</posx>
+			<posy>100</posy>
+			<include>transition2</include>
+			<include>contextMenuHide</include>
+			<visible>Container.Content(episodes) + !Window.IsActive(101)</visible>
+			<control type="label">
+				<width>780</width>
+				<label>$INFO[ListItem.Title]</label>
+				<include>Heading</include>
+				<visible>!ControlGroup(9001).HasFocus()</visible>
+			</control>
+			<control type="label">
+				<width>780</width>
+				<label>$LOCALIZE[206]</label>
+				<include>Heading</include>
+				<visible>ControlGroup(9001).HasFocus()</visible>
+			</control>
+			<control type="grouplist" id="1000">
+				<posy>35</posy>
+				<itemgap>6</itemgap>
+				<visible>!ControlGroup(9001).HasFocus()</visible>
+				<control type="label" id="1">
+					<width>690</width>
+					<label>$LOCALIZE[31074]</label>
+					<textcolor>Color1</textcolor>
+					<include>infoDialogMeta</include>
+				</control>
+				<control type="label" id="1">
+					<label/>
+				</control>
+				<control type="label" id="1">
+					<width>690</width>
+					<label>$LOCALIZE[20417] [COLOR=Color1]$INFO[ListItem.Writer][/COLOR]</label>
+					<include>infoDialogMeta</include>
+					<visible>!IsEmpty(ListItem.Writer)</visible>
+				</control>
+				<control type="label" id="1">
+					<width>690</width>
+					<label>$LOCALIZE[20339] [COLOR=Color1]$INFO[ListItem.Director][/COLOR]</label>
+					<include>infoDialogMeta</include>
+					<visible>!IsEmpty(ListItem.Director)</visible>
+				</control>
+				<control type="label" id="1">
+					<width>690</width>
+					<label>$LOCALIZE[563] [COLOR=Color1]$INFO[ListItem.MPAA][/COLOR]</label>
+					<include>infoDialogMeta</include>
+					<visible>!IsEmpty(ListItem.MPAA)</visible>
+				</control>
+				<control type="label" id="1">
+					<width>690</width>
+					<label/>
+					<include>infoDialogMeta</include>
+				</control>
+				<control type="label" id="1">
+					<width>690</width>
+					<label/>
+					<include>infoDialogMeta</include>
+					<visible>IsEmpty(ListItem.MPAA)</visible>
+				</control>
+				<control type="label" id="1">
+					<label/>
+				</control>
+				<control type="textbox" id="4">
+					<width>690</width>
+					<height>300</height>
+					<label>$INFO[ListItem.Plot]</label>
+					<font>fontinSmall</font>
+					<textcolor>ivory3</textcolor>
+				</control>
+				<!-- END MOD -->
+			</control>
+		</control>
+		<!-- MUSIC VIDEOS -->
+		<control type="group">
+			<posx>520</posx>
+			<posy>117</posy>
+			<include>transition2</include>
+			<include>contextMenuHide</include>
+			<visible>Container.Content(musicvideos) + !Window.IsActive(101)</visible>
+			<control type="label">
+				<width>780</width>
+				<label>$INFO[ListItem.Title]</label>
+				<include>Heading</include>
+				<visible>!ControlGroup(9001).HasFocus()</visible>
+			</control>
+			<control type="label">
+				<width>780</width>
+				<label>$LOCALIZE[206]</label>
+				<include>Heading</include>
+				<visible>ControlGroup(9001).HasFocus()</visible>
+			</control>
+			<control type="grouplist" id="1000">
+				<posy>50</posy>
+				<itemgap>6</itemgap>
+				<visible>!ControlGroup(9001).HasFocus()</visible>
+				<control type="label" id="1">
+					<width>770</width>
+					<label>$LOCALIZE[557] [COLOR=Color1]$INFO[ListItem.Artist][/COLOR]</label>
+					<include>infoDialogMeta</include>
+					<visible>!IsEmpty(ListItem.Artist)</visible>
+				</control>
+				<control type="label" id="1">
+					<width>770</width>
+					<label>$LOCALIZE[558] [COLOR=Color1]$INFO[ListItem.Album][/COLOR]</label>
+					<include>infoDialogMeta</include>
+					<visible>!IsEmpty(ListItem.Album)</visible>
+				</control>
+				<control type="label" id="1">
+					<width>770</width>
+					<label>$LOCALIZE[562] [COLOR=Color1]$INFO[ListItem.Genre][/COLOR]</label>
+					<include>infoDialogMeta</include>
+					<visible>!IsEmpty(ListItem.Genre)</visible>
+				</control>
+				<control type="label" id="1">
+					<width>770</width>
+					<label>$LOCALIZE[345] [COLOR=Color1]$INFO[ListItem.Year][/COLOR]</label>
+					<include>infoDialogMeta</include>
+					<visible>!IsEmpty(ListItem.Year)</visible>
+				</control>
+				<control type="label" id="1">
+					<width>770</width>
+					<label>$LOCALIZE[21899] [COLOR=Color1]$INFO[ListItem.Studio][/COLOR]</label>
+					<include>infoDialogMeta</include>
+					<visible>!IsEmpty(ListItem.Studio)</visible>
+				</control>
+				<control type="label" id="1">
+					<width>770</width>
+					<label>$LOCALIZE[563] [COLOR=Color1]$INFO[ListItem.MPAA][/COLOR]</label>
+					<include>infoDialogMeta</include>
+					<visible>!IsEmpty(ListItem.MPAA)</visible>
+				</control>
+				<control type="label" id="1">
+					<width>770</width>
+					<label/>
+					<include>infoDialogMeta</include>
+				</control>
+				<control type="textbox" id="4">
+					<width>740</width>
+					<height>240</height>
+					<label>$INFO[ListItem.Property(Artist_Description)]</label>
+					<include>textBox</include>
+					<font>fontinSmall</font>
+					<visible>Skin.HasSetting(usecapitalisation)</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<posx>470</posx>
+			<posy>630</posy>
+			<include>typeFlagsFullInfo</include>
+			<include>transition2</include>
+			<include>contextMenuHide</include>
+			<animation effect="slide" start="0" end="50" time="0" condition="Container.Content(episodes) | Container.Content(musicvideos)">Conditional</animation>
+		</control>
+		<!-- CAST LIST -->
+		<control type="group" id="9001">
+			<control type="list" id="50">
+				<posx>429</posx>
+				<posy>345</posy>
+				<width>765</width>
+				<height>251</height>
+				<onleft>300</onleft>
+				<onright>-</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<orientation>vertical</orientation>
+				<scrolltime>200</scrolltime>
+				<include>transition2</include>
+				<include>contextMenuHide</include>
+				<itemlayout height="42">
+					<control type="label">
+						<posx>40</posx>
+						<width>570</width>
+						<label>$INFO[ListItem.Label]</label>
+						<include>listMenu</include>
+					</control>
+				</itemlayout>
+				<focusedlayout height="42">
+					<control type="image">
+						<posy>-28</posy>
+						<width>570</width>
+						<height>100</height>
+						<texture border="0,30,0,30">views/list-focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>40</posx>
+						<width>570</width>
+						<label>$INFO[ListItem.Label]</label>
+						<include>listMenuFocus</include>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		<!-- IMAGES -->
+		<control type="group">
+			<posy>65</posy>
+			<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes)] + !Window.IsActive(101)</visible>
+			<include>transition2</include>
+			<include>contextMenuHide</include>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>456</width>
+				<height>648</height>
+				<texture border="48">frames/bannerFrame.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<include>thumbFadeTime</include>
+				<animation effect="fade" start="80" end="80" time="0" condition="true">Conditional</animation>
+				<visible>!IsEmpty(ListItem.Title) + ![Container.Content(episodes) + !ControlGroup(9001).HasFocus()]</visible>
+			</control>
+			<!-- movie poster -->
+			<control type="image">
+				<posx>30</posx>
+				<posy>22</posy>
+				<width>395</width>
+				<height>585</height>
+				<texture diffuse="frames/slideBigPosterMask.png" fallback="thumbs/movie.png" scalediffuse="false">$INFO[ListItem.Thumb]</texture>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<visible>Container.Content(movies)</visible>
+			</control>
+			<control type="largeimage">
+				<posx>30</posx>
+				<posy>22</posy>
+				<width>395</width>
+				<height>585</height>
+				<texture scalediffuse="false">$INFO[listitem.path]poster.tbn</texture>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<visible>Container.Content(movies)</visible>
+			</control>
+			<control type="largeimage">
+				<posx>30</posx>
+				<posy>22</posy>
+				<width>395</width>
+				<height>585</height>
+				<texture scalediffuse="false">$INFO[listitem.path]poster.png</texture>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<visible>Container.Content(movies)</visible>
+			</control>
+			<control type="largeimage">
+				<posx>30</posx>
+				<posy>22</posy>
+				<width>395</width>
+				<height>585</height>
+				<texture scalediffuse="false">$INFO[listitem.path]poster.jpg</texture>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<visible>Container.Content(movies)</visible>
+			</control>
+			<!-- tv show poster -->
+			<control type="image">
+				<posx>30</posx>
+				<posy>22</posy>
+				<width>395</width>
+				<height>585</height>
+				<texture diffuse="frames/slideBigPosterMask.png" fallback="thumbs/tvshow.png" scalediffuse="false">$INFO[ListItem.Thumb]</texture>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons)]</visible>
+			</control>
+			<control type="largeimage">
+				<posx>30</posx>
+				<posy>22</posy>
+				<width>395</width>
+				<height>585</height>
+				<texture scalediffuse="false">$INFO[listitem.path]poster.tbn</texture>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons)]</visible>
+			</control>
+			<control type="largeimage">
+				<posx>30</posx>
+				<posy>22</posy>
+				<width>395</width>
+				<height>585</height>
+				<texture scalediffuse="false">$INFO[listitem.path]poster.png</texture>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons)]</visible>
+			</control>
+			<control type="largeimage">
+				<posx>30</posx>
+				<posy>22</posy>
+				<width>395</width>
+				<height>585</height>
+				<texture scalediffuse="false">$INFO[listitem.path]poster.jpg</texture>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons)]</visible>
+			</control>
+			<!-- episode -->
+			<control type="group">
+				<posx>0</posx>
+				<posy>120</posy>
+				<visible>Container.Content(episodes)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>500</width>
+				<height>341</height>
+				<texture border="48">frames/bannerFrame.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<include>thumbFadeTime</include>
+				<animation effect="fade" start="80" end="80" time="0" condition="true">Conditional</animation>
+				<visible>!IsEmpty(ListItem.Title)</visible>
+			</control>
+			<control type="image">
+				<posx>30</posx>
+				<posy>20</posy>
+				<width>440</width>
+				<height>281</height>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<texture background="true" diffuse="frames/slideBigPosterMask.png">$INFO[ListItem.Thumb]</texture>
+			</control>
+			</control>
+		</control>
+		<!-- flags -->
+		<control type="group">
+			<posx>8</posx>
+			<posy>70</posy>
+			<visible>[Container.Content(episodes) | Container.Content(musicvideos)] + !Window.IsActive(101) + !ControlGroup(9001).HasFocus()</visible>
+			<include>transition2</include>
+			<include>contextMenuHide</include>
+			<control type="image">
+				<width>492</width>
+				<height>335</height>
+				<texture border="48">frames/wideFrame.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>	
+		</control>
+		<!-- FUNCTIONS -->
+		<control type="group">
+			<include>transition1</include>
+			<include>InfoDialogMenu</include>
+		</control>
+	</controls>
+</window>

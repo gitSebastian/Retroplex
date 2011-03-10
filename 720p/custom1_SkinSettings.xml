@@ -1,0 +1,507 @@
+<?xml version="1.0"?>
+<window id="59">
+	<defaultcontrol always="true">9001</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<include>transition2</include>
+			<texture background="true" flipx="true">backgrounds/settings02.jpg</texture>
+		</control>
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<include>transition2</include>
+			<texture background="true">backgrounds/background15.png</texture>
+			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+			<animation type="WindowOpen">
+				<effect type="zoom" time="400" center="640,360" start="180" end="100" tween="cubic" easing="out"/>
+			</animation>
+			<animation type="WindowClose">
+				<effect type="zoom" time="250" center="640,360" start="100" end="180" tween="cubic" easing="in"/>				
+			</animation>
+		</control>
+		<!-- Background -->
+		<control type="group">
+			<control type="image">
+				<posx>0</posx>
+				<posy>-50</posy>
+				<height>800</height>
+				<width>324</width>
+				<include>transition2</include>
+				<texture flipx="true" border="10">dialogs/square_menu_background.png</texture>
+				<aspectratio align="right">stretch</aspectratio>
+				<animation type="Conditional" condition="true">
+					<effect type="fade" start="0" end="50"/>
+				</animation>
+			</control>
+		</control>
+		<!-- Separator -->
+		<control type="group">
+			<control type="image">
+				<include>transition2</include>
+				<posx>295</posx>
+				<posy>-200</posy>
+				<height>1120</height>
+				<width>29</width>
+				<texture>settings/separator.png</texture>
+				<aspectratio align="right">stretch</aspectratio>
+			</control>
+		</control>
+		<include>allscreens</include>
+		<!-- page label -->
+		<control type="label">
+			<include>PageLabel</include>
+			<label>$LOCALIZE[5] [COLOR=greenlime]$LOCALIZE[166][/COLOR]</label>
+		</control>
+		<!-- CATEGORIES -->
+		<control type="group" id="9000">
+			<posx>-1</posx>
+			<posy>150</posy>
+			<width>400</width>
+			<height>650</height>
+			<onup>9100</onup>
+			<ondown>9100</ondown>
+			<onright>300</onright>
+			<onleft>300</onleft>
+			<orientation>vertical</orientation>
+			<scrolltime>150</scrolltime>
+			<visible>true</visible>
+			<include>homeMenuToggle</include>
+			<include>homeMenusLayout</include>
+			<!-- white separators top and bottom sub-menu -->
+			<control type="image">
+				<posx>356</posx>
+				<posy>-18</posy>
+				<height>10</height>
+				<width>800</width>
+				<texture>dialogs/sliderBackground_.png</texture>
+				<aspectratio align="right">stretch</aspectratio>
+				<include>transition2</include>
+				<animation type="Conditional" condition="true">
+					<effect type="fade" start="0" end="80"/>
+				</animation>
+				<!--<visible>!Control.HasFocus(300) + [ControlGroup(9100).HasFocus() | ControlGroup(200).HasFocus()]</visible>-->
+			</control>
+			<control type="image">
+				<posx>356</posx>
+				<posy>460</posy>
+				<height>10</height>
+				<width>800</width>
+				<texture>dialogs/sliderBackground_.png</texture>
+				<aspectratio align="right">stretch</aspectratio>
+				<include>transition2</include>
+				<animation type="Conditional" condition="true">
+					<effect type="fade" start="0" end="80"/>
+				</animation>
+				<!--<visible>!Control.HasFocus(300) + [ControlGroup(9100).HasFocus() | ControlGroup(200).HasFocus()]</visible>-->
+			</control>
+			<!-- MAIN LEVEL -->
+			<control type="grouplist" id="9100">
+				<onup>9100</onup>
+				<ondown>9100</ondown>
+				<onleft>300</onleft>
+				<onright>200</onright>
+				<itemgap>0</itemgap>
+				<!-- home screen -->
+				<control type="button" id="9001">
+					<label>$LOCALIZE[31124]</label>
+					<include>settingsLeftMenuFormat</include>
+					<visible allowhiddenfocus="true">![Control.HasFocus(201) | Control.HasFocus(202) | Control.HasFocus(203) | Control.HasFocus(204) | Control.HasFocus(205) | Control.HasFocus(206) | Control.HasFocus(207) | Control.HasFocus(208) | Control.HasFocus(209) | Control.HasFocus(210) | Control.HasFocus(211) | Control.HasFocus(212)]</visible>
+				</control>
+				<control type="button" id="9002">
+					<label>$LOCALIZE[31124]</label>
+					<include>settingsLeftMenuFormat</include>
+					<visible>!Control.IsVisible(9001)</visible>
+				</control>
+				<!-- main menu -->
+				<!--<control type="button" id="9019">
+					<label>$LOCALIZE[31961]</label>
+					<include>settingsLeftMenuFormat</include>
+					<visible allowhiddenfocus="true">![Control.HasFocus(291) | Control.HasFocus(292) | Control.HasFocus(293) | Control.HasFocus(294) | Control.HasFocus(295)]</visible>
+					<visible>Skin.HasSetting(originalhome)</visible>
+					<enable>Skin.HasSetting(originalhome)</enable>
+				</control>
+				<control type="button" id="9020">
+					<label>$LOCALIZE[31961]</label>
+					<include>settingsLeftMenuFormat</include>
+					<visible>!Control.IsVisible(9019)</visible>
+					<visible>Skin.HasSetting(originalhome)</visible>
+					<enable>Skin.HasSetting(originalhome)</enable>
+				</control>-->
+				<!-- fanart -->
+				<control type="button" id="9005">
+					<label>fanart settings</label>
+					<include>settingsLeftMenuFormat</include>
+					<visible allowhiddenfocus="true">![Control.HasFocus(221) | Control.HasFocus(222) | Control.HasFocus(223) | Control.HasFocus(224) | Control.HasFocus(225) | Control.HasFocus(226)]</visible>
+				</control>
+				<control type="button" id="9006">
+					<label>fanart settings</label>
+					<include>settingsLeftMenuFormat</include>
+					<visible>!Control.IsVisible(9005)</visible>
+				</control>
+				<!-- views settings -->
+				<control type="button" id="9017">
+					<label>$LOCALIZE[31015]</label>
+					<include>settingsLeftMenuFormat</include>
+					<visible allowhiddenfocus="true">![Control.HasFocus(261) | Control.HasFocus(262) | Control.HasFocus(263) | Control.HasFocus(264) | Control.HasFocus(265) | Control.HasFocus(266) | Control.HasFocus(267) | Control.HasFocus(268) | Control.HasFocus(269)]</visible>
+				</control>
+				<control type="button" id="9018">
+					<label>$LOCALIZE[31015]</label>
+					<onclick>SetFocus(1150)</onclick>
+					<include>settingsLeftMenuFormat</include>
+					<visible>!Control.IsVisible(9017)</visible>
+				</control>
+				<!-- grainy edition -->
+				<!--<control type="button" id="9007">
+					<label>extra settings</label>
+					<include>settingsLeftMenuFormat</include>
+					<visible allowhiddenfocus="true">![Control.HasFocus(281) | Control.HasFocus(282) | Control.HasFocus(283) | Control.HasFocus(286)]</visible>
+				</control>
+				<control type="button" id="9008">
+					<label>grainy settings</label>
+					<include>settingsLeftMenuFormat</include>
+					<visible>!Control.IsVisible(9007)</visible>
+				</control>-->
+				<!-- about refocus -->
+				<control type="button" id="9013">
+					<label>$LOCALIZE[31909]</label>
+					<include>settingsLeftMenuFormat</include>
+					<visible allowhiddenfocus="true">![Control.HasFocus(241) | Control.HasFocus(242)]</visible>
+				</control>
+				<!--<control type="button" id="9010">
+					<label>$LOCALIZE[31909] reFocus</label>
+					<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
+					<include>-</include>
+				</control>-->
+				<!-- Programs -->
+				<!--<control type="button" id="9012">
+					<label>$LOCALIZE[0]</label>
+					<onclick>ActivateWindow(Programs)</onclick>
+					<onclick>Dialog.Close(shutdownmenu)</onclick>
+					<include>-</include>
+				</control>-->
+				<!-- Weather -->
+				<!--<control type="button" id="9013">
+					<label>$LOCALIZE[8]</label>
+					<onclick>ActivateWindow(weather)</onclick>
+					<include>-</include>
+					<visible allowhiddenfocus="true">![Control.HasFocus(241) | Control.HasFocus(242)]</visible>
+				</control>
+				<control type="button" id="9014">
+					<label>$LOCALIZE[8]</label>
+					<onclick>ActivateWindow(weather)</onclick>
+					<include>-</include>
+					<include>newHomeMenuCategoryNoFocusBg</include>
+					<visible>!Control.IsVisible(9013)</visible>
+				</control>-->
+			</control>
+		</control>
+		<!-- SUB-LEVEL -->
+		<control type="group">
+			<posx>323</posx>
+			<posy>150</posy>
+			<width>850</width>
+			<height>595</height>
+			<!-- home screen -->
+			<control type="grouplist" id="200">
+				<onleft>9001</onleft>
+				<onright>300</onright>
+				<onup>200</onup>
+				<ondown>200</ondown>
+				<itemgap>0</itemgap>
+				<include>transition2</include>
+				<visible>!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9001)</visible>
+				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9001)">Conditional</animation>
+				<control type="radiobutton" id="211">
+					<description>hide iTunes menu entry</description>
+					<label>Hide "iTunes" from home menu</label>
+					<onclick>Skin.ToggleSetting(hideitunesmenuitem)</onclick>
+					<selected>Skin.HasSetting(hideitunesmenuitem)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="212">
+					<description>hide iTunes menu entry</description>
+					<label>Hide "Programs" from home menu</label>
+					<onclick>Skin.ToggleSetting(hideprogramsmenuitem)</onclick>
+					<selected>Skin.HasSetting(hideprogramsmenuitem)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<!--<control type="radiobutton" id="207">
+					<description>Invisible Home menu</description>
+					<label>recommended : hide the menu (use left button to see it)</label>
+					<onclick>Skin.ToggleSetting(FanartSlideShow)</onclick>
+					<selected>!Skin.HasSetting(FanartSlideShow)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+					<enable>Skin.HasSetting(originalhome)</enable>
+					<visible>Skin.HasSetting(originalhome)</visible>
+				</control>-->
+			</control>
+			<!-- fanart -->
+			<control type="grouplist" id="200">
+				<onleft>9005</onleft>
+				<onright>300</onright>
+				<onup>200</onup>
+				<ondown>200</ondown>
+				<itemgap>0</itemgap>
+				<visible>!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9005)</visible>
+				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9005)">Conditional</animation>
+				<include>transition2</include>
+				<control type="radiobutton" id="221">
+					<label>Turn OFF fanart in library views</label>
+					<onclick>Skin.ToggleSetting(FanartGlobal)</onclick>
+					<selected>Skin.HasSetting(FanartGlobal)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="222">
+					<label>Use Fanart in Music Visualisation Screen</label>
+					<onclick>Skin.ToggleSetting(musicVis)</onclick>
+					<onclick>Skin.ToggleSetting(musicVisBlend)</onclick>
+					<selected>Skin.HasSetting(musicVis)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="223">
+					<label>Blend Music Visualisation and Fanart</label>
+					<onclick>Skin.ToggleSetting(musicVisBlend)</onclick>
+					<selected>Skin.HasSetting(musicVisBlend)</selected>
+					<enable>Skin.HasSetting(musicVis)</enable>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<!--<control type="button" id="224">
+					<description>go to Artists</description>
+					<label>go to Artists</label>
+					<label>Artists</label>
+					<onclick>ActivateWindow(10501,plex://127.0.0.1:32400/music/iTunes/Artists,return)</onclick>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="button" id="225">
+					<description>go to Albums</description>
+					<label>go to Albums</label>
+					<onclick>ActivateWindow(10501,plex://127.0.0.1:32400/music/iTunes/Artists,return)</onclick>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="button" id="226">
+					<description>go to iTunes main entry</description>
+					<label>go to iTunes main entry</label>
+					<onclick>ActivateWindow(10501,plex://127.0.0.1:32400/music/iTunes,return)</onclick>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>-->
+			</control>
+			<!-- grainy settings -->
+			<control type="grouplist" id="200">
+				<onleft>9007</onleft>
+				<onright>300</onright>
+				<onup>200</onup>
+				<ondown>200</ondown>
+				<itemgap>0</itemgap>
+				<visible>!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9007)</visible>
+				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9007)">Conditional</animation>
+				<include>transition2</include>
+				<!--<control type="radiobutton" id="281">
+					<description>use small case font</description>
+					<label>use only small case text everywhere</label>
+					<onclick>Skin.ToggleSetting(usesmallcase)</onclick>
+					<selected>Skin.HasSetting(usesmallcase)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="282">
+					<description>Stretch the posters instead of scaling</description>
+					<label>stretch the posters (if you must, but you shouldn't)</label>
+					<onclick>Skin.ToggleSetting(grainystretchthemposters)</onclick>
+					<selected>Skin.HasSetting(grainystretchthemposters)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="283">
+					<description>Letter Offset Scrolling</description>
+					<label>show "first letter offset" scrolling in library views</label>
+					<onclick>Skin.ToggleSetting(hidescrolloffset)</onclick>
+					<selected>Skin.HasSetting(hidescrolloffset)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="button" id="284">
+					<description>title</description>
+					<include>newHomeMenuSubSettingsButton</include>
+					<enable>Skin.HasSetting(dummy)</enable>
+				</control>
+				<control type="button" id="285">
+					<description>title</description>
+					<label>debug setting (don't activate unless knowing what for) :</label>
+					<include>newHomeMenuSubSettingsButton</include>
+					<enable>Skin.HasSetting(dummy)</enable>
+				</control>
+				<control type="radiobutton" id="286">
+					<description>Studio Flags Debug</description>
+					<label>debug studio flags in "List" view</label>
+					<onclick>Skin.ToggleSetting(debugstudioflags)</onclick>
+					<selected>Skin.HasSetting(debugstudioflags)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>-->
+			</control>
+			<!-- about Retroplex -->
+			<control type="group" id="5000">
+				<include>transition2</include>
+				<include>contextMenuHide</include>
+				<visible>!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9013)</visible>
+				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9013)">Conditional</animation>
+				<!-- separator between credits -->
+				<control type="image">
+					<posx>256</posx>
+					<posy>210</posy>
+					<height>10</height>
+					<width>370</width>
+					<texture>dialogs/sliderBackground_.png</texture>
+					<aspectratio align="right">stretch</aspectratio>
+					<include>transition2</include>
+					<animation type="Conditional" condition="true">
+						<effect type="fade" start="0" end="80"/>
+					</animation>
+					<visible>!Control.HasFocus(300) + [ControlGroup(9100).HasFocus() | ControlGroup(200).HasFocus()]</visible>
+				</control>
+				<!-- grainy edition credits -->
+				<control type="group">
+					<posx>30</posx>
+					<posy>10</posy>
+					<control type="textbox">
+						<label>[COLOR=greenlime]Retroplex[/COLOR] is designed, coded and maintained by [COLOR=greenlime]Sebastian[/COLOR] (se.bastian).[CR][CR]
+							Please come and discuss it in the Plex community Forums, in the skins section.[CR]There you can also follow the latest updates and news, get help and submit suggestions.[CR][CR]To ensure you're always having the latest version, please use [COLOR=greenlime]Preen[/COLOR] for updating : [CR]http://www.anomiesoftware.com/Anomie_Software/Preen.html[CR][CR][COLOR=greenlime]Thank YOU[/COLOR] for considering Retroplex to be worthy of your delicate eyes.</label>
+						<width>840</width>
+						<height>300</height>
+						<align>left</align>
+						<textcolor>Color1</textcolor>
+						<font>qlassikSmall2</font>
+						<include>textBox</include>
+					</control>
+				</control>
+			</control>
+			<!-- views settings -->
+			<control type="grouplist" id="200">
+				<onleft>9017</onleft>
+				<onright>300</onright>
+				<onup>200</onup>
+				<ondown>200</ondown>
+				<itemgap>0</itemgap>
+				<visible>!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9017)</visible>
+				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9017)">Conditional</animation>
+				<include>transition2</include>
+				<control type="radiobutton" id="261">
+					<description>scrollbars</description>
+					<label>31097</label>
+					<onclick>Skin.ToggleSetting(scrollbar)</onclick>
+					<selected>Skin.HasSetting(scrollbar)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="262">
+					<description>scrollbars hide</description>
+					<label>$LOCALIZE[31055]</label>
+					<onclick>Skin.ToggleSetting(scrollbarHide)</onclick>
+					<selected>Skin.HasSetting(scrollbarHide)</selected>
+					<enable>Skin.HasSetting(scrollbar)</enable>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="263">
+					<description>keyboard</description>
+					<label>$LOCALIZE[31035]</label>
+					<onclick>Skin.ToggleSetting(keyboardButtons)</onclick>
+					<selected>!Skin.HasSetting(keyboardButtons)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="264">
+					<label>Unwatched Icon : show for Movies</label>
+					<onclick>Skin.ToggleSetting(overlayMovies)</onclick>
+					<selected>Skin.HasSetting(overlayMovies)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="265">
+					<label>Unwatched Icon : show for TV Shows and Seasons</label>
+					<onclick>Skin.ToggleSetting(overlayTVSHows)</onclick>
+					<selected>Skin.HasSetting(overlayTVSHows)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="266">
+					<label>Unwatched Icon : show for TV Show Episodes</label>
+					<onclick>Skin.ToggleSetting(overlayEpisodes)</onclick>
+					<selected>Skin.HasSetting(overlayEpisodes)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="267">
+					<label>HD Icon : show for all movies</label>
+					<onclick>Skin.ToggleSetting(enablehdflags)</onclick>
+					<selected>Skin.HasSetting(enablehdflags)</selected>
+					<enable>!Skin.HasSetting(onlyfocusflagpanel)</enable>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="268">
+					<label>HD Icon : show only for Focused Item</label>
+					<onclick>Skin.ToggleSetting(onlyfocusflagpanel)</onclick>
+					<selected>Skin.HasSetting(onlyfocusflagpanel)</selected>
+					<enable>!Skin.HasSetting(enablehdflags)</enable>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="269">
+					<label>Hide Ratings</label>
+					<onclick>Skin.ToggleSetting(hideratings)</onclick>
+					<selected>Skin.HasSetting(hideratings)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+			</control>
+			<!-- home menu -->
+			<control type="grouplist" id="200">
+				<onleft>9019</onleft>
+				<onright>300</onright>
+				<onup>200</onup>
+				<ondown>200</ondown>
+				<itemgap>0</itemgap>
+				<visible>!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9019)</visible>
+				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9019)">Conditional</animation>
+				<include>transition2</include>
+				<!-- iTunes shortcuts -->
+				<control type="radiobutton" id="291">
+					<description>show iTunes shortcuts</description>
+					<label>Show iTunes Shortcuts in main menu</label>
+					<onclick>Skin.ToggleSetting(iTunesHome)</onclick>
+					<selected>Skin.HasSetting(iTunesHome)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+					<visible>Skin.HasSetting(originalhome)</visible>
+				</control>
+				<!-- favorites -->
+				<control type="radiobutton" id="292">
+					<label>31959</label>
+					<onclick>Skin.ToggleSetting(homemenuFavourites)</onclick>
+					<selected>Skin.HasSetting(homemenuFavourites)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+					<visible>Skin.HasSetting(originalhome)</visible>
+				</control>
+				<!-- programs -->
+				<control type="radiobutton" id="293">
+					<label>31956</label>
+					<onclick>Skin.ToggleSetting(homemenuPrograms)</onclick>
+					<selected>Skin.HasSetting(homemenuPrograms)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+					<visible>Skin.HasSetting(originalhome)</visible>
+				</control>
+				<!-- weather -->
+				<control type="radiobutton" id="294">
+					<label>31957</label>
+					<onclick>Skin.ToggleSetting(homemenuWeather)</onclick>
+					<selected>Skin.HasSetting(homemenuWeather)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+					<visible>Skin.HasSetting(originalhome)</visible>
+				</control>
+				<!-- plex online -->
+				<control type="radiobutton" id="295">
+					<label>Show Plug-Ins in Main Menu</label>
+					<onclick>Skin.ToggleSetting(homeMenuPlugins)</onclick>
+					<selected>Skin.HasSetting(homeMenuPlugins)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+					<visible>Skin.HasSetting(originalhome)</visible>
+				</control>
+			</control>
+		</control>
+		<control type="image">
+			<posx>80</posx>
+			<posy>543</posy>
+		<include>retroplexLogo</include>
+		</control>
+	</controls>
+</window>

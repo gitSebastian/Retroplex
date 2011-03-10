@@ -1,0 +1,173 @@
+<window id="12">
+	<defaultcontrol>888</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<include>transition2</include>
+			<texture background="true" flipx="true">backgrounds/settings02.jpg</texture>
+		</control>
+		<include>themeBackground2</include>
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<texture background="true">backgrounds/background15.png</texture>
+			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+			<animation type="WindowOpen">
+				<effect type="zoom" time="400" center="640,360" start="180" end="100" tween="cubic" easing="out"/>
+			</animation>
+			<animation type="WindowClose">
+				<effect type="zoom" time="250" center="640,360" start="100" end="180" tween="cubic" easing="in"/>				
+			</animation>
+		</control>
+		<include>allscreens</include>
+		<!-- Background -->
+		<control type="group">
+			<control type="image">
+				<posx>0</posx>
+				<posy>-50</posy>
+				<height>800</height>
+				<width>324</width>
+				<texture flipx="true">dialogs/square_menu_background.png</texture>
+				<aspectratio align="right">stretch</aspectratio>
+				<animation type="Conditional" condition="true">
+					<effect type="fade" start="0" end="50"/>
+				</animation>
+			</control>
+		</control>
+		<!-- Separator -->
+		<control type="group">
+			<control type="image">
+				<posx>295</posx>
+				<posy>-200</posy>
+				<height>1120</height>
+				<width>29</width>
+				<texture>settings/separator.png</texture>
+				<aspectratio align="right">stretch</aspectratio>
+			</control>
+		</control>
+		<!-- white separators top and bottom sub-menu -->
+		<control type="image">
+			<posx>356</posx>
+			<posy>140</posy>
+			<height>10</height>
+			<width>800</width>
+			<texture>dialogs/sliderBackground_.png</texture>
+			<aspectratio align="right">stretch</aspectratio>
+			<include>transition2</include>
+			<animation type="Conditional" condition="true">
+				<effect type="fade" start="0" end="80"/>
+			</animation>
+			<!--<visible>!Control.HasFocus(300) + [ControlGroup(9100).HasFocus() | ControlGroup(200).HasFocus()]</visible>-->
+		</control>
+		<control type="image">
+			<posx>356</posx>
+			<posy>617</posy>
+			<height>10</height>
+			<width>800</width>
+			<texture>dialogs/sliderBackground_.png</texture>
+			<aspectratio align="right">stretch</aspectratio>
+			<include>transition2</include>
+			<animation type="Conditional" condition="true">
+				<effect type="fade" start="0" end="80"/>
+			</animation>
+			<!--<visible>!Control.HasFocus(300) + [ControlGroup(9100).HasFocus() | ControlGroup(200).HasFocus()]</visible>-->
+		</control>
+		<control type="group">
+			<control type="label">
+				<include>PageLabel</include>
+				<label>$LOCALIZE[10507] </label>
+				<visible>Window.IsActive(settings)</visible>
+			</control>
+			<control type="label">
+				<include>PageLabel</include>
+				<label>$LOCALIZE[5] [COLOR=greenlime]$LOCALIZE[480][/COLOR]</label>
+				<visible>Window.IsActive(appearancesettings)</visible>
+			</control>
+			<control type="label">
+				<include>PageLabel</include>
+				<label>$LOCALIZE[157] [COLOR=greenlime]$LOCALIZE[5][/COLOR]</label>
+				<visible>Window.IsActive(videossettings)</visible>
+			</control>
+			<control type="label">
+				<include>PageLabel</include>
+				<label>$LOCALIZE[0] [COLOR=greenlime]$LOCALIZE[5][/COLOR]</label>
+				<visible>Window.IsActive(programssettings)</visible>
+			</control>
+			<control type="label">
+				<include>PageLabel</include>
+				<label>$LOCALIZE[2] [COLOR=greenlime]$LOCALIZE[5][/COLOR]</label>
+				<visible>Window.IsActive(musicsettings)</visible>
+			</control>
+			<control type="label">
+				<include>PageLabel</include>
+				<label>$LOCALIZE[1] [COLOR=greenlime]$LOCALIZE[5][/COLOR]</label>
+				<visible>Window.IsActive(picturessettings)</visible>
+			</control>
+			<control type="label">
+				<include>PageLabel</include>
+				<label>$LOCALIZE[705] [COLOR=greenlime]$LOCALIZE[5][/COLOR]</label>
+				<visible>Window.IsActive(networksettings)</visible>
+			</control>
+			<control type="label"><include>PageLabel</include><label>$LOCALIZE[12600] [COLOR=greenlime]$LOCALIZE[5][/COLOR]</label>&gt;
+				<visible>Window.IsActive(weathersettings)</visible></control>
+			<control type="label">
+				<include>PageLabel</include>
+				<label>$LOCALIZE[13000] [COLOR=greenlime]$LOCALIZE[5][/COLOR]</label>
+				<visible>Window.IsActive(systemsettings)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<control type="grouplist" id="3">
+				<description>button area</description>
+				<posx>-1</posx>
+				<posy>150</posy>
+				<height>410</height>
+				<itemgap>0</itemgap>
+				<onleft>-</onleft>
+				<onright>5</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<include>transition2</include>
+				<visible>!Window.IsActive(progressdialog)</visible>
+			</control>
+			<control type="grouplist" id="5">
+				<description>control area</description>
+				<posx>323</posx>
+				<posy>150</posy>
+				<width>850</width>
+				<height>600</height>
+				<itemgap>0</itemgap>
+				<onleft>3</onleft>
+				<onright>-</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<include>transition2</include>
+				<visible>!Window.IsActive(progressdialog)</visible>
+			</control>
+			<control type="button" id="7">
+				<description>Default Button</description>
+				<include>newHomeMenuSubSettingsButton</include>
+			</control>
+			<control type="radiobutton" id="8">
+				<description>Default RadioButton</description>
+				<include>newHomeMenuSubSettingsButton</include>
+			</control>
+			<control type="spincontrolex" id="9">
+				<description>Default SpinControlex</description>
+				<include>newHomeMenuSubSettingsButton</include>
+			</control>
+			<control type="button" id="10">
+				<description>Default Category Button</description>
+				<label>[UPPERCASE]224[/UPPERCASE]</label>
+				<include>settingsLeftMenuFormat</include>
+			</control>
+		</control>
+		<control type="image">
+			<posx>80</posx>
+			<posy>543</posy>
+		<include>retroplexLogo</include>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<window id="2004">
+	<controls>
+		<!--<control type="label" id="200">
+			<posx>28r</posx>
+			<posy>40</posy>
+			<label>[COLOR=greenlime]$INFO[MusicPlayer.Title] &#xB7;[/COLOR] $INFO[MusicPlayer.Artist]</label>
+			<width>800</width>
+			<align>right</align>
+			<height>40</height>
+			<font>petitaSmall</font>
+			<aligny>center</aligny>
+			<textcolor>ivory3</textcolor>
+			<include>transition2</include>
+			<visible>Player.HasAudio + !Skin.HasSetting(overlay) + ![Window.IsActive(107) | Window.IsActive(104) | Window.IsActive(10133) | Window.IsActive(10112) | Window.IsActive(0) | Window.IsActive(500) | Window.IsActive(50)]</visible>
+		</control>-->
+		<control type="group">
+			<posy>30</posy>
+			<posx>28r</posx>
+			<include>transition2</include>
+			<control type="label" id="200">				
+				<label>[COLOR=greenlime]$INFO[MusicPlayer.Title][/COLOR]</label>
+				<width>800</width>
+				<align>right</align>
+				<height>40</height>
+				<font>lobsterSmallest</font>
+				<aligny>center</aligny>
+				<textcolor>ivory3</textcolor>
+				<visible>Player.HasAudio + !Skin.HasSetting(overlay) + ![Window.IsActive(107) | Window.IsActive(104) | Window.IsActive(10133) | Window.IsActive(10112) | Window.IsActive(0) | Window.IsActive(500) | Window.IsActive(50)]</visible>
+			</control>
+			<control type="label" id="200">
+				<posy>20</posy>
+				<label>$INFO[MusicPlayer.Artist]</label>
+				<width>800</width>
+				<align>right</align>
+				<height>40</height>
+				<font>qlassikSmall</font>
+				<aligny>center</aligny>
+				<textcolor>ivory3</textcolor>
+				<visible>Player.HasAudio + !Skin.HasSetting(overlay) + ![Window.IsActive(107) | Window.IsActive(104) | Window.IsActive(10133) | Window.IsActive(10112) | Window.IsActive(0) | Window.IsActive(500) | Window.IsActive(50)]</visible>
+			</control>
+		</control>
+	</controls>
+</window>

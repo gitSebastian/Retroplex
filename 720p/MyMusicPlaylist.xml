@@ -1,0 +1,322 @@
+<?xml version="1.0"?>
+<window id="500">
+	<defaultcontrol always="false">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>themeBackground2</include>
+		<include>grainyeditionback</include>
+		<!-- page label -->
+		<control type="label">
+			<label>$LOCALIZE[2] [COLOR=greenlime]$LOCALIZE[559][/COLOR]</label>
+			<posx>34</posx>
+			<posy>20</posy>
+			<width>950</width>
+			<aligny>center</aligny>
+			<font>qlassikMedium2</font>
+			<textcolor>ivory3</textcolor>
+			<include>transition3</include>
+			<include>PageLabelsLeftMenuSlide</include>
+			<visible>!Window.IsActive(2001)</visible>
+		</control>
+		<include>LibraryPlaylistMenu</include>
+		<include>info_MusicList</include>
+		<include>allscreens</include>
+		<control type="group">
+			<include>PlaylistNowLeftMenuSlide</include>
+			<!-- Shadow layer for right side bg -->
+			<control type="group">
+				<animation effect="fade" start="100" end="100" time="350" condition="Control.HasFocus(300)">Conditional</animation>
+				<animation effect="slide" start="162" end="0" time="500" condition="Control.HasFocus(300)">Conditional</animation>
+				<animation effect="slide" start="0" end="162" time="500" condition="!Control.HasFocus(300)">Conditional</animation>
+				<control type="image">
+					<posx>623</posx>
+					<posy>-50</posy>
+					<height>800</height>
+					<width>540</width>
+					<include>transition2</include>
+					<include>infoDialogHide</include>
+					<include>contextMenuHide</include>
+					<texture flipx="true">dialogs/square_menu_background.png</texture>
+					<aspectratio align="right">stretch</aspectratio>
+					<animation type="Conditional" condition="true">
+						<effect type="fade" start="0" end="50"/>
+					</animation>
+				</control>
+			</control>
+			<!-- vertical separator -->
+			<control type="group">
+				<animation effect="fade" start="100" end="20" time="350" condition="Control.HasFocus(40) | Control.HasFocus(1110) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
+				<control type="image">
+					<posx>785</posx>
+					<posy>-200</posy>
+					<height>1120</height>
+					<width>29</width>
+					<texture flipx="true">settings/separator.png</texture>
+					<aspectratio align="right">stretch</aspectratio>
+					<include>transition2</include>
+					<include>contextMenuHide</include>
+					<include>infoDialogHide</include>
+				</control>
+			</control>
+			<!-- LIST -->
+			<control type="group">
+				<animation effect="fade" start="100" end="20" time="350" condition="Control.HasFocus(9000) | Control.HasFocus(1110) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
+				<visible>Window.IsActive(musicplaylist)</visible>
+			</control>
+			<control type="fixedlist" id="50">
+				<viewtype label="535">List</viewtype>
+				<posx>0</posx>
+				<posy>110</posy>
+				<width>800</width>
+				<height>520</height>
+				<onleft>300</onleft>
+				<onright>23</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<scrolltime>150</scrolltime>
+				<orientation>vertical</orientation>
+				<pagecontrol>23</pagecontrol>
+				<focusposition>6</focusposition>
+				<include>transition2</include>
+				<include>infoDialogHide</include>
+				<include>contextMenuHide</include>
+				<visible>!Window.IsActive(progressdialog)</visible>
+				<itemlayout condition="Window.IsActive(musicplaylist)" width="625" height="40">
+					<control type="label">
+						<posy>10</posy>
+						<posx>100</posx>
+						<width>500</width>
+						<label>$INFO[ListItem.Title,, ][COLOR=ffA1927F]&#xB7; $INFO[ListItem.Artist][/COLOR]</label>
+						<font>qlassikSmall</font>
+						<textcolor>ivory2</textcolor>
+						<selectedcolor>greenlime</selectedcolor>
+					</control>
+					<control type="label">
+						<posy>10</posy>
+						<posx>100</posx>
+						<width>500</width>
+						<label>$INFO[ListItem.Label]</label>
+						<include>listMenu</include>
+						<font>qlassikSmall</font>
+						<textcolor>ivory2</textcolor>
+						<selectedcolor>Color5</selectedcolor>
+						<visible>IsEmpty(ListItem.Title)</visible>
+					</control>
+					<control type="label">
+						<posy>10</posy>
+						<posx>740</posx>
+						<width>500</width>
+						<label>$INFO[ListItem.Duration]</label>
+						<align>right</align>
+						<font>qlassikSmall</font>
+						<textcolor>ivory2</textcolor>
+						<selectedcolor>greenlime</selectedcolor>
+						<visible>!IsEmpty(ListItem.Title)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout condition="Window.IsActive(musicplaylist)" width="625" height="40">
+					<control type="image">
+						<posy>2</posy>
+						<posx>0</posx>
+						<width>785</width>
+						<height>40</height>
+						<texture flipx="true">dialogs/square_menu_background.png</texture>
+						<animation type="Conditional" condition="true">
+							<effect type="fade" start="0" end="50"/>
+						</animation>
+					</control>
+					<control type="label">
+						<posy>10</posy>
+						<posx>100</posx>
+						<width>500</width>
+						<label>[COLOR=greenlime]$INFO[ListItem.Title,, ]&#xB7;[/COLOR] [COLOR=Color1]$INFO[ListItem.Artist][/COLOR]</label>
+						<textcolor>ivory3</textcolor>
+						<font>lobsterSmall</font>
+					</control>
+					<control type="label">
+						<posy>10</posy>
+						<posx>740</posx>
+						<width>500</width>
+						<label>[COLOR=greenlime]$INFO[ListItem.Duration][/COLOR]</label>
+						<align>right</align>
+						<textcolor>ivory3</textcolor>
+						<font>qlassikSmall</font>
+						<visible>!IsEmpty(ListItem.Title)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<!-- now and next playing assembly -->
+			<control type="group">
+				<posy>-5</posy>
+				<posx>120</posx>
+				<!-- now playing progress bar and track information -->
+				<control type="group">
+					<posy>117</posy>
+					<posx>755</posx>
+					<animation type="WindowOpen">
+						<effect type="fade" start="0" end="90" time="1000" delay="1500"/>
+					</animation>
+					<animation type="WindowClose">
+						<effect type="fade" start="50" end="0" time="100"/>
+					</animation>
+					<animation type="Visible">
+						<effect type="fade" start="0" end="90" time="1000" delay="300"/>
+					</animation>
+					<!-- progress bar -->
+					<control type="progress" id="21">
+						<description>Progress bar</description>
+						<posy>-10</posy>
+						<posx>0</posx>
+						<height>1</height>
+						<width>324</width>
+						<info>Player.Progress</info>
+						<texturebg>dialogs/progressBackground_.png</texturebg>
+						<lefttexture>-</lefttexture>
+						<midtexture border="0">dialogs/progressSlider_.png</midtexture>
+						<righttexture>-</righttexture>
+						<animation effect="fade" start="0" end="100" time="1000">Visible</animation>
+						<animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
+						<visible>Player.HasMusicPlaylist</visible>
+					</control>
+					<!-- now playing informations -->
+					<control type="group">
+						<posy>0</posy>
+						<posx>0</posx>
+						<visible>Player.HasMusicPlaylist</visible>
+						<control type="label">
+							<width>324</width>
+							<font>qlassikSmall</font>
+							<textcolor>ivory3</textcolor>
+							<label>$INFO[MusicPlayer.Artist]</label>
+							<align>left</align>
+						</control>
+						<control type="label">
+							<posy>20</posy>
+							<width>324</width>
+							<font>lobsterSmallest</font>
+							<textcolor>greenlime</textcolor>
+							<label>$INFO[MusicPlayer.Title]</label>
+							<align>left</align>
+						</control>
+					</control>
+				</control>
+				<!-- frame -->
+				<control type="image">
+					<animation type="WindowOpen">
+						<effect type="slide" start="0,-500" time="1000" delay="200" tween="cubic" easing="out"/>
+						<effect type="fade" start="20" end="80" time="2000" delay="500"/>
+					</animation>
+					<animation type="WindowClose">
+						<effect type="slide" start="0,0" end="0,-500" time="700" tween="cubic" easing="in"/>
+						<effect type="fade" start="50" end="0" time="700"/>
+					</animation>
+					<animation type="Visible">
+						<effect type="fade" start="0" end="80" time="2000" delay="300"/>
+					</animation>
+					<posx>742</posx>
+					<posy>155</posy>
+					<width>350</width>
+					<height>382</height>
+					<include>transition2</include>
+					<include>infoDialogHide</include>
+					<include>grainypagefade</include>
+					<texture>frames/bannerFrame.png</texture>
+					<visible>Window.IsActive(musicplaylist) + Player.HasAudio</visible>
+				</control>
+				<!-- item image -->
+				<control type="image" id="99">
+					<animation type="WindowOpen">
+						<effect type="slide" start="0,-500" time="1000" delay="200" tween="cubic" easing="out"/>
+						<effect type="fade" start="20" end="100" time="2000" delay="500"/>
+					</animation>
+					<animation type="WindowClose">
+						<effect type="slide" start="0,0" end="0,-500" time="700" tween="cubic" easing="in"/>
+						<effect type="fade" start="50" end="0" time="700"/>
+					</animation>
+					<animation type="Visible">
+						<effect type="fade" start="0" end="100" time="2000" delay="300"/>
+					</animation>
+					<posx>756</posx>
+					<posy>173</posy>
+					<width>322</width>
+					<height>322</height>
+					<fadetime>400</fadetime>
+					<include>transition2</include>
+					<include>infoDialogHide</include>
+					<include>grainypagefade</include>
+					<info>MusicPlayer.Cover</info>
+					<aspectratio>scale</aspectratio>
+					<texture diffuse="frames/slideBigPosterMask.png"/>
+					<visible>Window.IsActive(musicplaylist) + Player.HasAudio</visible>
+				</control>
+				<!-- NEXT PLAYING -->
+				<control type="group">
+					<posx>740</posx>
+					<posy>524</posy>
+					<visible>Player.HasMusicPlaylist + MusicPlayer.HasNext</visible>
+					<!-- effects when closing/opening window -->
+					<animation type="WindowOpen">
+						<effect type="slide" start="0,500" time="1000" delay="100" tween="cubic" easing="out"/>
+						<effect type="fade" start="0" end="60" time="1000" delay="100"/>
+					</animation>
+					<animation type="WindowClose">
+						<effect type="slide" start="0,0" end="0,500" time="700" tween="cubic" easing="in"/>
+						<effect type="fade" start="60" end="0" time="700"/>
+					</animation>
+					<!-- next playing informations -->
+					<control type="group">
+						<posy>82</posy>
+						<posx>210</posx>
+						<control type="label">
+							<posy>-2</posy>
+							<width>220</width>
+							<font>qlassikSmall</font>
+							<textcolor>ivory3</textcolor>
+							<label>$INFO[MusicPlayer.Offset(1).Artist]</label>
+							<align>right</align>
+						</control>
+						<control type="label">
+							<posy>21</posy>
+							<width>220</width>
+							<font>lobsterSmallest</font>
+							<textcolor>ivory3</textcolor>
+							<multilinewrap>true</multilinewrap>
+							<label>$INFO[MusicPlayer.Offset(1).Title]</label>
+							<align>right</align>
+						</control>
+					</control>
+					<!-- cover next playing -->
+					<control type="group">
+						<posx>220</posx>
+						<align>right</align>
+						<visible>MusicPlayer.HasNext</visible>
+						<control type="image">
+							<posx>-7</posx>
+							<posy>-9</posy>
+							<width>132</width>
+							<height>145</height>
+							<texture>frames/bannerFrame.png</texture>
+							<visible>MusicPlayer.HasNext</visible>
+						</control>
+						<control type="image">
+							<width>118</width>
+							<height>118</height>
+							<info>MusicPlayer.NextNewCover</info>
+							<aspectratio>scale</aspectratio>
+							<visible>MusicPlayer.HasNewCoverNext</visible>
+							<texture diffuse="frames/slideBigPosterMask.png"/>
+						</control>
+						<control type="image">
+							<width>118</width>
+							<height>118</height>
+							<info>MusicPlayer.Cover</info>
+							<aspectratio>scale</aspectratio>
+							<visible>!MusicPlayer.HasNewCoverNext</visible>
+							<texture diffuse="frames/slideBigPosterMask.png"/>
+						</control>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
