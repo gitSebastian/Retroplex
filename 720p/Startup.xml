@@ -8,7 +8,7 @@
 			<onfocus>ReplaceWindow(Home)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<animation effect="fade" delay="5000" end="100">Focus</animation>
+			<animation effect="fade" delay="6100" end="100">Focus</animation>
 		</control>
 		<control type="image">
 			<posx>512</posx>
