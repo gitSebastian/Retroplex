@@ -1462,7 +1462,7 @@
 		</control>
 	</include>
 	<!-- SLIDE VIEW (episodes) -->
-	<include name="view_SlideEpisode">
+	<!--<include name="view_SlideEpisode">
 		<control type="fixedlist" id="58">
 			<viewtype label="Slide">wrap</viewtype>
 			<posx>-590</posx>
@@ -1571,7 +1571,7 @@
 				</control>
 			</focusedlayout>
 		</control>
-	</include>
+	</include>-->
 	<!-- POSTER VIEW (posters and flags positions) -->
 	<!-- large poster view (without right side info) -->
 	<include name="view_Poster">
