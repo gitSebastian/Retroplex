@@ -390,6 +390,8 @@
 					<onclick>Skin.ToggleSetting(scrollbar)</onclick>
 					<selected>Skin.HasSetting(scrollbar)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
+					<enable>Skin.HasSetting(dummy)</enable>
+					<visible>false</visible>
 				</control>
 				<control type="radiobutton" id="262">
 					<description>scrollbars hide</description>
@@ -398,6 +400,7 @@
 					<selected>Skin.HasSetting(scrollbarHide)</selected>
 					<enable>Skin.HasSetting(scrollbar)</enable>
 					<include>newHomeMenuSubSettingsButton</include>
+					<visible>false</visible>
 				</control>
 				<control type="radiobutton" id="263">
 					<description>keyboard</description>
@@ -443,6 +446,8 @@
 					<onclick>Skin.ToggleSetting(hideratings)</onclick>
 					<selected>Skin.HasSetting(hideratings)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
+					<enable>Skin.HasSetting(dummy)</enable>
+					<visible>false</visible>
 				</control>
 			</control>
 			<!-- home menu -->

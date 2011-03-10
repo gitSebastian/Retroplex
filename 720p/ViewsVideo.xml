@@ -361,7 +361,7 @@
 					</control>
 					<control type="image">
 						<posx>0</posx>
-						<posy>620</posy>
+						<posy>618</posy>
 						<width>450</width>
 						<height>1</height>
 						<aligny>top</aligny>
@@ -374,7 +374,7 @@
 						<include>transition2</include>
 						<control type="textbox" id="8">
 							<width>450</width>
-							<height>205</height>
+							<height>203</height>
 							<align>left</align>
 							<aligny>top</aligny>
 							<label>$INFO[ListItem.Plot]</label>
@@ -650,13 +650,15 @@
 				<include>grainypagefade</include>
 				<include>watchedOverlay</include>
 				<include>focus_SlidePosterOverlay</include>
+				<width>25</width>
+				<height>25</height>
 				<visible>Control.IsVisible(555) + [Container.Content(movies) + Skin.HasSetting(overlayMovies) | Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)]</visible>
 			</control>
 			<control type="image">
 				<posx>794</posx>
-				<posy>436</posy>
-				<width>39</width>
-				<height>24</height>
+				<posy>435</posy>
+				<width>25</width>
+				<height>25</height>
 				<include>transition2</include>
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
@@ -1094,7 +1096,7 @@
 						<height>26</height>
 						<include>watchedOverlay</include>
 						<include>focus_SlidePosterOverlay</include>
-						<visible>!Control.HasFocus(8000) + [Container.Content(movies) + Skin.HasSetting(overlayMovies) | Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)]</visible>
+						<visible>!Control.HasFocus(8000) + [Container.Content(movies) + Skin.HasSetting(overlayMovies) | Container.Content(tvshows) + Skin.HasSetting(overlayTVShows) | Container.Content(seasons) + Skin.HasSetting(overlayTVShows)]</visible>
 					</control>
 				</itemlayout>
 				<!-- the focused poster -->
@@ -1136,7 +1138,7 @@
 						<height>26</height>
 						<include>watchedOverlay</include>
 						<include>focus_SlidePosterFlags</include>
-						<visible>!Control.HasFocus(8000) + [Container.Content(movies) + Skin.HasSetting(overlayMovies) | Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)]</visible>
+						<visible>!Control.HasFocus(8000) + [Container.Content(movies) + Skin.HasSetting(overlayMovies) | Container.Content(tvshows) + Skin.HasSetting(overlayTVShows) | Container.Content(seasons) + Skin.HasSetting(overlayTVShows)]</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -1316,7 +1318,7 @@
 			<visible>Control.IsVisible(52) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 		</control>-->
 				<!-- .png -->
-				<control type="largeimage">
+			<!--	<control type="largeimage">
 			<posx>8</posx>
 			<posy>-9</posy>
 			<width>357</width>
@@ -1328,13 +1330,12 @@
 			<include>grainypagefade</include>
 			<texture background="true">$INFO[listitem.path]poster.png</texture>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<!--<include>thumbFadeTime</include>-->
 			<animation type="Conditional" condition="true">
 				<effect type="fade" start="20" end="100" time="2600"/>
 				<effect type="zoom" center="0,40" tween="Cubic" start="0,0" end="100,100" easing="In" reversible="false" time="500"/>
 			</animation>
 			<visible>Control.IsVisible(52) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
-		</control>
+		</control>-->
 				<!-- .jpg -->
 				<!--<control type="largeimage">
 			<posx>8</posx>
@@ -1634,10 +1635,10 @@
 						<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)] | [Container.Content(seasons) + Skin.HasSetting(overlayTVShows)]</visible>
 					</control>
 					<control type="image">
-						<posx>25</posx>
-						<posy>227</posy>
-						<width>36</width>
-						<height>21</height>
+						<posx>26</posx>
+						<posy>228</posy>
+						<width>20</width>
+						<height>20</height>
 						<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 						<aspectratio align="right">keep</aspectratio>
 						<visible>Skin.HasSetting(enablehdflags)</visible>
@@ -1679,7 +1680,7 @@
 					</control>
 					<!-- unwatched movies & shows -->
 					<control type="image">
-						<posx>158</posx>
+						<posx>159</posx>
 						<posy>228</posy>
 						<width>20</width>
 						<height>20</height>
@@ -1699,10 +1700,10 @@
 						<include>focus_Poster</include>
 					</control>
 					<control type="image">
-						<posx>25</posx>
-						<posy>227</posy>
-						<width>36</width>
-						<height>21</height>
+						<posx>26</posx>
+						<posy>228</posy>
+						<width>20</width>
+						<height>20</height>
 						<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 						<aspectratio align="right">keep</aspectratio>
 						<include>focus_Poster</include>
@@ -1899,15 +1900,15 @@
 						<include>watchedOverlay</include>
 						<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)]</visible>
 					</control>
-					<control type="image">
-						<posx>24</posx>
+					<!--<control type="image">
+						<posx>26</posx>
 						<posy>166</posy>
-						<width>36</width>
-						<height>21</height>
+						<width>20</width>
+						<height>20</height>
 						<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 						<aspectratio align="right">keep</aspectratio>
 						<visible>Skin.HasSetting(enablehdflags)</visible>
-					</control>
+					</control>-->
 				</itemlayout>
 				<!-- focused poster -->
 				<focusedlayout height="190" width="133">
@@ -1950,16 +1951,16 @@
 						<include>focus_PosterWithInfo</include>
 						<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)]</visible>
 					</control>
-					<control type="image">
-						<posx>24</posx>
+					<!--<control type="image">
+						<posx>26</posx>
 						<posy>166</posy>
-						<width>36</width>
-						<height>21</height>
+						<width>20</width>
+						<height>20</height>
 						<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 						<aspectratio align="right">keep</aspectratio>
 						<include>focus_PosterWithInfo</include>
 						<visible>Skin.HasSetting(onlyfocusflagpanel) | Skin.HasSetting(enablehdflags)</visible>
-					</control>
+					</control>-->
 				</focusedlayout>
 			</control>
 			<control type="group">
