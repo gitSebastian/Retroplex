@@ -363,7 +363,7 @@
 	<!-- PAGE ELEMENTS -->
 	<include name="startupBackground">
 		<aspectratio>scale</aspectratio>
-		<timeperimage>5000</timeperimage>
+		<timeperimage>6000</timeperimage>
 		<fadetime>850</fadetime>
 		<randomize>true</randomize>
 		<loop>yes</loop>
