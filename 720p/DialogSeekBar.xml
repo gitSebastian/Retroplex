@@ -10,8 +10,7 @@
 			<!-- fix to glitch when this window sometimes showed while opening and -->
 			<!-- caching the video : is hidden while caching -->
 			<visible>!Player.Caching</visible>
-			<control type="group">
-				
+			<control type="group">				
 				<control type="image" id="1">
 					<posx>325</posx>
 					<posy>530</posy>
@@ -36,6 +35,14 @@
 					<height>6</height>
 					<info>Player.Progress</info>
 				</control>
+				<control type="image" id="1">
+					<posx>350</posx>
+					<posy>570</posy>
+					<width>600</width>				
+					<height>1</height>
+					<texture>dialogs/whiteline_h.png</texture>
+					<colordiffuse>Color6</colordiffuse>
+				</control>
 				<control type="label" id="1">
 					<posx>940</posx>
 					<posy>576</posy>
@@ -44,6 +51,15 @@
 					<font>qlassikSmall</font>
 					<label>$INFO[Player.Duration]</label>
 					<textcolor>ivory3</textcolor>
+				</control>
+				<control type="label" id="200">
+					<posx>940</posx>
+					<posy>541</posy>
+					<width>110</width>
+					<label>$INFO[System.Time]</label>
+					<align>right</align>
+					<font>qlassikSmall</font>
+					<textcolor>Color4</textcolor>
 				</control>
 			</control>
 			<control type="group" id="901">
@@ -155,8 +171,7 @@
 					<include>screenwidth</include>
 					<include>Heading3</include>
 				</control>
-			</control>
-			
+			</control>			
 		</control>
 	</controls>
 </window>

@@ -2,7 +2,7 @@
 <window id="6">
 	<defaultcontrol always="false">555</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>50,51,52,53,54,55,56,57,58,59,555,571</views>
+	<views>50,51,52,53,54,55,56,57,58,59,555,566,571</views>
 	<controls>		
 		<include>themeBackground2</include>
 		<include>grainyeditionback</include>
@@ -10,6 +10,7 @@
 		<include>AllViewCommonPageControls</include>
 		<include>videoFanartPageLabels</include>
 		<include>view_Banner</include>
+		<include>view_MultiBanner</include>
 		<include>view_BigList</include>
 		<include>view_GalleryFull</include>
 		<include>view_Poster</include>
@@ -30,98 +31,6 @@
 		<!-- SLIDE VIEW MOVIES & TVSHOWS -->
 		<include>view_SlidePoster</include>
 		<include>view_SlideWide</include>
-		<!-- SLIDE VIEW EPISODES -->
-		<control type="group">
-			<visible>Control.IsVisible(58) + Container.Content(episodes)</visible>
-			<include>transition3</include>
-			<include>infoDialogHide</include>
-			<include>contextMenuHide</include>
-			<posx>240</posx>
-			<posy>410</posy>
-			<!-- Focused TITLE -->
-			<control type="label">
-				<width>1080</width>
-				<label>$INFO[ListItem.Title]</label>
-				<include>Heading</include>
-				<visible>!IsEmpty(ListItem.Title) + IsEmpty(Container.Property(mixedParents))</visible>
-			</control>
-			<!-- Focused TITLE with show name -->
-			<control type="label">
-				<width>1080</width>
-				<label>$INFO[ListItem.TVShowTitle] : $INFO[ListItem.Title]</label>
-				<include>Heading</include>
-				<visible>!IsEmpty(ListItem.Title) + !IsEmpty(Container.Property(mixedParents))</visible>
-			</control>
-			<control type="label">
-				<posy>35</posy>
-				<width>980</width>
-				<label>$LOCALIZE[31087] $INFO[ListItem.Season] &#xB7; $LOCALIZE[31088] $INFO[ListItem.Episode] &#xB7; $INFO[ListItem.Date] &#xB7; $INFO[ListItem.Duration,, ]</label>
-				<align>left</align>
-				<include>Heading3</include>
-				<visible>!IsEmpty(ListItem.Title)</visible>
-			</control>
-			<control type="label">
-				<posy>35</posy>
-				<width>980</width>
-				<label>$LOCALIZE[31087] $INFO[ListItem.Season] &#xB7; $LOCALIZE[31088] $INFO[ListItem.Episode] &#xB7; $INFO[ListItem.Premiered]</label>
-				<align>left</align>
-				<include>Heading3</include>
-				<visible>!IsEmpty(ListItem.Title)</visible>
-			</control>
-			<!-- plot separators -->
-			<control type="image">
-				<posx>-200</posx>
-				<posy>59</posy>
-				<width>1200</width>
-				<height>1</height>
-				<texture>views/separatorFaded.png</texture>
-				<colordiffuse>Color4</colordiffuse>
-				<visible>Container.Content(movies) | Container.Content(episodes)</visible>
-			</control>
-			<control type="image">
-				<posx>-200</posx>
-				<posy>240</posy>
-				<width>1200</width>
-				<height>1</height>
-				<texture>views/separatorFaded.png</texture>
-				<colordiffuse>Color4</colordiffuse>
-				<visible>Container.Content(movies) | Container.Content(episodes)</visible>
-			</control>
-			<!-- original small caps -->
-			<control type="textbox" id="8">
-				<posy>60</posy>
-				<width>980</width>
-				<height>180</height>
-				<align>left</align>
-				<aligny>top</aligny>
-				<label>$INFO[ListItem.Plot]</label>
-				<textcolor>Color7</textcolor>
-				<font>normalLow</font>
-				<visible>Skin.HasSetting(usesmallcase)</visible>
-			</control>
-			<!-- use capitalisation -->
-			<control type="textbox" id="8">
-				<posy>60</posy>
-				<width>980</width>
-				<height>180</height>
-				<align>left</align>
-				<aligny>top</aligny>
-				<label>$INFO[ListItem.Plot]</label>
-				<textcolor>Color7</textcolor>
-				<font>normal</font>
-				<visible>!Skin.HasSetting(usesmallcase)</visible>
-			</control>
-		</control>
-		<!-- media flags, optional -->
-		<control type="group">
-			<include>transition3</include>
-			<include>infoDialogHide</include>
-			<include>contextMenuHide</include>
-			<posx>205</posx>
-			<posy>645</posy>
-			<include>typeFlagsInfoSlides</include>
-			<visible>Control.IsVisible(58)</visible>
-		</control>
 		<include>view_SlideEpisode</include>
 		<!-- GALLERY VIEW -->
 		<!-- TITLES -->

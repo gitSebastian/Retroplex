@@ -95,6 +95,13 @@
 				<!--<control type="button" id="9006">
 					<label>$LOCALIZE[31003]</label>
 					<onclick>Container.SetViewMode(58)</onclick>
+					<include>leftMenuViewOptions</include>
+					<visible>[Container.Content(episodes)]</visible>
+				</control>-->
+				<!-- slide (episodes) -->
+				<!--<control type="button" id="9006">
+					<label>$LOCALIZE[31003]</label>
+					<onclick>Container.SetViewMode(58)</onclick>
 					<include>leftMenuFormat</include>
 					<visible>Container.Content(episodes)</visible>
 				</control>-->
@@ -123,6 +130,13 @@
 				<control type="button" id="9010">
 					<label>$LOCALIZE[31093]</label>
 					<onclick>Container.SetViewMode(54)</onclick>
+					<include>leftMenuViewOptions</include>
+					<visible>Container.Content(tvshows) </visible>
+				</control>
+				<!-- multi-banners (tv shows) -->
+				<control type="button" id="9022">
+					<label>multi-banners</label>
+					<onclick>Container.SetViewMode(566)</onclick>
 					<include>leftMenuViewOptions</include>
 					<visible>Container.Content(tvshows) </visible>
 				</control>

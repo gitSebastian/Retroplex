@@ -100,6 +100,18 @@
 		<animation effect="slide" start="85" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
 		<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus()">Conditional</animation>
 	</include>
+	<!-- Multi-banners left menu animations -->
+	<include name="MultibannersLeftMenuSlide">
+		<animation effect="slide" start="0" end="130" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
+		<animation effect="slide" start="130" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
+		<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus()">Conditional</animation>
+	</include>
+	<!-- Multi-banners studio logo left menu animations -->
+	<include name="MultibannersStudioLogoLeftMenuSlide">
+		<animation effect="slide" start="0" end="150" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
+		<animation effect="slide" start="150" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
+		<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus()">Conditional</animation>
+	</include>	
 	<!-- Big List left menu animations -->
 	<include name="BigListLeftMenuRightSlide">
 		<animation effect="slide" start="0" end="450" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
@@ -316,11 +328,11 @@
 	</include>
 	<include name="focus_SlideEpisode">
 		<animation type="focus">
-			<effect type="zoom" tween="quadratic" start="100,100" end="130,130" reversible="false" center="auto" time="250"/>
+			<effect type="zoom" tween="quadratic" start="100,100" end="130,130" reversible="false" center="auto" time="350"/>
 		</animation>
-		<animation type="unfocus">
+		<!--<animation type="unfocus">
 			<effect type="zoom" tween="quadratic" start="130,130" end="100,100" reversible="false" center="auto" time="250"/>
-		</animation>
+		</animation>-->
 	</include>
 	<include name="focus_SlideEpisodeOverlay">
 		<animation type="focus">
@@ -333,7 +345,7 @@
 	<include name="focus_Banner">
 		<animation type="Focus" reversible="false">
 			<effect type="zoom" center="360,100" start="80" end="100" time="450" tween="Cubic" easing="out"/>
-			<effect type="fade" start="0" end="100" time="250"/>
+			<effect type="fade" start="20" end="100" time="250"/>
 		</animation>
 	</include>
 	<include name="albumSlideFocus">
@@ -506,12 +518,12 @@
 		</animation>
 	</include>
 	<include name="open_PlayerControls">
-		<animation type="WindowOpen">
+		<!--<animation type="WindowOpen">
 			<effect type="slide" start="0,75" end="0,0" tween="Cubic" easing="Out" time="250"/>
 		</animation>
 		<animation type="WindowClose">
 			<effect type="slide" start="0,0" end="0,75" tween="Cubic" easing="In" time="250"/>
-		</animation>
+		</animation>-->
 		<animation type="Visible">
 			<effect type="slide" start="0,75" end="0,0" tween="Cubic" easing="Out" time="250"/>
 		</animation>

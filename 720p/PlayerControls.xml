@@ -82,25 +82,25 @@
 				<!-- repeat -->
 				<control type="button" id="7">
 					<posy>-9</posy>
-					<posx>430</posx>
+					<posx>435</posx>
 					<width>48</width>
 					<height>48</height>
 					<onleft>6</onleft>
 					<onright>8</onright>
 					<label>repeat</label>
-					<font>petitaSmall</font>
+					<font>qlassikSmall</font>
 					<textcolor>Color4</textcolor>
-					<focusedcolor>Color1</focusedcolor>
+					<focusedcolor>greenlime</focusedcolor>
 					<onclick>XBMC.PlayerControl(Repeat)</onclick>
 				</control>
 				<control type="group">
-					<posy>-18</posy>
+					<posy>-17</posy>
 					<posx>492</posx>
 					<control type="label">
 						<width>48</width>
 						<height>48</height>
 						<label>off</label>
-						<font>petitaSmall</font>
+						<font>qlassikSmall</font>
 						<textcolor>Color1</textcolor>
 						<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
 					</control>
@@ -108,7 +108,7 @@
 						<width>48</width>
 						<height>48</height>
 						<label>one</label>
-						<font>petitaSmall</font>
+						<font>qlassikSmall</font>
 						<textcolor>Color1</textcolor>
 						<visible>Playlist.IsRepeatOne</visible>
 					</control>
@@ -116,7 +116,7 @@
 						<width>48</width>
 						<height>48</height>
 						<label>all</label>
-						<font>petitaSmall</font>
+						<font>qlassikSmall</font>
 						<textcolor>Color1</textcolor>
 						<visible>Playlist.IsRepeat</visible>
 					</control>
@@ -124,25 +124,25 @@
 				<!-- shuffle -->
 				<control type="button" id="8">
 					<posy>-9</posy>
-					<posx>516</posx>
+					<posx>520</posx>
 					<width>48</width>
 					<height>48</height>
 					<onleft>7</onleft>
 					<onright>1</onright>
 					<label>shuffle</label>
-					<font>petitaSmall</font>
+					<font>qlassikSmall</font>
 					<textcolor>Color4</textcolor>
-					<focusedcolor>Color1</focusedcolor>
+					<focusedcolor>greenlime</focusedcolor>
 					<onclick>XBMC.PlayerControl(Random)</onclick>
 				</control>
 				<control type="group">
-					<posy>-18</posy>
-					<posx>575</posx>
+					<posy>-17</posy>
+					<posx>580</posx>
 					<control type="label">
 						<width>48</width>
 						<height>48</height>
 						<label>off</label>
-						<font>petitaSmall</font>
+						<font>qlassikSmall</font>
 						<textcolor>Color1</textcolor>
 						<visible>!Playlist.IsRandom</visible>
 					</control>
@@ -150,7 +150,7 @@
 						<width>48</width>
 						<height>48</height>
 						<label>on</label>
-						<font>petitaSmall</font>
+						<font>qlassikSmall</font>
 						<textcolor>Color1</textcolor>
 						<visible>Playlist.IsRandom</visible>
 					</control>

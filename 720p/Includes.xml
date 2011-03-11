@@ -189,6 +189,15 @@
 			<animation effect="fade" start="80" end="80" time="0" condition="true">Conditional</animation>
 			<include>transition2</include>
 		</control>
+		<!-- bg tv show multi-banners -->
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<texture background="true">backgrounds/background9.png</texture>
+			<visible>Control.IsVisible(566) + !Window.IsActive(2600)</visible>
+			<animation effect="fade" start="80" end="80" time="0" condition="true">Conditional</animation>
+			<include>transition2</include>
+		</control>
 		<!-- bg list view (no music) -->
 		<control type="image">
 			<aspectratio>scale</aspectratio>
