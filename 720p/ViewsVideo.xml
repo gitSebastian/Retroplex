@@ -2518,16 +2518,16 @@
 			<visible>Control.IsVisible(566) + Container.Content(tvshows)</visible>
 		</control>
 		<control type="image">
-			<posx>600</posx>
+			<posx>767</posx>
 			<posy>380</posy>
-			<width>800</width>
+			<width>600</width>
 			<height>140</height>
 			<include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
 			<include>grainypagefade</include>
 			<include>ListHorizBarLeftMenuSlide</include>
-			<texture flipx="true">dialogs/square_menu_background.png</texture>
+			<texture flipx="true" border="50">dialogs/square_dialog_background.png</texture>
 			<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
 			<visible>Control.IsVisible(566) + Container.Content(tvshows)</visible>
 		</control>
