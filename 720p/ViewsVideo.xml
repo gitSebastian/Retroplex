@@ -215,6 +215,16 @@
 						<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
 						<visible>!IsEmpty(Container.Property(mixedParents))</visible>
 					</control>
+					<control type="image">
+						<posx>720</posx>
+						<posy>18</posy>
+						<align>right</align>
+						<aligny>center</aligny>
+						<width>15</width>
+						<height>15</height>
+						<include>watchedOverlay</include>
+						<visible>Skin.HasSetting(overlayEpisodes)</visible>
+					</control>
 				</itemlayout>
 				<!-- episodes focused -->
 				<focusedlayout condition="Control.IsVisible(555) + [Container.Content(episodes)]" width="800" height="120">
@@ -759,14 +769,14 @@
 			<width>1400</width>
 			<height>610</height>
 			<onleft>300</onleft>
-			<onright>76</onright>
+			<onright>78</onright>
 			<onup>51</onup>
 			<ondown>51</ondown>
 			<scrolltime>150</scrolltime>
 			<focusposition>1</focusposition>
 			<wraparound>true</wraparound>
 			<movement>2</movement>
-			<pagecontrol>76</pagecontrol>
+			<pagecontrol>78</pagecontrol>
 			<orientation>vertical</orientation>
 			<include>transition2</include>
 			<include>infoDialogHide</include>
@@ -2491,7 +2501,7 @@
 						<height>48</height>
 						<aspectratio align="right" aligny="bottom">keep</aspectratio>
 						<colordiffuse>ivory3</colordiffuse>
-						<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/tvshows/mono/,.png]</texture>
+						<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/tvshows/,.png]</texture>
 						<include>focus_Banner</include>
 						<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
 					</control>
@@ -2560,7 +2570,7 @@
 						<height>139</height>
 						<texture border="29" background="true">frames/bannerFrame.png</texture>
 						<include>focus_Banner</include>
-						<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
+						<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
 						<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
 					</control>
 					<!-- banner -->
@@ -2573,7 +2583,7 @@
 						<texture diffuse="frames/bannerMask.png" fallback="thumbs/bannerTV.png" background="true">$INFO[ListItem.Banner]</texture>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 						<include>focus_Banner</include>
-						<animation effect="fade" start="80" end="80" time="0" condition="true">Conditional</animation>
+						<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
 						<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
 					</control>
 				</itemlayout>
@@ -2687,7 +2697,7 @@
 			<height>88</height>
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
 			<colordiffuse>ivory3</colordiffuse>
-			<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/tvshows/mono/,.png]</texture>
+			<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/tvshows/,.png]</texture>
 			<visible>!IsEmpty(ListItem.TVShowTitle) + Control.IsVisible(566) + Container.Content(tvshows)</visible>
 			<include>MultibannersStudioLogoLeftMenuSlide</include>
 		</control>

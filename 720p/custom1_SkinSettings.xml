@@ -228,15 +228,13 @@
 					<selected>Skin.HasSetting(hideprogramsmenuitem)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
-				<!--<control type="radiobutton" id="207">
-					<description>Invisible Home menu</description>
-					<label>recommended : hide the menu (use left button to see it)</label>
-					<onclick>Skin.ToggleSetting(FanartSlideShow)</onclick>
-					<selected>!Skin.HasSetting(FanartSlideShow)</selected>
+				<control type="radiobutton" id="207">
+					<description>Show weather widget</description>
+					<label>Show Weather widget on Home screen</label>
+					<onclick>Skin.ToggleSetting(showweatherwidget)</onclick>
+					<selected>Skin.HasSetting(showweatherwidget)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
-					<enable>Skin.HasSetting(originalhome)</enable>
-					<visible>Skin.HasSetting(originalhome)</visible>
-				</control>-->
+				</control>
 			</control>
 			<!-- fanart -->
 			<control type="grouplist" id="200">
@@ -364,9 +362,13 @@
 					<posy>10</posy>
 					<control type="textbox">
 						<label>[COLOR=greenlime]Retroplex[/COLOR] is designed, coded and maintained by [COLOR=greenlime]Sebastian[/COLOR] (se.bastian).[CR][CR]
-							Please come and discuss it in the Plex community Forums, in the skins section.[CR]There you can also follow the latest updates and news, get help and submit suggestions.[CR][CR]To ensure you're always having the latest version, please use [COLOR=greenlime]Preen[/COLOR] for updating : [CR]http://www.anomiesoftware.com/Anomie_Software/Preen.html[CR][CR][COLOR=greenlime]Thank YOU[/COLOR] for considering Retroplex to be worthy of your delicate eyes.</label>
+							Please come and discuss it in the Plex community Forums, in the skins section.[CR]There you can also follow the latest updates and news, get help and submit suggestions.[CR][CR]To ensure you're always having the latest version, please use [COLOR=greenlime]Preen[/COLOR] for updating : [CR]http://www.anomiesoftware.com/Anomie_Software/Preen.html[CR][CR][COLOR=greenlime]Thank YOU[/COLOR] for considering Retroplex to be worthy of your delicate eyes.[CR][CR][CR][CR]
+							Additional credits :[CR][CR]
+							A huge thanks to [COLOR=greenlime]gedoode[/COLOR] for all the wonderful media flags that he has made and donated to Retroplex.[CR][CR]
+							A huge thanks to [COLOR=greenlime]scottu[/COLOR] who made and donated the amazing retro-licious startup sound.[CR][CR]
+							Without you guys Retroplex just wouldn't be the same. Thanks.</label>
 						<width>840</width>
-						<height>300</height>
+						<height>500</height>
 						<align>left</align>
 						<textcolor>Color1</textcolor>
 						<font>qlassikSmall2</font>
@@ -390,8 +392,6 @@
 					<onclick>Skin.ToggleSetting(scrollbar)</onclick>
 					<selected>Skin.HasSetting(scrollbar)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
-					<enable>Skin.HasSetting(dummy)</enable>
-					<visible>false</visible>
 				</control>
 				<control type="radiobutton" id="262">
 					<description>scrollbars hide</description>
@@ -400,7 +400,6 @@
 					<selected>Skin.HasSetting(scrollbarHide)</selected>
 					<enable>Skin.HasSetting(scrollbar)</enable>
 					<include>newHomeMenuSubSettingsButton</include>
-					<visible>false</visible>
 				</control>
 				<control type="radiobutton" id="263">
 					<description>keyboard</description>

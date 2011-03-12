@@ -29,8 +29,8 @@
 	</include>	
 	<!-- Weatherleft menu animations -->
 	<include name="WeatherLeftMenuSlide">
-		<animation effect="slide" start="0" end="172" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
-		<animation effect="slide" start="172" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
+		<animation effect="slide" start="0" end="200" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
+		<animation effect="slide" start="200" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
 		<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus() | Control.HasFocus(1110) | Control.HasFocus(1130) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
 	</include>
 	<!-- Library logo animations -->
@@ -52,8 +52,8 @@
 	</include>
 	<!-- Thumbnails Small left menu animations -->
 	<include name="ThumbnailsSmallLeftMenuRightSlide">
-		<animation effect="slide" start="0" end="272" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
-		<animation effect="slide" start="272" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
+		<animation effect="slide" start="0" end="280" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
+		<animation effect="slide" start="280" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
 		<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus()">Conditional</animation>
 	</include>
 	<include name="ThumbnailsSmallLeftMenuThumbsSlide">
@@ -518,12 +518,12 @@
 		</animation>
 	</include>
 	<include name="open_PlayerControls">
-		<!--<animation type="WindowOpen">
+		<animation type="WindowOpen">
 			<effect type="slide" start="0,75" end="0,0" tween="Cubic" easing="Out" time="250"/>
 		</animation>
 		<animation type="WindowClose">
 			<effect type="slide" start="0,0" end="0,75" tween="Cubic" easing="In" time="250"/>
-		</animation>-->
+		</animation>
 		<animation type="Visible">
 			<effect type="slide" start="0,75" end="0,0" tween="Cubic" easing="Out" time="250"/>
 		</animation>

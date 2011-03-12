@@ -165,7 +165,7 @@
 			<height>109</height>
 			<aspectratio align="center">keep</aspectratio>
 			<colordiffuse>ivory3</colordiffuse>
-			<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/tvshows/mono/,.png]</texture>
+			<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/tvshows/,.png]</texture>
 			<visible>Container.Content(tvshows)</visible>
 		</control>
 	</include>
@@ -201,7 +201,7 @@
 			<height>64</height>
 			<aspectratio align="right">keep</aspectratio>
 			<colordiffuse>ivory3</colordiffuse>
-			<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/tvshows/mono/,.png]</texture>
+			<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/tvshows/,.png]</texture>
 			<visible>Container.Content(tvshows)</visible>
 		</control>
 	</include>
@@ -228,16 +228,16 @@
 	</include>
 	<!-- custom conditional show/hide flag list for slideview -->
 	<include name="typeFlagsInfoSlides">
-		<!--<control type="image">
-			<posx>10</posx>
-			<posy>-55</posy>
+		<control type="image">
+			<posx>1060</posx>
+			<posy>-180</posy>
 			<width>128</width>
-			<height>60</height>
+			<height>18</height>
 			<info>ListItem.StarRating</info>
 			<colordiffuse>Color7</colordiffuse>
 			<aspectratio align="center">keep</aspectratio>
 			<visible>!IsEmpty(ListItem.StarRating) + [[!Skin.HasSetting(hideratings) + !Skin.HasSetting(slidehiderating)] | Window.IsActive(2003)]</visible>
-		</control>-->
+		</control>
 		<control type="grouplist" id="100">
 			<width>900</width>
 			<height>64</height>
@@ -273,7 +273,7 @@
 				<height>64</height>
 				<texture>$INFO[Listitem.Property(mediaTag-videoCodec),flags/type/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<colordiffuse>ivory2</colordiffuse>
+				<colordiffuse>ivory3</colordiffuse>
 				<visible>[Container.Content(movies) | Container.Content(episodes)] + [!Skin.HasSetting(slidehidevideoinfo) | Window.IsActive(2003)]</visible>
 			</control>
 			<control type="image">
@@ -281,7 +281,7 @@
 				<height>64</height>
 				<texture>$INFO[Listitem.Property(mediaTag-audioCodec),flags/type/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<colordiffuse>ivory2</colordiffuse>
+				<colordiffuse>ivory3</colordiffuse>
 				<visible>[Container.Content(movies) | Container.Content(episodes)] + [!Skin.HasSetting(slidehideaudioinfo) | Window.IsActive(2003)]</visible>
 			</control>
 			<control type="image">
@@ -297,7 +297,7 @@
 				<height>64</height>
 				<texture>$INFO[Listitem.MPAA,flags/contentrating/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<colordiffuse>ivory2</colordiffuse>
+				<colordiffuse>ivory3</colordiffuse>
 				<visible>Container.Content(movies) + !Skin.HasSetting(slidehidecontentrating)</visible>
 			</control>
 		</control>
@@ -365,7 +365,7 @@
 			<width>180</width>
 			<height>80</height>
 			<colordiffuse>ivory3</colordiffuse>
-			<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/tvshows/mono/,.png]</texture>
+			<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/tvshows/,.png]</texture>
 			<aspectratio align="center">keep</aspectratio>
 			<visible>Container.Content(tvshows)</visible>
 		</control>
@@ -622,7 +622,7 @@
 				<width>128</width>
 				<height>42</height>
 				<include>typeFlag</include>
-				<texture>$INFO[Listitem.StarRating,special://skin/flags/rating/mono/,.png]</texture>
+				<texture>$INFO[Listitem.StarRating,special://skin/flags/rating/,.png]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<colordiffuse>Color4</colordiffuse>
 			</control>

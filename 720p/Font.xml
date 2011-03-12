@@ -118,6 +118,11 @@
 			<filename>Fontin-Regular.otf</filename>
 			<size>16</size>
 		</font>
+		<font>
+			<name>nymphetteMedium</name>
+			<filename>Nymphette.ttf</filename>
+			<size>40</size>
+		</font>
 		<!--<font>
 			<name>test</name>
 			<filename>MarketingScript.ttf</filename>

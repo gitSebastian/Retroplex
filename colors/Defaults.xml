@@ -29,11 +29,12 @@
 	<color name="violet1">ffE066FF</color>
 	<color name="violet2">ffAB82FF</color>
 	<color name="greenlime">ffC0FF3E</color>
+	<color name="greenolive">ff8E8E38</color>
 	
 	<color name="ivory1">ffFFFFF0</color>
 	<color name="ivory2">ffEEEEE0</color>
 	<color name="ivory3">ffCDCDC1</color>
 	<color name="ivory4">ffF5F5DC</color>
 	
-	<color name="test">ffC0FF3E</color>
+	<color name="test">ff8E8E38</color>
 </colors>

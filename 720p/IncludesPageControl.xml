@@ -3,7 +3,7 @@
 	<include name="AllViewCommonPageControls">
 		<control type="scrollbar" id="23">
 			<description>list</description>
-			<posx>1240</posx>
+			<posx>1260</posx>
 			<posy>92</posy>
 			<height>580</height>
 			<onleft>555</onleft>
@@ -12,10 +12,11 @@
 			<include>contextMenuHide</include>
 			<visible allowhiddenfocus="true">Control.IsVisible(555) + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide)] | [Skin.HasSetting(scrollbarHide) + Control.HasFocus(23)]</visible>
 			<enable>Skin.HasSetting(scrollbar)</enable>
+			<include>ListLeftMenuSlide</include>
 		</control>
 		<control type="scrollbar" id="64">
 			<description>thumbnails</description>
-			<posx>1240</posx>
+			<posx>1250</posx>
 			<posy>97</posy>
 			<height>497</height>
 			<onleft>57</onleft>
@@ -25,6 +26,7 @@
 			<include>contextMenuHide</include>
 			<animation effect="slide" start="0" end="-35" time="200" condition="Window.IsActive(2)">Conditional</animation>
 			<enable>Skin.HasSetting(scrollbar)</enable>
+			<include>ThumbnailsSmallLeftMenuThumbsSlide</include>
 		</control>
 		<control type="scrollbar" id="77">
 			<description>thumbnails small</description>
@@ -37,11 +39,12 @@
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
 			<enable>Skin.HasSetting(scrollbar)</enable>
+			<include>ThumbnailsSmallLeftMenuRightSlide</include>
 		</control>
 		<control type="scrollbar" id="65">
 			<description>slide posters</description>
 			<posx>30</posx>
-			<posy>415</posy>
+			<posy>397</posy>
 			<width>1220</width>
 			<onup>52</onup>
 			<ondown>52</ondown>
@@ -53,8 +56,9 @@
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
 			<enable>Skin.HasSetting(scrollbar)</enable>
+			<include>SlidePostersLeftMenuThumbsSlide</include>
 		</control>
-		<control type="scrollbar" id="66">
+		<!--<control type="scrollbar" id="66">
 			<description>slide fanart</description>
 			<posx>30</posx>
 			<posy>400</posy>
@@ -69,8 +73,8 @@
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
 			<enable>Skin.HasSetting(scrollbar)</enable>
-		</control>
-		<control type="scrollbar" id="67">
+		</control>-->
+		<!--<control type="scrollbar" id="67">
 			<description>slide episodes</description>
 			<posx>30</posx>
 			<posy>360</posy>
@@ -85,8 +89,8 @@
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
 			<enable>Skin.HasSetting(scrollbar)</enable>
-		</control>
-		<control type="scrollbar" id="70">
+		</control>-->
+		<!--<control type="scrollbar" id="70">
 			<description>slide albums</description>
 			<posx>30</posx>
 			<posy>385</posy>
@@ -101,8 +105,8 @@
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
 			<enable>Skin.HasSetting(scrollbar)</enable>
-		</control>
-		<control type="scrollbar" id="71">
+		</control>-->
+		<!--<control type="scrollbar" id="71">
 			<description>slide artists</description>
 			<posx>30</posx>
 			<posy>385</posy>
@@ -117,7 +121,7 @@
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
 			<enable>Skin.HasSetting(scrollbar)</enable>
-		</control>
+		</control>-->
 		<control type="scrollbar" id="75">
 			<description>thumbnails pictures</description>
 			<posx>1190</posx>
@@ -136,11 +140,12 @@
 			<posy>85</posy>
 			<height>596</height>
 			<onleft>54</onleft>
-			<visible allowhiddenfocus="true">[Control.IsVisible(54) + Container.Content(tvshows)] + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide)] | [Skin.HasSetting(scrollbarHide) + Control.HasFocus(76)]</visible>
+			<visible allowhiddenfocus="true">[Control.IsVisible(54) | Control.IsVisible(566) + Container.Content(tvshows)] + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide)] | [Skin.HasSetting(scrollbarHide) + Control.HasFocus(76)]</visible>
 			<include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
 			<enable>Skin.HasSetting(scrollbar)</enable>
+			<include>BannersLeftMenuSlide</include>
 		</control>
 		<control type="scrollbar" id="78">
 			<description>big list episodes</description>
@@ -153,6 +158,7 @@
 			<include>contextMenuHide</include>
 			<visible allowhiddenfocus="true">Control.IsVisible(51) + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide)] | [Skin.HasSetting(scrollbarHide) + Control.HasFocus(78)]</visible>
 			<enable>Skin.HasSetting(scrollbar)</enable>
+			<include>BigListLeftMenuSlide</include>
 		</control>
 	</include>
 </includes>

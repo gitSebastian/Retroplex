@@ -6,7 +6,7 @@
 		<control type="group">
 			<include>NowPlayingHomeLeftMenuSlide</include>
 			<control type="group">
-				<posx>885</posx>
+				<posx>890</posx>
 				<posy>0</posy>				
 				<visible>Player.HasMusicPlaylist</visible>
 				<animation condition="!Player.Paused" type="Conditional">
@@ -19,14 +19,21 @@
 				</animation>
 				<!-- NEXT PLAYING -->
 				<control type="group">
-					<posx>0</posx>
-					<posy>200</posy>
+					<include condition="!Skin.HasSetting(showweatherwidget)">nowplayingwithoutweather</include>
+					<include condition="Skin.HasSetting(showweatherwidget)">nowplayingwithweather</include>
 					<visible>Player.HasMusicPlaylist + MusicPlayer.HasNext</visible>
 					<!-- effects when closing/opening window -->
-					<animation type="WindowOpen">
+					<!-- no weather widget -->
+					<animation type="WindowOpen" condition="!Skin.HasSetting(showweatherwidget)">
 						<effect type="slide" start="0,-300" time="1000" tween="cubic" easing="out"/>
 						<effect type="fade" start="0" end="60" time="3000" delay="100"/>
 						<effect type="rotatex" center="200" start="-180" end="0" time="500" delay="2000" reversible="false"/>
+					</animation>
+					<!-- with weather widget -->
+					<animation type="WindowOpen" condition="Skin.HasSetting(showweatherwidget)">
+						<effect type="slide" start="0,-300" time="1000" tween="cubic" easing="out"/>
+						<effect type="fade" start="0" end="60" time="3000" delay="100"/>
+						<effect type="rotatex" center="345" start="-180" end="0" time="500" delay="2000" reversible="false"/>
 					</animation>
 					<animation type="WindowClose">
 						<effect type="slide" start="0,0" end="0,-300" time="700" tween="cubic" easing="in"/>

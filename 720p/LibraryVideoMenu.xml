@@ -214,7 +214,7 @@
 					<include>leftMenuViewOptions</include>
 					<visible>[Control.IsVisible(52) | Control.IsVisible(55)] + Skin.HasSetting(slideViewFanart) + !Container.Content(seasons)</visible>
 				</control>-->
-				<!--<control type="radiobutton" id="9053">
+				<control type="radiobutton" id="9053">
 					<label>hide rating</label>
 					<onclick>Container.SetViewMode(52)</onclick>
 					<onclick>Skin.ToggleSetting(slidehiderating)</onclick>
@@ -222,7 +222,7 @@
 					<include>leftMenuViewOptions</include>
 					<include>leftMenuRadioButton</include>
 					<visible>[Control.IsVisible(52) | Control.IsVisible(55)] + Container.Content(movies)</visible>
-				</control>-->
+				</control>
 				<control type="radiobutton" id="9054">
 					<label>hide resolution</label>
 					<onclick>Container.SetViewMode(52)</onclick>
