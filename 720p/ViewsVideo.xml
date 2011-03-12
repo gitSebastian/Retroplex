@@ -666,7 +666,7 @@
 				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<include>focus_PosterFlagsNoEffect_GrainyEdition</include>
-				<visible>Control.IsVisible(555) + [Skin.HasSetting(onlyfocusflagpanel) | Skin.HasSetting(enablehdflags)]</visible>
+				<visible>Control.IsVisible(555) + [Skin.HasSetting(onlyfocusflagpanel) | Skin.HasSetting(enablehdflags)] + !Container.Content(episodes)</visible>
 			</control>
 			<!-- STUDIO FLAGS DEBUG DIALOG -->
 			<control type="group">
