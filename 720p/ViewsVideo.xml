@@ -1789,7 +1789,7 @@
 						<width>20</width>
 						<height>20</height>
 						<include>watchedOverlay</include>
-						<visible>Container.Content(seasons)</visible>
+						<visible>Skin.HasSetting(overlayTVSHows) + Container.Content(seasons)</visible>
 						<include>focus_Poster</include>
 					</control>
 					<control type="image">
