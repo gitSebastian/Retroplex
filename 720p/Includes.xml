@@ -981,7 +981,7 @@
 	</include>
 	<include name="settingsLeftMenuFormat">
 		<animation type="Conditional" condition="true">
-			<effect type="fade" start="0" end="80"/>
+			<effect type="fade" start="0" end="90"/>
 		</animation>
 		<texturefocus>dialogs/square_menu_background.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
@@ -1054,7 +1054,7 @@
 	</include>
 	<include name="newHomeMenuSubSettingsButton">
 		<animation type="Conditional" condition="true">
-			<effect type="fade" start="0" end="80"/>
+			<effect type="fade" start="0" end="90"/>
 		</animation>
 		<texturefocus flipx="true">dialogs/square_menu_background.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
