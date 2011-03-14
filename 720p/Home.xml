@@ -13,6 +13,14 @@
 		</control>-->		
 		<!-- grainy bg for home screen only -->
 		<include>nostalgiaOverlay</include>
+		<!--<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>100</width>
+			<height>720</height>
+			<texture>backgrounds/leftyellowblue.png</texture>
+			<animation effect="fade" start="100" end="30" time="0" condition="true">Conditional</animation>
+		</control>-->
 		<!-- time and date -->
 		<include condition="![Window.IsActive(10112) | Window.IsActive(10133) | Window.IsActive(107)]">libClock</include>
 		<!-- HOME MENU -->
@@ -30,7 +38,7 @@
 			<control type="image">
 				<animation effect="fade" start="0" end="50" time="250" delay="0" condition="true">Conditional</animation>
 				<height>38</height>
-				<texture border="9">home/rssBackground.png</texture>
+				<texture>dialogs/square_menu_background.png</texture>
 				<include>screenwidth</include>
 				<visible>!Skin.HasSetting(enableRSSFeed)</visible>
 			</control>

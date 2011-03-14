@@ -1,64 +1,199 @@
+<?xml version="1.0"?>
 <window id="28">
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	
 	<controls>
 		<include>themeBackground2</include>
+		<include>grainyeditionback</include>
 		<include>allscreens</include>
-		
 		<control type="label">
-			<label>$LOCALIZE[157] [COLOR=Color2]$LOCALIZE[559][/COLOR]</label>
-			<include>videoPageLabel</include>
+			<label>$LOCALIZE[157] [COLOR=greenlime]$LOCALIZE[559][/COLOR]</label>
+			<posx>34</posx>
+			<posy>20</posy>
+			<width>950</width>
+			<aligny>center</aligny>
+			<font>qlassikMedium2</font>
+			<textcolor>ivory3</textcolor>
+			<include>transition3</include>
+			<include>PageLabelsLeftMenuSlide</include>
 		</control>
-
 		<include>LibraryPlaylistMenu</include>
-		
-		<include>view_List</include>
 		<include>AllViewCommonPageControls</include>
-		<include>transition2</include>
 		<include>infoDialogHide</include>
 		<include>contextMenuHide</include>
-			
-			
-			
-			
+		<control type="group">
+			<include>PlaylistNowLeftMenuSlide</include>
+			<!-- Shadow layer for right side bg -->
+			<control type="group">
+				<animation effect="fade" start="100" end="100" time="350" condition="Control.HasFocus(300)">Conditional</animation>
+				<animation effect="slide" start="162" end="0" time="500" condition="Control.HasFocus(300)">Conditional</animation>
+				<animation effect="slide" start="0" end="162" time="500" condition="!Control.HasFocus(300)">Conditional</animation>
+				<control type="image">
+					<posx>623</posx>
+					<posy>-50</posy>
+					<height>800</height>
+					<width>540</width>
+					<include>transition2</include>
+					<include>infoDialogHide</include>
+					<include>contextMenuHide</include>
+					<texture flipx="true">dialogs/square_menu_background.png</texture>
+					<aspectratio align="right">stretch</aspectratio>
+					<animation type="Conditional" condition="true">
+						<effect type="fade" start="0" end="50"/>
+					</animation>
+				</control>
+			</control>
+			<!-- vertical separator -->
+			<control type="group">
+				<animation effect="fade" start="100" end="20" time="350" condition="Control.HasFocus(40) | Control.HasFocus(1110) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
+				<control type="image">
+					<posx>785</posx>
+					<posy>-200</posy>
+					<height>1120</height>
+					<width>29</width>
+					<texture flipx="true">settings/separator.png</texture>
+					<aspectratio align="right">stretch</aspectratio>
+					<include>transition2</include>
+					<include>contextMenuHide</include>
+					<include>infoDialogHide</include>
+				</control>
+			</control>
+			<!-- LIST -->
+			<control type="group">
+				<animation effect="fade" start="100" end="20" time="350" condition="Control.HasFocus(9000) | Control.HasFocus(1110) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
+				<visible>Window.IsActive(musicplaylist)</visible>
+			</control>
+			<control type="fixedlist" id="50">
+				<viewtype label="535">List</viewtype>
+				<posx>0</posx>
+				<posy>110</posy>
+				<width>800</width>
+				<height>520</height>
+				<onleft>300</onleft>
+				<onright>23</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<scrolltime>150</scrolltime>
+				<orientation>vertical</orientation>
+				<pagecontrol>23</pagecontrol>
+				<focusposition>6</focusposition>
+				<include>transition2</include>
+				<include>infoDialogHide</include>
+				<include>contextMenuHide</include>
+				<visible>!Window.IsActive(progressdialog)</visible>
+				<itemlayout condition="Window.IsActive(musicplaylist)" width="625" height="40">
+					<control type="label">
+						<posy>10</posy>
+						<posx>100</posx>
+						<width>500</width>
+						<label>$INFO[ListItem.Title,, ][COLOR=ffA1927F]&#xB7; $INFO[ListItem.Artist][/COLOR]</label>
+						<font>qlassikSmall</font>
+						<textcolor>ivory2</textcolor>
+						<selectedcolor>greenlime</selectedcolor>
+					</control>
+					<control type="label">
+						<posy>10</posy>
+						<posx>100</posx>
+						<width>500</width>
+						<label>$INFO[ListItem.Label]</label>
+						<include>listMenu</include>
+						<font>qlassikSmall</font>
+						<textcolor>ivory2</textcolor>
+						<selectedcolor>Color5</selectedcolor>
+						<visible>IsEmpty(ListItem.Title)</visible>
+					</control>
+					<control type="label">
+						<posy>10</posy>
+						<posx>740</posx>
+						<width>500</width>
+						<label>$INFO[ListItem.Duration]</label>
+						<align>right</align>
+						<font>qlassikSmall</font>
+						<textcolor>ivory2</textcolor>
+						<selectedcolor>greenlime</selectedcolor>
+						<visible>!IsEmpty(ListItem.Title)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout condition="Window.IsActive(musicplaylist)" width="625" height="40">
+					<control type="image">
+						<posy>2</posy>
+						<posx>0</posx>
+						<width>785</width>
+						<height>40</height>
+						<texture flipx="true">dialogs/square_menu_background.png</texture>
+						<animation type="Conditional" condition="true">
+							<effect type="fade" start="0" end="50"/>
+						</animation>
+					</control>
+					<control type="label">
+						<posy>10</posy>
+						<posx>100</posx>
+						<width>500</width>
+						<label>[COLOR=greenlime]$INFO[ListItem.Title,, ][/COLOR]</label>
+						<textcolor>ivory3</textcolor>
+						<font>lobsterSmall</font>
+						<visible>IsEmpty(ListItem.TVShowTitle)</visible>
+					</control>
+					<control type="label">
+						<posy>10</posy>
+						<posx>100</posx>
+						<width>500</width>
+						<label>[COLOR=greenlime]$INFO[ListItem.Title,, ]&#xB7;[/COLOR] [COLOR=Color1]$INFO[ListItem.TVShowTitle][/COLOR]</label>
+						<textcolor>ivory3</textcolor>
+						<font>lobsterSmall</font>
+						<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
+					</control>
+					<control type="label">
+						<posy>10</posy>
+						<posx>740</posx>
+						<width>500</width>
+						<label>[COLOR=greenlime]$INFO[ListItem.Duration][/COLOR]</label>
+						<align>right</align>
+						<textcolor>ivory3</textcolor>
+						<font>qlassikSmall</font>
+						<visible>!IsEmpty(ListItem.Title)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			</control>
+			<!-- video window & frame -->
 		<control type="group">
 			<include>infoDialogHide</include>
 			<include>transition2</include>
 			<include>contextMenuHide</include>
 			<visible>Player.HasVideo</visible>
-
+			<include>PlaylistNowLeftMenuSlide</include>
 			<control type="group">
-				<posx>675</posx>
-				<posy>75</posy>
-
+				<posx>785</posx>
+				<posy>230</posy>
 				<control type="image">
-					<width>562</width>
-					<height>340</height>
-					<texture border="48">frames/wideFrame.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<include>thumbFadeTime</include>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>501</width>
+					<height>306</height>
+					<texture border="29" background="true">frames/bannerFrame.png</texture>
+					<visible>!IsEmpty(ListItem.Title)</visible>
+					<include>focus_Banner</include>
+					<animation type="Conditional" condition="true">
+						<effect type="fade" start="0" end="70"/>
+					</animation>
 				</control>
 				<control type="videowindow">
 					<posx>26</posx>
-					<posy>27</posy>
-					<width>510</width>
-					<height>287</height>
-					<visible>!ControlGroup(300).HasFocus(0)</visible>
+					<posy>18</posy>
+					<width>450</width>
+					<height>250</height>
+					<texture diffuse="frames/slideBigPosterMask.png">-</texture>
+					<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>					
 				</control>
 			</control>
 		</control>
-			
-			
-
-		
 		<control type="image">
 			<posx>203</posx>
 			<posy>465</posy>
-            <aspectratio align="right">keep</aspectratio>
-            <colordiffuse>Color7</colordiffuse>
+			<aspectratio align="right">keep</aspectratio>
+			<colordiffuse>Color7</colordiffuse>
 			<texture fallback="flags/default.png">$INFO[VideoPlayer.studio,special://skin/extras/studios/,.png]</texture>
 		</control>
-
 	</controls>
 </window>

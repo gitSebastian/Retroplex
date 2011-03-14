@@ -1,5 +1,16 @@
 <?xml version="1.0"?>
 <includes>
+	<include name="settingsPageLabel">
+		<posx>430</posx>
+		<posy>70</posy>
+		<width>800</width>
+		<aligny>center</aligny>
+		<align>center</align>
+		<font>qlassikMedium2</font>
+		<textcolor>chocolate</textcolor>
+		<include>transition3</include>
+		<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+	</include>
 	<include name="PageLabel">
 		<posx>34</posx>
 		<posy>20</posy>

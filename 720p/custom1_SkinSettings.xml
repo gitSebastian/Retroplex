@@ -3,105 +3,61 @@
 	<defaultcontrol always="true">9001</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
-		<control type="image">
-			<aspectratio>scale</aspectratio>
-			<include>screentype</include>
-			<include>transition2</include>
-			<texture background="true" flipx="true">backgrounds/settings02.jpg</texture>
-		</control>
-		<control type="image">
-			<aspectratio>scale</aspectratio>
-			<include>screentype</include>
-			<include>transition2</include>
-			<texture background="true">backgrounds/background15.png</texture>
-			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
-			<animation type="WindowOpen">
-				<effect type="zoom" time="400" center="640,360" start="180" end="100" tween="cubic" easing="out"/>
-			</animation>
-			<animation type="WindowClose">
-				<effect type="zoom" time="250" center="640,360" start="100" end="180" tween="cubic" easing="in"/>				
-			</animation>
-		</control>
-		<!-- Background -->
-		<control type="group">
-			<control type="image">
-				<posx>0</posx>
-				<posy>-50</posy>
-				<height>800</height>
-				<width>324</width>
-				<include>transition2</include>
-				<texture flipx="true" border="10">dialogs/square_menu_background.png</texture>
-				<aspectratio align="right">stretch</aspectratio>
-				<animation type="Conditional" condition="true">
-					<effect type="fade" start="0" end="50"/>
-				</animation>
-			</control>
-		</control>
-		<!-- Separator -->
-		<control type="group">
-			<control type="image">
-				<include>transition2</include>
-				<posx>295</posx>
-				<posy>-200</posy>
-				<height>1120</height>
-				<width>29</width>
-				<texture>settings/separator.png</texture>
-				<aspectratio align="right">stretch</aspectratio>
-			</control>
-		</control>
+		<include>themeBackground2</include>
+		<include>grainyeditionback</include>
 		<include>allscreens</include>
 		<!-- page label -->
 		<control type="label">
-			<include>PageLabel</include>
-			<label>$LOCALIZE[5] [COLOR=greenlime]$LOCALIZE[166][/COLOR]</label>
+			<include>settingsPageLabel</include>
+			<label>&#xB7; $LOCALIZE[5] : $LOCALIZE[166] &#xB7;</label>
+		</control>
+		<!-- type separator -->
+		<control type="label">
+			<posx>790</posx>
+			<posy>105</posy>
+			<width>100</width>
+			<label>y</label>
+			<font>nymphetteMedium</font>
+			<textcolor>chocolate</textcolor>
+			<height>30</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<include>transition2</include>
+			<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+		</control>
+		<!-- type separator -->
+		<control type="label">
+			<posx>790</posx>
+			<posy>605</posy>
+			<width>100</width>
+			<width>240</width>
+			<label>B</label>
+			<font>nymphetteMedium</font>
+			<textcolor>chocolate</textcolor>
+			<height>30</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<include>transition2</include>
+			<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 		</control>
 		<!-- CATEGORIES -->
 		<control type="group" id="9000">
-			<posx>-1</posx>
-			<posy>150</posy>
-			<width>400</width>
+			<posx>16</posx>
+			<posy>330</posy>
+			<width>284</width>
 			<height>650</height>
 			<onup>9100</onup>
 			<ondown>9100</ondown>
 			<onright>300</onright>
-			<onleft>300</onleft>
+			<onleft>-</onleft>
 			<orientation>vertical</orientation>
+			<include>transition2</include>
 			<scrolltime>150</scrolltime>
-			<visible>true</visible>
-			<include>homeMenuToggle</include>
-			<include>homeMenusLayout</include>
-			<!-- white separators top and bottom sub-menu -->
-			<control type="image">
-				<posx>356</posx>
-				<posy>-18</posy>
-				<height>10</height>
-				<width>800</width>
-				<texture>dialogs/sliderBackground_.png</texture>
-				<aspectratio align="right">stretch</aspectratio>
-				<include>transition2</include>
-				<animation type="Conditional" condition="true">
-					<effect type="fade" start="0" end="80"/>
-				</animation>
-				<!--<visible>!Control.HasFocus(300) + [ControlGroup(9100).HasFocus() | ControlGroup(200).HasFocus()]</visible>-->
-			</control>
-			<control type="image">
-				<posx>356</posx>
-				<posy>460</posy>
-				<height>10</height>
-				<width>800</width>
-				<texture>dialogs/sliderBackground_.png</texture>
-				<aspectratio align="right">stretch</aspectratio>
-				<include>transition2</include>
-				<animation type="Conditional" condition="true">
-					<effect type="fade" start="0" end="80"/>
-				</animation>
-				<!--<visible>!Control.HasFocus(300) + [ControlGroup(9100).HasFocus() | ControlGroup(200).HasFocus()]</visible>-->
-			</control>
 			<!-- MAIN LEVEL -->
 			<control type="grouplist" id="9100">
 				<onup>9100</onup>
 				<ondown>9100</ondown>
-				<onleft>300</onleft>
+				<onleft>-</onleft>
 				<onright>200</onright>
 				<itemgap>0</itemgap>
 				<!-- home screen -->
@@ -112,7 +68,7 @@
 				</control>
 				<control type="button" id="9002">
 					<label>$LOCALIZE[31124]</label>
-					<include>settingsLeftMenuFormat</include>
+					<include>settingsLeftMenuFormat2</include>
 					<visible>!Control.IsVisible(9001)</visible>
 				</control>
 				<!-- main menu -->
@@ -138,7 +94,7 @@
 				</control>
 				<control type="button" id="9006">
 					<label>fanart settings</label>
-					<include>settingsLeftMenuFormat</include>
+					<include>settingsLeftMenuFormat2</include>
 					<visible>!Control.IsVisible(9005)</visible>
 				</control>
 				<!-- views settings -->
@@ -150,7 +106,7 @@
 				<control type="button" id="9018">
 					<label>$LOCALIZE[31015]</label>
 					<onclick>SetFocus(1150)</onclick>
-					<include>settingsLeftMenuFormat</include>
+					<include>settingsLeftMenuFormat2</include>
 					<visible>!Control.IsVisible(9017)</visible>
 				</control>
 				<!-- grainy edition -->
@@ -200,9 +156,9 @@
 		</control>
 		<!-- SUB-LEVEL -->
 		<control type="group">
-			<posx>323</posx>
+			<posx>376</posx>
 			<posy>150</posy>
-			<width>850</width>
+			<width>895</width>
 			<height>595</height>
 			<!-- home screen -->
 			<control type="grouplist" id="200">
@@ -361,16 +317,16 @@
 					<posx>30</posx>
 					<posy>10</posy>
 					<control type="textbox">
-						<label>[COLOR=greenlime]Retroplex[/COLOR] is designed, coded and maintained by [COLOR=greenlime]Sebastian[/COLOR] (se.bastian).[CR][CR]
-							Please come and discuss it in the Plex community Forums, in the skins section.[CR]There you can also follow the latest updates and news, get help and submit suggestions.[CR][CR]To ensure you're always having the latest version, please use [COLOR=greenlime]Preen[/COLOR] for updating : [CR]http://www.anomiesoftware.com/Anomie_Software/Preen.html[CR][CR][COLOR=greenlime]Thank YOU[/COLOR] for considering Retroplex to be worthy of your delicate eyes.[CR][CR][CR][CR]
+						<label>[COLOR=ivory3]Retroplex[/COLOR] is designed, coded and maintained by [COLOR=ivory3]Sebastian[/COLOR] (se.bastian).[CR][CR]
+							Please come and discuss it in the Plex community Forums, in the skins section.[CR]There you can also follow the latest updates and news, get help and submit suggestions.[CR][CR]To ensure you're always having the latest version, please use [COLOR=ivory3]Preen[/COLOR] for updating : [CR]http://www.anomiesoftware.com/Anomie_Software/Preen.html[CR][CR][COLOR=ivory3]Thank YOU[/COLOR] for considering Retroplex to be worthy of your delicate eyes.[CR][CR][CR][CR]
 							Additional credits :[CR][CR]
-							A huge thanks to [COLOR=greenlime]gedoode[/COLOR] for all the wonderful media flags that he has made and donated to Retroplex.[CR][CR]
-							A huge thanks to [COLOR=greenlime]scottu[/COLOR] who made and donated the amazing retro-licious startup sound.[CR][CR]
+							A huge thanks to [COLOR=ivory3]gedoode[/COLOR] for all the wonderful media flags that he has made and donated to Retroplex.[CR][CR]
+							A huge thanks to [COLOR=ivory3]scottu[/COLOR] who made and donated the amazing retro-licious startup sound.[CR][CR]
 							Without you guys Retroplex just wouldn't be the same. Thanks.</label>
 						<width>840</width>
 						<height>500</height>
 						<align>left</align>
-						<textcolor>Color1</textcolor>
+						<textcolor>chocolate</textcolor>
 						<font>qlassikSmall2</font>
 						<include>textBox</include>
 					</control>
@@ -502,10 +458,6 @@
 				</control>
 			</control>
 		</control>
-		<control type="image">
-			<posx>80</posx>
-			<posy>543</posy>
-		<include>retroplexLogo</include>
-		</control>
+		<include>settingslogo</include>
 	</controls>
 </window>

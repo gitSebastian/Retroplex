@@ -216,10 +216,10 @@
 		<!-- THUMBNAILS VIEW -->
 		<control type="panel" id="572">
 			<viewtype label="Thumbnails">bigicons</viewtype>
-			<posx>22</posx>
+			<posx>28</posx>
 			<posy>70</posy>
 			<width>1280</width>
-			<height>588</height>
+			<height>585</height>
 			<onleft>300</onleft>
 			<onright>572</onright>
 			<onup>572</onup>
@@ -234,44 +234,44 @@
 			<visible>!IsEmpty(Container.FirstTitle)</visible>
 			<itemlayout height="195" width="205">
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>212</width>
-					<height>215</height>
-					<texture border="10">frames/bannerFrame.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<include>focus_PhotosThumbs</include>
-					<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>18</posx>
-					<posy>15</posy>
-					<width>176</width>
-					<height>133</height>
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>180</width>
+					<height>150</height>
 					<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 					<texture background="true" diffuse="frames/slideBigPosterMask.png" fallback="thumbs/pictureSmall.png">$INFO[ListItem.Thumb]</texture>
 					<include>focus_PhotosThumbs</include>
 				</control>
-			</itemlayout>
-			<focusedlayout height="195" width="210">
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>212</width>
-					<height>215</height>
-					<texture border="10">frames/bannerFrame.png</texture>
+					<width>200</width>
+					<height>190</height>
+					<texture border="10">frames/polaroid.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<include>focus_PhotosThumbs</include>
 					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 				</control>
+			</itemlayout>
+			<focusedlayout height="195" width="210">
 				<control type="image">
-					<posx>18</posx>
-					<posy>15</posy>
-					<width>176</width>
-					<height>133</height>
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>180</width>
+					<height>150</height>
 					<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 					<texture background="true" diffuse="frames/white.png" fallback="thumbs/pictureSmall.png">$INFO[ListItem.Thumb]</texture>
 					<include>focus_PhotosThumbs</include>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>200</width>
+					<height>190</height>
+					<texture border="10">frames/polaroid.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<include>focus_PhotosThumbs</include>
+					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="label">
 					<posx>0</posx>
@@ -280,7 +280,7 @@
 					<font>fontinSmallest</font>
 					<textcolor>Color6</textcolor>
 					<align>left</align>
-					<width>215</width>
+					<width>205</width>
 					<include>focus_PhotosThumbsText</include>
 				</control>
 			</focusedlayout>

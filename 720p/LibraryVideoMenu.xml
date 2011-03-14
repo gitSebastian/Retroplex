@@ -52,6 +52,26 @@
 				<onleft>-</onleft>
 				<onright>555</onright>
 				<itemgap>0</itemgap>
+				<!-- ACCESS -->
+				<control type="button" id="9001">
+					<label>Access :</label>
+					<include>leftMenuTitle</include>
+					<enable>false</enable>
+				</control>
+				<!-- spacing -->
+				<control type="button" id="9098">
+					<label></label>
+					<include>leftMenuSpacing</include>
+					<enable>false</enable>
+				</control>
+				<!-- VIEW OPTIONS -->
+				<!-- common -->
+				<control type="button" id="9050">
+					<description>Add to favorites</description>
+					<label>$LOCALIZE[1036]</label>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<include>leftMenuViewOptions</include>
+				</control>
 				<!-- view selection -->
 				<control type="button" id="9099">
 					<label>View Selection :</label>
@@ -177,26 +197,6 @@
 					<include>newHomeMenuCategoryNoFocusBg</include>
 					<visible>false</visible>
 				</control>
-				<!-- view options -->
-				<control type="button" id="9001">
-					<label>View Options :</label>
-					<include>leftMenuTitle</include>
-					<enable>false</enable>
-				</control>
-				<!-- spacing -->
-				<control type="button" id="9098">
-					<label></label>
-					<include>leftMenuSpacing</include>
-					<enable>false</enable>
-				</control>
-				<!-- VIEW OPTIONS -->
-				<!-- common -->
-				<control type="button" id="9050">
-					<description>Add to favorites</description>
-					<label>$LOCALIZE[1036]</label>
-					<onclick>ActivateWindow(Favourites)</onclick>
-					<include>leftMenuViewOptions</include>
-				</control>
 				<!-- slide -->
 				<!--<control type="button" id="9051">
 					<description>SLIDE: use posters</description>
@@ -319,6 +319,26 @@
 					<include>leftMenuViewOptions</include>
 					<include>leftMenuRadioButton</include>
 					<visible>!Skin.HasSetting(FanartGlobal) + [Window.IsActive(501) | Window.IsActive(502)]</visible>
+				</control>
+				<!-- Home screen options -->
+				<control type="button" id="9070">
+					<label>Extras :</label>
+					<include>leftMenuTitle</include>
+					<enable>false</enable>
+				</control>
+				<!-- spacing -->
+				<control type="button" id="9071">
+					<label></label>
+					<include>leftMenuSpacing</include>
+					<enable>false</enable>
+				</control>
+				<control type="button" id="9074">
+					<description>Quit Plex</description>
+					<label>Quit Plex</label>
+					<onclick>Dialog.Close(shutdownmenu)</onclick>
+					<onclick>dialog.close(all,true)</onclick>
+					<onclick>Plex.Shutdown()</onclick>
+					<include>leftMenuViewOptions</include>
 				</control>
 			</control>
 		</control>

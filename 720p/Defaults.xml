@@ -216,9 +216,9 @@
 		<font>menu</font>
 		<reverse>no</reverse>
 		<textcolor>Color1</textcolor>
-		<focusedcolor>Color3</focusedcolor>
-		<disabledcolor>Disabled</disabledcolor>
-		<selectedcolor>Selected</selectedcolor>
+		<focusedcolor>greenlime</focusedcolor>
+		<disabledcolor>ivory3</disabledcolor>
+		<selectedcolor>greenlime</selectedcolor>
 		<textureup>scroll-up.png</textureup>
 		<texturedown>scroll-down.png</texturedown>
 		<textureupfocus>scroll-up-focus.png</textureupfocus>
@@ -238,8 +238,9 @@
 		<textureupfocus>settings/scrollUp-focus.png</textureupfocus>
 		<texturedownfocus>settings/scrollDown-focus.png</texturedownfocus>
 		<textcolor>Color1</textcolor>
-		<focusedcolor>Focused</focusedcolor>
-		<disabledcolor>Disabled</disabledcolor>
+		<focusedcolor>greenlime</focusedcolor>
+		<selectedcolor>greenlime</selectedcolor>
+		<disabledcolor>ivory3</disabledcolor>
 		<reverse>yes</reverse>
 		<textoffsety>0</textoffsety>
 		<textoffsetx>15</textoffsetx>

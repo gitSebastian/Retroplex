@@ -94,6 +94,17 @@
 		<animation effect="slide" start="220" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
 		<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus()">Conditional</animation>
 	</include>
+	<!-- Video Full Info left menu animations -->
+	<include name="VideoInfoLeftMenuRightSlide">
+		<animation effect="slide" start="0" end="500" time="500" condition="ControlGroup(300).HasFocus()">Conditional</animation>
+		<animation effect="slide" start="500" end="0" time="500" condition="!ControlGroup(300).HasFocus()">Conditional</animation>
+		<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(300).HasFocus()">Conditional</animation>
+	</include>
+	<include name="VideoInfoLeftMenuPosterSlide">
+		<animation effect="slide" start="0" end="162" time="500" condition="ControlGroup(300).HasFocus()">Conditional</animation>
+		<animation effect="slide" start="162" end="0" time="500" condition="!ControlGroup(300).HasFocus()">Conditional</animation>
+		<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(300).HasFocus()">Conditional</animation>
+	</include>
 	<!-- Banners left menu animations -->
 	<include name="BannersLeftMenuSlide">
 		<animation effect="slide" start="0" end="85" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>

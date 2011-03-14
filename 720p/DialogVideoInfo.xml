@@ -3,6 +3,8 @@
 	<defaultcontrol always="true">8000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
+		<control type="group">
+		<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes)] + ![Window.IsActive(101) | Window.IsActive(0)]</visible>			
 		<!-- FAKE INFO BUTTONS -->
 		<!--<control type="button" id="8000">
 			<label>SHOULD NOT SEE ME</label>
@@ -39,6 +41,7 @@
 			<height>300</height>
 			<include>transition2</include>
 			<include>grainypagefade</include>
+			<include>VideoInfoLeftMenuPosterSlide</include>
 			<texture flipx="true">dialogs/square_menu_background.png</texture>
 			<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
 		</control>
@@ -55,30 +58,35 @@
 				<label>$LOCALIZE[345] [COLOR=Color1]$INFO[ListItem.Year][/COLOR]</label>
 				<include>infoDialogMeta</include>
 				<visible>!IsEmpty(ListItem.Genre)</visible>
+				<include>VideoInfoLeftMenuPosterSlide</include>
 			</control>
 			<control type="label" id="1">
 				<width>740</width>
 				<label>$LOCALIZE[515] [COLOR=Color1]$INFO[ListItem.Genre][/COLOR]</label>
 				<include>infoDialogMeta</include>
 				<visible>!IsEmpty(ListItem.Genre)</visible>
+				<include>VideoInfoLeftMenuPosterSlide</include>
 			</control>
 			<control type="label" id="1">
 				<width>740</width>
 				<label>$LOCALIZE[20417] [COLOR=Color1]$INFO[ListItem.Writer][/COLOR]</label>
 				<include>infoDialogMeta</include>
 				<visible>!IsEmpty(ListItem.Writer)</visible>
+				<include>VideoInfoLeftMenuPosterSlide</include>
 			</control>
 			<control type="label" id="1">
 				<width>740</width>
 				<label>$LOCALIZE[20339] [COLOR=Color1]$INFO[ListItem.Director][/COLOR]</label>
 				<include>infoDialogMeta</include>
 				<visible>!IsEmpty(ListItem.Director)</visible>
+				<include>VideoInfoLeftMenuPosterSlide</include>
 			</control>
 			<control type="label" id="1">
 				<width>740</width>
 				<label>$LOCALIZE[572] [COLOR=Color1]$INFO[Listitem.Property(mediaTag-Studio)][/COLOR]</label>
 				<include>infoDialogMeta</include>
 				<visible>!IsEmpty(Listitem.Property(mediaTag-Studio))</visible>
+				<include>VideoInfoLeftMenuPosterSlide</include>
 			</control>
 			<control type="label" id="1">
 				<width>740</width>
@@ -86,12 +94,14 @@
 				<scroll>true</scroll>
 				<include>infoDialogMeta</include>
 				<visible>!IsEmpty(ListItem.Duration)</visible>
+				<include>VideoInfoLeftMenuPosterSlide</include>
 			</control>
 			<control type="label" id="1">
 				<width>740</width>
 				<label>$LOCALIZE[563] [COLOR=Color1]$INFO[ListItem.MPAA][/COLOR]</label>
 				<include>infoDialogMeta</include>
 				<visible>!IsEmpty(ListItem.MPAA)</visible>
+				<include>VideoInfoLeftMenuPosterSlide</include>
 			</control>
 			<control type="label" id="1">
 				<width>740</width>
@@ -111,6 +121,7 @@
 				<label>$INFO[ListItem.PlotOutline]</label>
 				<font>fontinSmall</font>
 				<textcolor>ivory3</textcolor>
+				<include>VideoInfoLeftMenuRightSlide</include>
 			</control>
 			<!-- END MOD -->
 		</control>
@@ -127,34 +138,40 @@
 				<label>$LOCALIZE[345] [COLOR=Color1]$INFO[ListItem.Year][/COLOR]</label>
 				<include>infoDialogMeta</include>
 				<visible>!IsEmpty(ListItem.Genre)</visible>
+				<include>VideoInfoLeftMenuPosterSlide</include>
 			</control>
 			<control type="label" id="1">
 				<width>740</width>
 				<label>$LOCALIZE[515] [COLOR=Color1]$INFO[ListItem.Genre][/COLOR]</label>
 				<include>infoDialogMeta</include>
 				<visible>!IsEmpty(ListItem.Genre)</visible>
+				<include>VideoInfoLeftMenuPosterSlide</include>
 			</control>
 			<control type="label" id="1">
 				<width>770</width>
 				<label>$LOCALIZE[31089] [COLOR=Color1]$INFO[ListItem.Episode] $LOCALIZE[20360][/COLOR]</label>
 				<include>infoDialogMeta</include>
+				<include>VideoInfoLeftMenuPosterSlide</include>
 			</control>
 			<control type="label" id="1">
 				<width>770</width>
 				<label>$LOCALIZE[16101] [COLOR=Color1]$INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[20360][/COLOR]</label>
 				<include>infoDialogMeta</include>
+				<include>VideoInfoLeftMenuPosterSlide</include>
 			</control>
 			<control type="label" id="1">
 				<width>770</width>
 				<label>$LOCALIZE[572] [COLOR=Color1]$INFO[ListItem.Studio][/COLOR]</label>
 				<include>infoDialogMeta</include>
 				<visible>!IsEmpty(ListItem.Studio)</visible>
+				<include>VideoInfoLeftMenuPosterSlide</include>
 			</control>
 			<control type="label" id="1">
 				<width>770</width>
 				<label>$LOCALIZE[563] [COLOR=Color1]$INFO[ListItem.MPAA][/COLOR]</label>
 				<include>infoDialogMeta</include>
 				<visible>!IsEmpty(ListItem.MPAA)</visible>
+				<include>VideoInfoLeftMenuPosterSlide</include>
 			</control>
 			<!-- <control type="label" id="1">
 			<width>770</width>
@@ -177,6 +194,7 @@
 				<label>$INFO[ListItem.Plot]</label>
 				<font>fontinSmall</font>
 				<textcolor>ivory3</textcolor>
+				<include>VideoInfoLeftMenuRightSlide</include>
 			</control>
 			<!-- END MOD -->
 		</control>
@@ -192,12 +210,14 @@
 				<label>$INFO[ListItem.Title]</label>
 				<include>Heading</include>
 				<visible>!ControlGroup(9001).HasFocus()</visible>
+				<include>VideoInfoLeftMenuPosterSlide</include>
 			</control>
 			<control type="label">
 				<width>780</width>
 				<label>$LOCALIZE[206]</label>
 				<include>Heading</include>
 				<visible>ControlGroup(9001).HasFocus()</visible>
+				<include>VideoInfoLeftMenuPosterSlide</include>
 			</control>
 			<control type="grouplist" id="1000">
 				<posy>35</posy>
@@ -208,6 +228,7 @@
 					<label>$LOCALIZE[31074]</label>
 					<textcolor>Color1</textcolor>
 					<include>infoDialogMeta</include>
+					<include>VideoInfoLeftMenuPosterSlide</include>
 				</control>
 				<control type="label" id="1">
 					<label/>
@@ -217,18 +238,21 @@
 					<label>$LOCALIZE[20417] [COLOR=Color1]$INFO[ListItem.Writer][/COLOR]</label>
 					<include>infoDialogMeta</include>
 					<visible>!IsEmpty(ListItem.Writer)</visible>
+					<include>VideoInfoLeftMenuPosterSlide</include>
 				</control>
 				<control type="label" id="1">
 					<width>690</width>
 					<label>$LOCALIZE[20339] [COLOR=Color1]$INFO[ListItem.Director][/COLOR]</label>
 					<include>infoDialogMeta</include>
 					<visible>!IsEmpty(ListItem.Director)</visible>
+					<include>VideoInfoLeftMenuPosterSlide</include>
 				</control>
 				<control type="label" id="1">
 					<width>690</width>
 					<label>$LOCALIZE[563] [COLOR=Color1]$INFO[ListItem.MPAA][/COLOR]</label>
 					<include>infoDialogMeta</include>
 					<visible>!IsEmpty(ListItem.MPAA)</visible>
+					<include>VideoInfoLeftMenuPosterSlide</include>
 				</control>
 				<control type="label" id="1">
 					<width>690</width>
@@ -240,6 +264,7 @@
 					<label/>
 					<include>infoDialogMeta</include>
 					<visible>IsEmpty(ListItem.MPAA)</visible>
+					<include>VideoInfoLeftMenuPosterSlide</include>
 				</control>
 				<control type="label" id="1">
 					<label/>
@@ -250,6 +275,7 @@
 					<label>$INFO[ListItem.Plot]</label>
 					<font>fontinSmall</font>
 					<textcolor>ivory3</textcolor>
+					<include>VideoInfoLeftMenuRightSlide</include>
 				</control>
 				<!-- END MOD -->
 			</control>
@@ -334,6 +360,7 @@
 			<include>typeFlagsFullInfo</include>
 			<include>transition2</include>
 			<include>contextMenuHide</include>
+			<include>VideoInfoLeftMenuPosterSlide</include>
 			<animation effect="slide" start="0" end="50" time="0" condition="Container.Content(episodes) | Container.Content(musicvideos)">Conditional</animation>
 		</control>
 		<!-- CAST LIST -->
@@ -351,6 +378,7 @@
 				<scrolltime>200</scrolltime>
 				<include>transition2</include>
 				<include>contextMenuHide</include>
+				<include>VideoInfoLeftMenuPosterSlide</include>
 				<itemlayout height="42">
 					<control type="label">
 						<posx>40</posx>
@@ -381,6 +409,7 @@
 			<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes)] + !Window.IsActive(101)</visible>
 			<include>transition2</include>
 			<include>contextMenuHide</include>
+			<include>VideoInfoLeftMenuPosterSlide</include>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -499,6 +528,7 @@
 			<visible>[Container.Content(episodes) | Container.Content(musicvideos)] + !Window.IsActive(101) + !ControlGroup(9001).HasFocus()</visible>
 			<include>transition2</include>
 			<include>contextMenuHide</include>
+			<include>VideoInfoLeftMenuPosterSlide</include>
 			<control type="image">
 				<width>492</width>
 				<height>335</height>
@@ -511,5 +541,6 @@
 			<include>transition1</include>
 			<include>InfoDialogMenu</include>
 		</control>
+	</control>
 	</controls>
 </window>

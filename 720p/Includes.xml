@@ -49,8 +49,16 @@
 		<texture>backgrounds/weatherpinupplate.png</texture>
 		<aspectratio scalediffuse="false" align="center">keep</aspectratio>
 		<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
-		<!--<animation effect="fade" start="100" end="60" time="350" condition="System.IdleTime(60)">Conditional</animation>-->
 	</control>
+	<!--<control type="image">
+		<posx>-200</posx>
+		<posy>0</posy>
+		<width>179</width>
+		<height>300</height>
+		<texture>frames/tape.png</texture>
+		<aspectratio scalediffuse="false" align="center">keep</aspectratio>
+		<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
+	</control>-->
 	<!-- condition icon -->
 	<control type="image" id="21">
 		<posx>110</posx>
@@ -94,6 +102,31 @@
 		<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 		<animation effect="fade" start="100" end="60" time="350" condition="System.IdleTime(60)">Conditional</animation>
 		<include>transition2</include>
+	</include>
+	<!-- Retroplex settings logo -->
+	<include name="settingslogo">
+		<control type="group">
+			<posx>100</posx>
+			<posy>662</posy>
+			<include>transition2</include>
+			<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
+		<control type="label">
+		<width>200</width>
+		<label>Retroplex</label>
+		<font>lobsterMediumSmall</font>
+		<height>40</height>
+		<textcolor>ivory3</textcolor>
+		<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+		</control>
+		<control type="label">
+		<width>200</width>
+		<label>Retroplex</label>
+		<font>lobsterMediumSmall</font>
+		<height>40</height>
+		<textcolor>greenlime</textcolor>
+		<animation effect="fade" start="40" end="40" time="0" condition="true">Conditional</animation>
+		</control>
+		</control>
 	</include>
 	<!-- left menu -->
 	<include name="leftMenu">
@@ -185,6 +218,16 @@
 	<!-- this is the grainy edition bg elsewhere than homescreen -->
 	<!-- the animations are included here for ease of modding, came from "transition2.5" IncludesAnimations.xml -->
 	<include name="grainyeditionback">
+		<!-- bg settings -->
+		<control type="image">
+			<description>settings bg</description>
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<include>transition2</include>
+			<texture background="true">backgrounds/background15.png</texture>
+			<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
+			<visible>[Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
+		</control>
 		<!-- bg weather -->
 		<control type="image">
 			<aspectratio>scale</aspectratio>
@@ -217,7 +260,7 @@
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
 			<texture background="true">backgrounds/background4.png</texture>
-			<visible>Window.IsVisible(500)</visible>
+			<visible>Window.IsVisible(500) | Window.IsVisible(28)</visible>
 			<animation effect="fade" start="85" end="85" time="0" condition="true">Conditional</animation>
 			<include>transition2</include>
 		</control>
@@ -235,7 +278,7 @@
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
 			<texture background="true">backgrounds/background13.png</texture>
-			<visible>Control.IsVisible(54) + !Window.IsActive(2600)</visible>
+			<visible>Control.IsVisible(54) + !Window.IsActive(2600) + ![Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
 			<animation effect="fade" start="80" end="80" time="0" condition="true">Conditional</animation>
 			<include>transition2</include>
 		</control>
@@ -244,7 +287,7 @@
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
 			<texture background="true">backgrounds/background9.png</texture>
-			<visible>Control.IsVisible(566) + !Window.IsActive(2600)</visible>
+			<visible>Control.IsVisible(566) + !Window.IsActive(2600) + ![Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
 			<animation effect="fade" start="80" end="80" time="0" condition="true">Conditional</animation>
 			<include>transition2</include>
 		</control>
@@ -271,7 +314,7 @@
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
 			<texture background="true">backgrounds/background.png</texture>
-			<visible>Control.IsVisible(51) + !Window.IsActive(2600)</visible>
+			<visible>Control.IsVisible(51) + !Window.IsActive(2600) + ![Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
 			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
 			<include>transition2</include>
 		</control>
@@ -280,7 +323,7 @@
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
 			<texture background="true">backgrounds/background15.png</texture>
-			<visible>Control.IsVisible(57) + !Window.IsActive(2600)</visible>
+			<visible>Control.IsVisible(57) + !Window.IsActive(2600) + ![Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
 			<animation effect="fade" start="85" end="85" time="0" condition="true">Conditional</animation>
 			<include>transition2</include>
 		</control>
@@ -289,7 +332,7 @@
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
 			<texture background="true">backgrounds/background5.png</texture>
-			<visible>Control.IsVisible(571) + !Window.IsActive(2600)</visible>
+			<visible>Control.IsVisible(571) + !Window.IsActive(2600) + ![Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
 			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
 			<include>transition2</include>
 		</control>
@@ -298,7 +341,7 @@
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
 			<texture background="true">backgrounds/background17.png</texture>
-			<visible>[Control.IsVisible(52) | Control.IsVisible(55) | Control.IsVisible(58)] + !Window.IsActive(2600)</visible>
+			<visible>[Control.IsVisible(52) | Control.IsVisible(55) | Control.IsVisible(58)] + !Window.IsActive(2600) + ![Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
 			<animation effect="fade" start="85" end="85" time="0" condition="true">Conditional</animation>
 			<include>transition2</include>
 		</control>
@@ -311,6 +354,14 @@
 			<include>fanartFadeTime</include>
 			<visible>!Skin.HasSetting(FanartGlobal) + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)] + ![Control.IsVisible(56)] + ![Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(2)]</visible>
 			<include>transition2</include>
+		</control>
+		<control type="image">
+			<description>settings bg</description>
+			<aspectratio>stretch</aspectratio>
+			<include>screentype</include>
+			<include>transition2</include>
+			<texture background="true">backgrounds/settings.jpg</texture>
+			<visible>[Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
 		</control>
 		<control type="image">
 			<description>movies bg</description>
@@ -636,7 +687,20 @@
 			<textcolor>ivory3</textcolor>
 			<include>transition2</include>
 			<label>$INFO[System.Date] &#xB7; $INFO[System.Time]</label>
-			<visible>![Control.IsVisible(56)] + ![Window.IsActive(133) | Window.IsActive(112) | Window.IsActive(12600)] + ![Window.IsActive(2) + Control.IsVisible(52)] | Window.IsActive(111)</visible>
+			<visible>![Control.IsVisible(56)] + ![Window.IsActive(133) | Window.IsActive(112) | Window.IsActive(12600) | Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)] + ![Window.IsActive(2) + Control.IsVisible(52)] | Window.IsActive(111)</visible>
+		</control>
+		<control type="label" id="200">
+			<posy>23</posy>
+			<posx>20r</posx>
+			<width>400</width>
+			<align>right</align>
+			<height>40</height>
+			<font>qlassikSmall</font>
+			<aligny>center</aligny>
+			<textcolor>ivory3</textcolor>
+			<include>transition2</include>
+			<label>$INFO[System.Date] &#xB7; $INFO[System.Time]</label>
+			<visible>[Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
 		</control>
 	</include>
 	<!-- SLIDESHOWS -->
@@ -919,17 +983,31 @@
 		<animation type="Conditional" condition="true">
 			<effect type="fade" start="0" end="80"/>
 		</animation>
-		<texturefocus flipx="true">dialogs/square_menu_background.png</texturefocus>
+		<texturefocus>dialogs/square_menu_background.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
-		<textoffsety>0</textoffsety>
 		<textoffsetx>20</textoffsetx>
 		<font>lobsterSmall</font>
 		<height>40</height>
-		<textcolor>ivory3</textcolor>
+		<textcolor>chocolate</textcolor>
 		<focusedcolor>greenlime</focusedcolor>
 		<align>right</align>
 		<aligny>center</aligny>
-		<width>325</width>
+		<width>300</width>
+	</include>
+	<include name="settingsLeftMenuFormat2">
+		<animation type="Conditional" condition="true">
+			<effect type="fade" start="0" end="50"/>
+		</animation>
+		<texturefocus>-</texturefocus>
+		<texturenofocus>dialogs/square_menu_background.png</texturenofocus>
+		<textoffsetx>20</textoffsetx>
+		<font>lobsterSmall</font>
+		<height>40</height>
+		<textcolor>greenlime</textcolor>
+		<focusedcolor>-</focusedcolor>
+		<align>right</align>
+		<aligny>center</aligny>
+		<width>300</width>
 	</include>
 	<include name="leftMenuViewOptions">
 		<animation type="Conditional" condition="true">
@@ -984,12 +1062,34 @@
 		<textoffsetx>30</textoffsetx>
 		<font>qlassikMedium1</font>
 		<height>40</height>
-		<textcolor>ivory3</textcolor>
+		<textcolor>chocolate</textcolor>
 		<focusedcolor>greenlime</focusedcolor>
+		<selectedcolor>greenlime</selectedcolor>
+		<disabledcolor>ivory3</disabledcolor>
 		<aspectratio align="right">stretch</aspectratio>
 		<align>left</align>
 		<aligny>center</aligny>
-		<width>900</width>
+		<width>895</width>
+	</include>
+	<include name="newHomeMenuSubSettingsSpincontrol">
+		<animation type="Conditional" condition="true">
+			<effect type="fade" start="0" end="80"/>
+		</animation>
+		<texturefocus flipx="true">dialogs/square_menu_background.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<textoffsety>3</textoffsety>
+		<textoffsetx>30</textoffsetx>
+		<font>qlassikMedium1</font>
+		<height>40</height>
+		<diffusecolor>Color1</diffusecolor>
+		<textcolor>chocolate</textcolor>
+		<focusedcolor>greenlime</focusedcolor>
+		<selectedcolor>greenlime</selectedcolor>
+		<disabledcolor>ivory3</disabledcolor>
+		<aspectratio align="right">stretch</aspectratio>
+		<align>left</align>
+		<aligny>center</aligny>
+		<width>895</width>
 	</include>
 	<!-- END new home menu formatting -->
 	<include name="settingsButton">

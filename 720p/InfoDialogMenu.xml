@@ -1,23 +1,75 @@
+<?xml version="1.0"?>
 <includes>
-
 	<include name="InfoDialogMenu">
-
+		<!-- menu bg & animations -->
+		<control type="group">
+			<animation effect="fade" start="100" end="20" time="350" condition="!ControlGroup(300).HasFocus + ![Window.IsActive(101) | Window.IsActive(filebrowser)]">Conditional</animation>
+			<animation effect="slide" start="162" end="0" time="500" condition="!ControlGroup(300).HasFocus + ![Window.IsActive(101) | Window.IsActive(filebrowser)]">Conditional</animation>
+			<animation effect="slide" start="0" end="162" time="500" condition="ControlGroup(300).HasFocus + ![Window.IsActive(101) | Window.IsActive(filebrowser)]">Conditional</animation>
+			<!-- Background -->
+			<control type="group">
+				<control type="image">
+					<posx>-383</posx>
+					<posy>-50</posy>
+					<height>800</height>
+					<width>383</width>
+					<texture flipx="true">dialogs/square_menu_background.png</texture>
+					<aspectratio align="right">stretch</aspectratio>
+					<animation type="Conditional" condition="true">
+						<effect type="fade" start="0" end="50"/>
+					</animation>
+				</control>
+			</control>
+			<!-- Separator -->
+			<control type="group">
+				<control type="image">
+					<posx>-29</posx>
+					<posy>-200</posy>
+					<height>1120</height>
+					<width>29</width>
+					<texture>settings/separator.png</texture>
+					<aspectratio align="right">stretch</aspectratio>
+				</control>
+			</control>
+		</control>
+		<!-- MENU -->
 		<control type="group" id="300">
-			<posx>-275</posx>
-			<posy>20</posy>
-			<width>800</width>
-			<height>800</height>
+			<posx>-405</posx>
+			<posy>145</posy>
+			<width>400</width>
+			<height>650</height>
+			<onup>9100</onup>
+			<ondown>9100</ondown>
 			<visible allowhiddenfocus="true">ControlGroup(300).HasFocus + ![Window.IsActive(101) | Window.IsActive(filebrowser)]</visible>
 			<orientation>vertical</orientation>
-			<include>pagemenus</include>
-
+			<include>transition2</include>
+			<animation effect="slide" start="202" end="40" time="500" condition="![ControlGroup(9100).HasFocus() | ControlGroup(200).HasFocus()]">Conditional</animation>
+			<animation effect="slide" start="40" end="202" time="500" condition="!Control.HasFocus(300) + [ControlGroup(9100).HasFocus() | ControlGroup(200).HasFocus()]">Conditional</animation>
+			<control type="grouplist" id="9100">
+				<onup>9100</onup>
+				<ondown>9100</ondown>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<itemgap>0</itemgap>
+				<!-- options -->
+				<control type="button" id="9099">
+					<label>Options :</label>
+					<include>leftMenuTitle</include>
+					<enable>false</enable>
+				</control>
+				<!-- spacing -->
+				<control type="button" id="9097">
+					<label></label>
+					<include>leftMenuSpacing</include>
+					<enable>false</enable>
+				</control>
 			<control type="button" id="5">
 				<label>$LOCALIZE[206]</label>
 				<width>275</width>
 				<onup>13</onup>
 				<ondown>8</ondown>
 				<onright>7000</onright>
-				<include>contextButton</include>
+				<include>leftMenuViewOptions</include>
 				<onclick>Skin.ToggleSetting(foo)</onclick>
 			</control>
 			<control type="button" id="8">
@@ -27,7 +79,7 @@
 				<onup>5</onup>
 				<ondown>6</ondown>
 				<onright>8000</onright>
-				<include>contextButton</include>
+				<include>leftMenuViewOptions</include>
 			</control>
 			<control type="button" id="6">
 				<posy>86</posy>
@@ -36,7 +88,7 @@
 				<onup>8</onup>
 				<ondown>10</ondown>
 				<onright>8000</onright>
-				<include>contextButton</include>
+				<include>leftMenuViewOptions</include>
 			</control>
 			<control type="button" id="10">
 				<posy>129</posy>
@@ -45,18 +97,18 @@
 				<onup>6</onup>
 				<ondown>12</ondown>
 				<onright>8000</onright>
-				<include>contextButton</include>
+				<include>leftMenuViewOptions</include>
 				<onclick>SetFocus(5000)</onclick>
 				<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
 			</control>
-			<control type="button" id="10">
+			<control type="button" id="11">
 				<posy>129</posy>
 				<label>$LOCALIZE[31019]</label>
 				<width>275</width>
 				<onup>6</onup>
 				<ondown>12</ondown>
 				<onright>8000</onright>
-				<include>contextButton</include>
+				<include>leftMenuViewOptions</include>
 				<onclick>SetFocus(5000)</onclick>
 				<visible>Container.Content(episodes) | Container.Content(musicvideos)</visible>
 			</control>
@@ -67,9 +119,8 @@
 				<onup>10</onup>
 				<ondown>13</ondown>
 				<onright>8000</onright>
-				<include>contextButton</include>
+				<include>leftMenuViewOptions</include>
 				<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
-				
 			</control>
 			<control type="button" id="13">
 				<posy>215</posy>
@@ -78,9 +129,8 @@
 				<onup>12</onup>
 				<ondown>5</ondown>
 				<onright>8000</onright>
-				<include>contextButton</include>
+				<include>leftMenuViewOptions</include>
 				<visible>Container.Content(tvshows)</visible>
-				
 			</control>
 			<!--control type="button" id="11">
 				<posy>215</posy>
@@ -94,13 +144,10 @@
 				<visible>Container.Content(movies)</visible>
 			</control-->
 		</control>
-				
+		</control>
 	</include>
-	
-	
 	<include name="InfoDialogMenuM">
-
-        <control type="group" id="300">
+		<control type="group" id="300">
 			<posx>-275</posx>
 			<posy>20</posy>
 			<width>800</width>
@@ -109,7 +156,6 @@
 			<onright>50</onright>
 			<orientation>vertical</orientation>
 			<include>pagemenus</include>
-
 			<control type="button" id="5">
 				<label>$LOCALIZE[182]</label>
 				<width>275</width>
@@ -146,6 +192,5 @@
 				<include>contextButton</include>
 			</control>
 		</control>
-
 	</include>
 </includes>
