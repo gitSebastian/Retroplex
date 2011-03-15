@@ -6,7 +6,7 @@
 		<control type="group">
 			<include>NowPlayingHomeLeftMenuSlide</include>
 			<control type="group">
-				<posx>890</posx>
+				<posx>898</posx>
 				<posy>0</posy>				
 				<visible>Player.HasMusicPlaylist</visible>
 				<animation condition="!Player.Paused" type="Conditional">
@@ -42,7 +42,7 @@
 					<!-- next playing informations -->
 					<control type="group">
 						<posx>210</posx>
-						<posy>12</posy>
+						<posy>17</posy>
 						<control type="label">
 							<posy>-2</posy>
 							<width>190</width>
@@ -65,17 +65,17 @@
 					<!-- cover next playing -->
 					<control type="group">
 						<posx>211</posx>
-						<posy>0</posy>
+						<posy>5</posy>
 						<align>right</align>
-						<!-- frame -->
+						<!-- shadow -->
 						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>174</width>
-							<height>169</height>
+							<posx>23</posx>
+							<posy>13</posy>
+							<width>128</width>
+							<height>128</height>
 							<aspectratio>stretch</aspectratio>
-							<texture border="20">frames/bannerFrame.png</texture>
-							<visible>MusicPlayer.HasNext</visible>
+							<texture>frames/oldpaperDarkShadow.png</texture>
+							<animation effect="fade" start="60" end="100" time="0" condition="true">Conditional</animation>
 						</control>
 						<!-- new cover -->
 						<control type="image">
@@ -86,7 +86,7 @@
 							<info>MusicPlayer.NextNewCover</info>
 							<aspectratio>stretch</aspectratio>
 							<visible>MusicPlayer.HasNewCoverNext</visible>
-							<texture diffuse="frames/grainyframe.png"/>
+							<texture diffuse="frames/oldpaperDarkMask.png"/>
 						</control>
 						<!-- if no new cover, then same cover -->
 						<control type="image">
@@ -97,7 +97,17 @@
 							<info>MusicPlayer.Cover</info>
 							<aspectratio>stretch</aspectratio>
 							<visible>!MusicPlayer.HasNewCoverNext</visible>
-							<texture diffuse="frames/slideBigPosterMask.png"/>
+							<texture diffuse="frames/oldpaperDarkMask.png"/>
+						</control>
+						<!-- overlay -->
+						<control type="image">
+							<posx>23</posx>
+							<posy>13</posy>
+							<width>128</width>
+							<height>128</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>frames/oldpaperDarkOverlay.png</texture>
+							<animation effect="fade" start="60" end="100" time="0" condition="true">Conditional</animation>
 						</control>
 					</control>
 				</control>
@@ -118,13 +128,13 @@
 					<!-- cover now playing -->
 					<control type="group">
 						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>299</width>
-							<height>299</height>
+							<posx>25</posx>
+							<posy>15</posy>
+							<width>249</width>
+							<height>249</height>
 							<aspectratio>stretch</aspectratio>
-							<texture border="20">frames/bannerFrame.png</texture>
-							<animation effect="fade" start="60" end="80" time="0" condition="true">Conditional</animation>
+							<texture>frames/oldpaperShadow2.png</texture>
+							<animation effect="fade" start="60" end="100" time="0" condition="true">Conditional</animation>
 						</control>
 						<control type="image">
 							<posx>25</posx>
@@ -132,14 +142,23 @@
 							<width>249</width>
 							<height>249</height>
 							<info>MusicPlayer.Cover</info>
-							<aspectratio>scale</aspectratio>
-							<texture diffuse="frames/slideBigPosterMask.png"/>
+							<aspectratio>stretch</aspectratio>
+							<texture diffuse="frames/oldpaperMask2.png"/>
+						</control>
+						<control type="image">
+							<posx>25</posx>
+							<posy>15</posy>
+							<width>249</width>
+							<height>249</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>frames/oldpaperOverlay2.png</texture>
+							<animation effect="fade" start="60" end="80" time="0" condition="true">Conditional</animation>
 						</control>
 					</control>
 					<!-- now playing informations -->
 					<control type="group">
 						<posy>278</posy>
-						<posx>275</posx>
+						<posx>265</posx>
 						<visible>Player.HasMusicPlaylist</visible>
 						<control type="label">
 							<width>330</width>
@@ -161,9 +180,9 @@
 					<control type="progress" id="21">
 						<description>Progress bar</description>
 						<posy>330</posy>
-						<posx>20</posx>
+						<posx>30</posx>
 						<height>1</height>
-						<width>257</width>
+						<width>237</width>
 						<info>Player.Progress</info>
 						<texturebg>dialogs/progressBackground_.png</texturebg>
 						<lefttexture>-</lefttexture>

@@ -481,7 +481,7 @@
 				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 				<colordiffuse>ivory3</colordiffuse>
-				<visible>Container.Content(movies) + Window.IsActive(2003)</visible>
+				<visible>[Container.Content(movies) | Container.Content(episodes)] + Window.IsActive(2003)</visible>
 			</control>
 			<control type="image">
 				<width>56</width>

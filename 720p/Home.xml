@@ -6,11 +6,14 @@
 		<include>slideshows</include>
 		<!-- test image -->
 		<!--<control type="image" id="21">
-			<include>screenwidth</include>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
 			<aspectratio>scale</aspectratio>
-			<aligny>top</aligny>
+			<aligny>center</aligny>
 			<texture>backgrounds/test.jpg</texture>
-		</control>-->		
+		</control>-->
 		<!-- grainy bg for home screen only -->
 		<include>nostalgiaOverlay</include>
 		<!--<control type="image">

@@ -324,5 +324,6 @@
 		<include>LibraryVideoMenu</include>
 		<include>videoLibPageLabels</include>
 		<include>debugInfos</include>
+		<include>musicOSDInfoNew</include>
 	</controls>
 </window>

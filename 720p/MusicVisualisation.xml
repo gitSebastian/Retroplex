@@ -16,6 +16,6 @@
 			<include>fadeinout</include>
 			<animation effect="fade" start="100" end="80" time="0" condition="Skin.HasSetting(musicVisBlend)">Conditional</animation>
 		</control>
-		<!--<include>musicOSDInfo</include>-->
+		<include>musicOSDInfoNew</include>
 	</controls>
 </window>

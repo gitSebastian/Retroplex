@@ -38,18 +38,36 @@
 	<include name="weatherhome">
 		<control type="group">
 			<include>transition2</include>
-			<posx>195r</posx>
+			<posx>205r</posx>
 			<posy>50</posy>
-			<visible>Skin.HasSetting(showweatherwidget)</visible>		
-	<control type="image">
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>179</width>
-		<height>300</height>
-		<texture>backgrounds/weatherpinupplate.png</texture>
-		<aspectratio scalediffuse="false" align="center">keep</aspectratio>
-		<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
-	</control>
+			<visible>Skin.HasSetting(showweatherwidget)</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>190</width>
+				<height>297</height>
+				<texture>frames/oldpaperShadowPortrait2.png</texture>
+				<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+			</control>		
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>190</width>
+				<height>300</height>
+				<texture diffuse="frames/oldpaperMaskPortrait2.png">backgrounds/weatherpinupplate3.png</texture>
+				<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>190</width>
+				<height>298</height>
+				<texture>frames/oldpaperOverlayPortrait2.png</texture>
+				<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+				<animation effect="fade" start="100" end="60" time="0" condition="true">Conditional</animation>
+			</control>
 	<!--<control type="image">
 		<posx>-200</posx>
 		<posy>0</posy>
@@ -83,14 +101,6 @@
 			<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 		</control>
 		</control>
-	</include>
-	<include name="nowplayingwithoutweather">
-		<posx>0</posx>
-		<posy>200</posy>
-	</include>
-	<include name="nowplayingwithweather">
-		<posx>-270</posx>
-		<posy>345</posy>
 	</include>
 	<!-- Retroplex logo -->
 	<include name="retroplexLogo">
@@ -224,8 +234,8 @@
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
 			<include>transition2</include>
-			<texture background="true">backgrounds/background15.png</texture>
-			<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
+			<texture background="true">backgrounds/background6.png</texture>
+			<animation effect="fade" start="50" end="40" time="0" condition="true">Conditional</animation>
 			<visible>[Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
 		</control>
 		<!-- bg weather -->
@@ -1054,7 +1064,7 @@
 	</include>
 	<include name="newHomeMenuSubSettingsButton">
 		<animation type="Conditional" condition="true">
-			<effect type="fade" start="0" end="90"/>
+			<effect type="fade" start="0" end="100"/>
 		</animation>
 		<texturefocus flipx="true">dialogs/square_menu_background.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
@@ -1073,7 +1083,7 @@
 	</include>
 	<include name="newHomeMenuSubSettingsSpincontrol">
 		<animation type="Conditional" condition="true">
-			<effect type="fade" start="0" end="80"/>
+			<effect type="fade" start="0" end="100"/>
 		</animation>
 		<texturefocus flipx="true">dialogs/square_menu_background.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
@@ -1146,6 +1156,14 @@
 		</control>
 	</include>
 	<!-- NOW PLAYING -->
+	<include name="nowplayingwithoutweather">
+		<posx>0</posx>
+		<posy>200</posy>
+	</include>
+	<include name="nowplayingwithweather">
+		<posx>-270</posx>
+		<posy>345</posy>
+	</include>
 	<include name="NowPlayingCurrentCover">
 		<control type="group">
 			<posx>-30</posx>
@@ -1342,7 +1360,250 @@
 			<posy>235r</posy>
 			<include>videoFullScreenInfo</include>
 			<include>transition2</include>
-			<visible>Player.ShowInfo + ![Window.IsActive(2000) | Window.IsVisible(script-XBMC_Lyrics-main.xml)]</visible>
+			<!--<visible>Player.ShowInfo + ![Window.IsActive(2000) | Window.IsVisible(script-XBMC_Lyrics-main.xml)]</visible>-->
+			<visible>Player.ShowInfo + Window.IsActive(2006)</visible>
+			<control type="group">
+				<control type="image">
+					<width>1265</width>
+					<height>231</height>
+					<include>dialogWindow</include>
+				</control>
+				<control type="image">
+					<posx>232</posx>
+					<posy>130</posy>
+					<width>1051</width>
+					<height>1</height>
+					<texture>views/separatorFadedLeft.png</texture>
+					<colordiffuse>Color4</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>24</posx>
+					<posy>23</posy>
+					<width>190</width>
+					<height>182</height>
+					<texture background="true" diffuse="frames/albumFrameMask.png" fallback="thumbs/album.png" scalediffuse="false">$INFO[MusicPlayer.Cover]</texture>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<include>thumbFadeTime</include>
+				</control>
+				<control type="group">
+					<posx>175r</posx>
+					<posy>34</posy>
+					<include>typeFlagsVis</include>
+				</control>
+				<control type="label" id="1">
+					<posx>230</posx>
+					<posy>34</posy>
+					<width>800</width>
+					<align>left</align>
+					<label>[UPPERCASE]$INFO[MusicPlayer.Title][/UPPERCASE]</label>
+					<textcolor>Color4</textcolor>
+					<font>osd1</font>
+				</control>
+				<control type="label" id="1">
+					<posx>230</posx>
+					<posy>66</posy>
+					<width>800</width>
+					<label>$LOCALIZE[31082]</label>
+					<align>left</align>
+					<textcolor>Color4</textcolor>
+					<font>osd2</font>
+				</control>
+				<control type="label" id="1">
+					<posx>230</posx>
+					<posy>90</posy>
+					<width>800</width>
+					<label>$LOCALIZE[31083]</label>
+					<align>left</align>
+					<textcolor>Color4</textcolor>
+					<font>osd3</font>
+				</control>
+				<control type="label" id="1">
+					<posx>230</posx>
+					<posy>148</posy>
+					<width>800</width>
+					<label>$INFO[MusicPlayer.Time,, / ]$INFO[MusicPlayer.Duration] &#xEF; $LOCALIZE[554] $INFO[MusicPlayer.PlaylistPosition,, $LOCALIZE[31108] ]$INFO[MusicPlayer.PlaylistLength]</label>
+					<align>left</align>
+					<textcolor>Color4</textcolor>
+					<font>mediumCaps</font>
+				</control>
+				<control type="label" id="1">
+					<posx>230</posx>
+					<posy>170</posy>
+					<width>800</width>
+					<label>$LOCALIZE[209]: $INFO[MusicPlayer.offset(1).Title,, ]$LOCALIZE[31106] $INFO[MusicPlayer.offset(1).Artist]</label>
+					<align>left</align>
+					<textcolor>Color4</textcolor>
+					<font>mediumCaps</font>
+					<visible>MusicPlayer.HasNext</visible>
+				</control>
+			</control>
+		</control>
+	</include>
+	<!-- NEW MUSIC OSD / SLIDESHOW -->
+	<include name="musicOSDInfoNew">
+		<control type="group">
+			<include>videoFullScreenInfo</include>
+			<include>transition2</include>
+			<visible>Player.ShowInfo + Window.IsActive(2006)</visible>
+			<!-- NOW & NEXT PLAYING VISUALS -->
+			<control type="group">
+				<control type="group">
+					<posx>890</posx>
+					<posy>0</posy>				
+					<visible>Player.HasMusicPlaylist</visible>
+					<!-- NEXT PLAYING -->
+					<control type="group">
+						<posx>0</posx>
+						<posy>200</posy>
+						<visible>Player.HasMusicPlaylist + MusicPlayer.HasNext</visible>
+						<control type="image">
+							<posx>85</posx>
+							<posy>-10</posy>
+							<width>300</width>
+							<height>510</height>
+							<include>dialogWindow</include>
+						</control>
+						<!-- next playing informations -->
+						<control type="group">
+								<posx>218</posx>
+								<posy>12</posy>
+							<control type="label">
+								<posy>-2</posy>
+								<width>120</width>
+								<height>30</height>
+								<font>qlassikSmallest</font>
+								<textcolor>ivory3</textcolor>
+								<label>$INFO[MusicPlayer.Offset(1).Artist]</label>
+								<align>right</align>
+								<aligny>top</aligny>
+								<wrapmultiline>true</wrapmultiline>
+							</control>
+							<control type="label">
+								<posy>40</posy>
+								<width>130</width>
+								<height>60</height>
+								<font>lobsterSmallest</font>
+								<wrapmultiline>true</wrapmultiline>
+								<textcolor>ivory3</textcolor>
+								<label>$INFO[MusicPlayer.Offset(1).Title]</label>
+								<align>right</align>
+								<aligny>top</aligny>
+								<wrapmultiline>true</wrapmultiline>
+							</control>
+						</control>
+						<!-- cover next playing -->
+						<control type="group">
+							<posx>211</posx>
+							<posy>0</posy>
+							<align>right</align>
+							<!-- frame -->
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>174</width>
+								<height>169</height>
+								<aspectratio>stretch</aspectratio>
+								<texture border="20">frames/bannerFrame.png</texture>
+								<visible>MusicPlayer.HasNext</visible>
+							</control>
+							<!-- new cover -->
+							<control type="image">
+								<posx>23</posx>
+								<posy>13</posy>
+								<width>128</width>
+								<height>128</height>
+								<info>MusicPlayer.NextNewCover</info>
+								<aspectratio>stretch</aspectratio>
+								<visible>MusicPlayer.HasNewCoverNext</visible>
+								<texture diffuse="frames/grainyframe.png"/>
+							</control>
+							<!-- if no new cover, then same cover -->
+							<control type="image">
+								<posx>23</posx>
+								<posy>13</posy>
+								<width>128</width>
+								<height>128</height>
+								<info>MusicPlayer.Cover</info>
+								<aspectratio>stretch</aspectratio>
+								<visible>!MusicPlayer.HasNewCoverNext</visible>
+								<texture diffuse="frames/slideBigPosterMask.png"/>
+							</control>
+						</control>
+					</control>
+					<!-- CURRENTLY PLAYING -->
+					<control type="group">
+						<posy>345</posy>
+						<posx>86</posx>
+						<align>right</align>
+						<!-- cover now playing -->
+						<control type="group">
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>299</width>
+								<height>299</height>
+								<aspectratio>stretch</aspectratio>
+								<texture border="20">frames/bannerFrame.png</texture>
+								<animation effect="fade" start="60" end="80" time="0" condition="true">Conditional</animation>
+							</control>
+							<control type="image">
+								<posx>25</posx>
+								<posy>15</posy>
+								<width>249</width>
+								<height>249</height>
+								<info>MusicPlayer.Cover</info>
+								<aspectratio>scale</aspectratio>
+								<texture diffuse="frames/slideBigPosterMask.png"/>
+							</control>
+						</control>
+						<!-- now playing informations -->
+						<control type="group">
+							<posy>278</posy>
+							<posx>275</posx>
+							<visible>Player.HasMusicPlaylist</visible>
+							<control type="label">
+								<width>330</width>
+								<font>qlassikSmallest</font>
+								<textcolor>ivory3</textcolor>
+								<label>$INFO[MusicPlayer.Artist]</label>
+								<align>right</align>
+							</control>
+							<control type="label">
+								<posy>20</posy>
+								<width>350</width>
+								<font>lobsterSmallest</font>
+								<textcolor>greenlime</textcolor>
+								<label>$INFO[MusicPlayer.Title]</label>
+								<align>right</align>
+							</control>
+						</control>
+						<!-- progress bar -->
+						<control type="progress" id="21">
+							<description>Progress bar</description>
+							<posy>330</posy>
+							<posx>20</posx>
+							<height>1</height>
+							<width>257</width>
+							<info>Player.Progress</info>
+							<texturebg>dialogs/progressBackground_.png</texturebg>
+							<lefttexture>-</lefttexture>
+							<midtexture border="0">dialogs/progressSlider_.png</midtexture>
+							<righttexture>-</righttexture>
+							<animation effect="fade" start="0" end="100" time="1000">Visible</animation>
+							<animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
+							<visible>Player.HasMusicPlaylist</visible>
+						</control>
+					</control>
+				</control>
+			</control>
+			</control>
+		<control type="group">
+			<posx>10</posx>
+			<posy>235r</posy>
+			<include>videoFullScreenInfo</include>
+			<include>transition2</include>
+			<!--<visible>Player.ShowInfo + Window.IsActive(2006)</visible>-->
+			<visible>false</visible>
 			<control type="group">
 				<control type="image">
 					<width>1265</width>

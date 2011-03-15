@@ -14,10 +14,12 @@
 			<include>transition2</include>
 			<visible>Player.HasAudio + !Skin.HasSetting(overlay) + ![Window.IsActive(107) | Window.IsActive(104) | Window.IsActive(10133) | Window.IsActive(10112) | Window.IsActive(0) | Window.IsActive(500) | Window.IsActive(50)]</visible>
 		</control>-->
+		<!-- all but settings -->
 		<control type="group">
 			<posy>30</posy>
 			<posx>28r</posx>
 			<include>transition2</include>
+			<visible>Player.HasAudio + !Skin.HasSetting(overlay) + ![Window.IsActive(107) | Window.IsActive(104) | Window.IsActive(10133) | Window.IsActive(10112) | Window.IsActive(0) | Window.IsActive(500) | Window.IsActive(50)] + ![Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
 			<control type="label" id="200">				
 				<label>[COLOR=greenlime]$INFO[MusicPlayer.Title][/COLOR]</label>
 				<width>800</width>
@@ -25,8 +27,7 @@
 				<height>40</height>
 				<font>lobsterSmallest</font>
 				<aligny>center</aligny>
-				<textcolor>ivory3</textcolor>
-				<visible>Player.HasAudio + !Skin.HasSetting(overlay) + ![Window.IsActive(107) | Window.IsActive(104) | Window.IsActive(10133) | Window.IsActive(10112) | Window.IsActive(0) | Window.IsActive(500) | Window.IsActive(50)]</visible>
+				<textcolor>ivory3</textcolor>				
 			</control>
 			<control type="label" id="200">
 				<posy>20</posy>
@@ -37,7 +38,32 @@
 				<font>qlassikSmall</font>
 				<aligny>center</aligny>
 				<textcolor>ivory3</textcolor>
-				<visible>Player.HasAudio + !Skin.HasSetting(overlay) + ![Window.IsActive(107) | Window.IsActive(104) | Window.IsActive(10133) | Window.IsActive(10112) | Window.IsActive(0) | Window.IsActive(500) | Window.IsActive(50)]</visible>
+			</control>
+		</control>
+		<!-- settings screens -->
+		<control type="group">
+			<posy>45</posy>
+			<posx>20r</posx>
+			<include>transition2</include>
+			<visible>Player.HasAudio + !Skin.HasSetting(overlay) + [Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
+			<control type="label" id="200">				
+				<label>[COLOR=greenlime]$INFO[MusicPlayer.Title][/COLOR]</label>
+				<width>800</width>
+				<align>right</align>
+				<height>40</height>
+				<font>lobsterSmallest</font>
+				<aligny>center</aligny>
+				<textcolor>ivory3</textcolor>				
+			</control>
+			<control type="label" id="200">
+				<posy>20</posy>
+				<label>$INFO[MusicPlayer.Artist]</label>
+				<width>800</width>
+				<align>right</align>
+				<height>40</height>
+				<font>qlassikSmall</font>
+				<aligny>center</aligny>
+				<textcolor>ivory3</textcolor>
 			</control>
 		</control>
 	</controls>

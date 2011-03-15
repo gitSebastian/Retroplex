@@ -242,9 +242,23 @@
 				</control>
 				<control type="label" id="1">
 					<width>690</width>
+					<label/>
+					<include>infoDialogMeta</include>
+					<visible>IsEmpty(ListItem.Writer)</visible>
+					<include>VideoInfoLeftMenuPosterSlide</include>
+				</control>
+				<control type="label" id="1">
+					<width>690</width>
 					<label>$LOCALIZE[20339] [COLOR=Color1]$INFO[ListItem.Director][/COLOR]</label>
 					<include>infoDialogMeta</include>
 					<visible>!IsEmpty(ListItem.Director)</visible>
+					<include>VideoInfoLeftMenuPosterSlide</include>
+				</control>
+				<control type="label" id="1">
+					<width>690</width>
+					<label/>
+					<include>infoDialogMeta</include>
+					<visible>IsEmpty(ListItem.Director)</visible>
 					<include>VideoInfoLeftMenuPosterSlide</include>
 				</control>
 				<control type="label" id="1">
@@ -353,15 +367,6 @@
 					<visible>Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 			</control>
-		</control>
-		<control type="group">
-			<posx>470</posx>
-			<posy>630</posy>
-			<include>typeFlagsFullInfo</include>
-			<include>transition2</include>
-			<include>contextMenuHide</include>
-			<include>VideoInfoLeftMenuPosterSlide</include>
-			<animation effect="slide" start="0" end="50" time="0" condition="Container.Content(episodes) | Container.Content(musicvideos)">Conditional</animation>
 		</control>
 		<!-- CAST LIST -->
 		<control type="group" id="9001">
@@ -522,6 +527,15 @@
 			</control>
 		</control>
 		<!-- flags -->
+		<control type="group">
+			<posx>470</posx>
+			<posy>630</posy>
+			<include>typeFlagsFullInfo</include>
+			<include>transition2</include>
+			<include>contextMenuHide</include>
+			<include>VideoInfoLeftMenuPosterSlide</include>
+			<animation effect="slide" start="0" end="50" time="0" condition="Container.Content(episodes) | Container.Content(musicvideos)">Conditional</animation>
+		</control>
 		<control type="group">
 			<posx>8</posx>
 			<posy>70</posy>
