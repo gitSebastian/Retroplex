@@ -123,6 +123,31 @@
 			<filename>Nymphette.ttf</filename>
 			<size>40</size>
 		</font>
+		<font>
+			<name>dockBig</name>
+			<filename>dock11.otf</filename>
+			<size>36</size>
+		</font>
+		<font>
+			<name>dockMedium</name>
+			<filename>dock11.otf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>dockMediumSmall</name>
+			<filename>dock11.otf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>dockSmall</name>
+			<filename>dock11.otf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>telegraficoSmall</name>
+			<filename>Telegrafico.ttf</filename>
+			<size>18</size>
+		</font>
 		<!--<font>
 			<name>test</name>
 			<filename>MarketingScript.ttf</filename>

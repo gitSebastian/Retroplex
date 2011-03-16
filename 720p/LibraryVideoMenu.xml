@@ -72,6 +72,13 @@
 					<onclick>ActivateWindow(Favourites)</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
+				<!--<control type="button" id="9080">
+					<description>Search</description>
+					<label>Search</label>
+					<onclick>555</onclick>
+					<onclick>Plex.ActivateWindow(10051)</onclick>
+					<include>leftMenuViewOptions</include>
+				</control>-->
 				<!-- view selection -->
 				<control type="button" id="9099">
 					<label>View Selection :</label>

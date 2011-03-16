@@ -238,6 +238,16 @@
 			<animation effect="fade" start="50" end="40" time="0" condition="true">Conditional</animation>
 			<visible>[Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
 		</control>
+		<!-- bg search -->
+		<control type="image">
+			<description>settings bg</description>
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<include>transition2</include>
+			<texture background="true">search/background.jpg</texture>
+			<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+			<visible>[Window.IsActive(10051)]</visible>
+		</control>
 		<!-- bg weather -->
 		<control type="image">
 			<aspectratio>scale</aspectratio>
@@ -387,6 +397,15 @@
 			<visible>!Skin.HasSetting(FanartGlobal) + IsEmpty(ListItem.Property(Fanart_Image)) + [Container.Content(tvshows) | Container.Content(seasons)  | Container.Content(episodes)] + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
 			<include>transition2</include>
 		</control>
+		<!--<control type="image">
+			<description>tv bg</description>
+			<aspectratio>stretch</aspectratio>
+			<include>screentype</include>
+			<include>transition2</include>
+			<texture background="true">backgrounds/test2.jpg</texture>
+			<visible>Window.IsActive(10051)</visible>
+			<include>transition2</include>
+		</control>-->
 		<!--<control type="image">
 			<description>music bg</description>
 			<posx>0</posx>
@@ -1681,4 +1700,159 @@
 			</control>
 		</control>
 	</include>
+	<!-- SEARCH -->
+	<include name="Search_Label">
+		<posx>870</posx>
+		<font>qlassikSmall</font>
+		<textcolor>ivory3</textcolor>
+		<width>278</width>
+		<height>30</height>
+		<align>right</align>
+	</include>
+	<include name="Search_Label_Unfocused">
+		<posx>870</posx>
+		<font>qlassikSmall</font>
+		<textcolor>ivory3</textcolor>
+		<width>278</width>
+		<height>30</height>
+		<align>right</align>
+	</include>
+	<!--<include name="Search_Result">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>880</width>
+		<itemlayout width="140" height="200">
+			<control type="image">
+				<posx>15</posx>
+				<posy>10</posy>
+				<width>128</width>
+				<height>140</height>
+				<info>ListItem.Thumb</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+			</control>
+			<control type="label">
+				<visible>ListItem.Type(episode)</visible>
+				<posx>81</posx>
+				<posy>160</posy>
+				<width>130</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<scroll>false</scroll>
+				<label>$INFO[ListItem.tvshowtitle]</label>
+				<font>MediumSmallTitleFont</font>
+				<textcolor>FF999999</textcolor>
+				<wrapmultiline>false</wrapmultiline>
+			</control>
+			<control type="label">
+				<visible>ListItem.Type(album) | ListItem.Type(track)</visible>
+				<posx>81</posx>
+				<posy>160</posy>
+				<width>130</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<scroll>false</scroll>
+				<label>$INFO[ListItem.artist]</label>
+				<font>MediumSmallTitleFont</font>
+				<textcolor>FF999999</textcolor>
+				<wrapmultiline>false</wrapmultiline>
+			</control>
+			<control type="label">
+				<posx>81</posx>
+				<posy>180</posy>
+				<width>130</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<scroll>false</scroll>
+				<label>$INFO[ListItem.Title]</label>
+				<font>MediumSmallTitleFont</font>
+				<textcolor>FF999999</textcolor>
+				<wrapmultiline>false</wrapmultiline>
+			</control>
+		</itemlayout>
+
+		<focusedlayout width="140" height="200">
+			<control type="image">
+				<posx>15</posx>
+				<posy>10</posy>
+				<width>128</width>
+				<height>140</height>
+				<info>ListItem.Thumb</info>
+				<aspectratio aligny="bottom">keep</aspectratio>
+			</control>
+			<control type="label">
+				<visible>ListItem.Type(episode)</visible>
+				<posx>81</posx>
+				<posy>160</posy>
+				<width>130</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<scroll>false</scroll>
+				<label>$INFO[ListItem.tvshowtitle]</label>
+				<font>MediumSmallTitleFont</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<wrapmultiline>false</wrapmultiline>
+			</control>
+			<control type="label">
+				<visible>ListItem.Type(album) | ListItem.Type(track)</visible>
+				<posx>81</posx>
+				<posy>160</posy>
+				<width>130</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<scroll>false</scroll>
+				<label>$INFO[ListItem.artist]</label>
+				<font>MediumSmallTitleFont</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<wrapmultiline>false</wrapmultiline>
+			</control>
+			<control type="label">
+				<posx>81</posx>
+				<posy>180</posy>
+				<width>130</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<scroll>false</scroll>
+				<label>$INFO[ListItem.Title]</label>
+				<font>MediumSmallTitleFont</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<wrapmultiline>false</wrapmultiline>
+			</control>
+		</focusedlayout>
+	</include>-->
+	<include name="Search_Keyboard_Button">
+		<width>46</width>
+		<height>46</height>
+		<font>dockMedium</font>
+		<textcolor>ivory2</textcolor>
+		<focusedcolor>ivory2</focusedcolor>
+		<align>center</align>
+		<aligny>center</aligny>
+		<texturefocus>search/kbbutton.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<textureclick border="10">-</textureclick>
+	</include>
+	<!--<include name="Search_Keyboard_ToggleButton">
+		<width>36</width>
+		<height>36</height>
+		<font>LargeDefaultFont</font>
+		<textcolor>HomeMain</textcolor>
+		<focusedcolor>Focused</focusedcolor>
+		<align>center</align>
+		<aligny>center</aligny>
+		<texturenofocus border="18" diffuse="grey.png">search/button_keyboard.png</texturenofocus>
+		<texturefocus border="18" diffuse="masks/10b9f2.png">search/button_keyboard.png</texturefocus>
+		<textureclick border="18">-</textureclick>
+	</include>
+	<include name="Search_Keyboard_Big_Button">
+		<width>80</width>
+		<height>80</height>
+		<font>LargeDefaultFont</font>
+		<textcolor>HomeMain</textcolor>
+		<focusedcolor>Focused</focusedcolor>
+		<align>center</align>
+		<aligny>center</aligny>
+		<texturenofocus>search/button_kb.png</texturenofocus>
+		<texturefocus>search/button_kb_on.png</texturefocus>
+		<textureclick>search/button_kb_click.png</textureclick>
+	</include>-->
 </includes>
