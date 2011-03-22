@@ -5,7 +5,11 @@
 	<views>555,572</views>
 	<controls>
 		<include>themeBackground2</include>
-		<include>grainyeditionback</include>
+		<include>listMenuFocusedBg</include>
+		<include>frameOverlay</include>
+		<include>leftMenuBg</include>	
+		<include>grainyeditionback</include>		
+		<include>leftMenuDressing</include>
 		<include>LibraryVideoMenu</include>
 		<include>transition2</include>
 		<control type="label">
@@ -26,21 +30,6 @@
 		</control>
 		<!-- LIST VIEW -->
 		<control type="group">
-			<!-- horiz bar -->
-			<control type="image">
-				<posx>0</posx>
-				<posy>330</posy>
-				<width>1300</width>
-				<height>100</height>
-				<include>transition2</include>
-				<include>infoDialogHide</include>
-				<include>contextMenuHide</include>
-				<include>grainypagefade</include>
-				<include>ListHorizBarLeftMenuSlide</include>
-				<texture flipx="true">dialogs/square_menu_background.png</texture>
-				<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
-				<visible>Control.IsVisible(555)</visible>
-			</control>
 			<control type="group">
 				<include>ListLeftMenuSlide</include>
 				<!-- vertical separator -->

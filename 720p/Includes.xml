@@ -361,7 +361,7 @@
 				<aspectratio>stretch</aspectratio>
 				<include>transition2</include>
 				<texture background="true">backgrounds/agnes2.png</texture>
-				<visible>Window.IsActive(0)</visible>
+				<visible>Window.IsActive(0) | Window.IsActive(2)</visible>
 			</control>
 			<!-- MUSIC & PLUG-INS & PROGRAMS pin-up -->
 			<control type="image">
