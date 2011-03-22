@@ -1,42 +1,11 @@
 <?xml version="1.0"?>
 <includes>
 	<include name="LibraryVideoMenu">
-		<!-- menu bg & animations -->
-		<control type="group">
-			<animation effect="fade" start="100" end="20" time="350" condition="Control.HasFocus(300) | Control.HasFocus(1110) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
-			<animation effect="slide" start="162" end="0" time="500" condition="!Control.HasFocus(300) + ![ControlGroup(9100).HasFocus() | ControlGroup(200).HasFocus()]">Conditional</animation>
-			<animation effect="slide" start="0" end="162" time="500" condition="!Control.HasFocus(300) + [ControlGroup(9100).HasFocus() | ControlGroup(200).HasFocus()]">Conditional</animation>
-			<!-- Background -->
-			<control type="group">
-				<control type="image">
-					<posx>-383</posx>
-					<posy>-50</posy>
-					<height>800</height>
-					<width>383</width>
-					<texture flipx="true">dialogs/square_menu_background.png</texture>
-					<aspectratio align="right">stretch</aspectratio>
-					<animation type="Conditional" condition="true">
-						<effect type="fade" start="0" end="50"/>
-					</animation>
-				</control>
-			</control>
-			<!-- Separator -->
-			<control type="group">
-				<control type="image">
-					<posx>-29</posx>
-					<posy>-200</posy>
-					<height>1120</height>
-					<width>29</width>
-					<texture>settings/separator.png</texture>
-					<aspectratio align="right">stretch</aspectratio>
-				</control>
-			</control>
-		</control>
 		<!-- MENU -->
 		<control type="group" id="300">
-			<posx>-405</posx>
-			<posy>145</posy>
-			<width>400</width>
+			<posx>-298</posx>
+			<posy>64</posy>
+			<width>277</width>
 			<height>650</height>
 			<onup>9100</onup>
 			<ondown>9100</ondown>
@@ -44,8 +13,7 @@
 			<orientation>vertical</orientation>
 			<scrolltime>150</scrolltime>
 			<visible allowhiddenfocus="true">![ControlGroup(1100).HasFocus() | ControlGroup(4000).HasFocus() | ControlGroup(2100).HasFocus()]</visible>
-			<animation effect="slide" start="202" end="40" time="500" condition="![ControlGroup(9100).HasFocus() | ControlGroup(200).HasFocus()]">Conditional</animation>
-			<animation effect="slide" start="40" end="202" time="500" condition="!Control.HasFocus(300) + [ControlGroup(9100).HasFocus() | ControlGroup(200).HasFocus()]">Conditional</animation>
+			<include>leftMenuSlide</include>
 			<control type="grouplist" id="9100">
 				<onup>9100</onup>
 				<ondown>9100</ondown>
@@ -58,12 +26,6 @@
 					<include>leftMenuTitle</include>
 					<enable>false</enable>
 				</control>
-				<!-- spacing -->
-				<control type="button" id="9098">
-					<label></label>
-					<include>leftMenuSpacing</include>
-					<enable>false</enable>
-				</control>
 				<!-- VIEW OPTIONS -->
 				<!-- common -->
 				<control type="button" id="9050">
@@ -72,23 +34,17 @@
 					<onclick>ActivateWindow(Favourites)</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
-				<!--<control type="button" id="9080">
+				<control type="button" id="9080">
 					<description>Search</description>
 					<label>Search</label>
-					<onclick>555</onclick>
+					<onclick>SetFocus(555)</onclick>
 					<onclick>Plex.ActivateWindow(10051)</onclick>
 					<include>leftMenuViewOptions</include>
-				</control>-->
+				</control>
 				<!-- view selection -->
 				<control type="button" id="9099">
-					<label>View Selection :</label>
+					<label>View :</label>
 					<include>leftMenuTitle</include>
-					<enable>false</enable>
-				</control>
-				<!-- spacing -->
-				<control type="button" id="9097">
-					<label></label>
-					<include>leftMenuSpacing</include>
 					<enable>false</enable>
 				</control>
 				<!-- list -->
@@ -96,7 +52,7 @@
 					<label>$LOCALIZE[535]</label>
 					<onclick>Container.SetViewMode(555)</onclick>
 					<include>leftMenuViewOptions</include>
-					<visible>![Container.Content(seasons) | Window.IsActive(2)]</visible>
+					<visible>![Window.IsActive(2)]</visible>
 				</control>
 				<!-- list photos -->
 				<control type="button" id="9090">
@@ -159,14 +115,14 @@
 					<label>$LOCALIZE[31093]</label>
 					<onclick>Container.SetViewMode(54)</onclick>
 					<include>leftMenuViewOptions</include>
-					<visible>Container.Content(tvshows) </visible>
+					<visible>Container.Content(tvshows)</visible>
 				</control>
 				<!-- multi-banners (tv shows) -->
 				<control type="button" id="9022">
 					<label>Multi Banners</label>
 					<onclick>Container.SetViewMode(566)</onclick>
 					<include>leftMenuViewOptions</include>
-					<visible>Container.Content(tvshows) </visible>
+					<visible>[Container.Content(tvshows)]</visible>
 				</control>
 				<!-- gallery (movies & tv shows) -->
 				<!--<control type="button" id="9012">
@@ -221,6 +177,30 @@
 					<include>leftMenuViewOptions</include>
 					<visible>[Control.IsVisible(52) | Control.IsVisible(55)] + Skin.HasSetting(slideViewFanart) + !Container.Content(seasons)</visible>
 				</control>-->
+				<control type="radiobutton" id="9049">
+					<label>Hide TV Ratings</label>
+					<onclick>Skin.ToggleSetting(hidetvratings)</onclick>
+					<selected>Skin.HasSetting(hidetvratings)</selected>
+					<include>leftMenuViewOptions</include>
+					<include>leftMenuRadioButton</include>
+					<visible>[Control.IsVisible(555) | Control.IsVisible(571)] + Container.Content(tvshows)</visible>
+				</control>
+				<control type="radiobutton" id="9051">
+					<label>Hide Movie Ratings</label>
+					<onclick>Skin.ToggleSetting(hidemovieratings)</onclick>
+					<selected>Skin.HasSetting(hidemovieratings)</selected>
+					<include>leftMenuViewOptions</include>
+					<include>leftMenuRadioButton</include>
+					<visible>[Control.IsVisible(555) | Control.IsVisible(571)] + Container.Content(movies)</visible>
+				</control>
+				<control type="radiobutton" id="9052">
+					<label>Hide Media Flags</label>
+					<onclick>Skin.ToggleSetting(hidemovielistflags)</onclick>
+					<selected>Skin.HasSetting(hidemovielistflags)</selected>
+					<include>leftMenuViewOptions</include>
+					<include>leftMenuRadioButton</include>
+					<visible>[Control.IsVisible(555) | Control.IsVisible(571)] + Container.Content(movies)</visible>
+				</control>
 				<control type="radiobutton" id="9053">
 					<label>hide rating</label>
 					<onclick>Container.SetViewMode(52)</onclick>
@@ -331,12 +311,6 @@
 				<control type="button" id="9070">
 					<label>Extras :</label>
 					<include>leftMenuTitle</include>
-					<enable>false</enable>
-				</control>
-				<!-- spacing -->
-				<control type="button" id="9071">
-					<label></label>
-					<include>leftMenuSpacing</include>
 					<enable>false</enable>
 				</control>
 				<control type="button" id="9074">

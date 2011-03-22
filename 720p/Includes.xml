@@ -2,33 +2,18 @@
 <includes>
 	<include file="Defaults.xml">-</include>
 	<include file="Includes_Plex.xml">-</include>
-	<include file="ViewsFiles.xml">-</include>
 	<include file="ViewsMusic.xml">-</include>
 	<include file="ViewsVideo.xml">-</include>
-	<include file="ViewsPictures.xml">-</include>
 	<include file="ViewsAddons.xml">-</include>
 	<include file="ViewsShared.xml">-</include>
 	<include file="HomeMenu.xml">-</include>
-	<include file="HomeMenuNew.xml">-</include>
-	<include file="HomeMenu_Original.xml">-</include>
-	<include file="HomeSubMenu.xml">-</include>
-	<include file="HomeSubMenuNew.xml">-</include>
-	<include file="HomeSubMenu_Original.xml">-</include>
-	<include file="HomeMusicMenu.xml">-</include>
-	<include file="HomeVideoMenu.xml">-</include>
-	<include file="HomePicturesMenu.xml">-</include>
-	<include file="HomeAccessoriesMenu.xml">-</include>
-	<include file="HomeSettingsMenu.xml">-</include>
-	<include file="HomeExitMenu.xml">-</include>
 	<include file="LibraryVideoMenu.xml">-</include>
-	<include file="LibraryMusicMenu.xml">-</include>
 	<include file="LibraryPlaylistMenu.xml">-</include>
 	<include file="LibraryPlaylistMenu.xml">-</include>
 	<include file="NowPlayingNew.xml">-</include>
 	<include file="FilesMenu.xml">-</include>
 	<include file="WeatherMenu.xml">-</include>
 	<include file="InfoDialogMenu.xml">-</include>
-	<include file="DialogFullScreenInfoNew.xml">-</include>
 	<include file="IncludesFlags.xml">-</include>
 	<include file="IncludesPageLabels.xml">-</include>
 	<include file="IncludesAnimations.xml">-</include>
@@ -36,12 +21,13 @@
 	<include file="IncludesPageControl.xml">-</include>
 	<!-- weather widget for home screen -->
 	<include name="weatherhome">
+		<!-- without retroplex slideshow -->
 		<control type="group">
 			<include>transition2</include>
-			<posx>205r</posx>
+			<posx>195r</posx>
 			<posy>50</posy>
-			<visible>Skin.HasSetting(showweatherwidget)</visible>
-			<control type="image">
+			<visible>Skin.HasSetting(showweatherwidget) + !Skin.HasSetting(RetroplexSlideShow)</visible>
+			<!--<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>190</width>
@@ -49,17 +35,26 @@
 				<texture>frames/oldpaperShadowPortrait2.png</texture>
 				<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
-			</control>		
+			</control>-->
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>190</width>
-				<height>300</height>
-				<texture diffuse="frames/oldpaperMaskPortrait2.png">backgrounds/weatherpinupplate3.png</texture>
-				<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
-				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+				<posx>-13</posx>
+				<posy>2</posy>
+				<width>186</width>
+				<height>246</height>
+				<texture>backgrounds/weatherpinupbgred.png</texture>
+				<aspectratio scalediffuse="false" align="right">keep</aspectratio>
+				<animation effect="fade" start="100" end="30" time="0" condition="true">Conditional</animation>
 			</control>
 			<control type="image">
+				<posx>-15</posx>
+				<posy>0</posy>
+				<width>190</width>
+				<height>250</height>
+				<texture>backgrounds/weatherpinupplate.png</texture>
+				<aspectratio scalediffuse="false" align="right">keep</aspectratio>
+				<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
+			</control>
+			<!--<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>190</width>
@@ -67,41 +62,76 @@
 				<texture>frames/oldpaperOverlayPortrait2.png</texture>
 				<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 				<animation effect="fade" start="100" end="60" time="0" condition="true">Conditional</animation>
+			</control>-->
+			<!-- condition icon -->
+			<control type="image" id="21">
+				<posx>110</posx>
+				<posy>60</posy>
+				<info>Weather.Conditions</info>
+				<width>50</width>
+				<height>50</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<aspectratio align="right">keep</aspectratio>
 			</control>
-	<!--<control type="image">
-		<posx>-200</posx>
-		<posy>0</posy>
-		<width>179</width>
-		<height>300</height>
-		<texture>frames/tape.png</texture>
-		<aspectratio scalediffuse="false" align="center">keep</aspectratio>
-		<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
-	</control>-->
-	<!-- condition icon -->
-	<control type="image" id="21">
-		<posx>110</posx>
-		<posy>80</posy>
-		<info>Weather.Conditions</info>
-		<width>50</width>
-		<height>50</height>
-		<align>center</align>
-		<aligny>center</aligny>
-		<aspectratio align="right">keep</aspectratio>
-	</control>
-	<!-- current temp -->
-		<control type="label" id="23">
-			<posx>35r</posx>
-			<posy>122</posy>
-			<height>30</height>
-			<width>50</width>	
-			<align>right</align>
-			<info>Weather.Temperature</info>			
-			<font>lobsterSmallest</font>					
-			<textcolor>ff7b9da7</textcolor>
-			<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+			<!-- current temp -->
+			<control type="label" id="23">
+				<posx>35r</posx>
+				<posy>100</posy>
+				<height>30</height>
+				<width>50</width>	
+				<align>right</align>
+				<info>Weather.Temperature</info>			
+				<font>lobsterSmallest</font>					
+				<textcolor>ff7b9da7</textcolor>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+			</control>
 		</control>
+		<!-- with retroplex slideshow -->
+		<control type="group">
+			<include>transition2</include>
+			<posx>195r</posx>
+			<posy>50</posy>
+			<visible>Skin.HasSetting(showweatherwidget) + Skin.HasSetting(RetroplexSlideShow)</visible>
+			<!-- location -->
+			<control type="label" id="25">
+				<posx>25r</posx>
+				<posy>0</posy>
+				<height>30</height>
+				<width>300</width>	
+				<align>right</align>
+				<info>Weather.Location</info>			
+				<font>lobsterSmallest</font>					
+				<textcolor>greenlime</textcolor>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+			</control>
+			<!-- condition -->
+			<control type="label" id="21">
+				<posx>20r</posx>
+				<posy>20</posy>
+				<info>Weather.Conditions</info>
+				<width>300</width>
+				<height>30</height>
+				<align>right</align>
+				<font>qlassikSmallest</font>
+				<textcolor>ivory1</textcolor>
+				<aspectratio align="right">keep</aspectratio>
+			</control>
+			<!-- current temp -->
+			<control type="label" id="25">
+				<posx>25r</posx>
+				<posy>40</posy>
+				<height>30</height>
+				<width>50</width>	
+				<align>right</align>
+				<info>Weather.Temperature</info>			
+				<font>lobsterSmallest</font>					
+				<textcolor>greenlime</textcolor>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+			</control>
 		</control>
 	</include>
+	<!-- LOGOS -->
 	<!-- Retroplex logo -->
 	<include name="retroplexLogo">
 		<posx>-163</posx>
@@ -113,54 +143,206 @@
 		<animation effect="fade" start="100" end="60" time="350" condition="System.IdleTime(60)">Conditional</animation>
 		<include>transition2</include>
 	</include>
-	<!-- Retroplex settings logo -->
-	<include name="settingslogo">
+	<!-- home logo -->
+	<include name="homelogo">
 		<control type="group">
-			<posx>100</posx>
-			<posy>662</posy>
+			<posx>20</posx>
+			<posy>18</posy>
 			<include>transition2</include>
-			<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
-		<control type="label">
-		<width>200</width>
-		<label>Retroplex</label>
-		<font>lobsterMediumSmall</font>
-		<height>40</height>
-		<textcolor>ivory3</textcolor>
-		<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
-		</control>
-		<control type="label">
-		<width>200</width>
-		<label>Retroplex</label>
-		<font>lobsterMediumSmall</font>
-		<height>40</height>
-		<textcolor>greenlime</textcolor>
-		<animation effect="fade" start="40" end="40" time="0" condition="true">Conditional</animation>
-		</control>
-		</control>
-	</include>
-	<!-- left menu -->
-	<include name="leftMenu">
-		<control type="group">
-		<animation effect="fade" start="100" end="20" time="350" condition="Control.HasFocus(9000) | Control.HasFocus(1110) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
-		<animation effect="slide" start="162" end="0" time="500" condition="Control.HasFocus(300)">Conditional</animation>
-		<animation effect="slide" start="0" end="162" time="500" condition="!Control.HasFocus(300)">Conditional</animation>
-		<!-- Background -->
-		<control type="group">			
+			<include>HomeScreenLogoSlide</include>
+			<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
 			<control type="image">
-				<posx>-383</posx>
-				<posy>-50</posy>
-				<height>800</height>
-				<width>383</width>
-				<texture flipx="true">dialogs/square_menu_background.png</texture>
-				<aspectratio align="right">stretch</aspectratio>
-				<include>transition2</include>
-				<animation type="Conditional" condition="true">
-					<effect type="fade" start="0" end="70"/>
-				</animation>
+				<posx>0</posx>
+				<posy>0</posy>
+				<texture background="true">logos/Retroplexlogo2.png</texture>
 			</control>
 		</control>
-		<!-- Separator -->
+	</include>
+	<!-- home typo logo -->
+	<include name="hometypologo">
 		<control type="group">
+			<posx>20</posx>
+			<posy>18</posy>
+			<include>transition2</include>
+			<include>HomeScreenLogoSlide</include>
+			<animation effect="fade" start="60" end="100" time="0" condition="true">Conditional</animation>
+			<animation effect="fade" start="100" end="60" time="350" condition="System.IdleTime(30)">Conditional</animation>
+			<control type="group">
+				<posx>27</posx>
+				<posy>13</posy>
+				<include>transition2</include>
+				<animation effect="fade" start="60" end="100" time="0" condition="true">Conditional</animation>
+				<control type="label">
+					<posx>42</posx>
+					<posy>14</posy>
+					<width>200</width>
+					<label>ORIGINAL</label>
+					<font>telegraficoSmallest</font>
+					<height>40</height>
+					<textcolor>ivory2</textcolor>
+					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>3</posx>
+					<posy>38</posy>
+					<width>200</width>
+					<label>RETROPLEX</label>
+					<font>dock24</font>
+					<height>40</height>
+					<textcolor>ivory2</textcolor>
+					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>39</posx>
+					<posy>63</posy>
+					<width>600</width>
+					<label>UNLIMITED</label>
+					<font>telegraficoSmallest</font>
+					<height>40</height>
+					<textcolor>ivory2</textcolor>
+					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+				</control>
+			</control>
+		</control>
+	</include>
+	<!-- settings logo -->
+	<include name="newlogo">
+		<control type="group">
+			<posx>70</posx>
+			<posy>34</posy>
+			<include>transition2</include>
+			<animation effect="fade" start="60" end="100" time="0" condition="true">Conditional</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<texture background="true">logos/Retroplexlogo3.png</texture>
+			</control>
+		</control>
+	</include>
+	<!-- settings typo logo -->
+	<include name="settingstypologo">
+		<control type="group">
+			<posx>70</posx>
+			<posy>34</posy>
+			<include>transition2</include>
+			<animation effect="fade" start="60" end="100" time="0" condition="true">Conditional</animation>
+			<control type="group">
+				<posx>27</posx>
+				<posy>13</posy>
+				<include>transition2</include>
+				<animation effect="fade" start="60" end="100" time="0" condition="true">Conditional</animation>
+				<control type="label">
+					<posx>27</posx>
+					<posy>8</posy>
+					<width>200</width>
+					<label>RETROPLEX</label>
+					<font>telegraficoSmall</font>
+					<height>40</height>
+					<textcolor>ivory2</textcolor>
+					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>38</posy>
+					<width>200</width>
+					<label>SETTINGS</label>
+					<font>dockMedium2</font>
+					<height>40</height>
+					<textcolor>ivory2</textcolor>
+					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>37</posx>
+					<posy>68</posy>
+					<width>200</width>
+					<label>CENTRAL</label>
+					<font>telegraficoSmall</font>
+					<height>40</height>
+					<textcolor>ivory2</textcolor>
+					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+				</control>
+			</control>
+		</control>
+	</include>
+	<!-- LEFT MENU -->
+	<include name="leftMenuBg">
+		<control type="group">
+			<include>leftMenuSlide</include>
+			<include>transition2</include>
+		<!-- Background -->
+			<control type="group">			
+				<control type="image">
+					<posx>-383</posx>
+					<posy>-50</posy>
+					<height>800</height>
+					<width>383</width>
+					<texture flipx="true">backgrounds/bgleftivory.png</texture>
+					<aspectratio align="right">stretch</aspectratio>
+					<include>transition2</include>				
+					<animation type="Conditional" condition="true">
+					<effect type="fade" start="0" end="100"/>
+					</animation>
+				</control>
+			</control>
+			<control type="image">
+				<posx>-313</posx>
+				<posy>9</posy>
+				<height>702</height>
+				<width>313</width>
+				<include>transition2</include>
+				<aspectratio>stretch</aspectratio>
+				<texture background="true" border="100">backgrounds/redcontour.png</texture>
+				<animation effect="fade" start="60" end="100" time="0" condition="true">Conditional</animation>
+			</control>
+		</control>
+	</include>
+	<include name="leftMenuDressing">
+		<control type="group">
+		<include>leftMenuSlide</include>
+		<include>transition2</include>
+		<control type="group">
+			<control type="image">
+				<posx>-301</posx>
+				<posy>0</posy>
+				<height>700</height>
+				<width>284</width>
+				<texture border="100" flipx="true">backgrounds/boxvertfillingbeige2.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>chocolate</colordiffuse>
+				<animation effect="fade" start="100" end="40" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>-301</posx>
+				<posy>0</posy>
+				<height>700</height>
+				<width>284</width>
+				<texture border="100" flipx="true">backgrounds/boxvertbeige2.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>chocolate</colordiffuse>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>-301</posx>
+				<posy>0</posy>
+				<height>700</height>
+				<width>284</width>
+				<texture border="100" flipx="true">backgrounds/boxvertbeige2.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>theRed</colordiffuse>
+				<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="label">
+				<posx>-210</posx>
+				<posy>22</posy>
+				<height>40</height>
+				<width>200</width>
+				<align>left</align>
+				<label>OPTIONS</label>
+				<font>dock24</font>
+				<textcolor>ivory1</textcolor>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+			</control>
+			<!-- vertical separator -->
 			<control type="image">
 				<posx>-29</posx>
 				<posy>-200</posy>
@@ -170,8 +352,607 @@
 				<aspectratio align="right">stretch</aspectratio>
 				<include>transition2</include>
 			</control>
+			<!-- HOME pin-up -->
+			<control type="image">
+				<width>230</width>
+				<height>230</height>
+				<posx>-355</posx>
+				<posy>511</posy>
+				<aspectratio>stretch</aspectratio>
+				<include>transition2</include>
+				<texture background="true">backgrounds/agnes2.png</texture>
+				<visible>Window.IsActive(0)</visible>
+			</control>
+			<!-- MUSIC & PLUG-INS & PROGRAMS pin-up -->
+			<control type="image">
+				<width>230</width>
+				<height>330</height>
+				<posx>-360</posx>
+				<posy>378</posy>
+				<aspectratio>keep</aspectratio>
+				<include>transition2</include>
+				<texture background="true" align="left">backgrounds/veronica.png</texture>
+				<visible>Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(musicplaylist) | Window.IsActive(programs) | Window.IsActive(plugins)</visible>
+			</control>
+			<!-- VIDEO pin-up -->
+			<control type="image">
+				<width>260</width>
+				<height>310</height>
+				<posx>-299</posx>
+				<posy>455</posy>
+				<aligny>bottom</aligny>
+				<aspectratio>stretch</aspectratio>
+				<include>transition2</include>
+				<texture background="true" align="left">backgrounds/betsi.png</texture>
+				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+			</control>
 		</control>
 		</control>
+	</include>
+	<!-- TEXT BOXES & RIGHT-SIDE BACKGROUNDS -->
+	<include name="plotBoxesLibrary">
+		<!-- Plex Online & Programs -->
+		<control type="group">
+			<posx>770</posx>
+			<posy>438</posy>
+			<include>transition2</include>
+			<include>ListLeftMenuSlide</include>
+			<include>infoDialogHide</include>
+			<visible>Window.IsActive(1)</visible>
+			<!-- Shadow bg -->
+			<control type="group">
+				<control type="image">
+					<posx>-25</posx>
+					<posy>-500</posy>
+					<height>1000</height>
+					<width>540</width>
+					<texture flipx="true">backgrounds/ivory.png</texture>
+					<aspectratio align="right">stretch</aspectratio>
+					<!--<colordiffuse>chocolate</colordiffuse>-->
+					<animation type="Conditional" condition="true">
+						<effect type="fade" start="0" end="50"/>
+					</animation>
+				</control>
+			</control>
+			<control type="image">
+				<posx>13</posx>
+				<posy>147</posy>
+				<height>100</height>
+				<width>455</width>
+				<texture flipy="true">backgrounds/ivory.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>Color5</colordiffuse>
+				<visible>!IsEmpty(ListItem.Plot)</visible>
+				<animation effect="fade" start="100" end="60" time="0" condition="true">Conditional</animation>				
+			</control>
+		<control type="group">
+			<control type="image">
+				<posx>10</posx>
+				<posy>103</posy>
+				<height>173</height>
+				<width>460</width>
+				<texture border="100" flipy="true">backgrounds/boxvertbeige5.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>theRed</colordiffuse>
+				<visible>!IsEmpty(ListItem.Plot)</visible>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>				
+			</control>
+		</control>
+		</control>
+		<!-- Weather -->
+		<control type="group">
+			<posx>145</posx>
+			<posy>386</posy>
+			<include>transition2</include>
+			<include>ListLeftMenuSlide</include>
+			<include>infoDialogHide</include>
+			<visible>Window.IsActive(2600)</visible>
+			<!-- today -->
+		<control type="group">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>303</height>
+				<width>230</width>
+				<texture border="100" flipy="true">backgrounds/boxvertfillingbeige3.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>Color1</colordiffuse>
+				<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>				
+			</control>
+			<control type="image">
+				<height>283</height>
+				<width>230</width>
+				<texture border="100" flipy="true">backgrounds/boxvertbeige5.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>theRed</colordiffuse>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>				
+			</control>
+		</control>
+		<!-- day 1 -->
+		<control type="group">
+			<posx>250</posx>
+			<posy>0</posy>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>213</height>
+				<width>230</width>
+				<texture border="100" flipy="true">backgrounds/boxvertfillingbeige3.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>Color1</colordiffuse>
+				<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>				
+			</control>
+			<control type="image">
+				<height>190</height>
+				<width>230</width>
+				<texture border="100" flipy="true">backgrounds/boxvertbeige5.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>theRed</colordiffuse>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>				
+			</control>
+		</control>
+		<!-- day 2 -->
+		<control type="group">
+			<posx>500</posx>
+			<posy>0</posy>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>213</height>
+				<width>230</width>
+				<texture border="100" flipy="true">backgrounds/boxvertfillingbeige3.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>Color1</colordiffuse>
+				<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>				
+			</control>
+			<control type="image">
+				<height>190</height>
+				<width>230</width>
+				<texture border="100" flipy="true">backgrounds/boxvertbeige5.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>theRed</colordiffuse>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>				
+			</control>
+		</control>
+		<!-- day 3 -->
+		<control type="group">
+			<posx>745</posx>
+			<posy>0</posy>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>213</height>
+				<width>230</width>
+				<texture border="100" flipy="true">backgrounds/boxvertfillingbeige3.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>Color1</colordiffuse>
+				<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>				
+			</control>
+			<control type="image">
+				<height>190</height>
+				<width>230</width>
+				<texture border="100" flipy="true">backgrounds/boxvertbeige5.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>theRed</colordiffuse>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>				
+			</control>
+		</control>
+		</control>
+		<!-- Keyboard background -->
+		<control type="group">
+			<posx>343</posx>
+			<posy>315</posy>
+			<include>transition2</include>
+			<include>ListLeftMenuSlide</include>
+			<include>infoDialogHide</include>
+			<visible>Window.IsVisible(103)</visible>
+			<!--<control type="group">
+			<control type="image">
+				<posx>-2</posx>
+				<posy>-2</posy>
+				<height>384</height>
+				<width>604</width>
+				<texture border="100" flipy="true">backgrounds/boxvertbeige5.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="0" end="100" time="300" condition="true">Conditional</animation>				
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>400</height>
+				<width>600</width>
+				<texture border="100" flipy="true">backgrounds/boxvertfillingbeige3.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>theRed</colordiffuse>				
+				<animation effect="fade" start="0" end="100" time="300" condition="true">Conditional</animation>				
+			</control>
+			<control type="image">
+				<height>380</height>
+				<width>600</width>
+				<texture border="100" flipy="true">backgrounds/boxvertbeige5.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>theRed</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="300" condition="true">Conditional</animation>				
+			</control>
+			</control>-->
+		</control>
+		<!-- Slides Poster -->
+		<control type="group">
+			<posx>632</posx>
+			<posy>449</posy>
+			<include>transition2</include>
+			<include>ListLeftMenuSlide</include>
+			<include>infoDialogHide</include>
+			<visible>Control.IsVisible(52) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+		<control type="group">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>283</height>
+				<width>615</width>
+				<texture border="100" flipy="true">backgrounds/boxvertfillingbeige3.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>Color1</colordiffuse>
+				<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>				
+			</control>
+			<control type="image">
+				<height>263</height>
+				<width>615</width>
+				<texture border="100" flipy="true">backgrounds/boxvertbeige5.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>theRed</colordiffuse>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>				
+			</control>
+		</control>
+		</control>
+		<!-- Banners TV --> -->
+		<control type="group">
+			<posx>205</posx>
+			<posy>230</posy>			
+			<include>transition2</include>
+			<include>BannersLeftMenuSlide</include>
+			<include>infoDialogHide</include>
+			<visible>Control.IsVisible(54) + [Container.Content(tvshows)]</visible>
+	 		<control type="image">
+				<posx>52</posx>
+				<posy>93</posy>
+				<height>160</height>
+				<width>754</width>
+				<texture background="true">frames/bannerFrameIvory.png</texture>
+				<include>focus_Banner</include>
+				<animation type="Conditional" condition="true">
+				<effect type="fade" start="0" end="100"/>
+				</animation>
+			</control>
+			<control type="image">
+				<posx>55</posx>
+				<posy>96</posy>
+				<height>154</height>
+				<width>748</width>
+				<include>focus_Banner</include>
+				<texture>frames/bannerMask.png</texture>
+				<colordiffuse>theRed</colordiffuse>
+				<aspectratio align="right">stretch</aspectratio>
+				<animation type="Conditional" condition="true">
+				<effect type="fade" start="0" end="100"/>
+				</animation>
+			</control>
+		</control>
+		<!-- List video -->
+		<control type="group">
+			<posx>769</posx>
+			<posy>460</posy>
+			<include>transition2</include>
+			<include>ListLeftMenuSlide</include>
+			<include>infoDialogHide</include>
+			<visible>Control.IsVisible(555) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+			<!-- Shadow bg -->
+			<control type="group">
+				<control type="image">
+					<posx>-24</posx>
+					<posy>-500</posy>
+					<height>1000</height>
+					<width>540</width>
+					<texture flipx="true">backgrounds/ivory.png</texture>
+					<aspectratio align="right">stretch</aspectratio>
+					<!--<colordiffuse>chocolate</colordiffuse>-->
+					<animation type="Conditional" condition="true">
+						<effect type="fade" start="0" end="50"/>
+					</animation>
+				</control>
+			</control>		
+		<control type="group">
+			<!-- MOVIES -->
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>242</height>
+				<width>490</width>
+				<texture border="100">backgrounds/boxvertfillingbeige3.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>Color1</colordiffuse>
+				<animation effect="fade" start="100" end="60" time="0" condition="true">Conditional</animation>
+				<visible>[Container.Content(movies)]</visible>				
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>20</posy>
+				<height>242</height>
+				<width>490</width>
+				<!--<texture border="100" flipx="true">settings/activesectionbgsansarrow.png</texture>-->
+				<texture border="100" flipy="true">backgrounds/boxvertbeige3.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>theRed</colordiffuse>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+				<visible>[Container.Content(movies)]</visible>				
+			</control>
+			<!-- TV SHOWS -->
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>242</height>
+				<width>490</width>
+				<texture border="100">backgrounds/boxvertfillingbeige3.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>Color1</colordiffuse>
+				<animation effect="fade" start="100" end="60" time="0" condition="true">Conditional</animation>
+				<visible>[Container.Content(tvshows)]</visible>				
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>20</posy>
+				<height>222</height>
+				<width>490</width>
+				<!--<texture border="100" flipx="true">settings/activesectionbgsansarrow.png</texture>-->
+				<texture border="100" flipy="true">backgrounds/boxvertbeige5.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>theRed</colordiffuse>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+				<visible>[Container.Content(tvshows)]</visible>				
+			</control>
+			<!-- TV EPISODES -->
+			<control type="image">
+				<posx>-5</posx>
+				<posy>-53</posy>
+				<height>283</height>
+				<width>490</width>
+				<texture border="100">backgrounds/boxvertfillingbeige3.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>Color1</colordiffuse>
+				<animation effect="fade" start="100" end="60" time="0" condition="true">Conditional</animation>
+				<visible>[Container.Content(episodes)]</visible>				
+			</control>
+			<control type="image">
+				<posx>-5</posx>
+				<posy>-33</posy>
+				<height>243</height>
+				<width>490</width>
+				<!--<texture border="100" flipx="true">settings/activesectionbgsansarrow.png</texture>-->
+				<texture border="100">backgrounds/boxvertbeige4.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>theRed</colordiffuse>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+				<visible>[Container.Content(episodes)]</visible>				
+			</control>
+				<!--<control type="label">
+					<posx>-240</posx>
+					<posy>30</posy>
+					<width>200</width>
+					<label>OPTIONS</label>
+					<font>dockBig</font>
+					<height>40</height>
+					<textcolor>ivory1</textcolor>
+					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+				</control>-->
+		</control>
+		</control>
+		<!-- Thumbnails small tv shows -->
+		<control type="group">
+			<posx>770</posx>
+			<posy>438</posy>
+			<include>transition2</include>
+			<include>ListLeftMenuSlide</include>
+			<include>infoDialogHide</include>
+			<visible>Control.IsVisible(571) + [Container.Content(tvshows)]</visible>
+			<!-- Shadow bg -->
+			<control type="group">
+				<control type="image">
+					<posx>-25</posx>
+					<posy>-500</posy>
+					<height>1000</height>
+					<width>540</width>
+					<texture flipx="true">backgrounds/ivory.png</texture>
+					<aspectratio align="right">stretch</aspectratio>
+					<!--<colordiffuse>chocolate</colordiffuse>-->
+					<animation type="Conditional" condition="true">
+						<effect type="fade" start="0" end="50"/>
+					</animation>
+				</control>
+			</control>
+			<control type="image">
+				<posx>16</posx>
+				<posy>18</posy>
+				<height>192</height>
+				<width>450</width>
+				<texture border="100" flipy="true">backgrounds/ivory.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>Color1</colordiffuse>
+				<animation effect="fade" start="100" end="60" time="0" condition="true">Conditional</animation>				
+			</control>
+		<control type="group">
+			<control type="image">
+				<posx>15</posx>
+				<posy>-21</posy>
+				<height>244</height>
+				<width>451</width>
+				<texture border="100">backgrounds/boxvertbeige5.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>theRed</colordiffuse>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>				
+			</control>
+		</control>
+		</control>
+		<!-- Thumbnails small movies -->
+		<control type="group">
+			<posx>770</posx>
+			<posy>332</posy>
+			<include>transition2</include>
+			<include>ListLeftMenuSlide</include>
+			<include>infoDialogHide</include>
+			<visible>Control.IsVisible(571) + [Container.Content(movies)]</visible>
+		<control type="group">
+			<!-- Shadow bg -->
+			<control type="group">
+				<control type="image">
+					<posx>-25</posx>
+					<posy>-400</posy>
+					<height>800</height>
+					<width>540</width>
+					<texture flipx="true">backgrounds/ivory.png</texture>
+					<aspectratio align="right">stretch</aspectratio>
+					<!--<colordiffuse>chocolate</colordiffuse>-->
+					<animation type="Conditional" condition="true">
+						<effect type="fade" start="0" end="50"/>
+					</animation>
+				</control>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>-20</posy>
+				<height>370</height>
+				<width>480</width>
+				<texture border="100" flipy="true">backgrounds/boxvertfillingbeige3.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>Color1</colordiffuse>
+				<animation effect="fade" start="100" end="60" time="0" condition="true">Conditional</animation>				
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>-40</posy>
+				<height>369</height>
+				<width>480</width>
+				<texture border="100">backgrounds/boxvertbeige3.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>theRed</colordiffuse>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>				
+			</control>
+		</control>
+		</control>
+	</include>
+	<!-- focused list background -->
+	<include name="listMenuFocusedBg">
+		<!-- Plex Online & Programs -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>330</posy>
+			<width>1300</width>
+			<height>100</height>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<include>grainypagefade</include>
+			<include>ListHorizBarLeftMenuSlide</include>
+			<texture flipx="true">dialogs/square_menu_background.png</texture>
+			<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
+			<visible>Window.IsActive(1)</visible>
+		</control>
+		<!-- full info window -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>268</posy>
+			<width>1300</width>
+			<height>350</height>
+			<include>transition2</include>
+			<include>grainypagefade</include>
+			<include>VideoInfoLeftMenuPosterSlide</include>
+			<texture border="100" flipy="true">backgrounds/boxvertfillingbeige3.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>chocolate</colordiffuse>
+			<visible>Window.IsVisible(2003)</visible>
+			<animation effect="fade" start="50" end="90" time="0" condition="true">Conditional</animation>
+		</control>
+		<!-- List -->
+	<control type="image">
+		<posx>0</posx>
+		<posy>330</posy>
+		<width>1300</width>
+		<height>100</height>
+		<texture flipx="true">dialogs/square_menu_background.png</texture>
+		<animation effect="fade" start="40" end="100" time="0" condition="true">Conditional</animation>
+		<include>transition2</include>
+		<include>infoDialogHide</include>
+		<include>HomeScreenLeftMenuSlide</include>
+		<visible>Control.IsVisible(555)</visible>
+		<!--<animation effect="fade" start="100" end="0" time="350" condition="System.IdleTime(60)">Conditional</animation>-->
+	</control>
+	<!-- Multi Banners left bar -->
+	<control type="image">
+		<posx>0</posx>
+		<posy>298</posy>
+		<width>600</width>
+		<height>140</height>
+		<include>transition2</include>
+		<include>infoDialogHide</include>
+		<include>contextMenuHide</include>
+		<include>grainypagefade</include>
+		<include>ListHorizBarLeftMenuSlide</include>
+		<texture flipx="true">dialogs/square_menu_background.png</texture>
+		<animation effect="fade" start="50" end="100" time="0" condition="true">Conditional</animation>
+		<visible>Control.IsVisible(566) + Container.Content(tvshows)</visible>
+	</control>
+	<!-- Multi Banners right bar -->
+	<control type="image">
+		<posx>767</posx>
+		<posy>380</posy>
+		<width>600</width>
+		<height>140</height>
+		<include>transition2</include>
+		<include>infoDialogHide</include>
+		<include>contextMenuHide</include>
+		<include>grainypagefade</include>
+		<include>ListHorizBarLeftMenuSlide</include>
+		<texture>frames/bannerMask.png</texture>
+		<colordiffuse>theRed</colordiffuse>
+		<aspectratio align="right">stretch</aspectratio>
+		<animation effect="fade" start="50" end="100" time="0" condition="true">Conditional</animation>
+		<visible>Control.IsVisible(566) + Container.Content(tvshows)</visible>
+	</control>
+	<!-- Big List focused bg -->
+	<control type="group">
+		<animation type="WindowOpen">
+			<effect type="fade" start="0" end="80" time="1000" delay="200"/>
+		</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="80" end="0" time="200"/>
+		</animation>
+		<animation type="Visible">
+			<effect type="fade" start="0" end="80" time="1000"/>
+		</animation>
+		<include>BigListLeftMenuSlide</include>
+		<include>transition2</include>
+		<include>infoDialogHide</include>
+		<include>contextMenuHide</include>
+		<include>grainypagefade</include>
+		<visible>[[!Window.IsActive(progressdialog) + Container.Content(episodes)] | Container.Content(plugincontent)] + Control.IsVisible(51)</visible>
+		<!-- focused background -->
+		<control type="image">
+			<posy>211</posy>
+			<width>1300</width>
+			<height>237</height>
+			<texture flipx="true">dialogs/square_menu_background.png</texture>
+			<animation effect="fade" start="50" end="100" time="0" condition="true">Conditional</animation>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>311</posy>
+			<width>1300</width>
+			<height>135</height>
+			<texture>backgrounds/ivory.png</texture>
+			<!--<colordiffuse>Color1</colordiffuse>-->
+			<aspectratio>stretch</aspectratio>
+			<animation effect="fade" start="50" end="100" time="0" condition="true">Conditional</animation>
+		</control>
+	</control>
 	</include>
 	<!-- go home button -->
 	<include name="goHome">
@@ -212,31 +993,68 @@
 		<include>debugInfos</include>
 	</include>
 	<!-- BACKGROUNDS / FANART -->
-	<!-- NOSTALGIA HOME OVERLAY -->
+	<!-- HOME SCREEN OVERLAY -->
+	<include name="frameOverlay">
+		<control type="image">
+			<posy>205</posy>
+			<posx>-279</posx>
+			<width>330</width>
+			<height>380</height>
+			<include>transition2</include>
+			<texture border="100" flipx="true" flipy="true">search/activesectionbgbasic.png</texture>
+			<animation effect="fade" start="100" end="0" time="350" condition="System.IdleTime(30)">Conditional</animation>
+			<visible>Window.IsActive(0)</visible>
+		</control>
+		<control type="image">
+			<posy>400</posy>
+			<posx>0</posx>
+			<width>23</width>
+			<height>400</height>
+			<include>transition2</include>
+			<texture>backgrounds/red.png</texture>
+			<animation effect="fade" start="100" end="0" time="350" condition="System.IdleTime(30)">Conditional</animation>
+			<visible>Window.IsActive(0)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>720</height>
+			<width>1280</width>
+			<aspectratio>stretch</aspectratio>
+			<include>transition2</include>
+			<texture background="true">backgrounds/ivoryframe.png</texture>
+			<animation type="Conditional" condition="True">
+				<effect type="fade" start="100" end="100" time="3000" delay="100"/>
+			</animation>
+			<visible>-</visible>
+		</control>		
+	</include>
 	<include name="nostalgiaOverlay">
-		<!-- homescreen -->
 		<control type="image">
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
+			<include>transition2</include>
 			<texture background="true">backgrounds/background5.png</texture>
 			<animation type="Conditional" condition="True">
-				<effect type="fade" start="100" end="80" time="3000" delay="100"/>
+				<effect type="fade" start="100" end="75" time="3000" delay="100"/>
 			</animation>
 			<visible>-</visible>
-		</control>
+		</control>		
 	</include>
 	<!-- this is the grainy edition bg elsewhere than homescreen -->
 	<!-- the animations are included here for ease of modding, came from "transition2.5" IncludesAnimations.xml -->
 	<include name="grainyeditionback">
 		<!-- bg settings -->
+		<control type="group">
+			<visible>[Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
 		<control type="image">
 			<description>settings bg</description>
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
 			<include>transition2</include>
-			<texture background="true">backgrounds/background6.png</texture>
-			<animation effect="fade" start="50" end="40" time="0" condition="true">Conditional</animation>
-			<visible>[Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
+			<texture background="true">backgrounds/background4.png</texture>
+			<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>			
+		</control>
 		</control>
 		<!-- bg search -->
 		<control type="image">
@@ -254,23 +1072,23 @@
 			<include>screentype</include>
 			<texture background="true">backgrounds/background.png</texture>
 			<visible>Window.IsVisible(2600)</visible>
-			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+			<animation effect="fade" start="90" end="80" time="0" condition="true">Conditional</animation>
 			<include>transition2</include>
 		</control>
 		<!-- bg programs -->
 		<control type="image">
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
-			<texture background="true">backgrounds/background6.png</texture>
+			<texture background="true">backgrounds/background4.png</texture>
 			<visible>Window.IsVisible(1)</visible>
-			<animation effect="fade" start="85" end="85" time="0" condition="true">Conditional</animation>
+			<animation effect="fade" start="85" end="75" time="0" condition="true">Conditional</animation>
 			<include>transition2</include>
 		</control>
 		<!-- bg now playing -->
 		<control type="image">
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
-			<texture background="true">backgrounds/background13.png</texture>
+			<texture background="true">backgrounds/background17.png</texture>
 			<visible>Window.IsVisible(50)</visible>
 			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
 			<include>transition2</include>
@@ -297,7 +1115,7 @@
 		<control type="image">
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
-			<texture background="true">backgrounds/background13.png</texture>
+			<texture background="true">backgrounds/background5.png</texture>
 			<visible>Control.IsVisible(54) + !Window.IsActive(2600) + ![Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
 			<animation effect="fade" start="80" end="80" time="0" condition="true">Conditional</animation>
 			<include>transition2</include>
@@ -306,18 +1124,18 @@
 		<control type="image">
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
-			<texture background="true">backgrounds/background9.png</texture>
+			<texture background="true">backgrounds/background4.png</texture>
 			<visible>Control.IsVisible(566) + !Window.IsActive(2600) + ![Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
-			<animation effect="fade" start="80" end="80" time="0" condition="true">Conditional</animation>
+			<animation effect="fade" start="80" end="70" time="0" condition="true">Conditional</animation>
 			<include>transition2</include>
 		</control>
 		<!-- bg list view (no music) -->
 		<control type="image">
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
-			<texture background="true">backgrounds/background4.png</texture>
+			<texture background="true">backgrounds/background5.png</texture>
 			<visible>Control.IsVisible(555) + ![Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(1) | Window.IsActive(2) | Window.IsActive(2600)]</visible>
-			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+			<animation effect="fade" start="80" end="70" time="0" condition="true">Conditional</animation>
 			<include>transition2</include>
 		</control>
 		<!-- bg list view music -->
@@ -326,25 +1144,25 @@
 			<include>screentype</include>
 			<texture background="true">backgrounds/background5.png</texture>
 			<visible>Control.IsVisible(555) + [Window.IsActive(501) | Window.IsActive(502)]</visible>
-			<animation effect="fade" start="85" end="85" time="0" condition="true">Conditional</animation>
+			<animation effect="fade" start="85" end="75" time="0" condition="true">Conditional</animation>
 			<include>transition2</include>
 		</control>
 		<!-- bg list big view -->
 		<control type="image">
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
-			<texture background="true">backgrounds/background.png</texture>
+			<texture background="true">backgrounds/background5.png</texture>
 			<visible>Control.IsVisible(51) + !Window.IsActive(2600) + ![Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
-			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+			<animation effect="fade" start="90" end="75" time="0" condition="true">Conditional</animation>
 			<include>transition2</include>
 		</control>
 		<!-- bg thumbnails big view -->
 		<control type="image">
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
-			<texture background="true">backgrounds/background15.png</texture>
+			<texture background="true">backgrounds/background4.png</texture>
 			<visible>Control.IsVisible(57) + !Window.IsActive(2600) + ![Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
-			<animation effect="fade" start="85" end="85" time="0" condition="true">Conditional</animation>
+			<animation effect="fade" start="75" end="75" time="0" condition="true">Conditional</animation>
 			<include>transition2</include>
 		</control>
 		<!-- bg thumbnails small view -->
@@ -353,16 +1171,16 @@
 			<include>screentype</include>
 			<texture background="true">backgrounds/background5.png</texture>
 			<visible>Control.IsVisible(571) + !Window.IsActive(2600) + ![Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
-			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+			<animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
 			<include>transition2</include>
 		</control>
 		<!-- bg slides view -->
 		<control type="image">
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
-			<texture background="true">backgrounds/background17.png</texture>
+			<texture background="true">backgrounds/background5.png</texture>
 			<visible>[Control.IsVisible(52) | Control.IsVisible(55) | Control.IsVisible(58)] + !Window.IsActive(2600) + ![Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
-			<animation effect="fade" start="85" end="85" time="0" condition="true">Conditional</animation>
+			<animation effect="fade" start="75" end="70" time="0" condition="true">Conditional</animation>
 			<include>transition2</include>
 		</control>
 	</include>
@@ -375,13 +1193,97 @@
 			<visible>!Skin.HasSetting(FanartGlobal) + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)] + ![Control.IsVisible(56)] + ![Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(2)]</visible>
 			<include>transition2</include>
 		</control>
+		<!-- Plex Online & Programs -->
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<include>transition2</include>
+			<texture background="true">backgrounds/programs02.jpg</texture>
+			<visible>[Window.IsActive(1)]</visible>
+		</control>
+		<!-- weather -->
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<texture>backgrounds/weather03.jpg</texture>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="200" delay="300"/>
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="40" end="0" time="200"/>
+			</animation>
+			<visible>!Skin.HasSetting(FanartGlobal) + [Window.IsActive(2600)]</visible>
+			<include>transition2</include>
+		</control>
+		<!-- settings dressing -->
+	<control type="group">
+			<visible>[Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
+			<include>transition2</include>
 		<control type="image">
 			<description>settings bg</description>
 			<aspectratio>stretch</aspectratio>
 			<include>screentype</include>
-			<include>transition2</include>
+			<texture background="true">backgrounds/chocolate.png</texture>
+		</control>
+		<control type="image">
+			<description>settings bg</description>
+			<aspectratio>stretch</aspectratio>
+			<include>screentype</include>
+			<texture background="true">backgrounds/ivoryrounded.png</texture>
+		</control>
+		<control type="image">
+			<description>settings bg</description>
+			<aspectratio>stretch</aspectratio>
+			<include>screentype</include>
+			<texture background="true">backgrounds/ivoryrounded.png</texture>
+		</control>
+		<control type="image">
+			<posx>15</posx>
+			<posy>13</posy>
+			<height>695</height>
+			<width>340</width>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true" border="100">backgrounds/redcontour.png</texture>
+			<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
+		</control>
+		<!--<control type="image">
+			<posx>355</posx>
+			<posy>13</posy>
+			<height>695</height>
+			<width>911</width>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true" border="100" flipx="true">backgrounds/redcontour.png</texture>
+			<animation effect="fade" start="60" end="40" time="0" condition="true">Conditional</animation>
+		</control>-->
+		<!-- Separator -->
+			<control type="image">
+				<posx>326</posx>
+				<posy>-200</posy>
+				<height>1120</height>
+				<width>29</width>
+				<texture>settings/separator.png</texture>
+				<aspectratio align="right">stretch</aspectratio>
+			</control>
+		<control type="image">
+			<posx>-925</posx>
+			<posy>0</posy>
+			<texture background="true">backgrounds/chocolate.png</texture>
+			<animation effect="fade" start="60" end="80" time="0" condition="true">Conditional</animation>
+		</control>
+	</control>
+		<control type="image">
+			<description>settings intermediary bg</description>
+			<include>screentype</include>
 			<texture background="true">backgrounds/settings.jpg</texture>
-			<visible>[Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
+			<visible>[Window.IsActive(4000)] + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
+			<include>transition2</include>
+		</control>
+		<control type="image">
+			<description>settings bg</description>
+			<include>screentype</include>
+			<texture background="true">backgrounds/background.jpg</texture>
+			<visible>!Skin.HasSetting(FanartGlobal) + [Window.IsActive(40) | Window.IsActive(10019) | Window.IsActive(10018) | Window.IsActive(10017) | Window.IsActive(10016) | Window.IsActive(10015) | Window.IsActive(10014) | Window.IsActive(10013) | Window.IsActive(10012) | Window.IsActive(10003) | Window.IsActive(10004) | Window.IsActive(10007) | Window.IsActive(10034)] + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
+			<include>transition2</include>
 		</control>
 		<control type="image">
 			<description>movies bg</description>
@@ -419,7 +1321,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<texture background="true">backgrounds/iTunes04.jpg</texture>
-			<visible>!Skin.HasSetting(FanartGlobal) + [Window.IsActive(501) | Window.IsActive(502)] + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)] + Skin.HasSetting(newStyleMusicBg)</visible>
+			<visible>[Window.IsActive(501) | Window.IsActive(502)] + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)] + Skin.HasSetting(newStyleMusicBg)</visible>
 			<include>transition2</include>
 		</control>
 		<control type="image">
@@ -427,7 +1329,7 @@
 			<posx>745</posx>
 			<posy>0</posy>
 			<texture background="true">backgrounds/iTunes05b.jpg</texture>
-			<visible>!Skin.HasSetting(FanartGlobal) + [Window.IsActive(501) | Window.IsActive(502)] + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)] + Skin.HasSetting(newStyleMusicBg)</visible>
+			<visible>[Window.IsActive(501) | Window.IsActive(502)] + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)] + Skin.HasSetting(newStyleMusicBg)</visible>
 			<include>transition2</include>
 			<include>ListLeftMenuSlide</include>
 		</control>
@@ -436,7 +1338,7 @@
 			<posx>-25</posx>
 			<posy>0</posy>
 			<texture background="true">backgrounds/iTunes08.jpg</texture>
-			<visible>!Skin.HasSetting(FanartGlobal) + [Window.IsActive(501) | Window.IsActive(502)] + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)] + !Skin.HasSetting(newStyleMusicBg)</visible>
+			<visible>[Window.IsActive(501) | Window.IsActive(502)] + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)] + !Skin.HasSetting(newStyleMusicBg)</visible>
 			<include>transition2</include>
 		</control>
 		<control type="image">
@@ -444,7 +1346,7 @@
 			<posx>745</posx>
 			<posy>0</posy>
 			<texture background="true">backgrounds/iTunes08b.jpg</texture>
-			<visible>!Skin.HasSetting(FanartGlobal) + [Window.IsActive(501) | Window.IsActive(502)] + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)] + !Skin.HasSetting(newStyleMusicBg)</visible>
+			<visible>[Window.IsActive(501) | Window.IsActive(502)] + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)] + !Skin.HasSetting(newStyleMusicBg)</visible>
 			<include>transition2</include>
 		</control>
 		<control type="image">
@@ -454,20 +1356,7 @@
 			<visible>!Skin.HasSetting(FanartGlobal) + Window.IsActive(2) + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
 			<include>transition2</include>
 		</control>
-		<control type="image">
-			<description>settings bg</description>
-			<include>screentype</include>
-			<texture background="true">backgrounds/settings.jpg</texture>
-			<visible>!Skin.HasSetting(FanartGlobal) + [Window.IsActive(4000)] + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
-			<include>transition2</include>
-		</control>
-		<control type="image">
-			<description>settings bg</description>
-			<include>screentype</include>
-			<texture background="true">backgrounds/background.jpg</texture>
-			<visible>!Skin.HasSetting(FanartGlobal) + [Window.IsActive(40) | Window.IsActive(10019) | Window.IsActive(10018) | Window.IsActive(10017) | Window.IsActive(10016) | Window.IsActive(10015) | Window.IsActive(10014) | Window.IsActive(10013) | Window.IsActive(10012) | Window.IsActive(10003) | Window.IsActive(10004) | Window.IsActive(10007) | Window.IsActive(10034)] + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
-			<include>transition2</include>
-		</control>
+		
 		<control type="image">
 			<description>skin bg</description>
 			<include>screentype</include>
@@ -476,17 +1365,10 @@
 			<include>transition2</include>
 		</control>
 		<control type="image">
-			<description>skin bg</description>
-			<include>screentype</include>
-			<texture background="true">backgrounds/programs02.png</texture>
-			<visible>!Skin.HasSetting(FanartGlobal) + Window.IsActive(programs) + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
-			<include>transition2</include>
-		</control>
-		<control type="image">
 			<description>playlist now bg</description>
 			<include>screentype</include>
 			<texture background="true">backgrounds/iTunes07.jpg</texture>
-			<visible>!Skin.HasSetting(FanartGlobal) + Window.IsActive(musicplaylist)</visible>
+			<visible>Window.IsActive(musicplaylist)</visible>
 			<include>transition2</include>
 		</control>
 	</include>
@@ -719,8 +1601,8 @@
 			<visible>![Control.IsVisible(56)] + ![Window.IsActive(133) | Window.IsActive(112) | Window.IsActive(12600) | Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)] + ![Window.IsActive(2) + Control.IsVisible(52)] | Window.IsActive(111)</visible>
 		</control>
 		<control type="label" id="200">
-			<posy>23</posy>
-			<posx>20r</posx>
+			<posy>9</posy>
+			<posx>25r</posx>
 			<width>400</width>
 			<align>right</align>
 			<height>40</height>
@@ -735,6 +1617,7 @@
 	<!-- SLIDESHOWS -->
 	<include name="slideshows">
 		<control type="multiimage" id="1">
+			<include>transition2</include>
 			<include>screentype</include>
 			<aspectratio>scale</aspectratio>
 			<imagepath>../../../userdata/Thumbnails/PlexMediaServer/Fanart/</imagepath>
@@ -742,12 +1625,31 @@
 			<fadetime>1000</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>
-			<visible>!Skin.HasSetting(FanartSlideShow) + ![Player.HasVideo + !Skin.HasSetting(backgroundVideo)] + !ControlGroup(2100).HasFocus + !Skin.HasSetting(personalSlideShow)</visible>
+			<visible>!Skin.HasSetting(FanartSlideShow) + ![Player.HasVideo + !Skin.HasSetting(backgroundVideo)] + !ControlGroup(2100).HasFocus + ![Skin.HasSetting(personalSlideShow) | Skin.HasSetting(RetroplexSlideShow)]</visible>
 			<animation type="WindowOpen" condition="Window.Previous(2999)">
 				<effect type="fade" start="0" end="100" time="2000" delay="100"/>
 			</animation>
 		</control>
 		<control type="multiimage" id="1">
+			<include>transition2</include>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>scale</aspectratio>
+			<aligny>top</aligny>
+			<imagepath>../media/retroslide/</imagepath>
+			<timeperimage>8000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<visible>Skin.HasSetting(RetroplexSlideShow) + ![Skin.HasSetting(FanartSlideShow) | Skin.HasSetting(personalSlideShow)] + ![Player.HasVideo + !Skin.HasSetting(backgroundVideo)]</visible>
+			<animation type="WindowOpen" condition="Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="2000" delay="100"/>
+			</animation>
+		</control>
+		<control type="multiimage" id="1">
+			<include>transition2</include>
 			<include>screentype</include>
 			<aspectratio>scale</aspectratio>
 			<info>Skin.String(SlideShow)</info>
@@ -755,7 +1657,7 @@
 			<fadetime>1000</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>
-			<visible>[!Skin.HasSetting(FanartSlideShow) + Skin.HasSetting(personalSlideShow)] + ![Player.HasVideo + !Skin.HasSetting(backgroundVideo)]</visible>
+			<visible>Skin.HasSetting(personalSlideShow) + ![Skin.HasSetting(FanartSlideShow) | Skin.HasSetting(RetroplexSlideShow)] + ![Player.HasVideo + !Skin.HasSetting(backgroundVideo)]</visible>
 			<include>fadeinout</include>
 		</control>
 	</include>
@@ -902,10 +1804,15 @@
 		<include>contextMenuHide</include>
 		<visible>Skin.HasSetting(scrollIndicators)</visible>
 	</include>
-	<!--Added from older version of this skin-->
 	<include name="watchedOverlay">
-		<width>24</width>
-		<height>24</height>
+		<width>26</width>
+		<height>26</height>
+		<texture>$INFO[ListItem.Overlay]</texture>
+		<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)] | [Container.Content(episodes) + Skin.HasSetting(overlayEpisodes)] | [Container.Content(seasons) + Skin.HasSetting(overlayTVShows)] | Window.IsVisible(VideoFiles)</visible>
+	</include>
+	<include name="watchedOverlaySmall">
+		<width>18</width>
+		<height>18</height>
 		<texture>$INFO[ListItem.Overlay]</texture>
 		<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)] | [Container.Content(episodes) + Skin.HasSetting(overlayEpisodes)] | [Container.Content(seasons) + Skin.HasSetting(overlayTVShows)] | Window.IsVisible(VideoFiles)</visible>
 	</include>
@@ -955,6 +1862,20 @@
 		<texturenofocus>settings/list-focusRev.png</texturenofocus>
 	</include>
 	<!-- home menu formatting -->
+	<!-- focused background -->
+	<include name="homeMenuFocusedBg">
+	<control type="image">
+		<posx>0</posx>
+		<posy>459</posy>
+		<width>1300</width>
+		<height>90</height>
+		<texture flipx="true">dialogs/square_menu_background.png</texture>
+		<animation effect="fade" start="40" end="100" time="0" condition="true">Conditional</animation>
+		<include>transition2</include>
+		<include>HomeScreenLeftMenuSlide</include>
+		<animation effect="fade" start="100" end="0" time="350" condition="System.IdleTime(30)">Conditional</animation>
+	</control>
+	</include>
 	<include name="homeMenu">
 		<!-- opacity -->
 		<animation effect="fade" start="100" end="60" time="350" condition="true">Conditional</animation>
@@ -981,16 +1902,16 @@
 	</include>
 	<include name="leftMenuTitle">
 		<textoffsety>-5</textoffsety>
-		<textoffsetx>30</textoffsetx>
+		<textoffsetx>20</textoffsetx>
 		<font>lobsterSmall</font>
 		<height>50</height>
 		<textcolor>ivory3</textcolor>
-		<disabledcolor>ivory3</disabledcolor>
-		<texturenofocus border="5" flipx="true">dialogs/square_menu_background.png</texturenofocus>
-		<animation effect="fade" start="100" end="90" time="0" condition="true">Conditional</animation>
-		<align>right</align>
+		<disabledcolor>greenlime</disabledcolor>
+		<texturenofocus>settings/red.png</texturenofocus>
+		<animation effect="fade" start="100" end="60" time="0" condition="true">Conditional</animation>
+		<align>left</align>
 		<aligny>center</aligny>
-		<width>325</width>
+		<width>278</width>
 	</include>
 	<include name="leftMenuSpacing">
 		<height>5</height>
@@ -1012,45 +1933,46 @@
 		<animation type="Conditional" condition="true">
 			<effect type="fade" start="0" end="90"/>
 		</animation>
-		<texturefocus>dialogs/square_menu_background.png</texturefocus>
+		<texturefocus>settings/red.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
-		<textoffsetx>20</textoffsetx>
-		<font>lobsterSmall</font>
-		<height>40</height>
-		<textcolor>chocolate</textcolor>
-		<focusedcolor>greenlime</focusedcolor>
+		<textoffsetx>30</textoffsetx>
+		<font>qlassikMedium1</font>
+		<height>42</height>
+		<textcolor>ivory2</textcolor>
+		<focusedcolor>ivory2</focusedcolor>
 		<align>right</align>
 		<aligny>center</aligny>
-		<width>300</width>
+		<width>335</width>
 	</include>
 	<include name="settingsLeftMenuFormat2">
 		<animation type="Conditional" condition="true">
 			<effect type="fade" start="0" end="50"/>
 		</animation>
 		<texturefocus>-</texturefocus>
-		<texturenofocus>dialogs/square_menu_background.png</texturenofocus>
-		<textoffsetx>20</textoffsetx>
-		<font>lobsterSmall</font>
-		<height>40</height>
-		<textcolor>greenlime</textcolor>
+		<texturenofocus>settings/red.png</texturenofocus>
+		<textoffsetx>30</textoffsetx>
+		<font>qlassikMedium1</font>
+		<height>42</height>
+		<textcolor>ivory2</textcolor>
 		<focusedcolor>-</focusedcolor>
 		<align>right</align>
 		<aligny>center</aligny>
-		<width>300</width>
+		<width>335</width>
 	</include>
 	<include name="leftMenuViewOptions">
 		<animation type="Conditional" condition="true">
-			<effect type="fade" start="0" end="80"/>
+			<effect type="fade" start="0" end="100"/>
 		</animation>
-		<textoffsety>0</textoffsety>
-		<textoffsetx>70</textoffsetx>
-		<font>qlassikSmallBold</font>
+		<texturefocus>settings/chocolate50.png</texturefocus>
+		<textoffsety>3</textoffsety>
+		<textoffsetx>40</textoffsetx>
+		<font>qlassikSmall2</font>
 		<height>30</height>
-		<textcolor>ivory3</textcolor>
-		<focusedcolor>greenlime</focusedcolor>
+		<textcolor>ivory2</textcolor>
+		<focusedcolor>Color1</focusedcolor>
 		<align>right</align>
 		<aligny>bottom</aligny>
-		<width>325</width>
+		<width>278</width>
 	</include>
 	<include name="leftMenuRadioButton">
 		<description>default radio button</description>
@@ -1060,7 +1982,7 @@
 		<aligny>top</aligny>
 		<pulseonselect>false</pulseonselect>
 		<radioheight>14</radioheight>
-		<radiowidth>50</radiowidth>
+		<radiowidth>20</radiowidth>
 	</include>
 	<include name="newHomeMenuCategoryNoFocusBg">
 		<texturenofocus>settings/list-focusRev.png</texturenofocus>
@@ -1085,40 +2007,39 @@
 		<animation type="Conditional" condition="true">
 			<effect type="fade" start="0" end="100"/>
 		</animation>
-		<texturefocus flipx="true">dialogs/square_menu_background.png</texturefocus>
+		<!--<texturefocus flipx="true">settings/red70.png</texturefocus>-->
 		<texturenofocus>-</texturenofocus>
 		<textoffsety>3</textoffsety>
 		<textoffsetx>30</textoffsetx>
 		<font>qlassikMedium1</font>
 		<height>40</height>
 		<textcolor>chocolate</textcolor>
-		<focusedcolor>greenlime</focusedcolor>
-		<selectedcolor>greenlime</selectedcolor>
-		<disabledcolor>ivory3</disabledcolor>
+		<focusedcolor>ivory2</focusedcolor>
+		<selectedcolor>ivory2</selectedcolor>
+		<disabledcolor>Color4</disabledcolor>
 		<aspectratio align="right">stretch</aspectratio>
 		<align>left</align>
 		<aligny>center</aligny>
-		<width>895</width>
+		<width>770</width>
 	</include>
 	<include name="newHomeMenuSubSettingsSpincontrol">
 		<animation type="Conditional" condition="true">
 			<effect type="fade" start="0" end="100"/>
 		</animation>
-		<texturefocus flipx="true">dialogs/square_menu_background.png</texturefocus>
+		<!--<texturefocus flipx="true">dialogs/square_menu_background.png</texturefocus>-->
 		<texturenofocus>-</texturenofocus>
 		<textoffsety>3</textoffsety>
 		<textoffsetx>30</textoffsetx>
 		<font>qlassikMedium1</font>
 		<height>40</height>
-		<diffusecolor>Color1</diffusecolor>
 		<textcolor>chocolate</textcolor>
-		<focusedcolor>greenlime</focusedcolor>
-		<selectedcolor>greenlime</selectedcolor>
-		<disabledcolor>ivory3</disabledcolor>
+		<focusedcolor>ivory2</focusedcolor>
+		<selectedcolor>ivory2</selectedcolor>
+		<disabledcolor>Color4</disabledcolor>
 		<aspectratio align="right">stretch</aspectratio>
 		<align>left</align>
 		<aligny>center</aligny>
-		<width>895</width>
+		<width>770</width>
 	</include>
 	<!-- END new home menu formatting -->
 	<include name="settingsButton">
@@ -1189,14 +2110,14 @@
 			<posy>0</posy>
 			<description>Current cover</description>
 			<visible>Player.HasMusicPlaylist</visible>
-			<control type="image">
+			<!--<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>371</width>
 				<height>371</height>
 				<aspectratio>stretch</aspectratio>
 				<texture border="20">frames/bannerFrame.png</texture>
-			</control>
+			</control>-->
 			<control type="image">
 				<posx>26</posx>
 				<posy>16</posy>
@@ -1204,7 +2125,16 @@
 				<height>316</height>
 				<info>MusicPlayer.Cover</info>
 				<aspectratio>stretch</aspectratio>
-				<texture diffuse="frames/slideBigPosterMask.png"/>
+				<texture diffuse="frames/oldpaperMask2.png"/>
+			</control>
+			<control type="image">
+				<posx>26</posx>
+				<posy>16</posy>
+				<width>318</width>
+				<height>316</height>
+				<aspectratio scalediffuse="false" align="right">stretch</aspectratio>
+				<texture>frames/oldpaperOverlay2.png</texture>
+				<animation effect="fade" start="60" end="100" time="0" condition="true">Conditional</animation>
 			</control>
 		</control>
 	</include>
@@ -1214,7 +2144,7 @@
 			<posy>70</posy>
 			<description>Next cover</description>
 			<visible>Player.HasMusicPlaylist</visible>
-			<control type="image">
+			<!--<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>310</width>
@@ -1222,7 +2152,7 @@
 				<aspectratio>stretch</aspectratio>
 				<texture border="20">frames/bannerFrame.png</texture>
 				<visible>MusicPlayer.HasNext</visible>
-			</control>
+			</control>-->
 			<control type="image">
 				<posx>25</posx>
 				<posy>15</posy>
@@ -1231,7 +2161,7 @@
 				<info>MusicPlayer.NextNewCover</info>
 				<aspectratio>stretch</aspectratio>
 				<visible>MusicPlayer.HasNewCoverNext</visible>
-				<texture diffuse="frames/slideBigPosterMask.png"/>
+				<texture diffuse="frames/oldpaperDarkMask.png"/>
 			</control>
 			<!-- if no new cover, then same cover -->
 			<control type="image">
@@ -1242,7 +2172,15 @@
 				<info>MusicPlayer.Cover</info>
 				<aspectratio>stretch</aspectratio>
 				<visible>!MusicPlayer.HasNewCoverNext</visible>
-				<texture diffuse="frames/slideBigPosterMask.png"/>
+				<texture diffuse="frames/oldpaperDarkMask.png"/>
+			</control>
+			<control type="image">
+				<posx>25</posx>
+				<posy>15</posy>
+				<width>260</width>
+				<height>260</height>
+				<aspectratio scalediffuse="false" align="right">stretch</aspectratio>
+				<texture>frames/oldpaperDarkOverlay.png</texture>
 			</control>
 		</control>
 	</include>
@@ -1717,108 +2655,6 @@
 		<height>30</height>
 		<align>right</align>
 	</include>
-	<!--<include name="Search_Result">
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>880</width>
-		<itemlayout width="140" height="200">
-			<control type="image">
-				<posx>15</posx>
-				<posy>10</posy>
-				<width>128</width>
-				<height>140</height>
-				<info>ListItem.Thumb</info>
-				<aspectratio aligny="bottom">keep</aspectratio>
-			</control>
-			<control type="label">
-				<visible>ListItem.Type(episode)</visible>
-				<posx>81</posx>
-				<posy>160</posy>
-				<width>130</width>
-				<align>center</align>
-				<aligny>center</aligny>
-				<scroll>false</scroll>
-				<label>$INFO[ListItem.tvshowtitle]</label>
-				<font>MediumSmallTitleFont</font>
-				<textcolor>FF999999</textcolor>
-				<wrapmultiline>false</wrapmultiline>
-			</control>
-			<control type="label">
-				<visible>ListItem.Type(album) | ListItem.Type(track)</visible>
-				<posx>81</posx>
-				<posy>160</posy>
-				<width>130</width>
-				<align>center</align>
-				<aligny>center</aligny>
-				<scroll>false</scroll>
-				<label>$INFO[ListItem.artist]</label>
-				<font>MediumSmallTitleFont</font>
-				<textcolor>FF999999</textcolor>
-				<wrapmultiline>false</wrapmultiline>
-			</control>
-			<control type="label">
-				<posx>81</posx>
-				<posy>180</posy>
-				<width>130</width>
-				<align>center</align>
-				<aligny>center</aligny>
-				<scroll>false</scroll>
-				<label>$INFO[ListItem.Title]</label>
-				<font>MediumSmallTitleFont</font>
-				<textcolor>FF999999</textcolor>
-				<wrapmultiline>false</wrapmultiline>
-			</control>
-		</itemlayout>
-
-		<focusedlayout width="140" height="200">
-			<control type="image">
-				<posx>15</posx>
-				<posy>10</posy>
-				<width>128</width>
-				<height>140</height>
-				<info>ListItem.Thumb</info>
-				<aspectratio aligny="bottom">keep</aspectratio>
-			</control>
-			<control type="label">
-				<visible>ListItem.Type(episode)</visible>
-				<posx>81</posx>
-				<posy>160</posy>
-				<width>130</width>
-				<align>center</align>
-				<aligny>center</aligny>
-				<scroll>false</scroll>
-				<label>$INFO[ListItem.tvshowtitle]</label>
-				<font>MediumSmallTitleFont</font>
-				<textcolor>FFFFFFFF</textcolor>
-				<wrapmultiline>false</wrapmultiline>
-			</control>
-			<control type="label">
-				<visible>ListItem.Type(album) | ListItem.Type(track)</visible>
-				<posx>81</posx>
-				<posy>160</posy>
-				<width>130</width>
-				<align>center</align>
-				<aligny>center</aligny>
-				<scroll>false</scroll>
-				<label>$INFO[ListItem.artist]</label>
-				<font>MediumSmallTitleFont</font>
-				<textcolor>FFFFFFFF</textcolor>
-				<wrapmultiline>false</wrapmultiline>
-			</control>
-			<control type="label">
-				<posx>81</posx>
-				<posy>180</posy>
-				<width>130</width>
-				<align>center</align>
-				<aligny>center</aligny>
-				<scroll>false</scroll>
-				<label>$INFO[ListItem.Title]</label>
-				<font>MediumSmallTitleFont</font>
-				<textcolor>FFFFFFFF</textcolor>
-				<wrapmultiline>false</wrapmultiline>
-			</control>
-		</focusedlayout>
-	</include>-->
 	<include name="Search_Keyboard_Button">
 		<width>46</width>
 		<height>46</height>
@@ -1831,28 +2667,4 @@
 		<texturenofocus>-</texturenofocus>
 		<textureclick border="10">-</textureclick>
 	</include>
-	<!--<include name="Search_Keyboard_ToggleButton">
-		<width>36</width>
-		<height>36</height>
-		<font>LargeDefaultFont</font>
-		<textcolor>HomeMain</textcolor>
-		<focusedcolor>Focused</focusedcolor>
-		<align>center</align>
-		<aligny>center</aligny>
-		<texturenofocus border="18" diffuse="grey.png">search/button_keyboard.png</texturenofocus>
-		<texturefocus border="18" diffuse="masks/10b9f2.png">search/button_keyboard.png</texturefocus>
-		<textureclick border="18">-</textureclick>
-	</include>
-	<include name="Search_Keyboard_Big_Button">
-		<width>80</width>
-		<height>80</height>
-		<font>LargeDefaultFont</font>
-		<textcolor>HomeMain</textcolor>
-		<focusedcolor>Focused</focusedcolor>
-		<align>center</align>
-		<aligny>center</aligny>
-		<texturenofocus>search/button_kb.png</texturenofocus>
-		<texturefocus>search/button_kb_on.png</texturefocus>
-		<textureclick>search/button_kb_click.png</textureclick>
-	</include>-->
 </includes>

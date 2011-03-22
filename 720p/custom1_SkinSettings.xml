@@ -4,8 +4,43 @@
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<include>themeBackground2</include>
+		<include>newlogo</include>
+		<!--<control type="image">
+			<posx>15</posx>
+			<posy>500</posy>
+			<height>200</height>
+			<width>200</width>
+			<aspectratio>stretch</aspectratio>
+			<texture background="true">backgrounds/rond.png</texture>
+		</control>-->
+		<control type="image">
+			<posy>160</posy>
+			<posx>360</posx>
+			<width>850</width>
+			<height>450</height>
+			<include>transition2</include>
+			<texture border="100" flipy="true">search/activesectionbgbasic.png</texture>
+			<visible>ControlGroup(9100).HasFocus(9013)</visible>
+		</control>
+		<control type="image">
+			<posy>160</posy>
+			<posx>360</posx>
+			<width>850</width>
+			<height>450</height>
+			<include>transition2</include>
+			<texture border="100" flipy="true">settings/activesectionbgsansarrow.png</texture>
+			<visible>ControlGroup(9100).HasFocus(9001) | ControlGroup(9100).HasFocus(9005) | ControlGroup(9100).HasFocus(9017) | ControlGroup(9100).HasFocus(9019)</visible>
+		</control>	
 		<include>grainyeditionback</include>
+		<include>settingstypologo</include>
 		<include>allscreens</include>
+		<control type="image">
+			<posx>50</posx>
+			<posy>470</posy>
+			<aspectratio>scale</aspectratio>
+			<include>transition2</include>
+			<texture background="true">settings/skin.png</texture>
+		</control>
 		<!-- page label -->
 		<control type="label">
 			<include>settingsPageLabel</include>
@@ -28,7 +63,7 @@
 		<!-- type separator -->
 		<control type="label">
 			<posx>790</posx>
-			<posy>605</posy>
+			<posy>630</posy>
 			<width>100</width>
 			<width>240</width>
 			<label>B</label>
@@ -42,9 +77,9 @@
 		</control>
 		<!-- CATEGORIES -->
 		<control type="group" id="9000">
-			<posx>16</posx>
-			<posy>330</posy>
-			<width>284</width>
+			<posx>20</posx>
+			<posy>200</posy>
+			<width>400</width>
 			<height>650</height>
 			<onup>9100</onup>
 			<ondown>9100</ondown>
@@ -64,7 +99,7 @@
 				<control type="button" id="9001">
 					<label>$LOCALIZE[31124]</label>
 					<include>settingsLeftMenuFormat</include>
-					<visible allowhiddenfocus="true">![Control.HasFocus(201) | Control.HasFocus(202) | Control.HasFocus(203) | Control.HasFocus(204) | Control.HasFocus(205) | Control.HasFocus(206) | Control.HasFocus(207) | Control.HasFocus(208) | Control.HasFocus(209) | Control.HasFocus(210) | Control.HasFocus(211) | Control.HasFocus(212)]</visible>
+					<visible allowhiddenfocus="true">![Control.HasFocus(201) | Control.HasFocus(202) | Control.HasFocus(203) | Control.HasFocus(204) | Control.HasFocus(205) | Control.HasFocus(206) | Control.HasFocus(207) | Control.HasFocus(208) | Control.HasFocus(209) | Control.HasFocus(210)]</visible>
 				</control>
 				<control type="button" id="9002">
 					<label>$LOCALIZE[31124]</label>
@@ -72,28 +107,24 @@
 					<visible>!Control.IsVisible(9001)</visible>
 				</control>
 				<!-- main menu -->
-				<!--<control type="button" id="9019">
+				<control type="button" id="9019">
 					<label>$LOCALIZE[31961]</label>
 					<include>settingsLeftMenuFormat</include>
-					<visible allowhiddenfocus="true">![Control.HasFocus(291) | Control.HasFocus(292) | Control.HasFocus(293) | Control.HasFocus(294) | Control.HasFocus(295)]</visible>
-					<visible>Skin.HasSetting(originalhome)</visible>
-					<enable>Skin.HasSetting(originalhome)</enable>
+					<visible allowhiddenfocus="true">![Control.HasFocus(211) | Control.HasFocus(212) | Control.HasFocus(213) | Control.HasFocus(214) | Control.HasFocus(215) | Control.HasFocus(216) | Control.HasFocus(217) | Control.HasFocus(218) | Control.HasFocus(219) | Control.HasFocus(220)]</visible>
 				</control>
 				<control type="button" id="9020">
 					<label>$LOCALIZE[31961]</label>
-					<include>settingsLeftMenuFormat</include>
+					<include>settingsLeftMenuFormat2</include>
 					<visible>!Control.IsVisible(9019)</visible>
-					<visible>Skin.HasSetting(originalhome)</visible>
-					<enable>Skin.HasSetting(originalhome)</enable>
-				</control>-->
+				</control>
 				<!-- fanart -->
 				<control type="button" id="9005">
-					<label>fanart settings</label>
+					<label>Fanart settings</label>
 					<include>settingsLeftMenuFormat</include>
 					<visible allowhiddenfocus="true">![Control.HasFocus(221) | Control.HasFocus(222) | Control.HasFocus(223) | Control.HasFocus(224) | Control.HasFocus(225) | Control.HasFocus(226)]</visible>
 				</control>
 				<control type="button" id="9006">
-					<label>fanart settings</label>
+					<label>Fanart settings</label>
 					<include>settingsLeftMenuFormat2</include>
 					<visible>!Control.IsVisible(9005)</visible>
 				</control>
@@ -156,8 +187,8 @@
 		</control>
 		<!-- SUB-LEVEL -->
 		<control type="group">
-			<posx>376</posx>
-			<posy>150</posy>
+			<posx>425</posx>
+			<posy>200</posy>
 			<width>895</width>
 			<height>595</height>
 			<!-- home screen -->
@@ -170,27 +201,27 @@
 				<include>transition2</include>
 				<visible>!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9001)</visible>
 				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9001)">Conditional</animation>
-				<control type="radiobutton" id="211">
-					<description>hide iTunes menu entry</description>
-					<label>Hide "iTunes" from home menu</label>
-					<onclick>Skin.ToggleSetting(hideitunesmenuitem)</onclick>
-					<selected>Skin.HasSetting(hideitunesmenuitem)</selected>
-					<include>newHomeMenuSubSettingsButton</include>
-				</control>
-				<control type="radiobutton" id="212">
-					<description>hide iTunes menu entry</description>
-					<label>Hide "Programs" from home menu</label>
-					<onclick>Skin.ToggleSetting(hideprogramsmenuitem)</onclick>
-					<selected>Skin.HasSetting(hideprogramsmenuitem)</selected>
-					<include>newHomeMenuSubSettingsButton</include>
-				</control>
-				<control type="radiobutton" id="207">
+				<control type="radiobutton" id="201">
 					<description>Show weather widget</description>
-					<label>Show Weather widget on Home screen</label>
+					<label>Show Weather pin-up (Veronica)</label>
 					<onclick>Skin.ToggleSetting(showweatherwidget)</onclick>
 					<selected>Skin.HasSetting(showweatherwidget)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
+				<control type="radiobutton" id="202">
+					<description>Show RSS</description>
+					<label>Show RSS feed</label>
+					<onclick>Skin.ToggleSetting(showhomerss)</onclick>
+					<selected>Skin.HasSetting(showhomerss)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="203">
+					<description>turn off slideshows</description>
+					<label>Turn all slideshows OFF</label>
+					<onclick>Skin.ToggleSetting(FanartSlideShow)</onclick>
+					<selected>Skin.HasSetting(FanartSlideShow)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>	
 			</control>
 			<!-- fanart -->
 			<control type="grouplist" id="200">
@@ -300,8 +331,8 @@
 				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9013)">Conditional</animation>
 				<!-- separator between credits -->
 				<control type="image">
-					<posx>256</posx>
-					<posy>210</posy>
+					<posx>270</posx>
+					<posy>240</posy>
 					<height>10</height>
 					<width>370</width>
 					<texture>dialogs/sliderBackground_.png</texture>
@@ -314,14 +345,14 @@
 				</control>
 				<!-- grainy edition credits -->
 				<control type="group">
-					<posx>30</posx>
-					<posy>10</posy>
+					<posx>10</posx>
+					<posy>0</posy>
 					<control type="textbox">
-						<label>[COLOR=ivory3]Retroplex[/COLOR] is designed, coded and maintained by [COLOR=ivory3]Sebastian[/COLOR] (se.bastian).[CR][CR]
-							Please come and discuss it in the Plex community Forums, in the skins section.[CR]There you can also follow the latest updates and news, get help and submit suggestions.[CR][CR]To ensure you're always having the latest version, please use [COLOR=ivory3]Preen[/COLOR] for updating : [CR]http://www.anomiesoftware.com/Anomie_Software/Preen.html[CR][CR][COLOR=ivory3]Thank YOU[/COLOR] for considering Retroplex to be worthy of your delicate eyes.[CR][CR][CR][CR]
+						<label>[COLOR=ivory2]Retroplex[/COLOR] is designed, coded and maintained by [COLOR=ivory2]Sebastian[/COLOR] (se.bastian).[CR][CR]
+							Please come and discuss it in the Plex community Forums, in the skins section.[CR]There you can also follow the latest updates and news, get help and submit suggestions.[CR][CR]To ensure you're always having the latest version, please use [COLOR=ivory2]Preen[/COLOR] for updating : [CR]http://www.anomiesoftware.com/Anomie_Software/Preen.html[CR][CR][COLOR=ivory2]Thank YOU[/COLOR] for considering Retroplex to be worthy of your delicate eyes.[CR][CR][CR][CR]
 							Additional credits :[CR][CR]
-							A huge thanks to [COLOR=ivory3]gedoode[/COLOR] for all the wonderful media flags that he has made and donated to Retroplex.[CR][CR]
-							A huge thanks to [COLOR=ivory3]scottu[/COLOR] who made and donated the amazing retro-licious startup sound.[CR][CR]
+							A huge thanks to [COLOR=ivory2]gedoode[/COLOR] for all the wonderful media flags that he has made and donated to Retroplex.[CR][CR]
+							A huge thanks to [COLOR=ivory2]scottu[/COLOR] who made and donated the amazing retro-licious startup sound.[CR][CR]
 							Without you guys Retroplex just wouldn't be the same. Thanks.</label>
 						<width>840</width>
 						<height>500</height>
@@ -415,46 +446,68 @@
 				<visible>!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9019)</visible>
 				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9019)">Conditional</animation>
 				<include>transition2</include>
-				<!-- iTunes shortcuts -->
-				<control type="radiobutton" id="291">
-					<description>show iTunes shortcuts</description>
-					<label>Show iTunes Shortcuts in main menu</label>
-					<onclick>Skin.ToggleSetting(iTunesHome)</onclick>
-					<selected>Skin.HasSetting(iTunesHome)</selected>
+				<control type="radiobutton" id="211">
+					<description>show iTunes menu entry</description>
+					<label>Show "iTunes" in main menu</label>
+					<onclick>Skin.ToggleSetting(showitunesmainmenu)</onclick>
+					<selected>Skin.HasSetting(showitunesmainmenu)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
-					<visible>Skin.HasSetting(originalhome)</visible>
 				</control>
-				<!-- favorites -->
-				<control type="radiobutton" id="292">
-					<label>31959</label>
-					<onclick>Skin.ToggleSetting(homemenuFavourites)</onclick>
-					<selected>Skin.HasSetting(homemenuFavourites)</selected>
+				<control type="radiobutton" id="212">
+					<description>show Search menu entry</description>
+					<label>Show "Search" in main menu</label>
+					<onclick>Skin.ToggleSetting(showsearchmainmenu)</onclick>
+					<selected>Skin.HasSetting(showsearchmainmenu)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
-					<visible>Skin.HasSetting(originalhome)</visible>
 				</control>
-				<!-- programs -->
-				<control type="radiobutton" id="293">
-					<label>31956</label>
-					<onclick>Skin.ToggleSetting(homemenuPrograms)</onclick>
-					<selected>Skin.HasSetting(homemenuPrograms)</selected>
+				<control type="radiobutton" id="213">
+					<description>show Favourites menu entry</description>
+					<label>Show "Favourites" in main menu</label>
+					<onclick>Skin.ToggleSetting(showfavouritesmainmenu)</onclick>
+					<selected>Skin.HasSetting(showfavouritesmainmenu)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
-					<visible>Skin.HasSetting(originalhome)</visible>
 				</control>
-				<!-- weather -->
-				<control type="radiobutton" id="294">
-					<label>31957</label>
-					<onclick>Skin.ToggleSetting(homemenuWeather)</onclick>
-					<selected>Skin.HasSetting(homemenuWeather)</selected>
+				<control type="radiobutton" id="214">
+					<description>show Video Plugins menu entry</description>
+					<label>Show "Video Plugins" in main menu</label>
+					<onclick>Skin.ToggleSetting(showvideoplugsmainmenu)</onclick>
+					<selected>Skin.HasSetting(showvideoplugsmainmenu)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
-					<visible>Skin.HasSetting(originalhome)</visible>
 				</control>
-				<!-- plex online -->
-				<control type="radiobutton" id="295">
-					<label>Show Plug-Ins in Main Menu</label>
-					<onclick>Skin.ToggleSetting(homeMenuPlugins)</onclick>
-					<selected>Skin.HasSetting(homeMenuPlugins)</selected>
+				<control type="radiobutton" id="215">
+					<description>show Music Plugins menu entry</description>
+					<label>Show "Music Plugins" in main menu</label>
+					<onclick>Skin.ToggleSetting(showmusicplugsmainmenu)</onclick>
+					<selected>Skin.HasSetting(showmusicplugsmainmenu)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
-					<visible>Skin.HasSetting(originalhome)</visible>
+				</control>
+				<control type="radiobutton" id="216">
+					<description>show Pictures Plugins menu entry</description>
+					<label>Show "Pictures Plugins" in main menu</label>
+					<onclick>Skin.ToggleSetting(showpicturesplugsmainmenu)</onclick>
+					<selected>Skin.HasSetting(showpicturesplugsmainmenu)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="217">
+					<description>show Plex Online menu entry</description>
+					<label>Show "Plex Online" in main menu</label>
+					<onclick>Skin.ToggleSetting(showplexonlinemainmenu)</onclick>
+					<selected>Skin.HasSetting(showplexonlinemainmenu)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="218">
+					<description>show Programs menu entry</description>
+					<label>Show "Programs" in main menu</label>
+					<onclick>Skin.ToggleSetting(showprogramsmainmenu)</onclick>
+					<selected>Skin.HasSetting(showprogramsmainmenu)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="219">
+					<description>show Weather menu entry</description>
+					<label>Show "Weather" in main menu</label>
+					<onclick>Skin.ToggleSetting(showweathermainmenu)</onclick>
+					<selected>Skin.HasSetting(showweathermainmenu)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
 				</control>
 			</control>
 		</control>

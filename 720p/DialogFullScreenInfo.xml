@@ -8,7 +8,7 @@
 			<posy>490</posy>
 			<width>1500</width>
 			<height>250</height>
-			<texture border="10">dialogs/square_dialog_background.png</texture>
+			<texture border="10">dialogs/square_dialog_background0.png</texture>
 			<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + ![Window.IsActive(2901)]</visible>
 			<include>videoFullScreenInfo</include>
 		</control>
@@ -53,7 +53,7 @@
 			</control>
 			<control type="label" id="1">
 				<width>1000</width>
-				<label>$INFO[VideoPlayer.Title]</label>
+				<label>$INFO[VideoPlayer.Title] + </label>
 				<align>left</align>
 				<textcolor>greenlime</textcolor>
 				<font>lobsterMediumSmall</font>
@@ -143,7 +143,7 @@
 				<label>$INFO[VideoPlayer.PlotOutline]</label>
 				<visible>!IsEmpty(VideoPlayer.PlotOutline)</visible>
 				<textcolor>ivory3</textcolor>
-				<font>fontinSmall</font>
+				<font>titilliumMedium</font>
 			</control>
 			<control type="textbox" id="8">
 				<posy>65</posy>
@@ -154,7 +154,7 @@
 				<label>$INFO[VideoPlayer.Plot]</label>
 				<visible>IsEmpty(VideoPlayer.PlotOutline)</visible>
 				<textcolor>ivory3</textcolor>
-				<font>fontinSmall</font>
+				<font>titilliumMedium</font>
 			</control>
 			<!-- <control type="progress" id="1">
 				<description>Progressbar</description>

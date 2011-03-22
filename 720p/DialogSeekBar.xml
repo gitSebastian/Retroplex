@@ -16,7 +16,7 @@
 					<posy>530</posy>
 					<width>650</width>				
 					<height>79</height>
-					<texture border="20">osd/background_slim.png</texture>
+					<texture border="35">osd/background_slim.png</texture>
 				</control>
 				<control type="label" id="1">
 					<posx>360</posx>
@@ -55,7 +55,7 @@
 				<control type="label" id="200">
 					<posx>940</posx>
 					<posy>541</posy>
-					<width>110</width>
+					<width>200</width>
 					<label>$INFO[System.Time] / $INFO[Player.FinishTime]</label>
 					<align>right</align>
 					<font>qlassikSmall</font>

@@ -2,7 +2,7 @@
 <includes>
 	<!-- DIALOG INCLUDES -->
 	<include name="dialogWindow">
-		<texture border="20">dialogs/square_dialog_background.png</texture>
+		<texture border="20">dialogs/square_dialog_background0.png</texture>
 	</include>
 	<include name="contextMenuButton">
 		<font>qlassikSmallBold2</font>
@@ -56,7 +56,7 @@
 		<texturenofocus border="20">dialogs/buttonD.png</texturenofocus>
 		<texturefocus border="20">dialogs/buttonD-focus.png</texturefocus>
 		<textcolor>Color1</textcolor>
-		<focusedcolor>greenlime</focusedcolor>
+		<focusedcolor>ivory1</focusedcolor>
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="dialogConfirmButton">
@@ -69,7 +69,7 @@
 		<texturenofocus border="20">dialogs/buttonD.png</texturenofocus>
 		<texturefocus border="20,16,20,16">dialogs/buttonD-focus.png</texturefocus>
 		<textcolor>Color4</textcolor>
-		<focusedcolor>greenlime</focusedcolor>
+		<focusedcolor>ivory1</focusedcolor>
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="dialogListButton">
@@ -153,11 +153,11 @@
 		<texture>dialogs/separator.png</texture>
 	</include>
 	<include name="keyboardButton">
-		<font>qlassikSmallBold2</font>
-		<texturenofocus border="5">dialogs/buttonKB.png</texturenofocus>
+		<font>qlassikMedium1</font>
+		<texturenofocus border="5">-</texturenofocus>
 		<texturefocus border="5">dialogs/buttonKB-focus.png</texturefocus>
-		<textcolor>Color4</textcolor>
-		<focusedcolor>greenlime</focusedcolor>
+		<textcolor>ivory3</textcolor>
+		<focusedcolor>ivory2</focusedcolor>
 		<width>48</width>
 		<height>48</height>
 		<align>center</align>

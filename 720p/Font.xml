@@ -49,9 +49,19 @@
 			<size>40</size>
 		</font>
 		<font>
+			<name>lobsterMediumSmall2</name>
+			<filename>Lobster 1.4.otf</filename>
+			<size>38</size>
+		</font>
+		<font>
 			<name>lobsterMediumSmall</name>
 			<filename>Lobster 1.4.otf</filename>
 			<size>32</size>
+		</font>
+		<font>
+			<name>lobsterSmall2</name>
+			<filename>Lobster 1.4.otf</filename>
+			<size>28</size>
 		</font>
 		<font>
 			<name>lobsterSmall</name>
@@ -109,6 +119,11 @@
 			<size>16</size>
 		</font>
 		<font>
+			<name>titilliumMedium</name>
+			<filename>TitilliumMaps29L001.otf</filename>
+			<size>20</size>
+		</font>
+		<font>
 			<name>fontinSmall</name>
 			<filename>Fontin-Regular.otf</filename>
 			<size>18</size>
@@ -129,9 +144,19 @@
 			<size>36</size>
 		</font>
 		<font>
+			<name>dockMedium2</name>
+			<filename>dock11.otf</filename>
+			<size>31</size>
+		</font>
+		<font>
 			<name>dockMedium</name>
 			<filename>dock11.otf</filename>
 			<size>28</size>
+		</font>
+		<font>
+			<name>dock24</name>
+			<filename>dock11.otf</filename>
+			<size>24</size>
 		</font>
 		<font>
 			<name>dockMediumSmall</name>
@@ -147,6 +172,11 @@
 			<name>telegraficoSmall</name>
 			<filename>Telegrafico.ttf</filename>
 			<size>18</size>
+		</font>
+		<font>
+			<name>telegraficoSmallest</name>
+			<filename>Telegrafico.ttf</filename>
+			<size>16</size>
 		</font>
 		<!--<font>
 			<name>test</name>

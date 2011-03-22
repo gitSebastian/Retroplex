@@ -5,13 +5,13 @@
 	<previouswindow>Home</previouswindow>
 	<views>555</views>
 	<controls>		
-		<control type="image">
-			<aspectratio>scale</aspectratio>
-			<include>screentype</include>
-			<include>transition2</include>
-			<texture background="true">backgrounds/programs02.jpg</texture>
-		</control>
-		<include>grainyeditionback</include>
+		<include>themeBackground2</include>
+		<include>plotBoxesLibrary</include>
+		<include>listMenuFocusedBg</include>
+		<include>frameOverlay</include>
+		<include>leftMenuBg</include>	
+		<include>grainyeditionback</include>		
+		<include>leftMenuDressing</include>
 		<include>transition2</include>
 		<include>contextMenuHide</include>
 		<include>allscreens</include>
@@ -21,21 +21,6 @@
 			<include>PageLabelsLeftMenuSlide</include>
 		</control>
 		<include>LibraryVideoMenu</include>
-		<!-- horiz bar -->
-		<control type="image">
-			<posx>0</posx>
-			<posy>330</posy>
-			<width>1300</width>
-			<height>100</height>
-			<include>transition2</include>
-			<include>infoDialogHide</include>
-			<include>contextMenuHide</include>
-			<include>grainypagefade</include>
-			<include>ListHorizBarLeftMenuSlide</include>
-			<texture flipx="true">dialogs/square_menu_background.png</texture>
-			<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
-			<visible>Control.IsVisible(555)</visible>
-		</control>
 		<control type="group">
 			<include>ListLeftMenuSlide</include>
 			<!-- vertical separator -->
@@ -51,26 +36,6 @@
 					<include>transition2</include>
 					<include>contextMenuHide</include>
 					<include>infoDialogHide</include>
-				</control>
-			</control>
-			<!-- Shadow layer for right side bg -->
-			<control type="group">
-				<animation effect="fade" start="100" end="100" time="350" condition="Control.HasFocus(300)">Conditional</animation>
-				<animation effect="slide" start="162" end="0" time="500" condition="Control.HasFocus(300)">Conditional</animation>
-				<animation effect="slide" start="0" end="162" time="500" condition="!Control.HasFocus(300)">Conditional</animation>
-				<control type="image">
-					<posx>583</posx>
-					<posy>-50</posy>
-					<height>800</height>
-					<width>540</width>
-					<include>transition2</include>
-					<include>infoDialogHide</include>
-					<include>contextMenuHide</include>
-					<texture flipx="true">dialogs/square_menu_background.png</texture>
-					<aspectratio align="right">stretch</aspectratio>
-					<animation type="Conditional" condition="true">
-						<effect type="fade" start="0" end="50"/>
-					</animation>
 				</control>
 			</control>
 			<!-- LIST -->
@@ -191,24 +156,6 @@
 				<include>contextMenuHide</include>
 				<include>grainypagefade</include>
 				<visible>!IsEmpty(ListItem.Plot)</visible>
-				<control type="image">
-					<posx>700</posx>
-					<posy>514</posy>
-					<width>450</width>
-					<height>1</height>
-					<aligny>top</aligny>
-					<texture>dialogs/whiteline_h.png</texture>
-					<colordiffuse>Color4</colordiffuse>					
-				</control>
-				<control type="image">
-					<posx>700</posx>
-					<posy>600</posy>
-					<width>450</width>
-					<height>1</height>
-					<aligny>top</aligny>
-					<texture>dialogs/whiteline_h.png</texture>
-					<colordiffuse>Color4</colordiffuse>
-				</control>
 				<control type="group">
 					<posx>700</posx>
 					<posy>515</posy>
@@ -236,7 +183,7 @@
 					<effect type="fade" start="0" end="20" time="1000" delay="300"/>
 				</animation>
 				<posx>821</posx>
-				<posy>196</posy>
+				<posy>146</posy>
 				<width>373</width>
 				<height>368</height>
 				<fadetime>400</fadetime>
@@ -250,7 +197,7 @@
 			<!-- icon -->
 			<control type="image" id="5555">
 				<posx>830</posx>
-				<posy>200</posy>
+				<posy>150</posy>
 				<width>360</width>
 				<height>360</height>
 				<fadetime>400</fadetime>

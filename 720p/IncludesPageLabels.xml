@@ -2,7 +2,7 @@
 <includes>
 	<include name="settingsPageLabel">
 		<posx>430</posx>
-		<posy>70</posy>
+		<posy>60</posy>
 		<width>800</width>
 		<aligny>center</aligny>
 		<align>center</align>

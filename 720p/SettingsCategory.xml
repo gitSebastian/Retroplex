@@ -3,8 +3,73 @@
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<include>themeBackground2</include>
+		<include>newlogo</include>
+		<control type="image">
+			<posy>160</posy>
+			<posx>360</posx>
+			<width>850</width>
+			<height>450</height>
+			<include>transition2</include>
+			<texture border="100" flipy="true">settings/activesectionbgsansarrow.png</texture>
+		</control>
 		<include>grainyeditionback</include>
+		<include>settingstypologo</include>
 		<include>allscreens</include>
+		<!-- settings icons -->
+		<control type="image">
+			<height>200</height>
+			<posx>50</posx>
+			<posy>520</posy>
+			<aspectratio>keep</aspectratio>
+			<include>transition2</include>
+			<texture background="true">settings/system.png</texture>
+			<visible>Window.IsActive(systemsettings)</visible>
+		</control>
+		<control type="image">
+			<height>200</height>
+			<posx>50</posx>
+			<posy>520</posy>
+			<aspectratio>keep</aspectratio>
+			<include>transition2</include>
+			<texture background="true">settings/appearance.png</texture>
+			<visible>Window.IsActive(appearancesettings)</visible>
+		</control>
+		<control type="image">
+			<height>200</height>
+			<posx>50</posx>
+			<posy>520</posy>
+			<aspectratio>keep</aspectratio>
+			<include>transition2</include>
+			<texture background="true">settings/video.png</texture>
+			<visible>Window.IsActive(videossettings)</visible>
+		</control>
+		<control type="image">
+			<height>200</height>
+			<posx>50</posx>
+			<posy>520</posy>
+			<aspectratio>keep</aspectratio>
+			<include>transition2</include>
+			<texture background="true">settings/music.png</texture>
+			<visible>Window.IsActive(musicsettings)</visible>
+		</control>
+		<control type="image">
+			<height>200</height>
+			<posx>50</posx>
+			<posy>520</posy>
+			<aspectratio>keep</aspectratio>
+			<include>transition2</include>
+			<texture background="true">settings/pictures.png</texture>
+			<visible>Window.IsActive(picturessettings)</visible>
+		</control>
+		<control type="image">
+			<height>200</height>
+			<posx>50</posx>
+			<posy>520</posy>
+			<aspectratio>keep</aspectratio>
+			<include>transition2</include>
+			<texture background="true">settings/weather.png</texture>
+			<visible>Window.IsActive(weathersettings)</visible>
+		</control>
 		<!-- type separator -->
 		<control type="label">
 			<posx>790</posx>
@@ -22,9 +87,8 @@
 		<!-- type separator -->
 		<control type="label">
 			<posx>790</posx>
-			<posy>605</posy>
+			<posy>630</posy>
 			<width>100</width>
-			<width>240</width>
 			<label>B</label>
 			<font>nymphetteMedium</font>
 			<textcolor>chocolate</textcolor>
@@ -70,7 +134,9 @@
 				<label>&#xB7; $LOCALIZE[705] : $LOCALIZE[5] &#xB7;</label>
 				<visible>Window.IsActive(networksettings)</visible>
 			</control>
-			<control type="label"><include>PageLabel</include><label>$LOCALIZE[12600] : $LOCALIZE[5]</label>&gt;
+			<control type="label">
+				<include>settingsPageLabel</include>
+				<label>&#xB7; $LOCALIZE[12600] : $LOCALIZE[5] &#xB7;</label>
 				<visible>Window.IsActive(weathersettings)</visible></control>
 			<control type="label">
 				<include>settingsPageLabel</include>
@@ -81,9 +147,9 @@
 		<control type="group">
 			<control type="grouplist" id="3">
 				<description>button area</description>
-				<posx>16</posx>
-				<posy>330</posy>
-				<height>284</height>
+				<posx>20</posx>
+				<posy>200</posy>
+				<height>400</height>
 				<itemgap>0</itemgap>
 				<onleft>-</onleft>
 				<onright>5</onright>
@@ -94,37 +160,25 @@
 			</control>
 			<control type="grouplist" id="5">
 				<description>control area</description>
-				<posx>376</posx>
-				<posy>150</posy>
-				<width>895</width>
-				<height>600</height>
+				<posx>425</posx>
+				<posy>200</posy>
+				<width>770</width>
+				<height>595</height>
 				<itemgap>0</itemgap>
 				<onleft>3</onleft>
 				<onright>-</onright>
 				<onup>5</onup>
 				<ondown>5</ondown>
 				<include>transition2</include>
-				<textcolor>chocolate</textcolor>
-				<focusedcolor>greenlime</focusedcolor>
-				<selectedcolor>greenlime</selectedcolor>
-				<disabledcolor>ivory3</disabledcolor>
 				<visible>!Window.IsActive(progressdialog)</visible>
 			</control>
 			<control type="button" id="7">
 				<description>Default Button</description>
 				<include>newHomeMenuSubSettingsButton</include>
-				<textcolor>chocolate</textcolor>
-				<focusedcolor>greenlime</focusedcolor>
-				<selectedcolor>greenlime</selectedcolor>
-				<disabledcolor>ivory3</disabledcolor>
 			</control>
 			<control type="radiobutton" id="8">
 				<description>Default RadioButton</description>
 				<include>newHomeMenuSubSettingsButton</include>
-				<textcolor>chocolate</textcolor>
-				<focusedcolor>greenlime</focusedcolor>
-				<selectedcolor>greenlime</selectedcolor>
-				<disabledcolor>ivory3</disabledcolor>
 			</control>
 			<control type="spincontrolex" id="9">
 				<description>Default SpinControlex</description>
@@ -134,10 +188,6 @@
 				<description>Default Category Button</description>
 				<label>[UPPERCASE]224[/UPPERCASE]</label>
 				<include>settingsLeftMenuFormat</include>
-				<textcolor>chocolate</textcolor>
-				<focusedcolor>greenlime</focusedcolor>
-				<selectedcolor>greenlime</selectedcolor>
-				<disabledcolor>ivory3</disabledcolor>
 			</control>
 		</control>
 		<include>settingslogo</include>

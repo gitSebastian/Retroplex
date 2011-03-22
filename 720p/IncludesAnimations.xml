@@ -13,14 +13,13 @@
 	<include name="HomeScreenLeftMenuSlide">
 		<animation effect="slide" start="0" end="162" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
 		<animation effect="slide" start="162" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
-		<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus() | Control.HasFocus(1110) | Control.HasFocus(1130) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="400" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus() | Control.HasFocus(1110) | Control.HasFocus(1130) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
 	</include>
 	<!-- Home screen logo animations -->
-	<include name="HomeScreenLeftMenuLogoSlide">
-		<animation effect="slide" start="0" end="115" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
-		<animation effect="slide" start="115" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
-		<animation effect="fade" start="100" end="100" time="250" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus() | Control.HasFocus(1110) | Control.HasFocus(1130) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
-	</include>
+	<include name="HomeScreenLogoSlide">
+		<animation effect="slide" start="0" end="162" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
+		<animation effect="slide" start="162" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
+	</include>	
 	<!-- Home screen Now Playing left menu animations -->
 	<include name="NowPlayingHomeLeftMenuSlide">
 		<animation effect="slide" start="0" end="300" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
@@ -157,6 +156,15 @@
 		<animation effect="fade" start="0" end="100" time="300">Focus</animation>
 		<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
 	</include>
+	<!-- LEFT MENU ANIMATIONS -->
+	<include name="leftMenuSlide">
+		<!-- HOME -->
+		<animation effect="slide" start="162" end="0" time="500" condition="Window.IsActive(0) + Control.HasFocus(300)">Conditional</animation>
+		<animation effect="slide" start="0" end="162" time="500" condition="Window.IsActive(0) + !Control.HasFocus(300)">Conditional</animation>
+		<!-- -->
+		<animation effect="slide" start="162" end="0" time="500" condition="!ControlGroup(300).HasFocus()">Conditional</animation>
+		<animation effect="slide" start="0" end="162" time="500" condition="ControlGroup(300).HasFocus()">Conditional</animation>
+	</include>
 	<!-- GENERAL -->
 	<include name="thumbFadeTime">
 		<fadetime>300</fadetime>
@@ -235,7 +243,7 @@
 			<effect type="zoom" center="80,100" start="100" end="125" time="500" tween="back" easing="out"/>
 		</animation>
 		<animation type="UnFocus" reversible="false">
-			<effect type="zoom" center="80,100" start="125" end="100" time="200" tween="cubik" easing="out"/>
+			<effect type="zoom" center="80,100" start="125" end="100" time="200" tween="cubic" easing="out"/>
 		</animation>
 	</include>
 	<include name="focus_PosterShadow">
@@ -258,12 +266,10 @@
 	</include>-->
 	<!-- SLIDE -->
 	<include name="focus_SlidePoster">
-		<animation type="focus">
-			<effect type="fade" start="20" end="100" time="600"/>
-			<effect type="zoom" center="0,40" tween="Cubic" start="150,150" end="190,190" easing="In" reversible="false" time="500"/>
+		<animation type="focus">			
+			<effect type="zoom" center="0,40" tween="quadratic" start="120,120" end="190,190" easing="in" reversible="false" time="400"/>
 		</animation>
 		<animation type="unfocus">
-			<effect type="fade" start="50" end="100" time="400"/>
 			<effect type="zoom" center="0,40" tween="Cubic" start="150,150" end="100,100" easing="Out" reversible="false" time="500"/>
 		</animation>
 	</include>
@@ -355,7 +361,7 @@
 	</include>
 	<include name="focus_Banner">
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" center="360,100" start="80" end="100" time="450" tween="Cubic" easing="out"/>
+			<effect type="zoom" center="360,100" start="80" end="100" time="400" tween="Cubic" easing="out"/>
 			<effect type="fade" start="20" end="100" time="250"/>
 		</animation>
 	</include>

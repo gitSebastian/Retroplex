@@ -32,18 +32,19 @@
 				<posx>34</posx>
 				<posy>75</posy>
 				<width>543</width>
-				<height>40</height>
-				<texture border="10,0,10,0">dialogs/textFieldFocus.png</texture>
+				<height>44</height>
+				<texture border="10">search/searchInput.png</texture>
+				<aligny>center</aligny>
 			</control>
 			<control type="label" id="310">
 				<description>Edit Text</description>
 				<posx>34</posx>
 				<posy>73</posy>
 				<width>542</width>
-				<height>38</height>
-				<font>qlassikSmallBold2</font>
+				<height>44</height>
+				<font>qlassikMedium2</font>
 				<ondown>52</ondown>
-				<textcolor>Color4</textcolor>
+				<textcolor>deepRed</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 			</control>

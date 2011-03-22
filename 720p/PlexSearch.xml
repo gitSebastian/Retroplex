@@ -62,6 +62,7 @@
 					<texturefocus border="25">browse_menu_dialog_edit_focus.png</texturefocus>
 					<label/>
 				</control>
+				<!-- LEFT SIDE : Search -->
 				<control type="group" id="4000">
 					<posx>15</posx>
 					<posy>250</posy>

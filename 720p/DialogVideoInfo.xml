@@ -33,18 +33,6 @@
 			<width>200</width>
 			<visible allowhiddenfocus="true">false</visible>
 		</control>-->
-		<!-- horiz bar -->
-		<control type="image">
-			<posx>0</posx>
-			<posy>308</posy>
-			<width>1300</width>
-			<height>300</height>
-			<include>transition2</include>
-			<include>grainypagefade</include>
-			<include>VideoInfoLeftMenuPosterSlide</include>
-			<texture flipx="true">dialogs/square_menu_background.png</texture>
-			<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
-		</control>
 		<!-- MOVIES -->
 		<control type="grouplist" id="1000">
 			<visible>Container.Content(movies) + !Window.IsActive(101)</visible>
@@ -57,37 +45,37 @@
 				<width>740</width>
 				<label>$LOCALIZE[345] [COLOR=Color1]$INFO[ListItem.Year][/COLOR]</label>
 				<include>infoDialogMeta</include>
-				<visible>!IsEmpty(ListItem.Genre)</visible>
+				<visible>!IsEmpty(ListItem.Year)</visible>
 				<include>VideoInfoLeftMenuPosterSlide</include>
-			</control>
+			</control>			
 			<control type="label" id="1">
 				<width>740</width>
 				<label>$LOCALIZE[515] [COLOR=Color1]$INFO[ListItem.Genre][/COLOR]</label>
 				<include>infoDialogMeta</include>
 				<visible>!IsEmpty(ListItem.Genre)</visible>
 				<include>VideoInfoLeftMenuPosterSlide</include>
-			</control>
+			</control>			
 			<control type="label" id="1">
 				<width>740</width>
 				<label>$LOCALIZE[20417] [COLOR=Color1]$INFO[ListItem.Writer][/COLOR]</label>
 				<include>infoDialogMeta</include>
 				<visible>!IsEmpty(ListItem.Writer)</visible>
 				<include>VideoInfoLeftMenuPosterSlide</include>
-			</control>
+			</control>			
 			<control type="label" id="1">
 				<width>740</width>
 				<label>$LOCALIZE[20339] [COLOR=Color1]$INFO[ListItem.Director][/COLOR]</label>
 				<include>infoDialogMeta</include>
 				<visible>!IsEmpty(ListItem.Director)</visible>
 				<include>VideoInfoLeftMenuPosterSlide</include>
-			</control>
+			</control>			
 			<control type="label" id="1">
 				<width>740</width>
 				<label>$LOCALIZE[572] [COLOR=Color1]$INFO[Listitem.Property(mediaTag-Studio)][/COLOR]</label>
 				<include>infoDialogMeta</include>
 				<visible>!IsEmpty(Listitem.Property(mediaTag-Studio))</visible>
 				<include>VideoInfoLeftMenuPosterSlide</include>
-			</control>
+			</control>			
 			<control type="label" id="1">
 				<width>740</width>
 				<label>$LOCALIZE[180] [COLOR=Color1]$INFO[ListItem.Duration][/COLOR]</label>
@@ -95,18 +83,54 @@
 				<include>infoDialogMeta</include>
 				<visible>!IsEmpty(ListItem.Duration)</visible>
 				<include>VideoInfoLeftMenuPosterSlide</include>
-			</control>
+			</control>			
 			<control type="label" id="1">
 				<width>740</width>
 				<label>$LOCALIZE[563] [COLOR=Color1]$INFO[ListItem.MPAA][/COLOR]</label>
 				<include>infoDialogMeta</include>
 				<visible>!IsEmpty(ListItem.MPAA)</visible>
 				<include>VideoInfoLeftMenuPosterSlide</include>
+			</control>			
+			<control type="label" id="1">
+				<width>740</width>
+				<label/>
+				<include>infoDialogMeta</include>
 			</control>
 			<control type="label" id="1">
 				<width>740</width>
 				<label/>
 				<include>infoDialogMeta</include>
+				<visible>IsEmpty(ListItem.Year)</visible>
+			</control>
+			<control type="label" id="1">
+				<width>740</width>
+				<label/>
+				<include>infoDialogMeta</include>
+				<visible>IsEmpty(ListItem.Genre)</visible>
+			</control>
+			<control type="label" id="1">
+				<width>740</width>
+				<label/>
+				<include>infoDialogMeta</include>
+				<visible>IsEmpty(ListItem.Writer)</visible>
+			</control>
+			<control type="label" id="1">
+				<width>740</width>
+				<label/>
+				<include>infoDialogMeta</include>
+				<visible>IsEmpty(ListItem.Director)</visible>
+			</control>
+			<control type="label" id="1">
+				<width>740</width>
+				<label/>
+				<include>infoDialogMeta</include>
+				<visible>IsEmpty(Listitem.Property(mediaTag-Studio))</visible>
+			</control>
+			<control type="label" id="1">
+				<width>740</width>
+				<label/>
+				<include>infoDialogMeta</include>
+				<visible>IsEmpty(ListItem.Duration)</visible>
 			</control>
 			<control type="label" id="1">
 				<width>740</width>
@@ -119,8 +143,8 @@
 				<width>740</width>
 				<height>270</height>
 				<label>$INFO[ListItem.PlotOutline]</label>
-				<font>fontinSmall</font>
-				<textcolor>ivory3</textcolor>
+				<textcolor>ivory2</textcolor>
+				<font>titilliumMedium</font>
 				<include>VideoInfoLeftMenuRightSlide</include>
 			</control>
 			<!-- END MOD -->
@@ -137,7 +161,7 @@
 				<width>740</width>
 				<label>$LOCALIZE[345] [COLOR=Color1]$INFO[ListItem.Year][/COLOR]</label>
 				<include>infoDialogMeta</include>
-				<visible>!IsEmpty(ListItem.Genre)</visible>
+				<visible>!IsEmpty(ListItem.Year)</visible>
 				<include>VideoInfoLeftMenuPosterSlide</include>
 			</control>
 			<control type="label" id="1">
@@ -177,7 +201,31 @@
 			<width>770</width>
 			<label>$LOCALIZE[573] [COLOR=Color1]$INFO[ListItem.Path][/COLOR]</label>
 			<include>infoDialogMeta</include>
-		</control> -->
+			</control> -->
+			<control type="label" id="1">
+				<width>770</width>
+				<label/>
+				<include>infoDialogMeta</include>
+				<visible>IsEmpty(ListItem.Year)</visible>
+			</control>
+			<control type="label" id="1">
+				<width>770</width>
+				<label/>
+				<include>infoDialogMeta</include>
+				<visible>IsEmpty(ListItem.Genre)</visible>
+			</control>
+			<control type="label" id="1">
+				<width>770</width>
+				<label/>
+				<include>infoDialogMeta</include>
+				<visible>IsEmpty(ListItem.Studio)</visible>
+			</control>
+			<control type="label" id="1">
+				<width>770</width>
+				<label/>
+				<include>infoDialogMeta</include>
+				<visible>IsEmpty(ListItem.MPAA)</visible>
+			</control>
 			<control type="label" id="1">
 				<width>770</width>
 				<label/>
@@ -192,8 +240,8 @@
 				<width>740</width>
 				<height>270</height>
 				<label>$INFO[ListItem.Plot]</label>
-				<font>fontinSmall</font>
-				<textcolor>ivory3</textcolor>
+				<textcolor>ivory2</textcolor>
+				<font>titilliumMedium</font>
 				<include>VideoInfoLeftMenuRightSlide</include>
 			</control>
 			<!-- END MOD -->
@@ -211,6 +259,7 @@
 				<include>Heading</include>
 				<visible>!ControlGroup(9001).HasFocus()</visible>
 				<include>VideoInfoLeftMenuPosterSlide</include>
+				<animation effect="fade" start="50" end="70" time="0" condition="true">Conditional</animation>
 			</control>
 			<control type="label">
 				<width>780</width>
@@ -225,26 +274,21 @@
 				<visible>!ControlGroup(9001).HasFocus()</visible>
 				<control type="label" id="1">
 					<width>690</width>
-					<label>$LOCALIZE[31074]</label>
+					<label>$LOCALIZE[31074,,]$INFO[ListItem.date, &#xB7; ] &#xB7; $INFO[ListItem.Duration,, ]</label>
 					<textcolor>Color1</textcolor>
 					<include>infoDialogMeta</include>
 					<include>VideoInfoLeftMenuPosterSlide</include>
 				</control>
 				<control type="label" id="1">
+					<width>770</width>
 					<label/>
+					<include>infoDialogMeta</include>
 				</control>
 				<control type="label" id="1">
 					<width>690</width>
 					<label>$LOCALIZE[20417] [COLOR=Color1]$INFO[ListItem.Writer][/COLOR]</label>
 					<include>infoDialogMeta</include>
 					<visible>!IsEmpty(ListItem.Writer)</visible>
-					<include>VideoInfoLeftMenuPosterSlide</include>
-				</control>
-				<control type="label" id="1">
-					<width>690</width>
-					<label/>
-					<include>infoDialogMeta</include>
-					<visible>IsEmpty(ListItem.Writer)</visible>
 					<include>VideoInfoLeftMenuPosterSlide</include>
 				</control>
 				<control type="label" id="1">
@@ -274,21 +318,35 @@
 					<include>infoDialogMeta</include>
 				</control>
 				<control type="label" id="1">
+					<label/>
+				</control>
+				<control type="label" id="1">
+					<width>690</width>
+					<label/>
+					<include>infoDialogMeta</include>
+					<visible>IsEmpty(ListItem.Writer)</visible>
+					<include>VideoInfoLeftMenuPosterSlide</include>
+				</control>
+				<control type="label" id="1">
+					<width>690</width>
+					<label/>
+					<include>infoDialogMeta</include>
+					<visible>IsEmpty(ListItem.Director)</visible>
+					<include>VideoInfoLeftMenuPosterSlide</include>
+				</control>
+				<control type="label" id="1">
 					<width>690</width>
 					<label/>
 					<include>infoDialogMeta</include>
 					<visible>IsEmpty(ListItem.MPAA)</visible>
 					<include>VideoInfoLeftMenuPosterSlide</include>
 				</control>
-				<control type="label" id="1">
-					<label/>
-				</control>
 				<control type="textbox" id="4">
 					<width>690</width>
 					<height>300</height>
 					<label>$INFO[ListItem.Plot]</label>
-					<font>fontinSmall</font>
-					<textcolor>ivory3</textcolor>
+					<textcolor>ivory2</textcolor>
+					<font>titilliumMedium</font>
 					<include>VideoInfoLeftMenuRightSlide</include>
 				</control>
 				<!-- END MOD -->
@@ -363,7 +421,8 @@
 					<height>240</height>
 					<label>$INFO[ListItem.Property(Artist_Description)]</label>
 					<include>textBox</include>
-					<font>fontinSmall</font>
+					<textcolor>ivory2</textcolor>
+					<font>titilliumMedium</font>
 					<visible>Skin.HasSetting(usecapitalisation)</visible>
 				</control>
 			</control>
@@ -416,11 +475,11 @@
 			<include>contextMenuHide</include>
 			<include>VideoInfoLeftMenuPosterSlide</include>
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>456</width>
-				<height>648</height>
-				<texture border="48">frames/bannerFrame.png</texture>
+				<posx>25</posx>
+				<posy>17</posy>
+				<width>405</width>
+				<height>596</height>
+				<texture border="48">frames/bigPosterFrameIvory.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<include>thumbFadeTime</include>
 				<animation effect="fade" start="80" end="80" time="0" condition="true">Conditional</animation>
@@ -432,7 +491,7 @@
 				<posy>22</posy>
 				<width>395</width>
 				<height>585</height>
-				<texture diffuse="frames/slideBigPosterMask.png" fallback="thumbs/movie.png" scalediffuse="false">$INFO[ListItem.Thumb]</texture>
+				<texture diffuse="frames/bigPosterMask.png" fallback="thumbs/movie.png" scalediffuse="false">$INFO[ListItem.Thumb]</texture>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				<visible>Container.Content(movies)</visible>
 			</control>
@@ -441,7 +500,7 @@
 				<posy>22</posy>
 				<width>395</width>
 				<height>585</height>
-				<texture scalediffuse="false">$INFO[listitem.path]poster.tbn</texture>
+				<texture diffuse="frames/bigPosterMask.png" scalediffuse="false">$INFO[listitem.path]poster.tbn</texture>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				<visible>Container.Content(movies)</visible>
 			</control>
@@ -450,7 +509,7 @@
 				<posy>22</posy>
 				<width>395</width>
 				<height>585</height>
-				<texture scalediffuse="false">$INFO[listitem.path]poster.png</texture>
+				<texture diffuse="frames/bigPosterMask.png" scalediffuse="false">$INFO[listitem.path]poster.png</texture>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				<visible>Container.Content(movies)</visible>
 			</control>
@@ -459,7 +518,7 @@
 				<posy>22</posy>
 				<width>395</width>
 				<height>585</height>
-				<texture scalediffuse="false">$INFO[listitem.path]poster.jpg</texture>
+				<texture diffuse="frames/bigPosterMask.png" scalediffuse="false">$INFO[listitem.path]poster.jpg</texture>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				<visible>Container.Content(movies)</visible>
 			</control>
@@ -469,7 +528,7 @@
 				<posy>22</posy>
 				<width>395</width>
 				<height>585</height>
-				<texture diffuse="frames/slideBigPosterMask.png" fallback="thumbs/tvshow.png" scalediffuse="false">$INFO[ListItem.Thumb]</texture>
+				<texture diffuse="frames/bigPosterMask.png" fallback="thumbs/tvshow.png" scalediffuse="false">$INFO[ListItem.Thumb]</texture>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				<visible>[Container.Content(tvshows) | Container.Content(seasons)]</visible>
 			</control>
@@ -478,7 +537,7 @@
 				<posy>22</posy>
 				<width>395</width>
 				<height>585</height>
-				<texture scalediffuse="false">$INFO[listitem.path]poster.tbn</texture>
+				<texture diffuse="frames/bigPosterMask.png" scalediffuse="false">$INFO[listitem.path]poster.tbn</texture>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				<visible>[Container.Content(tvshows) | Container.Content(seasons)]</visible>
 			</control>
@@ -487,7 +546,7 @@
 				<posy>22</posy>
 				<width>395</width>
 				<height>585</height>
-				<texture scalediffuse="false">$INFO[listitem.path]poster.png</texture>
+				<texture diffuse="frames/bigPosterMask.png" scalediffuse="false">$INFO[listitem.path]poster.png</texture>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				<visible>[Container.Content(tvshows) | Container.Content(seasons)]</visible>
 			</control>
@@ -496,7 +555,7 @@
 				<posy>22</posy>
 				<width>395</width>
 				<height>585</height>
-				<texture scalediffuse="false">$INFO[listitem.path]poster.jpg</texture>
+				<texture diffuse="frames/bigPosterMask.png" scalediffuse="false">$INFO[listitem.path]poster.jpg</texture>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				<visible>[Container.Content(tvshows) | Container.Content(seasons)]</visible>
 			</control>
@@ -506,23 +565,23 @@
 				<posy>120</posy>
 				<visible>Container.Content(episodes)</visible>
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>500</width>
-				<height>341</height>
-				<texture border="48">frames/bannerFrame.png</texture>
+				<posx>35</posx>
+				<posy>10</posy>
+				<width>450</width>
+				<height>291</height>
+				<texture>frames/bigPosterHorizFrameIvory.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<include>thumbFadeTime</include>
 				<animation effect="fade" start="80" end="80" time="0" condition="true">Conditional</animation>
 				<visible>!IsEmpty(ListItem.Title)</visible>
 			</control>
 			<control type="image">
-				<posx>30</posx>
-				<posy>20</posy>
+				<posx>40</posx>
+				<posy>15</posy>
 				<width>440</width>
 				<height>281</height>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture background="true" diffuse="frames/slideBigPosterMask.png">$INFO[ListItem.Thumb]</texture>
+				<texture background="true" diffuse="frames/bigPosterHorizMask.png">$INFO[ListItem.Thumb]</texture>
 			</control>
 			</control>
 		</control>

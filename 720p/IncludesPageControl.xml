@@ -3,7 +3,7 @@
 	<include name="AllViewCommonPageControls">
 		<control type="scrollbar" id="23">
 			<description>list</description>
-			<posx>1260</posx>
+			<posx>1265</posx>
 			<posy>92</posy>
 			<height>580</height>
 			<onleft>555</onleft>

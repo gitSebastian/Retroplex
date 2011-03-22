@@ -5,7 +5,12 @@
 	<views>50,51,52,53,54,55,56,57,58,59,555,566,571</views>
 	<controls>		
 		<include>themeBackground2</include>
-		<include>grainyeditionback</include>
+		<include>plotBoxesLibrary</include>
+		<include>listMenuFocusedBg</include>
+		<include>frameOverlay</include>
+		<include>leftMenuBg</include>	
+		<include>grainyeditionback</include>		
+		<include>leftMenuDressing</include>
 		<include>allscreens</include>
 		<include>AllViewCommonPageControls</include>
 		<include>videoFanartPageLabels</include>

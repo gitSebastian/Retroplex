@@ -12,18 +12,16 @@
 			<height>720</height>
 			<aspectratio>scale</aspectratio>
 			<aligny>center</aligny>
-			<texture>backgrounds/test.jpg</texture>
+			<texture>retroslide/000.jpg</texture>
 		</control>-->
-		<!-- grainy bg for home screen only -->
+		<include>homeMenuFocusedBg</include>
+		<include>plotBoxesLibrary</include>
+		<include>frameOverlay</include>
+		<include>leftMenuBg</include>
 		<include>nostalgiaOverlay</include>
-		<!--<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>100</width>
-			<height>720</height>
-			<texture>backgrounds/leftyellowblue.png</texture>
-			<animation effect="fade" start="100" end="30" time="0" condition="true">Conditional</animation>
-		</control>-->
+		<include>leftMenuDressing</include>
+		<include>homelogo</include>
+		<include>hometypologo</include>
 		<!-- time and date -->
 		<include condition="![Window.IsActive(10112) | Window.IsActive(10133) | Window.IsActive(107)]">libClock</include>
 		<!-- HOME MENU -->
@@ -35,7 +33,7 @@
 		<!-- RSS FEED -->
 		<control type="group">
 			<posy>687</posy>
-			<visible>!Skin.HasSetting(enableRSSFeed) + ![Window.IsActive(10133) | Window.IsActive(10112)]</visible>			
+			<visible>Skin.HasSetting(showhomerss) + ![Window.IsActive(10133) | Window.IsActive(10112)]</visible>			
 			<animation effect="slide" start="0,100" end="0,0" time="200" tween="Quadratic" easing="In">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,100" time="200" tween="Quadratic" easing="Out">WindowClose</animation>
 			<control type="image">
@@ -43,7 +41,6 @@
 				<height>38</height>
 				<texture>dialogs/square_menu_background.png</texture>
 				<include>screenwidth</include>
-				<visible>!Skin.HasSetting(enableRSSFeed)</visible>
 			</control>
 			<control type="rss" id="1">
 				<posy>7</posy>
@@ -58,11 +55,6 @@
 				<highlightcolor>Focused</highlightcolor>
 				<include>fadeinout</include>
 			</control>
-		</control>
-		<!-- logo -->
-		<control type="image">
-		<include>retroplexLogo</include>
-		<include>HomeScreenLeftMenuLogoSlide</include>
 		</control>		
 	</controls>
 </window>

@@ -4,18 +4,11 @@
 	<defaultcontrol always="true">8000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<!-- bg image -->
-		<control type="image">
-			<aspectratio>scale</aspectratio>
-			<include>screentype</include>
-			<texture>backgrounds/weather03.jpg</texture>
-			<animation type="WindowOpen">
-				<effect type="fade" start="0" end="100" time="200" delay="300"/>
-			</animation>
-			<animation type="WindowClose">
-				<effect type="fade" start="40" end="0" time="200"/>
-			</animation>
-		</control>
+		
+		<include>themeBackground2</include>
+		<include>plotBoxesLibrary</include>
+		<include>listMenuFocusedBg</include>
+		<include>frameOverlay</include>
 		<include>grainyeditionback</include>
 		<!-- fake info trigger button -->
 		<control type="button" id="8000">
@@ -137,7 +130,7 @@
 						<height>50</height>
 						<align>center</align>
 						<aligny>center</aligny>
-						<animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
+						<animation effect="fade" start="70" end="60" time="0" condition="true">Conditional</animation>
 					</control>
 					<!-- current condition -->
 					<control type="grouplist">
@@ -175,7 +168,7 @@
 							<aligny>center</aligny>
 							<font>qlassikSmall</font>
 							<textcolor>ivory1</textcolor>
-							<width min="29" max="170">auto</width>
+							<width min="29" max="130">auto</width>
 						</control>
 					</control>
 					<!-- feels like -->
@@ -196,7 +189,7 @@
 							<aligny>center</aligny>
 							<font>qlassikSmall</font>
 							<textcolor>ivory1</textcolor>
-							<width min="29" max="170">auto</width>
+							<width min="29" max="130">auto</width>
 						</control>
 					</control>
 					<!-- humidity -->
@@ -217,7 +210,7 @@
 							<aligny>center</aligny>
 							<font>qlassikSmall</font>
 							<textcolor>ivory1</textcolor>
-							<width min="29" max="170">auto</width>
+							<width min="29" max="140">auto</width>
 						</control>
 					</control>
 					<!-- uv index -->
@@ -238,7 +231,7 @@
 							<aligny>center</aligny>
 							<font>qlassikSmall</font>
 							<textcolor>ivory1</textcolor>
-							<width min="29" max="170">auto</width>
+							<width min="29" max="180">auto</width>
 						</control>
 					</control>
 					<!-- wind -->
@@ -263,7 +256,7 @@
 						</control>
 					</control>
 					<control type="label">
-						<height>20</height>
+						<height>40</height>
 					</control>
 					<!-- type separator -->
 					<control type="label">
@@ -278,12 +271,6 @@
 					</control>
 				</control>
 				<!-- WRAPPER DAY 1 -->
-				<!-- separator -->
-				<control type="image">
-					<width>1</width>
-					<height>480</height>
-					<texture>dialogs/separator-y.png</texture>
-				</control>
 				<control type="grouplist">
 					<width min="29" max="240">auto</width>
 					<orientation>vertical</orientation>
@@ -320,7 +307,7 @@
 						<height>50</height>
 						<align>center</align>
 						<aligny>center</aligny>
-						<animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
+						<animation effect="fade" start="70" end="60" time="0" condition="true">Conditional</animation>
 					</control>
 					<!-- condition -->
 					<control type="grouplist">
@@ -367,7 +354,7 @@
 						</control>
 					</control>
 					<control type="label">
-						<height>20</height>
+						<height>30</height>
 					</control>
 					<!-- type separator -->
 					<control type="label">
@@ -418,7 +405,7 @@
 						<height>50</height>
 						<align>center</align>
 						<aligny>center</aligny>
-						<animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
+						<animation effect="fade" start="70" end="60" time="0" condition="true">Conditional</animation>
 					</control>
 					<!-- condition -->
 					<control type="grouplist">
@@ -465,7 +452,7 @@
 						</control>
 					</control>
 					<control type="label">
-						<height>20</height>
+						<height>30</height>
 					</control>
 					<!-- type separator -->
 					<control type="label">
@@ -480,12 +467,6 @@
 					</control>
 				</control>
 				<!-- WRAPPER DAY 3 -->
-				<!-- separator -->
-				<control type="image">
-					<width>1</width>
-					<height>480</height>
-					<texture>dialogs/separator-y.png</texture>
-				</control>
 				<control type="grouplist">
 					<width min="29" max="240">auto</width>
 					<orientation>vertical</orientation>
@@ -522,7 +503,7 @@
 						<height>50</height>
 						<align>center</align>
 						<aligny>center</aligny>
-						<animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
+						<animation effect="fade" start="70" end="60" time="0" condition="true">Conditional</animation>
 					</control>
 					<!-- condition -->
 					<control type="grouplist">
@@ -569,7 +550,7 @@
 						</control>
 					</control>
 					<control type="label">
-						<height>20</height>
+						<height>30</height>
 					</control>
 					<!-- type separator -->
 					<control type="label">
