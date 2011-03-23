@@ -221,6 +221,13 @@
 					<onclick>Skin.ToggleSetting(FanartSlideShow)</onclick>
 					<selected>Skin.HasSetting(FanartSlideShow)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="204">
+					<description>hide Retroplex logo</description>
+					<label>Hide the Retroplex logo</label>
+					<onclick>Skin.ToggleSetting(hidetheawesomelogo)</onclick>
+					<selected>Skin.HasSetting(hidetheawesomelogo)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
 				</control>	
 			</control>
 			<!-- fanart -->

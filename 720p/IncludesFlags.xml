@@ -156,7 +156,7 @@
 			<width>161</width>
 			<height>109</height>
 			<aspectratio align="center">keep</aspectratio>
-			<colordiffuse>ivory3</colordiffuse>
+			<colordiffuse>ivory2</colordiffuse>
 			<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/studios/,.png]</texture>
 			<visible>Container.Content(movies)</visible>
 		</control>
@@ -164,7 +164,7 @@
 			<width>161</width>
 			<height>109</height>
 			<aspectratio align="center">keep</aspectratio>
-			<colordiffuse>ivory3</colordiffuse>
+			<colordiffuse>ivory2</colordiffuse>
 			<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/tvshows/,.png]</texture>
 			<visible>Container.Content(tvshows)</visible>
 		</control>
@@ -249,7 +249,7 @@
 				<height>64</height>
 				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<colordiffuse>ivory3</colordiffuse>
+				<colordiffuse>ivory2</colordiffuse>
 				<visible>Container.Content(movies) + [!Skin.HasSetting(slidehideresolution) | Window.IsActive(2003)]</visible>
 			</control>
 			<control type="image">
@@ -257,7 +257,7 @@
 				<height>64</height>
 				<texture>$INFO[Listitem.Property(mediaTag-aspectRatio),flags/aspect/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<colordiffuse>ivory3</colordiffuse>
+				<colordiffuse>ivory2</colordiffuse>
 				<visible>[Container.Content(movies) | Container.Content(episodes)] + [!Skin.HasSetting(slidehideaspectratio) | Window.IsActive(2003)]</visible>
 			</control>
 			<control type="image">
@@ -265,7 +265,7 @@
 				<height>64</height>
 				<texture>$INFO[Listitem.Property(mediaTag-videoFrameRate),flags/videoframerate/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<colordiffuse>ivory3</colordiffuse>
+				<colordiffuse>ivory2</colordiffuse>
 				<visible>[Container.Content(movies) | Container.Content(episodes)] + !Skin.HasSetting(slidehideframerate)</visible>
 			</control>
 			<control type="image">
@@ -273,7 +273,7 @@
 				<height>64</height>
 				<texture>$INFO[Listitem.Property(mediaTag-videoCodec),flags/type/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<colordiffuse>ivory3</colordiffuse>
+				<colordiffuse>ivory2</colordiffuse>
 				<visible>[Container.Content(movies) | Container.Content(episodes)] + [!Skin.HasSetting(slidehidevideoinfo) | Window.IsActive(2003)]</visible>
 			</control>
 			<control type="image">
@@ -281,7 +281,7 @@
 				<height>64</height>
 				<texture>$INFO[Listitem.Property(mediaTag-audioCodec),flags/type/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<colordiffuse>ivory3</colordiffuse>
+				<colordiffuse>ivory2</colordiffuse>
 				<visible>[Container.Content(movies) | Container.Content(episodes)] + [!Skin.HasSetting(slidehideaudioinfo) | Window.IsActive(2003)]</visible>
 			</control>
 			<control type="image">
@@ -289,7 +289,7 @@
 				<height>64</height>
 				<texture>$INFO[Listitem.Property(mediaTag-audioChannels),flags/audiochannels/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<colordiffuse>ivory3</colordiffuse>
+				<colordiffuse>ivory2</colordiffuse>
 				<visible>[Container.Content(movies) | Container.Content(episodes)] + !Skin.HasSetting(slidehideaudioinfo)</visible>
 			</control>
 			<control type="image">
@@ -297,7 +297,7 @@
 				<height>64</height>
 				<texture>$INFO[Listitem.MPAA,flags/contentrating/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
-				<colordiffuse>ivory3</colordiffuse>
+				<colordiffuse>ivory2</colordiffuse>
 				<visible>Container.Content(movies) + !Skin.HasSetting(slidehidecontentrating)</visible>
 			</control>
 		</control>

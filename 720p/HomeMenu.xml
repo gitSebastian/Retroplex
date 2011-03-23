@@ -102,7 +102,7 @@
 				</item>-->
 			</content>
 		</control>
-		<include>leftMenu</include>
+		<!--<include>leftMenu</include>-->
 		<!-- LEFT SIDE MENU -->
 		<control type="group" id="9000">
 			<posx>-378</posx>

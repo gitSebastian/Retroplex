@@ -1,9 +1,10 @@
 <skin>
 	<defaultresolution>720p</defaultresolution>
-	<defaultresolutionwide>720p</defaultresolutionwide>
-	<defaultthemename>textures.xpr</defaultthemename>
-	<version>2.10</version>
-	<effectslowdown>.75</effectslowdown>
+	  <defaultresolutionwide>720p</defaultresolutionwide>
+	  <version>2.1</version>
+	  <skinversion>v1.00</skinversion>
+	  <zoom>1</zoom>
+	  <effectslowdown>0.8</effectslowdown>
 	<credits>
 		<skinname>Retroplex</skinname>
 		<name>Design, Coding and Graphics by Sebastian</name>

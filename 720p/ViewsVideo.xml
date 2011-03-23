@@ -343,7 +343,7 @@
 							<align>left</align>
 							<aligny>top</aligny>
 							<label>$INFO[ListItem.Plot]</label>
-							<textcolor>deepRed</textcolor>
+							<textcolor>ivory2</textcolor>
 							<font>titilliumMedium</font>
 						</control>
 					</control>
@@ -510,7 +510,7 @@
 						<align>left</align>
 						<aligny>top</aligny>
 						<label>$INFO[ListItem.Plot]</label>
-						<textcolor>deepRed</textcolor>
+						<textcolor>ivory2</textcolor>
 						<font>titilliumMedium</font>
 					</control>
 				</control>
@@ -983,7 +983,7 @@
 				<label>$INFO[ListItem(0).Plot]</label>
 				<autoscroll delay="10000" time="3000" repeat="5000">!Control.HasFocus(13)</autoscroll>
 				<font>titilliumMedium</font>
-				<textcolor>deepRed</textcolor>
+				<textcolor>ivory2</textcolor>
 				<include>textBox</include>
 				<animation type="Visible">
 					<effect type="fade" start="0" end="100" delay="100" time="1200"/>
@@ -1255,7 +1255,7 @@
 					<align>left</align>
 					<aligny>top</aligny>
 					<label>$INFO[ListItem.PlotOutline]</label>
-					<textcolor>deepRed</textcolor>
+					<textcolor>ivory2</textcolor>
 					<font>titilliumMedium</font>
 					<visible>!IsEmpty(ListItem.Plotoutline)</visible>
 				</control>
@@ -1267,7 +1267,7 @@
 					<align>left</align>
 					<aligny>top</aligny>
 					<label>$INFO[ListItem.Plot]</label>
-					<textcolor>deepRed</textcolor>
+					<textcolor>ivory2</textcolor>
 					<font>titilliumMedium</font>
 					<visible>IsEmpty(ListItem.Plotoutline)</visible>
 				</control>
@@ -2222,7 +2222,7 @@
 							<height>261</height>
 							<align>left</align>
 							<label>$INFO[ListItem.Plot]</label>
-							<textcolor>deepRed</textcolor>
+							<textcolor>ivory2</textcolor>
 							<font>titilliumMedium</font>
 						</control>
 					</control>
@@ -2266,7 +2266,7 @@
 							<height>156</height>
 							<align>left</align>
 							<label>$INFO[ListItem.Plot]</label>
-							<textcolor>deepRed</textcolor>
+							<textcolor>ivory2</textcolor>
 							<font>titilliumMedium</font>
 						</control>
 					</control>
@@ -2584,7 +2584,7 @@
 		<posy>483</posy>
 		<label>$LOCALIZE[16101] : $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[20360]</label>
 		<font>qlassikSmall</font>
-		<textcolor>ivory3</textcolor>
+		<textcolor>ivory2</textcolor>
 		<align>left</align>
 		<width>900</width>
 		<visible>!IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>

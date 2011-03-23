@@ -15,7 +15,7 @@
 			<texture>retroslide/000.jpg</texture>
 		</control>-->
 		<include>homeMenuFocusedBg</include>
-		<include>plotBoxesLibrary</include>
+		<!--<include>plotBoxesLibrary</include>-->
 		<include>frameOverlay</include>
 		<include>leftMenuBg</include>
 		<include>nostalgiaOverlay</include>
