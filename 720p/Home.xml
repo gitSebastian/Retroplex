@@ -20,8 +20,11 @@
 		<include>leftMenuBg</include>
 		<include>nostalgiaOverlay</include>
 		<include>leftMenuDressing</include>
-		<include>homelogo</include>
-		<include>hometypologo</include>
+		<control type="group">
+			<include>HomeScreenLeftMenuSlide</include>
+			<include>homelogo</include>
+			<include>hometypologo</include>
+		</control>
 		<!-- time and date -->
 		<include condition="![Window.IsActive(10112) | Window.IsActive(10133) | Window.IsActive(107)]">libClock</include>
 		<!-- HOME MENU -->

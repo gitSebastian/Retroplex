@@ -13,20 +13,17 @@
 	<include name="HomeScreenLeftMenuSlide">
 		<animation effect="slide" start="0" end="162" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
 		<animation effect="slide" start="162" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
+	</include>
+	<include name="HomeScreenLeftMenuSlideFade">
 		<animation effect="fade" start="100" end="0" time="400" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus() | Control.HasFocus(1110) | Control.HasFocus(1130) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
 	</include>
-	<!-- Home screen logo animations -->
-	<include name="HomeScreenLogoSlide">
-		<animation effect="slide" start="0" end="162" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
-		<animation effect="slide" start="162" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
-	</include>	
 	<!-- Home screen Now Playing left menu animations -->
 	<include name="NowPlayingHomeLeftMenuSlide">
 		<animation effect="slide" start="0" end="300" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
 		<animation effect="slide" start="300" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
 		<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus()">Conditional</animation>
 	</include>	
-	<!-- Weatherleft menu animations -->
+	<!-- Weather left menu animations -->
 	<include name="WeatherLeftMenuSlide">
 		<animation effect="slide" start="0" end="200" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
 		<animation effect="slide" start="200" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>

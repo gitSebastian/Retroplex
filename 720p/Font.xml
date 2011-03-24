@@ -169,6 +169,21 @@
 			<size>18</size>
 		</font>
 		<font>
+			<name>marketingBig</name>
+			<filename>MarketingScript.ttf</filename>
+			<size>40</size>
+		</font>
+		<font>
+			<name>marketingMedium</name>
+			<filename>MarketingScript.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>marketingMediumSmall</name>
+			<filename>MarketingScript.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
 			<name>telegraficoSmall</name>
 			<filename>Telegrafico.ttf</filename>
 			<size>18</size>

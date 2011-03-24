@@ -3,274 +3,115 @@
 	<!-- custom Home screen Now Playing visuals -->
 	<include name="nowplayinghome">
 		<!-- NOW & NEXT PLAYING VISUALS -->
+		<!-- WITH RETROPLEX SLIDESHOW -->
 		<control type="group">
-			<include>NowPlayingHomeLeftMenuSlide</include>
+			<posx>698</posx>
+			<posy>180</posy>
+			<visible>Player.HasMusicPlaylist</visible>
+			<animation condition="!Player.Paused" type="Conditional">
+				<effect type="rotatey" center="1085" start="-180" end="0" time="500" easing="out" reversible="false"/>
+				<effect type="fade" start="50" end="90" time="250" delay="0"/>
+			</animation>
+			<animation condition="Player.Paused" type="Conditional">
+				<effect type="rotatey" center="1085" start="0" end="-180" time="500" easing="out" reversible="false"/>
+				<effect type="fade" start="90" end="50" time="250" delay="0"/>
+			</animation>
+			<!-- CURRENTLY PLAYING -->
 			<control type="group">
-				<posx>898</posx>
-				<posy>-30</posy>
-				<visible>Player.HasMusicPlaylist</visible>
-				<animation condition="!Player.Paused" type="Conditional">
-					<effect type="rotatey" center="1085" start="-180" end="0" time="500" easing="out" reversible="false"/>
-					<effect type="fade" start="50" end="90" time="250" delay="0"/>
+				<posy>235</posy>
+				<posx>86</posx>
+				<align>right</align>
+				<!-- effects when closing/opening window -->
+				<animation type="WindowOpen">
+					<effect type="slide" start="400,0" time="1000" tween="cubic" easing="out"/>
+					<effect type="fade" start="0" end="100" time="1500"/>
 				</animation>
-				<animation condition="Player.Paused" type="Conditional">
-					<effect type="rotatey" center="1085" start="0" end="-180" time="500" easing="out" reversible="false"/>
-					<effect type="fade" start="90" end="50" time="250" delay="0"/>
+				<animation type="WindowClose">
+					<effect type="slide" start="0,0" end="400,0" time="700" tween="cubic" easing="inout"/>
+					<effect type="fade" start="100" end="0" time="1000"/>
 				</animation>
-				<!-- NEXT PLAYING with classic home -->
+				<!-- now playing informations -->
 				<control type="group">
-					<visible>!Skin.HasSetting(RetroplexSlideShow) + Player.HasMusicPlaylist + MusicPlayer.HasNext</visible>
-					<!-- effects when closing/opening window -->
-					<animation type="WindowOpen">
-						<effect type="slide" start="400,0" time="1000" tween="cubic" easing="out"/>
-						<effect type="fade" start="0" end="60" time="1500"/>
-					</animation>
-					<animation type="WindowClose">
-						<effect type="slide" start="0,0" end="400,0" time="700" tween="cubic" easing="inout"/>
-						<effect type="fade" start="100" end="0" time="1000"/>
-					</animation>
-					<!-- next playing informations -->
-					<control type="group">
-						<posx>245</posx>
-						<posy>355</posy>
-						<control type="label">
-							<posy>-2</posy>
-							<width>190</width>
-							<font>qlassikSmallest</font>
-							<textcolor>ivory3</textcolor>
-							<label>$INFO[MusicPlayer.Offset(1).Artist]</label>
-							<align>right</align>
-						</control>
-						<control type="label">
-							<posy>21</posy>
-							<width>190</width>
-							<font>lobsterSmallest</font>
-							<wrapmultiline>true</wrapmultiline>
-							<textcolor>ivory3</textcolor>
-							<label>$INFO[MusicPlayer.Offset(1).Title]</label>
-							<align>right</align>
-							<aligny>bottom</aligny>
-						</control>
+					<posy>172</posy>
+					<posx>30</posx>
+					<visible>Player.HasMusicPlaylist</visible>
+					<control type="label">
+						<width>250</width>
+						<font>qlassikSmallest</font>
+						<textcolor>ivory1</textcolor>
+						<label>$INFO[MusicPlayer.Artist]</label>
+						<align>left</align>
 					</control>
-					<!-- cover next playing -->
-					<control type="group">
-						<posx>235</posx>
-						<posy>340</posy>
+					<control type="label">
+						<posy>25</posy>
+						<width>432</width>
+						<font>lobsterSmall</font>
+						<textcolor>greenlime</textcolor>
+						<label>$INFO[MusicPlayer.Title]</label>
+						<align>left</align>
+					</control>
+				</control>
+				<!-- progress bar -->
+				<control type="progress" id="21">
+					<description>Progress bar</description>
+					<posy>230</posy>
+					<posx>30</posx>
+					<height>1</height>
+					<width>432</width>
+					<info>Player.Progress</info>
+					<texturebg>dialogs/progressBackground_.png</texturebg>
+					<lefttexture>-</lefttexture>
+					<midtexture border="0">dialogs/progressSlider_.png</midtexture>
+					<righttexture>-</righttexture>
+					<animation effect="fade" start="0" end="100" time="1000">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
+					<visible>Player.HasMusicPlaylist</visible>
+				</control>
+				<control type="label">
+					<posy>235</posy>
+					<posx>30</posx>
+					<width>200</width>
+					<font>qlassikSmallest</font>
+					<textcolor>ivory2</textcolor>
+					<label>$INFO[MusicPlayer.Time] / $INFO[MusicPlayer.Duration]</label>
+					<align>left</align>
+				</control>
+			</control>
+			<!-- NEXT PLAYING -->
+			<control type="group">
+				<posx>0</posx>
+				<posy>3</posy>
+				<visible>Player.HasMusicPlaylist + MusicPlayer.HasNext</visible>
+				<!-- effects when closing/opening window -->
+				<animation type="WindowOpen">
+					<effect type="slide" start="400,0" time="1000" tween="cubic" easing="out"/>
+					<effect type="fade" start="0" end="100" time="1500"/>
+				</animation>
+				<animation type="WindowClose">
+					<effect type="slide" start="0,0" end="400,0" time="700" tween="cubic" easing="inout"/>
+					<effect type="fade" start="100" end="0" time="1000"/>
+				</animation>
+				<!-- next playing informations -->
+				<control type="group">
+					<posx>550</posx>
+					<posy>470</posy>
+					<control type="label">
+						<posy>-2</posy>
+						<width>350</width>
+						<font>qlassikSmallest</font>
+						<textcolor>ivory1</textcolor>
+						<label>$INFO[MusicPlayer.Offset(1).Artist]</label>
 						<align>right</align>
-						<!-- shadow -->
-						<!--<control type="image">
-							<posx>23</posx>
-							<posy>13</posy>
-							<width>128</width>
-							<height>128</height>
-							<aspectratio scalediffuse="false" align="right">keep</aspectratio>
-							<texture>frames/oldpaperDarkShadow.png</texture>
-							<animation effect="fade" start="60" end="100" time="0" condition="true">Conditional</animation>
-						</control>-->
-						<!-- new cover -->
-						<control type="image">
-							<posx>23</posx>
-							<posy>13</posy>
-							<width>100</width>
-							<height>100</height>
-							<info>MusicPlayer.NextNewCover</info>
-							<aspectratio scalediffuse="false" align="right">stretch</aspectratio>
-							<visible>MusicPlayer.HasNewCoverNext</visible>
-							<texture diffuse="frames/oldpaperDarkMask.png"/>
-						</control>
-						<!-- if no new cover, then same cover -->
-						<control type="image">
-							<posx>23</posx>
-							<posy>13</posy>
-							<width>100</width>
-							<height>100</height>
-							<info>MusicPlayer.Cover</info>
-							<aspectratio scalediffuse="false" align="right">stretch</aspectratio>
-							<visible>!MusicPlayer.HasNewCoverNext</visible>
-							<texture diffuse="frames/oldpaperDarkMask.png"/>
-						</control>
-						<!-- overlay -->
-						<control type="image">
-							<posx>23</posx>
-							<posy>13</posy>
-							<width>100</width>
-							<height>100</height>
-							<aspectratio scalediffuse="false" align="right">stretch</aspectratio>
-							<texture>frames/oldpaperDarkOverlay.png</texture>
-							<animation effect="fade" start="60" end="100" time="0" condition="true">Conditional</animation>
-						</control>
 					</control>
-				</control>
-				<!-- NEXT PLAYING with retroplex slideshow -->
-				<control type="group">
-					<visible>Skin.HasSetting(RetroplexSlideShow) + Player.HasMusicPlaylist + MusicPlayer.HasNext</visible>
-					<!-- effects when closing/opening window -->
-					<animation type="WindowOpen">
-						<effect type="slide" start="400,0" time="1000" tween="cubic" easing="out"/>
-						<effect type="fade" start="0" end="100" time="1500"/>
-					</animation>
-					<animation type="WindowClose">
-						<effect type="slide" start="0,0" end="400,0" time="700" tween="cubic" easing="inout"/>
-						<effect type="fade" start="100" end="0" time="1000"/>
-					</animation>
-					<!-- next playing informations -->
-					<control type="group">
-						<posx>355</posx>
-						<posy>670</posy>
-						<control type="label">
-							<posy>-2</posy>
-							<width>250</width>
-							<font>qlassikSmallest</font>
-							<textcolor>ivory1</textcolor>
-							<label>$INFO[MusicPlayer.Offset(1).Artist]</label>
-							<align>right</align>
-						</control>
-						<control type="label">
-							<posy>21</posy>
-							<width>250</width>
-							<font>lobsterSmallest</font>
-							<wrapmultiline>false</wrapmultiline>
-							<textcolor>ivory1</textcolor>
-							<label>$INFO[MusicPlayer.Offset(1).Title]</label>
-							<align>right</align>
-							<aligny>bottom</aligny>
-						</control>
-					</control>
-				</control>
-				<!-- CURRENTLY PLAYING with classic home -->
-				<control type="group">
-					<visible>!Skin.HasSetting(RetroplexSlideShow)</visible>
-					<posy>370</posy>
-					<posx>90</posx>
-					<align>right</align>
-					<!-- effects when closing/opening window -->
-					<animation type="WindowOpen">
-						<effect type="slide" start="400,0" time="1000" tween="cubic" easing="out"/>
-						<effect type="fade" start="0" end="100" time="1500"/>
-					</animation>
-					<animation type="WindowClose">
-						<effect type="slide" start="0,0" end="400,0" time="700" tween="cubic" easing="inout"/>
-						<effect type="fade" start="100" end="0" time="1000"/>
-					</animation>
-					<!-- cover now playing -->
-					<control type="group">
-						<!--<control type="image">
-							<posx>25</posx>
-							<posy>15</posy>
-							<width>249</width>
-							<height>249</height>
-							<aspectratio>stretch</aspectratio>
-							<texture>frames/oldpaperShadow2.png</texture>
-							<animation effect="fade" start="60" end="100" time="0" condition="true">Conditional</animation>
-						</control>-->
-						<control type="image">
-							<posx>70</posx>
-							<posy>90</posy>
-							<width>200</width>
-							<height>200</height>
-							<info>MusicPlayer.Cover</info>
-							<aspectratio scalediffuse="false" align="right">stretch</aspectratio>
-							<texture diffuse="frames/oldpaperMask2.png"/>
-						</control>
-						<control type="image">
-							<posx>70</posx>
-							<posy>90</posy>
-							<width>200</width>
-							<height>200</height>
-							<aspectratio scalediffuse="false" align="right">stretch</aspectratio>
-							<texture>frames/oldpaperOverlay2.png</texture>
-							<animation effect="fade" start="60" end="100" time="0" condition="true">Conditional</animation>
-						</control>
-					</control>
-					<!-- now playing informations -->
-					<control type="group">
-						<posy>292</posy>
-						<posx>265</posx>
-						<visible>Player.HasMusicPlaylist</visible>
-						<control type="label">
-							<width>330</width>
-							<font>qlassikSmallest</font>
-							<textcolor>ivory3</textcolor>
-							<label>$INFO[MusicPlayer.Artist]</label>
-							<align>right</align>
-						</control>
-						<control type="label">
-							<posy>20</posy>
-							<width>350</width>
-							<font>lobsterSmallest</font>
-							<textcolor>greenlime</textcolor>
-							<label>$INFO[MusicPlayer.Title]</label>
-							<align>right</align>
-						</control>
-					</control>
-					<!-- progress bar -->
-					<control type="progress" id="21">
-						<description>Progress bar</description>
-						<posy>340</posy>
-						<posx>30</posx>
-						<height>1</height>
-						<width>237</width>
-						<info>Player.Progress</info>
-						<texturebg>dialogs/progressBackground_.png</texturebg>
-						<lefttexture>-</lefttexture>
-						<midtexture border="0">dialogs/progressSlider_.png</midtexture>
-						<righttexture>-</righttexture>
-						<animation effect="fade" start="0" end="100" time="1000">Visible</animation>
-						<animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
-						<visible>Player.HasMusicPlaylist</visible>
-					</control>
-				</control>
-				<!-- CURRENTLY PLAYING  with retroplex slideshow -->
-				<control type="group">
-					<visible>Skin.HasSetting(RetroplexSlideShow)</visible>
-					<posy>335</posy>
-					<posx>86</posx>
-					<align>right</align>
-					<!-- effects when closing/opening window -->
-					<animation type="WindowOpen">
-						<effect type="slide" start="400,0" time="1000" tween="cubic" easing="out"/>
-						<effect type="fade" start="0" end="100" time="1500"/>
-					</animation>
-					<animation type="WindowClose">
-						<effect type="slide" start="0,0" end="400,0" time="700" tween="cubic" easing="inout"/>
-						<effect type="fade" start="100" end="0" time="1000"/>
-					</animation>
-					<!-- now playing informations -->
-					<control type="group">
-						<posy>282</posy>
-						<posx>30</posx>
-						<visible>Player.HasMusicPlaylist</visible>
-						<control type="label">
-							<width>250</width>
-							<font>qlassikSmallest</font>
-							<textcolor>deepRed</textcolor>
-							<label>$INFO[MusicPlayer.Artist]</label>
-							<align>left</align>
-						</control>
-						<control type="label">
-							<posy>20</posy>
-							<width>250</width>
-							<font>lobsterSmallest</font>
-							<textcolor>greenlime</textcolor>
-							<label>$INFO[MusicPlayer.Title]</label>
-							<align>left</align>
-						</control>
-					</control>
-					<!-- progress bar -->
-					<control type="progress" id="21">
-						<description>Progress bar</description>
-						<posy>330</posy>
-						<posx>30</posx>
-						<height>1</height>
-						<width>237</width>
-						<info>Player.Progress</info>
-						<texturebg>dialogs/progressBackground_.png</texturebg>
-						<lefttexture>-</lefttexture>
-						<midtexture border="0">dialogs/progressSlider_.png</midtexture>
-						<righttexture>-</righttexture>
-						<animation effect="fade" start="0" end="100" time="1000">Visible</animation>
-						<animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
-						<visible>Player.HasMusicPlaylist</visible>
+					<control type="label">
+						<posy>21</posy>
+						<width>400</width>
+						<font>lobsterSmallest</font>
+						<wrapmultiline>false</wrapmultiline>
+						<textcolor>ivory1</textcolor>
+						<label>$INFO[MusicPlayer.Offset(1).Title]</label>
+						<align>right</align>
+						<aligny>bottom</aligny>
 					</control>
 				</control>
 			</control>

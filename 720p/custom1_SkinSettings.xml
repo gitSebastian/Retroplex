@@ -29,7 +29,7 @@
 			<height>450</height>
 			<include>transition2</include>
 			<texture border="100" flipy="true">settings/activesectionbgsansarrow.png</texture>
-			<visible>ControlGroup(9100).HasFocus(9001) | ControlGroup(9100).HasFocus(9005) | ControlGroup(9100).HasFocus(9017) | ControlGroup(9100).HasFocus(9019)</visible>
+			<visible>ControlGroup(9100).HasFocus(9001) | ControlGroup(9100).HasFocus(9005) | ControlGroup(9100).HasFocus(9007) | ControlGroup(9100).HasFocus(9017) | ControlGroup(9100).HasFocus(9019)</visible>
 		</control>	
 		<include>grainyeditionback</include>
 		<include>settingstypologo</include>
@@ -141,21 +141,21 @@
 					<visible>!Control.IsVisible(9017)</visible>
 				</control>
 				<!-- grainy edition -->
-				<!--<control type="button" id="9007">
-					<label>extra settings</label>
+				<control type="button" id="9007">
+					<label>Music Visualizer</label>
 					<include>settingsLeftMenuFormat</include>
 					<visible allowhiddenfocus="true">![Control.HasFocus(281) | Control.HasFocus(282) | Control.HasFocus(283) | Control.HasFocus(286)]</visible>
 				</control>
 				<control type="button" id="9008">
-					<label>grainy settings</label>
-					<include>settingsLeftMenuFormat</include>
+					<label>Music Visualizer</label>
+					<include>settingsLeftMenuFormat2</include>
 					<visible>!Control.IsVisible(9007)</visible>
-				</control>-->
+				</control>
 				<!-- about refocus -->
 				<control type="button" id="9013">
 					<label>$LOCALIZE[31909]</label>
 					<include>settingsLeftMenuFormat</include>
-					<visible allowhiddenfocus="true">![Control.HasFocus(241) | Control.HasFocus(242)]</visible>
+					<!--<visible allowhiddenfocus="true">![Control.HasFocus(281) | Control.HasFocus(282)]</visible>-->
 				</control>
 				<!--<control type="button" id="9010">
 					<label>$LOCALIZE[31909] reFocus</label>
@@ -191,6 +191,7 @@
 			<posy>200</posy>
 			<width>895</width>
 			<height>595</height>
+			<include>transition2</include>
 			<!-- home screen -->
 			<control type="grouplist" id="200">
 				<onleft>9001</onleft>
@@ -239,7 +240,6 @@
 				<itemgap>0</itemgap>
 				<visible>!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9005)</visible>
 				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9005)">Conditional</animation>
-				<include>transition2</include>
 				<control type="radiobutton" id="221">
 					<label>Turn OFF fanart in library views</label>
 					<onclick>Skin.ToggleSetting(FanartGlobal)</onclick>
@@ -280,7 +280,7 @@
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>-->
 			</control>
-			<!-- grainy settings -->
+			<!-- Music Visualizer settings -->
 			<control type="grouplist" id="200">
 				<onleft>9007</onleft>
 				<onright>300</onright>
@@ -290,21 +290,21 @@
 				<visible>!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9007)</visible>
 				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9007)">Conditional</animation>
 				<include>transition2</include>
-				<!--<control type="radiobutton" id="281">
-					<description>use small case font</description>
-					<label>use only small case text everywhere</label>
-					<onclick>Skin.ToggleSetting(usesmallcase)</onclick>
-					<selected>Skin.HasSetting(usesmallcase)</selected>
+				<control type="radiobutton" id="281">
+					<description>use retroplex slideshow</description>
+					<label>Turn Retroplex slideshow in "Now Playing" screen ON</label>
+					<onclick>Skin.ToggleSetting(retroplexmusicslideshow)</onclick>
+					<selected>Skin.HasSetting(retroplexmusicslideshow)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
 				<control type="radiobutton" id="282">
 					<description>Stretch the posters instead of scaling</description>
-					<label>stretch the posters (if you must, but you shouldn't)</label>
-					<onclick>Skin.ToggleSetting(grainystretchthemposters)</onclick>
-					<selected>Skin.HasSetting(grainystretchthemposters)</selected>
+					<label>Hide Retroplex logo in "Now Playing" screen</label>
+					<onclick>Skin.ToggleSetting(retroplexmusiclogo)</onclick>
+					<selected>Skin.HasSetting(retroplexmusiclogo)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
-				<control type="radiobutton" id="283">
+				<!--<control type="radiobutton" id="283">
 					<description>Letter Offset Scrolling</description>
 					<label>show "first letter offset" scrolling in library views</label>
 					<onclick>Skin.ToggleSetting(hidescrolloffset)</onclick>

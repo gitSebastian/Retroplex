@@ -149,7 +149,6 @@
 			<posx>20</posx>
 			<posy>18</posy>
 			<include>transition2</include>
-			<include>HomeScreenLogoSlide</include>
 			<visible>!Skin.HasSetting(hidetheawesomelogo)</visible>
 			<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
 			<control type="image">
@@ -165,7 +164,6 @@
 			<posx>20</posx>
 			<posy>18</posy>
 			<include>transition2</include>
-			<include>HomeScreenLogoSlide</include>
 			<visible>!Skin.HasSetting(hidetheawesomelogo)</visible>
 			<animation effect="fade" start="60" end="100" time="0" condition="true">Conditional</animation>
 			<animation effect="fade" start="100" end="60" time="350" condition="System.IdleTime(30)">Conditional</animation>
@@ -1103,9 +1101,9 @@
 		<control type="image">
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
-			<texture background="true">backgrounds/background17.png</texture>
+			<texture background="true">backgrounds/background5.png</texture>
 			<visible>Window.IsVisible(50)</visible>
-			<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+			<animation effect="fade" start="90" end="70" time="0" condition="true">Conditional</animation>
 			<include>transition2</include>
 		</control>
 		<!-- bg playlist now playing -->
@@ -1232,7 +1230,7 @@
 		<control type="image">
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
-			<texture>backgrounds/weather03.jpg</texture>
+			<texture background="true">backgrounds/weather03.jpg</texture>
 			<animation type="WindowOpen">
 				<effect type="fade" start="0" end="100" time="200" delay="300"/>
 			</animation>
@@ -1288,7 +1286,7 @@
 				<posy>-200</posy>
 				<height>1120</height>
 				<width>29</width>
-				<texture>settings/separator.png</texture>
+				<texture background="true">settings/separator.png</texture>
 				<aspectratio align="right">stretch</aspectratio>
 			</control>
 		<control type="image">
@@ -1396,6 +1394,13 @@
 			<include>screentype</include>
 			<texture background="true">backgrounds/iTunes07.jpg</texture>
 			<visible>Window.IsActive(musicplaylist)</visible>
+			<include>transition2</include>
+		</control>
+		<control type="image">
+			<description>NOW PLAYING bg</description>
+			<include>screentype</include>
+			<texture background="true">backgrounds/iTunes07.jpg</texture>
+			<visible>Window.IsActive(50) + !Skin.HasSetting(retroplexmusicslideshow)</visible>
 			<include>transition2</include>
 		</control>
 	</include>
@@ -1670,10 +1675,25 @@
 			<fadetime>1000</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>
-			<visible>Skin.HasSetting(RetroplexSlideShow) + ![Skin.HasSetting(FanartSlideShow) | Skin.HasSetting(personalSlideShow)] + ![Player.HasVideo + !Skin.HasSetting(backgroundVideo)]</visible>
+			<visible>Window.IsActive(0) + Skin.HasSetting(RetroplexSlideShow) + ![Skin.HasSetting(FanartSlideShow) | Skin.HasSetting(personalSlideShow)] + ![Player.HasVideo + !Skin.HasSetting(backgroundVideo)]</visible>
 			<animation type="WindowOpen" condition="Window.Previous(2999)">
 				<effect type="fade" start="0" end="100" time="2000" delay="100"/>
 			</animation>
+		</control>
+		<control type="multiimage" id="1">
+			<include>transition2</include>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>scale</aspectratio>
+			<aligny>top</aligny>
+			<imagepath>../media/retroslide/</imagepath>
+			<timeperimage>8000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<visible>[Window.IsActive(50) + Skin.HasSetting(retroplexmusicslideshow)] + Player.HasAudio</visible>
 		</control>
 		<control type="multiimage" id="1">
 			<include>transition2</include>
@@ -2045,6 +2065,7 @@
 		<selectedcolor>ivory2</selectedcolor>
 		<disabledcolor>Color4</disabledcolor>
 		<aspectratio align="right">stretch</aspectratio>
+		<colordiffuse>deepRed</colordiffuse>
 		<align>left</align>
 		<aligny>center</aligny>
 		<width>770</width>

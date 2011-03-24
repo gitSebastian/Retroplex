@@ -17,6 +17,7 @@
 			<scrolltime>300</scrolltime>
 			<include>transition2</include>
 			<include>HomeScreenLeftMenuSlide</include>
+			<include>HomeScreenLeftMenuSlideFade</include>
 			<animation effect="fade" start="100" end="0" time="350" condition="System.IdleTime(30)">Conditional</animation>
 			<!-- Unfocused -->
 			<itemlayout width="870" height="60">
@@ -33,11 +34,43 @@
 					<control type="label">
 						<label>&#xB7; $INFO[ListItem.Label]</label>
 						<include>homeMenuFocused</include>
+						<visible>IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
 						<label>[COLOR=greenlime]&#xB7; $INFO[ListItem.Label][/COLOR] </label>
 						<include>homeMenuFocused</include>
 						<animation effect="fade" start="20" end="30" time="0" condition="true">Conditional</animation>
+						<visible>IsEmpty(ListItem.Label2)</visible>
+					</control>
+					<!-- with Label2 -->
+					<control type="label">
+						<posx>105</posx>
+						<posy>240</posy>
+						<label>&#xB7; $INFO[ListItem.Label]</label>
+						<include>homeMenuFocused</include>
+						<visible>!IsEmpty(ListItem.Label2)</visible>
+					</control>
+					<control type="label">
+						<posx>105</posx>
+						<posy>240</posy>
+						<label>[COLOR=greenlime]&#xB7; $INFO[ListItem.Label][/COLOR] </label>
+						<include>homeMenuFocused</include>
+						<animation effect="fade" start="20" end="30" time="0" condition="true">Conditional</animation>
+						<visible>!IsEmpty(ListItem.Label2)</visible>
+					</control>
+					<control type="label">
+						<posx>165</posx>
+						<posy>285</posy>
+						<label>&#xB7; $INFO[ListItem.Label2]</label>
+						<!--<label>&#xB7; this is a test label</label>-->
+						<font>qlassikSmall2</font>
+						<height>30</height>
+						<textcolor>ivory2</textcolor>
+						<focusedcolor>Color1</focusedcolor>
+						<align>left</align>
+						<aligny>bottom</aligny>
+						<width>278</width>
+						<visible>!IsEmpty(ListItem.Label2)</visible>
 					</control>
 				</control>
 			</focusedlayout>
@@ -96,7 +129,7 @@
 					<onclick>ActivateWindow(weather)</onclick>
 					<visible>Skin.HasSetting(showweathermainmenu)</visible>
 				</item>
-				<!--<item id="3">
+				<!--<item id="10">
 					<label>test</label>
 					<onclick>ActivateWindow(000)</onclick>
 				</item>-->

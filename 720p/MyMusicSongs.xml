@@ -118,7 +118,7 @@
 					<control type="label">
 						<posx>710</posx>
 						<posy>35</posy>
-						<width>730</width>
+						<width>700</width>
 						<height>50</height>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -132,7 +132,7 @@
 					<control type="label">
 						<posx>710</posx>
 						<posy>35</posy>
-						<width>730</width>
+						<width>700</width>
 						<height>50</height>
 						<align>right</align>
 						<aligny>center</aligny>
