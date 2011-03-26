@@ -1481,13 +1481,15 @@
 	<include name="scrollOffset">
 		<control type="group">
 			<visible>Container.Scrolling + Skin.HasSetting(showscrolloffset)</visible>
+			<animation effect="slide" time="500" delay="400" tween="circle" easing="out" start="-300,0" end="0,0">Visible</animation>
+			<animation effect="slide" time="100" tween="circle" easing="in" start="0,0" end="-500,0">Hidden</animation>
 			<control type="label">
-				<posx>34</posx>
+				<posx>38</posx>
 				<posy>24</posy>
 				<width>40</width>
 				<aligny>center</aligny>
 				<font>lobsterMedium</font>
-				<textcolor>greenlime</textcolor>
+				<textcolor>greenlimelight</textcolor>
 				<label>$INFO[ListItem.SortLetter]</label>
 			</control>
 		</control>
@@ -1969,7 +1971,7 @@
 		<width>1100</width>
 		<animation type="Focus" reversible="false">
 			<effect type="zoom" center="85,250" start="60" end="100" time="450" tween="Cubic" easing="out"/>
-			<effect type="fade" start="0" end="90" time="550"/>
+			<effect type="fade" start="0" end="100" time="550"/>
 		</animation>
 	</include>
 	<include name="leftMenuTitle">

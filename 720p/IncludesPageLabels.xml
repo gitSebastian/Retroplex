@@ -23,26 +23,13 @@
 	</include>
 	<!-- VIDEO PAGELABELS -->
 	<include name="videoPageLabel">
-		<!-- scrolloffset visible -->
-		<posx>84</posx>
-		<posy>25</posy>
-		<width>600</width>
-		<aligny>center</aligny>
-		<font>qlassikMedium2</font>
-		<textcolor>Color1</textcolor>
-		<include>transition3</include>
-		<animation effect="fade" start="20" end="70" time="0" condition="true">Conditional</animation>		
-	</include>
-	<include name="videoPageLabel2">
-		<!-- scrolloffset hidden -->
 		<posx>34</posx>
 		<posy>25</posy>
 		<width>600</width>
 		<aligny>center</aligny>
 		<font>qlassikMedium2</font>
 		<textcolor>Color1</textcolor>
-		<include>transition3</include>
-		<animation effect="fade" start="20" end="70" time="0" condition="true">Conditional</animation>
+		<include>transition3</include>		
 	</include>
 	<include name="videoFanartPageLabels">
 		<posx>34</posx>
@@ -56,32 +43,37 @@
 		<animation effect="fade" start="20" end="70" time="0" condition="true">Conditional</animation>
 	</include>
 	<include name="videoLibPageLabels">
-		<!-- page titles with or without scrolloffset visible -->
+		<!-- page titles with scrolloffset visible -->
 		<control type="group">
 			<include>PageLabelsLeftMenuSlide</include>
 		<control type="label">
 			<label>$INFO[Container.FirstTitle]</label>
 			<include>videoPageLabel</include>
 			<include>infoDialogHide</include>
-			<visible>!Window.IsActive(502) + Container.Scrolling + Skin.HasSetting(showscrolloffset) + IsEmpty(Container.SecondTitle)</visible>
+			<visible>!Window.IsActive(502) + Skin.HasSetting(showscrolloffset) + IsEmpty(Container.SecondTitle)</visible>
+			<animation effect="slide" time="500" delay="600" tween="cubic" easing="in" start="0,0" end="30,0" condition="Container.Scrolling">Conditional</animation>
+			<animation effect="slide" time="500" tween="cubic" easing="out" start="30,0" end="0,0" condition="!Container.Scrolling">Conditional</animation>
 		</control>
 		<control type="label">
 			<label>$INFO[Container.FirstTitle] [COLOR=greenlime]$INFO[Container.SecondTitle][/COLOR]</label>
 			<include>videoPageLabel</include>
 			<include>infoDialogHide</include>
-			<visible>!Window.IsActive(502) + Container.Scrolling + Skin.HasSetting(showscrolloffset) + !IsEmpty(Container.SecondTitle)</visible>
+			<visible>!Window.IsActive(502) + Skin.HasSetting(showscrolloffset) + !IsEmpty(Container.SecondTitle)</visible>
+			<animation effect="slide" time="500" delay="600" tween="cubic" easing="in" start="0,0" end="30,0" condition="Container.Scrolling">Conditional</animation>
+			<animation effect="slide" time="500" tween="cubic" easing="out" start="30,0" end="0,0" condition="!Container.Scrolling">Conditional</animation>
 		</control>
+		<!-- page titles without scrolloffset visible -->
 		<control type="label">
 			<label>$INFO[Container.FirstTitle]</label>
-			<include>videoPageLabel2</include>
+			<include>videoPageLabel</include>
 			<include>infoDialogHide</include>
-			<visible>!Window.IsActive(502) + [!Container.Scrolling | [Container.Scrolling + !Skin.HasSetting(showscrolloffset)]] + IsEmpty(Container.SecondTitle)</visible>
+			<visible>!Window.IsActive(502) + !Skin.HasSetting(showscrolloffset) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
 		<control type="label">
 			<label>$INFO[Container.FirstTitle] [COLOR=greenlime]$INFO[Container.SecondTitle][/COLOR]</label>
-			<include>videoPageLabel2</include>
+			<include>videoPageLabel</include>
 			<include>infoDialogHide</include>
-			<visible>!Window.IsActive(502) + [!Container.Scrolling | [Container.Scrolling + !Skin.HasSetting(showscrolloffset)]] + !IsEmpty(Container.SecondTitle)</visible>
+			<visible>!Window.IsActive(502) + !Skin.HasSetting(showscrolloffset) + !IsEmpty(Container.SecondTitle)</visible>
 		</control>
 		<!-- full info screen movies -->
 		<control type="label">

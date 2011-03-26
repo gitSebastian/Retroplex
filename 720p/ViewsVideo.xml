@@ -65,23 +65,9 @@
 						<aligny>center</aligny>
 						<font>lobsterMedium</font>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>ivory3</textcolor>
+						<textcolor>greenlimelight</textcolor>
 						<selectedcolor>ivory3</selectedcolor>
 						<scroll>true</scroll>
-					</control>
-					<control type="label">
-						<posx>710</posx>
-						<posy>30</posy>
-						<width>700</width>
-						<height>50</height>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>lobsterMedium</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textcolor>greenlime</textcolor>
-						<selectedcolor>ivory3</selectedcolor>
-						<scroll>true</scroll>
-						<animation effect="fade" start="10" end="10" time="0" condition="true">Conditional</animation>
 					</control>
 				</focusedlayout>
 				<!-- video non-focused -->
@@ -116,23 +102,9 @@
 						<aligny>center</aligny>
 						<font>lobsterMedium</font>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>ivory3</textcolor>
+						<textcolor>greenlimelight</textcolor>
 						<selectedcolor>ivory3</selectedcolor>
 						<scroll>true</scroll>
-					</control>
-					<control type="label">
-						<posx>710</posx>
-						<posy>19</posy>
-						<width>700</width>
-						<height>50</height>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>lobsterMedium</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textcolor>greenlime</textcolor>
-						<selectedcolor>ivory3</selectedcolor>
-						<scroll>true</scroll>
-						<animation effect="fade" start="20" end="20" time="0" condition="true">Conditional</animation>
 					</control>
 					<control type="label">
 						<posx>710</posx>
@@ -213,24 +185,9 @@
 						<aligny>center</aligny>
 						<font>lobsterMedium</font>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>ivory3</textcolor>
+						<textcolor>greenlimelight</textcolor>
 						<selectedcolor>ivory3</selectedcolor>
 						<scroll>true</scroll>
-						<visible>IsEmpty(Container.Property(mixedParents))</visible>
-					</control>
-					<control type="label">
-						<posx>710</posx>
-						<posy>30</posy>
-						<width>700</width>
-						<height>55</height>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>lobsterMedium</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textcolor>greenlime</textcolor>
-						<selectedcolor>ivory3</selectedcolor>
-						<scroll>true</scroll>
-						<animation effect="fade" start="20" end="20" time="0" condition="true">Conditional</animation>
 						<visible>IsEmpty(Container.Property(mixedParents))</visible>
 					</control>
 					<control type="label">
@@ -242,24 +199,9 @@
 						<aligny>center</aligny>
 						<font>lobsterMedium</font>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>ivory3</textcolor>
+						<textcolor>greenlimelight</textcolor>
 						<selectedcolor>ivory3</selectedcolor>
 						<scroll>true</scroll>
-						<visible>!IsEmpty(Container.Property(mixedParents))</visible>
-					</control>
-					<control type="label">
-						<posx>710</posx>
-						<posy>45</posy>
-						<width>700</width>
-						<height>55</height>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>lobsterMedium</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textcolor>greenlime</textcolor>
-						<selectedcolor>ivory3</selectedcolor>
-						<scroll>true</scroll>
-						<animation effect="fade" start="20" end="20" time="0" condition="true">Conditional</animation>
 						<visible>!IsEmpty(Container.Property(mixedParents))</visible>
 					</control>
 					<!-- show name -->
@@ -877,19 +819,8 @@
 				<width>770</width>
 				<label>$INFO[ListItem.Title]</label>
 				<font>lobsterMedium</font>
-				<textcolor>ivory3</textcolor>
+				<textcolor>greenlimelight</textcolor>
 				<include>focus_Banner</include>
-				<visible>IsEmpty(Container.Property(mixedParents))</visible>
-			</control>
-			<control type="label" id="1">
-				<posx>400</posx>
-				<posy>230</posy>
-				<width>770</width>
-				<label>$INFO[ListItem.Title]</label>
-				<font>lobsterMedium</font>
-				<textcolor>greenlime</textcolor>
-				<include>focus_Banner</include>
-				<animation effect="fade" start="20" end="20" time="0" condition="True">Conditional</animation>
 				<visible>IsEmpty(Container.Property(mixedParents))</visible>
 			</control>
 			<!-- Focused TITLE with show name -->
@@ -899,19 +830,8 @@
 				<width>770</width>
 				<label>$INFO[ListItem.TVShowTitle] : $INFO[ListItem.Title]</label>
 				<font>lobsterMedium</font>
-				<textcolor>ivory2</textcolor>
+				<textcolor>greenlimelight</textcolor>
 				<include>focus_Banner</include>
-				<visible>!IsEmpty(Container.Property(mixedParents))</visible>
-			</control>
-			<control type="label" id="1">
-				<posx>400</posx>
-				<posy>230</posy>
-				<width>770</width>
-				<label>$INFO[ListItem.TVShowTitle] : $INFO[ListItem.Title]</label>
-				<font>lobsterMedium</font>
-				<textcolor>greenlime</textcolor>
-				<include>focus_Banner</include>
-				<animation effect="fade" start="20" end="20" time="0" condition="True">Conditional</animation>
 				<visible>!IsEmpty(Container.Property(mixedParents))</visible>
 			</control>
 			<!-- Focused TITLE backup label -->
@@ -921,19 +841,8 @@
 				<width>770</width>
 				<label>$INFO[ListItem.Label]</label>
 				<font>lobsterMedium</font>
-				<textcolor>ivory3</textcolor>
+				<textcolor>greenlimelight</textcolor>
 				<include>focus_Banner</include>
-				<visible>IsEmpty(ListItem.Title)</visible>
-			</control>
-			<control type="label" id="1">
-				<posx>400</posx>
-				<posy>230</posy>
-				<width>770</width>
-				<label>$INFO[ListItem.Label]</label>
-				<font>lobsterMedium</font>
-				<textcolor>greenlime</textcolor>
-				<include>focus_Banner</include>
-				<animation effect="fade" start="20" end="20" time="0" condition="True">Conditional</animation>
 				<visible>IsEmpty(ListItem.Title)</visible>
 			</control>
 			<control type="label" id="1">
@@ -1140,19 +1049,10 @@
 				<control type="label">
 					<width>640</width>
 					<label>$INFO[ListItem.Title]</label>
-					<textcolor>ivory3</textcolor>
+					<textcolor>greenlimelight</textcolor>
 					<font>lobsterMedium</font>
 					<scroll>true</scroll>
 					<visible>!Container.Content(seasons)</visible>
-				</control>
-				<control type="label">
-					<width>640</width>
-					<label>$INFO[ListItem.Title]</label>
-					<textcolor>greenlime</textcolor>
-					<font>lobsterMedium</font>
-					<scroll>true</scroll>
-					<visible>!Container.Content(seasons)</visible>
-					<animation effect="fade" start="20" end="20" time="0" condition="true">Conditional</animation>
 				</control>
 				<!-- tv series season level "season number", total episodes / unwatched -->
 				<control type="label">
@@ -1776,53 +1676,26 @@
 				<control type="label">
 					<label>$INFO[ListItem.Title]</label>
 					<font>lobsterMediumSmall</font>
-					<textcolor>ivory3</textcolor>
+					<textcolor>greenlimelight</textcolor>
 					<align>left</align>
 					<width>900</width>
 					<visible>Container.Content(movies)</visible>
 				</control>
 				<control type="label">
-					<label>$INFO[ListItem.Title]</label>
-					<font>lobsterMediumSmall</font>
-					<textcolor>greenlime</textcolor>
-					<align>left</align>
-					<width>900</width>
-					<visible>Container.Content(movies)</visible>
-					<animation effect="fade" start="20" end="20" time="0" condition="true">Conditional</animation>
-				</control>
-				<control type="label">
 					<label>$INFO[ListItem.TVShowTitle]</label>
 					<font>lobsterMediumSmall</font>
-					<textcolor>ivory3</textcolor>
+					<textcolor>greenlimelight</textcolor>
 					<align>left</align>
 					<width>900</width>
 					<visible>Container.Content(tvshows)</visible>
 				</control>
 				<control type="label">
-					<label>$INFO[ListItem.TVShowTitle]</label>
-					<font>lobsterMediumSmall</font>
-					<textcolor>greenlime</textcolor>
-					<align>left</align>
-					<width>900</width>
-					<visible>Container.Content(tvshows)</visible>
-					<animation effect="fade" start="20" end="20" time="0" condition="true">Conditional</animation>
-				</control>
-				<control type="label">
 					<label>$INFO[ListItem.Label]</label>
 					<font>lobsterMediumSmall</font>
-					<textcolor>ivory3</textcolor>
+					<textcolor>greenlimelight</textcolor>
 					<align>left</align>
 					<width>900</width>
 					<visible>Container.Content(seasons)</visible>
-				</control>
-				<control type="label">
-					<label>$INFO[ListItem.Label]</label>
-					<font>lobsterMediumSmall</font>
-					<textcolor>greenlime</textcolor>
-					<align>left</align>
-					<width>900</width>
-					<visible>Container.Content(seasons)</visible>
-					<animation effect="fade" start="20" end="20" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="label">
 					<posy>30</posy>
@@ -2010,13 +1883,11 @@
 					<control type="label" id="1">
 						<width>490</width>
 						<label>$INFO[ListItem.Title]</label>
-						<textcolor>greenlime</textcolor>
-						<!--<shadowcolor>theRed</shadowcolor>-->
+						<textcolor>greenlimelight</textcolor>
 						<font>lobsterMediumSmall2</font>
 						<height>30</height>
 						<scroll>true</scroll>
 						<scrollspeed>40</scrollspeed>
-						<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
 					</control>
 					<control type="label" id="1">
 						<label/>
@@ -2099,12 +1970,11 @@
 					<control type="label" id="1">
 						<width>490</width>
 						<label>$INFO[ListItem.Title]</label>
-						<textcolor>greenlime</textcolor>
+						<textcolor>greenlimelight</textcolor>
 						<font>lobsterMediumSmall2</font>
 						<height>30</height>
 						<scroll>true</scroll>
 						<scrollspeed>40</scrollspeed>
-						<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
 					</control>
 					<control type="label" id="1">
 						<label/>
@@ -2363,7 +2233,7 @@
 						<posy>180</posy>
 						<label>$INFO[ListItem.Title]</label>
 						<font>lobsterMedium</font>
-						<textcolor>ivory3</textcolor>
+						<textcolor>greenlimelight</textcolor>
 						<align>left</align>
 						<width>1100</width>
 						<include>focus_Banner</include>
@@ -2372,36 +2242,12 @@
 					<control type="label">
 						<posx>77</posx>
 						<posy>180</posy>
-						<label>$INFO[ListItem.Title]</label>
-						<font>lobsterMedium</font>
-						<textcolor>greenlime</textcolor>
-						<align>left</align>
-						<width>1100</width>
-						<include>focus_Banner</include>
-						<animation effect="fade" start="20" end="20" time="0" condition="true">Conditional</animation>
-						<visible>!IsEmpty(ListItem.Title)</visible>
-					</control>
-					<control type="label">
-						<posx>77</posx>
-						<posy>180</posy>
 						<label>$INFO[ListItem.Label]</label>
 						<font>lobsterMedium</font>
-						<textcolor>ivory3</textcolor>
+						<textcolor>greenlimelight</textcolor>
 						<align>left</align>
 						<width>1100</width>
 						<include>focus_Banner</include>
-						<visible>IsEmpty(ListItem.Title)</visible>
-					</control>
-					<control type="label">
-						<posx>77</posx>
-						<posy>180</posy>
-						<label>$INFO[ListItem.Label]</label>
-						<font>lobsterMedium</font>
-						<textcolor>greenlime</textcolor>
-						<align>left</align>
-						<width>1100</width>
-						<include>focus_Banner</include>
-						<animation effect="fade" start="20" end="20" time="0" condition="true">Conditional</animation>
 						<visible>IsEmpty(ListItem.Title)</visible>
 					</control>
 					<!-- MOD order of the label changed to more logical -->
@@ -2523,7 +2369,7 @@
 			<posy>180</posy>
 			<label>$INFO[ListItem.Title]</label>
 			<font>lobsterSmall2</font>
-			<textcolor>ivory3</textcolor>
+			<textcolor>greenlimelight</textcolor>
 			<align>left</align>
 			<width>1100</width>
 			<include>focus_Banner</include>
@@ -2532,36 +2378,12 @@
 		<control type="label">
 			<posx>77</posx>
 			<posy>180</posy>
-			<label>$INFO[ListItem.Title]</label>
-			<font>lobsterSmall2</font>
-			<textcolor>greenlime</textcolor>
-			<align>left</align>
-			<width>1100</width>
-			<include>focus_Banner</include>
-			<animation effect="fade" start="20" end="20" time="0" condition="true">Conditional</animation>
-			<visible>!IsEmpty(ListItem.Title)</visible>
-		</control>
-		<control type="label">
-			<posx>77</posx>
-			<posy>180</posy>
 			<label>$INFO[ListItem.Label]</label>
 			<font>lobsterSmall2</font>
-			<textcolor>ivory3</textcolor>
+			<textcolor>greenlimelight</textcolor>
 			<align>left</align>
 			<width>1100</width>
 			<include>focus_Banner</include>
-			<visible>IsEmpty(ListItem.Title)</visible>
-		</control>
-		<control type="label">
-			<posx>77</posx>
-			<posy>180</posy>
-			<label>$INFO[ListItem.Label]</label>
-			<font>lobsterSmall2</font>
-			<textcolor>greenlime</textcolor>
-			<align>left</align>
-			<width>1100</width>
-			<include>focus_Banner</include>
-			<animation effect="fade" start="20" end="20" time="0" condition="true">Conditional</animation>
 			<visible>IsEmpty(ListItem.Title)</visible>
 		</control>
 	</control>

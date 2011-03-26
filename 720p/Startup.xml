@@ -1,9 +1,32 @@
 <?xml version="1.0"?>
 <window>
-	<defaultcontrol always="true">10</defaultcontrol>
+	<defaultcontrol always="true">9</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<include>startupSlides</include>
+		<control type="button" id="9">
+			<posx>-20</posx>
+			<posy>-20</posy>
+			<width>1</width>
+			<height>1</height>
+			<onfocus>XBMC.PlayMedia(U:/skin/Retroplex/sounds/startup.wav)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<description>Trigger</description>
+			<onfocus>SetFocus(10)</onfocus>
+			<visible>!Skin.HasSetting(DisableStartupSound)</visible>
+		</control>
+		<control type="button" id="9">
+			<posx>-20</posx>
+			<posy>-20</posy>
+			<width>1</width>
+			<height>1</height>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<description>Trigger</description>
+			<onfocus>SetFocus(10)</onfocus>
+			<visible>Skin.HasSetting(DisableStartupSound)</visible>
+		</control>
 		<control type="button" id="10">
 			<onfocus>ReplaceWindow(Home)</onfocus>
 			<texturenofocus>-</texturenofocus>

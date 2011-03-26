@@ -32,28 +32,23 @@
 			<focusedlayout width="870" height="100">
 				<control type="group">
 					<control type="label">
-						<label>&#xB7; $INFO[ListItem.Label]</label>
+						<width>870</width>
+						<label>[COLOR=greenlimelight]&#xB7; $INFO[ListItem.Label] [/COLOR]</label>
 						<include>homeMenuFocused</include>
-						<visible>IsEmpty(ListItem.Label2)</visible>
-					</control>
-					<control type="label">
-						<label>[COLOR=greenlime]&#xB7; $INFO[ListItem.Label][/COLOR] </label>
-						<include>homeMenuFocused</include>
-						<animation effect="fade" start="20" end="30" time="0" condition="true">Conditional</animation>
 						<visible>IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<!-- with Label2 -->
 					<control type="label">
 						<posx>105</posx>
 						<posy>240</posy>
-						<label>&#xB7; $INFO[ListItem.Label]</label>
+						<label>&#xB7; $INFO[ListItem.Label] </label>
 						<include>homeMenuFocused</include>
 						<visible>!IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
 						<posx>105</posx>
 						<posy>240</posy>
-						<label>[COLOR=greenlime]&#xB7; $INFO[ListItem.Label][/COLOR] </label>
+						<label>[COLOR=greenlimelight]&#xB7; $INFO[ListItem.Label] [/COLOR]</label>
 						<include>homeMenuFocused</include>
 						<animation effect="fade" start="20" end="30" time="0" condition="true">Conditional</animation>
 						<visible>!IsEmpty(ListItem.Label2)</visible>
