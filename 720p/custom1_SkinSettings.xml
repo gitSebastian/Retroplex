@@ -29,8 +29,17 @@
 			<height>450</height>
 			<include>transition2</include>
 			<texture border="100" flipy="true">settings/activesectionbgsansarrow.png</texture>
-			<visible>ControlGroup(9100).HasFocus(9001) | ControlGroup(9100).HasFocus(9005) | ControlGroup(9100).HasFocus(9007) | ControlGroup(9100).HasFocus(9017) | ControlGroup(9100).HasFocus(9019)</visible>
-		</control>	
+			<visible>ControlGroup(9100).HasFocus(9001) | ControlGroup(9100).HasFocus(9005) | ControlGroup(9100).HasFocus(9007) | ControlGroup(9100).HasFocus(9019)</visible>
+		</control>
+		<control type="image">
+			<posy>160</posy>
+			<posx>360</posx>
+			<width>850</width>
+			<height>480</height>
+			<include>transition2</include>
+			<texture border="100" flipy="true">settings/activesectionbgsansarrow.png</texture>
+			<visible>ControlGroup(9100).HasFocus(9017)</visible>
+		</control>
 		<include>grainyeditionback</include>
 		<include>settingstypologo</include>
 		<include>allscreens</include>
@@ -60,7 +69,7 @@
 			<include>transition2</include>
 			<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 		</control>
-		<!-- type separator -->
+		<!-- type separator 2 -->
 		<control type="label">
 			<posx>790</posx>
 			<posy>630</posy>
@@ -74,6 +83,22 @@
 			<aligny>center</aligny>
 			<include>transition2</include>
 			<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+			<visible>ControlGroup(9100).HasFocus(9001) | ControlGroup(9100).HasFocus(9005) | ControlGroup(9100).HasFocus(9007) | ControlGroup(9100).HasFocus(9013) | ControlGroup(9100).HasFocus(9019)</visible>
+		</control>
+		<control type="label">
+			<posx>790</posx>
+			<posy>650</posy>
+			<width>100</width>
+			<width>240</width>
+			<label>B</label>
+			<font>nymphetteMedium</font>
+			<textcolor>chocolate</textcolor>
+			<height>30</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<include>transition2</include>
+			<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+			<visible>ControlGroup(9100).HasFocus(9017)</visible>
 		</control>
 		<!-- CATEGORIES -->
 		<control type="group" id="9000">
@@ -132,7 +157,7 @@
 				<control type="button" id="9017">
 					<label>$LOCALIZE[31015]</label>
 					<include>settingsLeftMenuFormat</include>
-					<visible allowhiddenfocus="true">![Control.HasFocus(261) | Control.HasFocus(262) | Control.HasFocus(263) | Control.HasFocus(264) | Control.HasFocus(265) | Control.HasFocus(266) | Control.HasFocus(267) | Control.HasFocus(268) | Control.HasFocus(269)]</visible>
+					<visible allowhiddenfocus="true">![Control.HasFocus(261) | Control.HasFocus(262) | Control.HasFocus(263) | Control.HasFocus(264) | Control.HasFocus(265) | Control.HasFocus(266) | Control.HasFocus(267) | Control.HasFocus(268) | Control.HasFocus(269) | Control.HasFocus(270)]</visible>
 				</control>
 				<control type="button" id="9018">
 					<label>$LOCALIZE[31015]</label>
@@ -338,8 +363,8 @@
 				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9013)">Conditional</animation>
 				<!-- separator between credits -->
 				<control type="image">
-					<posx>270</posx>
-					<posy>240</posy>
+					<posx>210</posx>
+					<posy>210</posy>
 					<height>10</height>
 					<width>370</width>
 					<texture>dialogs/sliderBackground_.png</texture>
@@ -435,12 +460,20 @@
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
 				<control type="radiobutton" id="269">
-					<label>Hide Ratings</label>
-					<onclick>Skin.ToggleSetting(hideratings)</onclick>
-					<selected>Skin.HasSetting(hideratings)</selected>
+					<label>Show Ratings as Text</label>
+					<onclick>Skin.ToggleSetting(textratings)</onclick>
+					<selected>Skin.HasSetting(textratings)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
-					<enable>Skin.HasSetting(dummy)</enable>
-					<visible>false</visible>
+					<enable>true</enable>
+					<visible>-</visible>
+				</control>
+				<control type="radiobutton" id="270">
+					<label>Show "First Letter Offset" while fast scrolling the library</label>
+					<onclick>Skin.ToggleSetting(showscrolloffset)</onclick>
+					<selected>Skin.HasSetting(showscrolloffset)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+					<enable>true</enable>
+					<visible>-</visible>
 				</control>
 			</control>
 			<!-- home menu -->

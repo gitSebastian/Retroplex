@@ -363,7 +363,7 @@
 				<texture background="true">backgrounds/agnes2.png</texture>
 				<visible>Window.IsActive(0) | Window.IsActive(2)</visible>
 			</control>
-			<!-- MUSIC & PLUG-INS & PROGRAMS pin-up -->
+			<!-- MUSIC -->
 			<control type="image">
 				<width>230</width>
 				<height>330</height>
@@ -372,7 +372,18 @@
 				<aspectratio>keep</aspectratio>
 				<include>transition2</include>
 				<texture background="true" align="left">backgrounds/veronica.png</texture>
-				<visible>Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(musicplaylist) | Window.IsActive(programs) | Window.IsActive(plugins)</visible>
+				<visible>Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(musicplaylist)</visible>
+			</control>
+			<!-- PLUG-INS & PROGRAMS pin-up -->
+			<control type="image">
+				<width>278</width>
+				<height>350</height>
+				<posx>-298</posx>
+				<posy>365</posy>
+				<aspectratio>keep</aspectratio>
+				<include>transition2</include>
+				<texture background="true" align="left" aligny="bottom">backgrounds/pinup05.png</texture>
+				<visible>Window.IsActive(programs) | Window.IsActive(plugins)</visible>
 			</control>
 			<!-- VIDEO pin-up -->
 			<control type="image">
@@ -385,6 +396,18 @@
 				<include>transition2</include>
 				<texture background="true" align="left">backgrounds/betsi.png</texture>
 				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+			</control>
+			<!-- WEATHER pin-up -->
+			<control type="image">
+				<width>260</width>
+				<height>310</height>
+				<posx>-310</posx>
+				<posy>413</posy>
+				<aligny>bottom</aligny>
+				<aspectratio>stretch</aspectratio>
+				<include>transition2</include>
+				<texture background="true" align="left">backgrounds/weatherpinup.png</texture>
+				<visible>Window.IsActive(2600)</visible>
 			</control>
 		</control>
 		</control>
@@ -444,17 +467,17 @@
 			<posx>145</posx>
 			<posy>386</posy>
 			<include>transition2</include>
-			<include>ListLeftMenuSlide</include>
+			<include>WeatherLeftMenuSlide</include>
 			<include>infoDialogHide</include>
 			<visible>Window.IsActive(2600)</visible>
 			<!-- today -->
 		<control type="group">
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<height>303</height>
-				<width>230</width>
-				<texture border="100" flipy="true">backgrounds/boxvertfillingbeige3.png</texture>
+				<posx>3</posx>
+				<posy>43</posy>
+				<height>196</height>
+				<width>224</width>
+				<texture flipy="true">backgrounds/ivory.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<colordiffuse>Color1</colordiffuse>
 				<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>				
@@ -473,11 +496,11 @@
 			<posx>250</posx>
 			<posy>0</posy>
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<height>213</height>
-				<width>230</width>
-				<texture border="100" flipy="true">backgrounds/boxvertfillingbeige3.png</texture>
+				<posx>3</posx>
+				<posy>43</posy>
+				<height>103</height>
+				<width>224</width>
+				<texture flipy="true">backgrounds/ivory.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<colordiffuse>Color1</colordiffuse>
 				<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>				
@@ -485,7 +508,7 @@
 			<control type="image">
 				<height>190</height>
 				<width>230</width>
-				<texture border="100" flipy="true">backgrounds/boxvertbeige5.png</texture>
+				<texture border="95" flipy="true">backgrounds/boxvertbeige5.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<colordiffuse>theRed</colordiffuse>
 				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>				
@@ -496,11 +519,11 @@
 			<posx>500</posx>
 			<posy>0</posy>
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<height>213</height>
-				<width>230</width>
-				<texture border="100" flipy="true">backgrounds/boxvertfillingbeige3.png</texture>
+				<posx>3</posx>
+				<posy>43</posy>
+				<height>103</height>
+				<width>224</width>
+				<texture flipy="true">backgrounds/ivory.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<colordiffuse>Color1</colordiffuse>
 				<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>				
@@ -508,7 +531,7 @@
 			<control type="image">
 				<height>190</height>
 				<width>230</width>
-				<texture border="100" flipy="true">backgrounds/boxvertbeige5.png</texture>
+				<texture border="95" flipy="true">backgrounds/boxvertbeige5.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<colordiffuse>theRed</colordiffuse>
 				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>				
@@ -519,11 +542,11 @@
 			<posx>745</posx>
 			<posy>0</posy>
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<height>213</height>
-				<width>230</width>
-				<texture border="100" flipy="true">backgrounds/boxvertfillingbeige3.png</texture>
+				<posx>3</posx>
+				<posy>43</posy>
+				<height>103</height>
+				<width>224</width>
+				<texture flipy="true">backgrounds/ivory.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<colordiffuse>Color1</colordiffuse>
 				<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>				
@@ -531,7 +554,7 @@
 			<control type="image">
 				<height>190</height>
 				<width>230</width>
-				<texture border="100" flipy="true">backgrounds/boxvertbeige5.png</texture>
+				<texture border="95" flipy="true">backgrounds/boxvertbeige5.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<colordiffuse>theRed</colordiffuse>
 				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>				
@@ -1457,13 +1480,14 @@
 	</include>
 	<include name="scrollOffset">
 		<control type="group">
-			<visible>Container.Scrolling + Skin.HasSetting(hidescrolloffset)</visible>
+			<visible>Container.Scrolling + Skin.HasSetting(showscrolloffset)</visible>
 			<control type="label">
 				<posx>34</posx>
 				<posy>24</posy>
 				<width>40</width>
 				<aligny>center</aligny>
-				<font>PageLabelGrainy</font>
+				<font>lobsterMedium</font>
+				<textcolor>greenlime</textcolor>
 				<label>$INFO[ListItem.SortLetter]</label>
 			</control>
 		</control>
@@ -1920,6 +1944,7 @@
 		<animation effect="fade" start="40" end="100" time="0" condition="true">Conditional</animation>
 		<include>transition2</include>
 		<include>HomeScreenLeftMenuSlide</include>
+		<include>HomeScreenLeftMenuSlideFade</include>
 		<animation effect="fade" start="100" end="0" time="350" condition="System.IdleTime(30)">Conditional</animation>
 	</control>
 	</include>

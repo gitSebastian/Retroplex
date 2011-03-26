@@ -434,7 +434,7 @@
 				<visible>!ControlGroup(300).HasFocus + Control.IsVisible(555) + !Window.IsActive(musicplaylist) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(artists) | Container.Content(singles) | Container.Content(songs)]</visible>
 			</control>
 			<!-- VIDEO LIBRARY SPECIFICS -->
-			<!-- List view tv show infos -->
+			<!-- List view infos -->
 			<control type="group">
 				<posx>1060</posx>
 				<posy>355</posy>
@@ -460,16 +460,6 @@
 				<include>grainypagefade</include>
 				<include>typeFlagsListVideo</include>
 				<visible>Control.IsVisible(555) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
-				<control type="image">
-					<posx>1142</posx>
-					<posy>472</posy>
-					<width>100</width>
-					<height>60</height>
-					<info>ListItem.StarRating</info>
-					<colordiffuse>ivory3</colordiffuse>
-					<aspectratio align="center">keep</aspectratio>
-					<visible>[Container.Content(tvshows)] + !IsEmpty(ListItem.StarRating) + [[!Skin.HasSetting(hideratings) + !Skin.HasSetting(hidetvratings)] | Window.IsActive(2003)]</visible>
-				</control>
 			</control>
 			<!-- plot library -->
 			<control type="group">

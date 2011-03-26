@@ -25,8 +25,8 @@
 	</include>	
 	<!-- Weather left menu animations -->
 	<include name="WeatherLeftMenuSlide">
-		<animation effect="slide" start="0" end="200" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
-		<animation effect="slide" start="200" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
+		<animation effect="slide" start="0" end="193" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
+		<animation effect="slide" start="193" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
 		<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus() | Control.HasFocus(1110) | Control.HasFocus(1130) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
 	</include>
 	<!-- Library logo animations -->
@@ -159,7 +159,7 @@
 		<animation effect="slide" start="162" end="0" time="500" condition="Window.IsActive(0) + Control.HasFocus(300)">Conditional</animation>
 		<animation effect="slide" start="0" end="162" time="500" condition="Window.IsActive(0) + !Control.HasFocus(300)">Conditional</animation>
 		<!-- -->
-		<animation effect="slide" start="162" end="0" time="500" condition="!ControlGroup(300).HasFocus()">Conditional</animation>
+		<animation effect="slide" start="162" end="0" time="500" condition="!ControlGroup(300).HasFocus() | Window.IsVisible(134)">Conditional</animation>
 		<animation effect="slide" start="0" end="162" time="500" condition="ControlGroup(300).HasFocus()">Conditional</animation>
 	</include>
 	<!-- GENERAL -->
@@ -378,12 +378,12 @@
 	</include>
 	<include name="transition2">
 		<animation type="WindowOpen">
-			<effect type="zoom" time="400" center="640,360" start="180" end="100" tween="cubic" easing="out"/>
-			<effect type="fade" time="400" center="640,360" start="0" easing="out" end="100"/>
+			<effect type="zoom" time="300" center="640,360" start="180" end="100" tween="cubic" easing="out"/>
+			<effect type="fade" time="300" center="640,360" start="0" easing="out" end="100"/>
 		</animation>
 		<animation type="WindowClose">
-			<effect type="zoom" time="250" center="640,360" start="100" end="180" tween="cubic" easing="in"/>
-			<effect type="fade" time="250" start="100" end="0"/>
+			<effect type="zoom" time="200" center="640,360" start="100" end="180" tween="cubic" easing="in"/>
+			<effect type="fade" time="200" start="100" end="0"/>
 		</animation>
 		<animation type="Visible" condition="Window.IsActive(movieinformation) | Window.IsActive(musicinformation)">
 			<effect type="zoom" time="400" center="640,360" start="180" end="100" tween="cubic" easing="out"/>

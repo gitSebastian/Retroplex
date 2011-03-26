@@ -3,13 +3,13 @@
 <window id="2600">
 	<defaultcontrol always="true">8000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<controls>
-		
+	<controls>	
 		<include>themeBackground2</include>
 		<include>plotBoxesLibrary</include>
-		<include>listMenuFocusedBg</include>
 		<include>frameOverlay</include>
-		<include>grainyeditionback</include>
+		<include>leftMenuBg</include>	
+		<include>grainyeditionback</include>		
+		<include>leftMenuDressing</include>
 		<!-- fake info trigger button -->
 		<control type="button" id="8000">
 			<label>SHOULD NOT SEE ME</label>
@@ -245,14 +245,14 @@
 							<label>$LOCALIZE[404] :</label>
 							<font>qlassikSmall</font>
 							<textcolor>ivory3</textcolor>
-							<width min="29" max="120">auto</width>							
+							<width min="29" max="100">auto</width>							
 						</control>
 						<control type="label" id="26">
 							<align>center</align>
 							<aligny>center</aligny>
 							<font>qlassikSmall</font>
 							<textcolor>ivory1</textcolor>
-							<width min="29" max="240">auto</width>
+							<width min="29" max="230">auto</width>
 						</control>
 					</control>
 					<control type="label">
@@ -574,5 +574,6 @@
 			</control>
 		</control>
 		<include>WeatherMenu</include>
+		<!--<include>LibraryVideoMenu</include>-->
 	</controls>
 </window>

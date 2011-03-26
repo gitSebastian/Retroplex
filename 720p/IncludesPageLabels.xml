@@ -63,25 +63,25 @@
 			<label>$INFO[Container.FirstTitle]</label>
 			<include>videoPageLabel</include>
 			<include>infoDialogHide</include>
-			<visible>!Window.IsActive(502) + Container.Scrolling + Skin.HasSetting(hidescrolloffset) + IsEmpty(Container.SecondTitle)</visible>
+			<visible>!Window.IsActive(502) + Container.Scrolling + Skin.HasSetting(showscrolloffset) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
 		<control type="label">
 			<label>$INFO[Container.FirstTitle] [COLOR=greenlime]$INFO[Container.SecondTitle][/COLOR]</label>
 			<include>videoPageLabel</include>
 			<include>infoDialogHide</include>
-			<visible>!Window.IsActive(502) + Container.Scrolling + Skin.HasSetting(hidescrolloffset) + !IsEmpty(Container.SecondTitle)</visible>
+			<visible>!Window.IsActive(502) + Container.Scrolling + Skin.HasSetting(showscrolloffset) + !IsEmpty(Container.SecondTitle)</visible>
 		</control>
 		<control type="label">
 			<label>$INFO[Container.FirstTitle]</label>
 			<include>videoPageLabel2</include>
 			<include>infoDialogHide</include>
-			<visible>!Window.IsActive(502) + [!Container.Scrolling | [Container.Scrolling + !Skin.HasSetting(hidescrolloffset)]] + IsEmpty(Container.SecondTitle)</visible>
+			<visible>!Window.IsActive(502) + [!Container.Scrolling | [Container.Scrolling + !Skin.HasSetting(showscrolloffset)]] + IsEmpty(Container.SecondTitle)</visible>
 		</control>
 		<control type="label">
 			<label>$INFO[Container.FirstTitle] [COLOR=greenlime]$INFO[Container.SecondTitle][/COLOR]</label>
 			<include>videoPageLabel2</include>
 			<include>infoDialogHide</include>
-			<visible>!Window.IsActive(502) + [!Container.Scrolling | [Container.Scrolling + !Skin.HasSetting(hidescrolloffset)]] + !IsEmpty(Container.SecondTitle)</visible>
+			<visible>!Window.IsActive(502) + [!Container.Scrolling | [Container.Scrolling + !Skin.HasSetting(showscrolloffset)]] + !IsEmpty(Container.SecondTitle)</visible>
 		</control>
 		<!-- full info screen movies -->
 		<control type="label">

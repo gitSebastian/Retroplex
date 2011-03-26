@@ -53,7 +53,7 @@
 			</control>
 			<control type="label" id="1">
 				<width>1000</width>
-				<label>$INFO[VideoPlayer.Title] + </label>
+				<label>$INFO[VideoPlayer.Title]</label>
 				<align>left</align>
 				<textcolor>greenlime</textcolor>
 				<font>lobsterMediumSmall</font>
@@ -83,7 +83,7 @@
 				<posy>35</posy>
 				<width>800</width>
 				<align>left</align>
-				<label>$LOCALIZE[31096] &#xB7; $INFO[Player.Duration]</label>
+				<label>$LOCALIZE[31096] &#xB7; $INFO[Player.Time] / $INFO[Player.Duration]</label>
 				<textcolor>ivory3</textcolor>
 				<font>qlassikSmallBold2</font>
 				<visible>VideoPlayer.Content(episodes)</visible>

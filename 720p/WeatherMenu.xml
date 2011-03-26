@@ -68,42 +68,11 @@
 				</control>
 			</control>				
 		</control>-->
-		<!-- menu bg & animations -->
-		<control type="group">
-			<animation effect="fade" start="100" end="20" time="350" condition="Control.HasFocus(300) | Control.HasFocus(1110) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
-			<animation effect="slide" start="162" end="0" time="500" condition="!Control.HasFocus(300) + ![ControlGroup(9100).HasFocus() | ControlGroup(200).HasFocus()]">Conditional</animation>
-			<animation effect="slide" start="0" end="162" time="500" condition="!Control.HasFocus(300) + [ControlGroup(9100).HasFocus() | ControlGroup(200).HasFocus()]">Conditional</animation>
-			<!-- Background -->
-			<control type="group">
-				<control type="image">
-					<posx>-383</posx>
-					<posy>-50</posy>
-					<height>800</height>
-					<width>383</width>
-					<texture flipx="true">dialogs/square_menu_background.png</texture>
-					<aspectratio align="right">stretch</aspectratio>
-					<animation type="Conditional" condition="true">
-						<effect type="fade" start="0" end="50"/>
-					</animation>
-				</control>
-			</control>
-			<!-- Separator -->
-			<control type="group">
-				<control type="image">
-					<posx>-29</posx>
-					<posy>-200</posy>
-					<height>1120</height>
-					<width>29</width>
-					<texture>settings/separator.png</texture>
-					<aspectratio align="right">stretch</aspectratio>
-				</control>
-			</control>
-		</control>
 		<!-- MENU -->
 		<control type="group" id="300">
-			<posx>-405</posx>
-			<posy>155</posy>
-			<width>400</width>
+			<posx>-298</posx>
+			<posy>64</posy>
+			<width>277</width>
 			<height>650</height>
 			<onup>9100</onup>
 			<ondown>9100</ondown>
@@ -111,8 +80,7 @@
 			<scrolltime>150</scrolltime>
 			<include>transition2</include>
 			<visible allowhiddenfocus="true">![ControlGroup(1100).HasFocus() | ControlGroup(4000).HasFocus() | ControlGroup(2100).HasFocus()]</visible>
-			<animation effect="slide" start="202" end="40" time="500" condition="![ControlGroup(9100).HasFocus() | ControlGroup(200).HasFocus()]">Conditional</animation>
-			<animation effect="slide" start="40" end="202" time="500" condition="!Control.HasFocus(300) + [ControlGroup(9100).HasFocus() | ControlGroup(200).HasFocus()]">Conditional</animation>
+			<include>leftMenuSlide</include>
 			<control type="grouplist" id="9100">
 				<onup>9100</onup>
 				<ondown>9100</ondown>
@@ -123,12 +91,6 @@
 				<control type="button" id="9099">
 					<label>Weather :</label>
 					<include>leftMenuTitle</include>
-					<enable>false</enable>
-				</control>
-				<!-- spacing -->
-				<control type="button" id="9097">
-					<label></label>
-					<include>leftMenuSpacing</include>
 					<enable>false</enable>
 				</control>	
 				<control type="button" id="2">

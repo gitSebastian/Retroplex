@@ -31,6 +31,7 @@
 				<control type="button" id="9050">
 					<description>Add to favorites</description>
 					<label>$LOCALIZE[1036]</label>
+					<onclick>SetFocus(555)</onclick>
 					<onclick>ActivateWindow(Favourites)</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
