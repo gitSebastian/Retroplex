@@ -75,7 +75,7 @@
     </window>
     <window>
       <name>startup</name>
-      <activate>-</activate>
+      <activate>startup.wav</activate>
     </window>
   </windows>
 </sounds>

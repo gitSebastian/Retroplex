@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <window>
-	<defaultcontrol always="true">9</defaultcontrol>
+	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
 		<include>startupSlides</include>
-		<control type="button" id="9">
+		<!--<control type="button" id="9">
 			<posx>-20</posx>
 			<posy>-20</posy>
 			<width>1</width>
@@ -26,7 +26,7 @@
 			<description>Trigger</description>
 			<onfocus>SetFocus(10)</onfocus>
 			<visible>Skin.HasSetting(DisableStartupSound)</visible>
-		</control>
+		</control>-->
 		<control type="button" id="10">
 			<onfocus>ReplaceWindow(Home)</onfocus>
 			<texturenofocus>-</texturenofocus>
@@ -34,7 +34,7 @@
 			<animation effect="fade" delay="6000" end="100">Focus</animation>
 		</control>
 		<control type="group">
-			<animation type="WindowClose" condition="Window.Next(0)">
+			<animation type="WindowClose">
 				<effect type="fade" start="100" end="0" time="250" delay="0"/>
 			</animation>
 			<animation type="WindowOpen">
