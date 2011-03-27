@@ -301,25 +301,19 @@
 				<include>contextMenuHide</include>
 				<include>grainypagefade</include>
 				<visible>Control.IsVisible(555) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Window.IsActive(2)</visible>
-				<control type="image">
-					<posx>700</posx>
-					<posy>514</posy>
-					<width>450</width>
-					<height>1</height>
-					<aligny>top</aligny>
-					<texture>dialogs/whiteline_h.png</texture>
-					<colordiffuse>Color4</colordiffuse>
-					<visible>!IsEmpty(ListItem.Plot)</visible>
-				</control>
-				<control type="image">
-					<posx>700</posx>
-					<posy>613</posy>
-					<width>450</width>
-					<height>1</height>
-					<aligny>top</aligny>
-					<texture>dialogs/whiteline_h.png</texture>
-					<colordiffuse>Color4</colordiffuse>
-					<visible>!IsEmpty(ListItem.Plot)</visible>
+				<control type="label">
+					<posx>710</posx>
+					<posy>477</posy>
+					<width>700</width>
+					<height>30</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>qlassikSmall2</font>
+					<label>$INFO[ListItem.Year]</label>
+					<textcolor>ivory2</textcolor>
+					<selectedcolor>ivory3</selectedcolor>
+					<scroll>true</scroll>
+					<visible>Container.Content(plugincontent)</visible>
 				</control>
 				<control type="group">
 					<posx>700</posx>
@@ -327,12 +321,12 @@
 					<include>transition2</include>
 					<control type="textbox" id="8">
 						<width>450</width>
-						<height>98</height>
+						<height>85</height>
 						<align>left</align>
 						<aligny>top</aligny>
 						<label>$INFO[ListItem.Plot]</label>
 						<textcolor>ivory3</textcolor>
-						<font>fontinSmall</font>
+						<font>titilliumMedium</font>
 					</control>
 				</control>
 			</control>
@@ -953,8 +947,8 @@
 						<visible>!Control.HasFocus(8000) + [Container.Content(movies) + Skin.HasSetting(overlayMovies) | Container.Content(tvshows) + Skin.HasSetting(overlayTVShows) | Container.Content(seasons) + Skin.HasSetting(overlayTVShows)]</visible>
 					</control>
 					<control type="image">
-						<posx>8</posx>
-						<posy>274</posy>
+						<posx>6</posx>
+						<posy>275</posy>
 						<width>48</width>
 						<height>18</height>
 						<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
@@ -1005,8 +999,8 @@
 						<visible>!Control.HasFocus(8000) + [Container.Content(movies) + Skin.HasSetting(overlayMovies) | Container.Content(tvshows) + Skin.HasSetting(overlayTVShows) | Container.Content(seasons) + Skin.HasSetting(overlayTVShows)]</visible>
 					</control>
 					<control type="image">
-						<posx>8</posx>
-						<posy>274</posy>
+						<posx>6</posx>
+						<posy>275</posy>
 						<width>48</width>
 						<height>18</height>
 						<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
@@ -1590,8 +1584,8 @@
 						<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)] | [Container.Content(seasons) + Skin.HasSetting(overlayTVShows)]</visible>
 					</control>
 					<control type="image">
-						<posx>26</posx>
-						<posy>229</posy>
+						<posx>24</posx>
+						<posy>230</posy>
 						<width>48</width>
 						<height>18</height>
 						<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
@@ -1655,8 +1649,8 @@
 						<include>focus_Poster</include>
 					</control>
 					<control type="image">
-						<posx>26</posx>
-						<posy>229</posy>
+						<posx>24</posx>
+						<posy>230</posy>
 						<width>48</width>
 						<height>18</height>
 						<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
@@ -1807,8 +1801,8 @@
 						<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)]</visible>
 					</control>
 					<control type="image">
-						<posx>26</posx>
-						<posy>170</posy>
+						<posx>24</posx>
+						<posy>171</posy>
 						<width>48</width>
 						<height>16</height>
 						<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
@@ -1858,8 +1852,8 @@
 						<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)]</visible>
 					</control>
 					<control type="image">
-						<posx>26</posx>
-						<posy>170</posy>
+						<posx>24</posx>
+						<posy>171</posy>
 						<width>48</width>
 						<height>16</height>
 						<include>focus_PosterWithInfo</include>
@@ -2235,7 +2229,7 @@
 						<font>lobsterMedium</font>
 						<textcolor>greenlimelight</textcolor>
 						<align>left</align>
-						<width>1100</width>
+						<width>600</width>
 						<include>focus_Banner</include>
 						<visible>!IsEmpty(ListItem.Title)</visible>
 					</control>
@@ -2246,7 +2240,7 @@
 						<font>lobsterMedium</font>
 						<textcolor>greenlimelight</textcolor>
 						<align>left</align>
-						<width>1100</width>
+						<width>600</width>
 						<include>focus_Banner</include>
 						<visible>IsEmpty(ListItem.Title)</visible>
 					</control>
@@ -2258,7 +2252,7 @@
 						<font>qlassikSmallBold2</font>
 						<textcolor>ivory3</textcolor>
 						<align>left</align>
-						<width>900</width>
+						<width>500</width>
 						<visible>!IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
 						<include>focus_Banner</include>
 						<visible>![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Property(UnWatchedEpisodes))]</visible>

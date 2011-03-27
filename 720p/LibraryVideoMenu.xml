@@ -22,7 +22,7 @@
 				<itemgap>0</itemgap>
 				<!-- ACCESS -->
 				<control type="button" id="9001">
-					<label>Access :</label>
+					<label>More :</label>
 					<include>leftMenuTitle</include>
 					<enable>false</enable>
 				</control>
@@ -184,7 +184,7 @@
 					<selected>Skin.HasSetting(hidetvratings)</selected>
 					<include>leftMenuViewOptions</include>
 					<include>leftMenuRadioButton</include>
-					<visible>[Control.IsVisible(555) | Control.IsVisible(571)] + Container.Content(tvshows)</visible>
+					<visible>[Control.IsVisible(52) | Control.IsVisible(55) | Control.IsVisible(555) | Control.IsVisible(571)] + Container.Content(tvshows)</visible>
 				</control>
 				<control type="radiobutton" id="9051">
 					<label>Hide Movie Ratings</label>
@@ -192,7 +192,7 @@
 					<selected>Skin.HasSetting(hidemovieratings)</selected>
 					<include>leftMenuViewOptions</include>
 					<include>leftMenuRadioButton</include>
-					<visible>[Control.IsVisible(555) | Control.IsVisible(571)] + Container.Content(movies)</visible>
+					<visible>[Control.IsVisible(52) | Control.IsVisible(55) | Control.IsVisible(555) | Control.IsVisible(571)] + Container.Content(movies)</visible>
 				</control>
 				<control type="radiobutton" id="9052">
 					<label>Hide Media Flags</label>
@@ -200,9 +200,9 @@
 					<selected>Skin.HasSetting(hidemovielistflags)</selected>
 					<include>leftMenuViewOptions</include>
 					<include>leftMenuRadioButton</include>
-					<visible>[Control.IsVisible(555) | Control.IsVisible(571)] + Container.Content(movies)</visible>
+					<visible>[Control.IsVisible(52) | Control.IsVisible(55) | Control.IsVisible(555) | Control.IsVisible(571)] + Container.Content(movies)</visible>
 				</control>
-				<control type="radiobutton" id="9053">
+				<!--<control type="radiobutton" id="9053">
 					<label>hide rating</label>
 					<onclick>Container.SetViewMode(52)</onclick>
 					<onclick>Skin.ToggleSetting(slidehiderating)</onclick>
@@ -264,7 +264,7 @@
 					<include>leftMenuViewOptions</include>
 					<include>leftMenuRadioButton</include>
 					<visible>[Control.IsVisible(52) | Control.IsVisible(55)] + Container.Content(movies)</visible>
-				</control>
+				</control>-->
 				<!-- list -->
 				<!--<control type="button" id="210">
 					<description>LIST : use posters</description>
@@ -310,11 +310,30 @@
 				</control>
 				<!-- Home screen options -->
 				<control type="button" id="9070">
-					<label>Extras :</label>
+					<label>System :</label>
 					<include>leftMenuTitle</include>
 					<enable>false</enable>
 				</control>
-				<control type="button" id="9074">
+				<control type="button" id="9071">
+					<label>$LOCALIZE[5]</label>
+					<onclick>ActivateWindow(Settings)</onclick>
+					<include>leftMenuViewOptions</include>
+				</control>
+				<control type="button" id="9072">
+				    <description>Shutdown System</description>
+				    <label>Shutdown</label>
+				    <onclick>Dialog.Close(shutdownmenu)</onclick>
+				    <onclick>XBMC.ShutDownSystem()</onclick>
+				    <include>leftMenuViewOptions</include>
+				</control>
+				<control type="button" id="9073">
+					<description>Sleep System</description>
+					<label>Sleep</label>
+					<onclick>Dialog.Close(shutdownmenu)</onclick>
+					<onclick>XBMC.SleepSystem()</onclick>
+					<include>leftMenuViewOptions</include>
+				</control>
+				<control type="button" id="9074r">
 					<description>Quit Plex</description>
 					<label>Quit Plex</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>

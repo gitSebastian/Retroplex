@@ -329,13 +329,13 @@
 					<selected>Skin.HasSetting(retroplexmusiclogo)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
-				<!--<control type="radiobutton" id="283">
+				<control type="radiobutton" id="283">
 					<description>Deactivate the startup sound</description>
 					<label>Turn OFF the Startup sound (when Plex starts)</label>
 					<onclick>Skin.ToggleSetting(DisableStartupSound)</onclick>
 					<selected>Skin.HasSetting(DisableStartupSound)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
-				</control>-->
+				</control>
 			</control>
 			<!-- about Retroplex -->
 			<control type="group" id="5000">

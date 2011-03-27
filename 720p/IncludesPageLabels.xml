@@ -78,21 +78,21 @@
 		<!-- full info screen movies -->
 		<control type="label">
 			<label>$INFO[ListItem.Title]</label>
-			<include>videoPageLabel2</include>
+			<include>videoPageLabel</include>
 			<visible>Window.IsActive(2003) + Container.Content(movies)</visible>
 		</control>
 		<!-- full info screen tv shows -->
 		<control type="label">
 			<description>tv shows</description>
 			<label>$INFO[ListItem.TVShowTitle]</label>
-			<include>videoPageLabel2</include>
+			<include>videoPageLabel</include>
 			<visible>Window.IsActive(2003) + Container.Content(tvshows)</visible>
 		</control>
 		<!-- full info screen episodes -->
 		<control type="label">
 			<description>episodes</description>
 			<label>$INFO[ListItem.TVShowTitle]</label>
-			<include>videoPageLabel2</include>
+			<include>videoPageLabel</include>
 			<visible>Window.IsActive(2003) + Container.Content(episodes)</visible>
 		</control>
 		<!-- music -->

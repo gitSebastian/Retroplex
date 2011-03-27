@@ -182,6 +182,7 @@
 			</control>
 			<control type="spincontrolex" id="9">
 				<description>Default SpinControlex</description>
+				<colordiffuse>Color1</colordiffuse>
 				<include>newHomeMenuSubSettingsSpincontrol</include>
 			</control>
 			<control type="button" id="10">

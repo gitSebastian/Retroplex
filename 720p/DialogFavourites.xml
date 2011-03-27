@@ -46,10 +46,10 @@
 					<posx>15</posx>
 					<width>543</width>
 					<height>35</height>
-					<font>qlassikMedium2</font>
+					<font>qlassikMedium1</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>ivory3</textcolor>
+					<textcolor>Color1</textcolor>
 					<selectedcolor>Color6</selectedcolor>
 					<info>ListItem.Label</info>
 				</control>
@@ -71,7 +71,7 @@
 					<posx>15</posx>
 					<width>543</width>
 					<height>35</height>
-					<font>qlassikMedium2</font>
+					<font>qlassikMedium1</font>
 					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>Color6</textcolor>
@@ -90,7 +90,7 @@
 			<font>qlassikSmallBold2</font>
 			<label>$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages]</label>
 			<visible>!Control.IsVisible(451)</visible>
-			<textcolor>greenlime</textcolor>
+			<textcolor>Color1</textcolor>
 		</control>
 	</controls>
 </window>

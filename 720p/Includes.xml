@@ -363,7 +363,7 @@
 				<texture background="true">backgrounds/agnes2.png</texture>
 				<visible>Window.IsActive(0) | Window.IsActive(2)</visible>
 			</control>
-			<!-- MUSIC -->
+			<!-- MUSIC pin-up -->
 			<control type="image">
 				<width>230</width>
 				<height>330</height>
@@ -421,7 +421,7 @@
 			<include>transition2</include>
 			<include>ListLeftMenuSlide</include>
 			<include>infoDialogHide</include>
-			<visible>Window.IsActive(1)</visible>
+			<visible>Window.IsActive(1) | Container.Content(plugincontent)</visible>
 			<!-- Shadow bg -->
 			<control type="group">
 				<control type="image">
@@ -1741,13 +1741,66 @@
 			<include>screentype</include>
 			<imagepath background="true">backgrounds/splash/</imagepath>
 			<!--<visible>system.time(00:00,12:00)</visible>-->
-			<animation type="WindowClose" condition="Window.Next(0)">
+			<!--<animation type="WindowClose" condition="Window.Next(0)">
 				<effect type="fade" start="100" end="0" time="250" delay="0"/>
 			</animation>
 			<animation type="WindowOpen">
 				<effect type="fade" start="0" end="100" time="250" delay="100"/>
-			</animation>
+			</animation>-->
 		</control>
+		<control type="group">
+			<!--<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="250" delay="0"/>
+			</animation>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="250" delay="100"/>
+			</animation>-->
+			<control type="group">
+				<posx>20</posx>
+				<posy>18</posy>
+				<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture background="true">logos/Retroplexlogo2.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<posx>20</posx>
+				<posy>18</posy>
+				<control type="group">
+					<posx>27</posx>
+					<posy>13</posy>
+					<control type="label">
+						<posx>42</posx>
+						<posy>14</posy>
+						<width>200</width>
+						<label>ORIGINAL</label>
+						<font>telegraficoSmallest</font>
+						<height>40</height>
+						<textcolor>ivory2</textcolor>
+					</control>
+					<control type="label">
+						<posx>3</posx>
+						<posy>38</posy>
+						<width>200</width>
+						<label>RETROPLEX</label>
+						<font>dock24</font>
+						<height>40</height>
+						<textcolor>ivory2</textcolor>
+					</control>
+					<control type="label">
+						<posx>39</posx>
+						<posy>63</posy>
+						<width>600</width>
+						<label>UNLIMITED</label>
+						<font>telegraficoSmallest</font>
+						<height>40</height>
+						<textcolor>ivory2</textcolor>
+					</control>
+				</control>
+			</control>
+		</control>		
 		<!--<control type="multiimage" id="1">
 			<include>startupBackground</include>
 			<include>screentype</include>
@@ -2476,7 +2529,7 @@
 		<control type="group">
 			<include>videoFullScreenInfo</include>
 			<include>transition2</include>
-			<visible>Player.ShowInfo + Window.IsActive(2006)</visible>
+			<visible>Player.HasAudio + Player.ShowInfo + Window.IsActive(2006)</visible>
 			<!-- NOW & NEXT PLAYING VISUALS -->
 			<control type="group">
 				<control type="group">
@@ -2634,7 +2687,7 @@
 			<posy>235r</posy>
 			<include>videoFullScreenInfo</include>
 			<include>transition2</include>
-			<!--<visible>Player.ShowInfo + Window.IsActive(2006)</visible>-->
+			<visible>Player.HasAudio + Player.ShowInfo + Window.IsActive(2006)</visible>
 			<visible>false</visible>
 			<control type="group">
 				<control type="image">

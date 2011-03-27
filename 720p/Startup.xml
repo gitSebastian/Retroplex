@@ -1,18 +1,16 @@
 <?xml version="1.0"?>
 <window>
-	<defaultcontrol always="true">10</defaultcontrol>
+	<defaultcontrol always="true">9</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<controls>
-		<include>startupSlides</include>
-		<!--<control type="button" id="9">
+	<controls>		
+		<control type="button" id="9">
 			<posx>-20</posx>
 			<posy>-20</posy>
 			<width>1</width>
 			<height>1</height>
-			<onfocus>XBMC.PlayMedia(U:/skin/Retroplex/sounds/startup.wav)</onfocus>
+			<onfocus>XBMC.PlayMedia(U:/skin/Retroplex/sounds/startup2.wav)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<description>Trigger</description>
 			<onfocus>SetFocus(10)</onfocus>
 			<visible>!Skin.HasSetting(DisableStartupSound)</visible>
 		</control>
@@ -23,68 +21,20 @@
 			<height>1</height>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<description>Trigger</description>
 			<onfocus>SetFocus(10)</onfocus>
 			<visible>Skin.HasSetting(DisableStartupSound)</visible>
-		</control>-->
+		</control>
+		<control type="group">
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="100" time="250" delay="4700"/>
+			</animation>
+			<include>startupSlides</include>
+		</control>
 		<control type="button" id="10">
 			<onfocus>ReplaceWindow(Home)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<animation effect="fade" delay="6000" end="100">Focus</animation>
+			<!--<animation effect="fade" delay="6000" end="100" condition="true">Focus</animation>-->
 		</control>
-		<control type="group">
-			<animation type="WindowClose">
-				<effect type="fade" start="100" end="0" time="250" delay="0"/>
-			</animation>
-			<animation type="WindowOpen">
-				<effect type="fade" start="0" end="100" time="250" delay="100"/>
-			</animation>
-		<control type="group">
-			<posx>20</posx>
-			<posy>18</posy>
-			<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<texture background="true">logos/Retroplexlogo2.png</texture>
-			</control>
-		</control>
-		<control type="group">
-			<posx>20</posx>
-			<posy>18</posy>
-			<control type="group">
-				<posx>27</posx>
-				<posy>13</posy>
-				<control type="label">
-					<posx>42</posx>
-					<posy>14</posy>
-					<width>200</width>
-					<label>ORIGINAL</label>
-					<font>telegraficoSmallest</font>
-					<height>40</height>
-					<textcolor>ivory2</textcolor>
-				</control>
-				<control type="label">
-					<posx>3</posx>
-					<posy>38</posy>
-					<width>200</width>
-					<label>RETROPLEX</label>
-					<font>dock24</font>
-					<height>40</height>
-					<textcolor>ivory2</textcolor>
-				</control>
-				<control type="label">
-					<posx>39</posx>
-					<posy>63</posy>
-					<width>600</width>
-					<label>UNLIMITED</label>
-					<font>telegraficoSmallest</font>
-					<height>40</height>
-					<textcolor>ivory2</textcolor>
-				</control>
-			</control>
-		</control>
-		</control>
-	</controls>
+		</controls>
 </window>

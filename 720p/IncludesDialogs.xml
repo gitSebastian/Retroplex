@@ -6,16 +6,15 @@
 	</include>
 	<include name="contextMenuButton">
 		<font>qlassikSmallBold2</font>
-		<textcolor>ivory3</textcolor>
+		<textcolor>Color1</textcolor>
 		<focusedcolor>Color6</focusedcolor>
 		<texturenofocus border="1">dialogs/list-nofocus2.png</texturenofocus>
-		<texturefocus border="5">dialogs/list-focus2.png</texturefocus>
+		<texturefocus border="10">dialogs/list-focus.png</texturefocus>
 		<height>40</height>
 		<align>left</align>
 		<aligny>center</aligny>
 		<textoffsety>3</textoffsety>
 		<textoffsetx>25</textoffsetx>
-		<colordiffuse>ivory3</colordiffuse>
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="dialogLabel">
@@ -80,7 +79,7 @@
 		<aligny>center</aligny>
 		<height>40</height>
 		<pulseonselect>false</pulseonselect>
-		<texturefocus border="3">dialogs/list-focus2.png</texturefocus>
+		<texturefocus border="10">dialogs/list-focus.png</texturefocus>
 		<texturenofocus border="3">dialogs/list-nofocus.png</texturenofocus>
 	</include>
 	<include name="dialogTextField">
@@ -99,7 +98,7 @@
 		<textcolor>Color1</textcolor>
 		<focusedcolor>Color6</focusedcolor>
 		<font>qlassikSmallBold2</font>
-		<texturefocus border="3">dialogs/list-focus2.png</texturefocus>
+		<texturefocus border="10">dialogs/list-focus.png</texturefocus>
 		<texturenofocus border="3">dialogs/list-nofocus.png</texturenofocus>
 		<textureradiofocus>dialogs/radioOn.png</textureradiofocus>
 		<textureradionofocus>dialogs/radioOff.png</textureradionofocus>
@@ -115,7 +114,7 @@
 		<textoffsety>-3</textoffsety>
 		<aligny>center</aligny>
 		<height>40</height>
-		<texturefocus border="3">dialogs/list-focus2.png</texturefocus>
+		<texturefocus border="10">dialogs/list-focus.png</texturefocus>
 		<texturenofocus border="3">dialogs/list-nofocus.png</texturenofocus>
 		<textureup>settings/scrollUp.png</textureup>
 		<texturedown>settings/scrollDown.png</texturedown>
@@ -126,11 +125,11 @@
 		<spinheight>44</spinheight>
 	</include>
 	<include name="dialogSlider">
-		<texturefocus border="3">dialogs/list-focus2.png</texturefocus>
+		<texturefocus border="10">dialogs/list-focus.png</texturefocus>
 		<texturenofocus border="3">dialogs/list-nofocus.png</texturenofocus>
-		<texturesliderbar>dialogs/sliderBackground.png</texturesliderbar>
-		<textureslidernib border="2">dialogs/sliderNib.png</textureslidernib>
-		<textureslidernibfocus border="2">dialogs/sliderNib.png</textureslidernibfocus>
+		<texturesliderbar border="10">dialogs/sliderBackground.png</texturesliderbar>
+		<textureslidernib border="0,3,0,3">dialogs/sliderNib.png</textureslidernib>
+		<textureslidernibfocus border="0">dialogs/sliderNib.png</textureslidernibfocus>
 		<font>qlassikSmallBold2</font>
 		<height>40</height>
 		<textcolor>Color1</textcolor>

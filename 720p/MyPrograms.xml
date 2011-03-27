@@ -167,7 +167,7 @@
 						<aligny>top</aligny>
 						<label>$INFO[ListItem.Plot]</label>
 						<textcolor>ivory3</textcolor>
-						<font>fontinSmall</font>
+						<font>titilliumMedium</font>
 					</control>
 				</control>
 			</control>

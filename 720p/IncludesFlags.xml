@@ -228,7 +228,7 @@
 	</include>
 	<!-- custom conditional show/hide flag list for slideview -->
 	<include name="typeFlagsInfoSlides">
-		<!-- stars rating -->
+		<!-- TV stars rating -->
 		<control type="image">
 			<posx>1085</posx>
 			<posy>-190</posy>
@@ -237,9 +237,9 @@
 			<info>ListItem.StarRating</info>
 			<colordiffuse>Color7</colordiffuse>
 			<aspectratio align="center">keep</aspectratio>
-			<visible>!IsEmpty(ListItem.StarRating) + [[!Skin.HasSetting(hideratings) + !Skin.HasSetting(slidehiderating)] | Window.IsActive(2003)] + !Skin.HasSetting(textratings)</visible>
+			<visible>Container.Content(tvshows) + !IsEmpty(ListItem.StarRating) + [[!Skin.HasSetting(hideratings) + !Skin.HasSetting(hidetvratings)] | Window.IsActive(2003)] + !Skin.HasSetting(textratings)</visible>
 		</control>
-		<!-- text rating -->
+		<!-- TV text rating -->
 		<control type="label">
 			<posx>1180</posx>
 			<posy>-185</posy>
@@ -248,13 +248,36 @@
 			<textcolor>ivory3</textcolor>
 			<font>qlassikSmall2</font>
 			<align>right</align>
-			<visible>!IsEmpty(ListItem.Rating) + [[!Skin.HasSetting(hideratings) + !Skin.HasSetting(slidehiderating)] | Window.IsActive(2003)] + Skin.HasSetting(textratings)</visible>
+			<visible>Container.Content(tvshows) + !IsEmpty(ListItem.StarRating) + [[!Skin.HasSetting(hideratings) + !Skin.HasSetting(hidetvratings)] | Window.IsActive(2003)] + Skin.HasSetting(textratings)</visible>
+		</control>
+		<!-- MOVIES stars rating -->
+		<control type="image">
+			<posx>1085</posx>
+			<posy>-190</posy>
+			<width>100</width>
+			<height>30</height>
+			<info>ListItem.StarRating</info>
+			<colordiffuse>Color7</colordiffuse>
+			<aspectratio align="center">keep</aspectratio>
+			<visible>Container.Content(movies) + !IsEmpty(ListItem.StarRating) + [[!Skin.HasSetting(hideratings) + !Skin.HasSetting(hidemovieratings)] | Window.IsActive(2003)] + !Skin.HasSetting(textratings)</visible>
+		</control>
+		<!-- MOVIES text rating -->
+		<control type="label">
+			<posx>1180</posx>
+			<posy>-185</posy>
+			<width>100</width>
+			<label>IMDB : $INFO[ListItem.Rating]</label>
+			<textcolor>ivory3</textcolor>
+			<font>qlassikSmall2</font>
+			<align>right</align>
+			<visible>Container.Content(movies) + !IsEmpty(ListItem.StarRating) + [[!Skin.HasSetting(hideratings) + !Skin.HasSetting(hidemovieratings)] | Window.IsActive(2003)] + Skin.HasSetting(textratings)</visible>
 		</control>
 		<control type="grouplist" id="100">
 			<width>900</width>
 			<height>64</height>
 			<itemgap>10</itemgap>
 			<orientation>horizontal</orientation>
+			<visible>[[!Skin.HasSetting(hidemovielistflags)] | Window.IsActive(2003)]</visible>
 			<!-- resolution -->
 			<control type="image">
 				<width>56</width>
