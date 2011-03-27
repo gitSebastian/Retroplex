@@ -110,58 +110,39 @@
 					<include>leftMenuViewOptions</include>
 					<visible>![ControlGroup(40).HasFocus() | ControlGroup(80).HasFocus()]</visible>
 				</control>		
-				<!--<control type="button" id="20">
-					<description>Shuffle button</description>
-					<posy>0</posy>
-					<label>191</label>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>31</onup>
-					<ondown>28</ondown>
+				<!-- Home screen options -->
+				<control type="button" id="9070">
+					<label>System :</label>
+					<include>leftMenuTitle</include>
+					<enable>false</enable>
+				</control>
+				<control type="button" id="9071">
+					<label>$LOCALIZE[5]</label>
+					<onclick>ActivateWindow(Settings)</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
-				<control type="togglebutton" id="28">
-					<description>Randomize button</description>
-					<posy>43</posy>
-					<label>$LOCALIZE[31114]</label>
-					<altlabel>$LOCALIZE[31113]</altlabel>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>20</onup>
-					<ondown>26</ondown>
+				<control type="button" id="9072">
+				    <description>Shutdown System</description>
+				    <label>Shutdown</label>
+				    <onclick>Dialog.Close(shutdownmenu)</onclick>
+				    <onclick>XBMC.ShutDownSystem()</onclick>
+				    <include>leftMenuViewOptions</include>
+				</control>
+				<control type="button" id="9073">
+					<description>Sleep System</description>
+					<label>Sleep</label>
+					<onclick>Dialog.Close(shutdownmenu)</onclick>
+					<onclick>XBMC.SleepSystem()</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
-				<control type="button" id="26">
-					<description>Repeat button</description>
-					<posy>86</posy>
-					<label>486</label>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>28</onup>
-					<ondown>21</ondown>
+				<control type="button" id="9074r">
+					<description>Quit Plex</description>
+					<label>Quit Plex</label>
+					<onclick>Dialog.Close(shutdownmenu)</onclick>
+					<onclick>dialog.close(all,true)</onclick>
+					<onclick>Plex.Shutdown()</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
-				<control type="button" id="21">
-					<description>Save button</description>
-					<posy>129</posy>
-					<label>190</label>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>26</onup>
-					<ondown>22</ondown>
-					<include>leftMenuViewOptions</include>
-				</control>
-				<control type="button" id="22">
-					<description>Clear button</description>
-					<posy>172</posy>
-					<label>192</label>
-					<label>31011</label>
-					<onleft>50</onleft>
-					<onright>50</onright>
-					<onup>21</onup>
-					<ondown>30</ondown>
-					<include>leftMenuViewOptions</include>
-				</control>-->
 			</control>
 		</control>
 		<!-- logo -->
