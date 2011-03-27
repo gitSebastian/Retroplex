@@ -442,7 +442,7 @@
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
 				<control type="radiobutton" id="269">
-					<label>Show Ratings as Text</label>
+					<label>Show Ratings as Numerals instead of Stars</label>
 					<onclick>Skin.ToggleSetting(textratings)</onclick>
 					<selected>Skin.HasSetting(textratings)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
