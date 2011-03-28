@@ -19,6 +19,7 @@
 	<include file="IncludesAnimations.xml">-</include>
 	<include file="IncludesDialogs.xml">-</include>
 	<include file="IncludesPageControl.xml">-</include>
+	<include file="Help.xml">-</include>
 	<!-- weather widget for home screen -->
 	<include name="weatherhome">
 		<!-- without retroplex slideshow -->
@@ -166,7 +167,7 @@
 			<include>transition2</include>
 			<visible>!Skin.HasSetting(hidetheawesomelogo)</visible>
 			<animation effect="fade" start="60" end="100" time="0" condition="true">Conditional</animation>
-			<animation effect="fade" start="100" end="60" time="350" condition="System.IdleTime(30)">Conditional</animation>
+			<include>homeLogoFade</include>
 			<control type="group">
 				<posx>27</posx>
 				<posy>13</posy>
@@ -1038,7 +1039,7 @@
 			<height>380</height>
 			<include>transition2</include>
 			<texture border="100" flipx="true" flipy="true">search/activesectionbgbasic.png</texture>
-			<animation effect="fade" start="100" end="0" time="350" condition="System.IdleTime(30)">Conditional</animation>
+			<include>homeMenuFade</include>
 			<visible>Window.IsActive(0)</visible>
 		</control>
 		<control type="image">
@@ -1048,7 +1049,7 @@
 			<height>400</height>
 			<include>transition2</include>
 			<texture>backgrounds/red.png</texture>
-			<animation effect="fade" start="100" end="0" time="350" condition="System.IdleTime(30)">Conditional</animation>
+			<include>homeMenuFade</include>
 			<visible>Window.IsActive(0)</visible>
 		</control>
 		<control type="image">
@@ -1999,8 +2000,8 @@
 		<animation effect="fade" start="40" end="100" time="0" condition="true">Conditional</animation>
 		<include>transition2</include>
 		<include>HomeScreenLeftMenuSlide</include>
-		<include>HomeScreenLeftMenuSlideFade</include>
-		<animation effect="fade" start="100" end="0" time="350" condition="System.IdleTime(30)">Conditional</animation>
+		<include>HomeScreenLeftMenuBgSlideFade</include>
+		<include>homeMenuFade</include>
 	</control>
 	</include>
 	<include name="homeMenu">

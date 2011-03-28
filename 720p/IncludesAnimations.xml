@@ -17,6 +17,9 @@
 	<include name="HomeScreenLeftMenuSlideFade">
 		<animation effect="fade" start="100" end="0" time="400" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus() | Control.HasFocus(1110) | Control.HasFocus(1130) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
 	</include>
+	<include name="HomeScreenLeftMenuBgSlideFade">
+		<animation effect="fade" start="100" end="0" time="400" condition="[ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus() | Control.HasFocus(1110) | Control.HasFocus(1130) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)] + !Skin.HasSetting(showmainhelp)">Conditional</animation>
+	</include>
 	<!-- Home screen Now Playing left menu animations -->
 	<include name="NowPlayingHomeLeftMenuSlide">
 		<animation effect="slide" start="0" end="300" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
@@ -162,6 +165,13 @@
 		<animation effect="slide" start="162" end="0" time="500" condition="!ControlGroup(300).HasFocus() | Window.IsVisible(134)">Conditional</animation>
 		<animation effect="slide" start="0" end="162" time="500" condition="ControlGroup(300).HasFocus()">Conditional</animation>
 	</include>
+	<!-- HOME MENU & MAIN HELP ANIMATIONS -->
+	<include name="homeMenuFade">
+		<animation effect="fade" start="100" end="0" time="350" condition="System.IdleTime(30) + !Skin.HasSetting(showmainhelp)">Conditional</animation>
+	</include>
+	<include name="homeLogoFade">
+		<animation effect="fade" start="100" end="60" time="350" condition="System.IdleTime(30) + !Skin.HasSetting(showmainhelp)">Conditional</animation>
+	</include>
 	<!-- GENERAL -->
 	<include name="thumbFadeTime">
 		<fadetime>300</fadetime>
@@ -253,14 +263,6 @@
 			<effect type="fade" center="auto" start="100" end="0" time="150" tween="back" easing="out"/>
 		</animation>
 	</include>
-	<!--<include name="focus_PosterWithInfoFlagsNoEffect_GrainyEdition">
-		<animation type="Focus" reversible="false">
-			<effect type="zoom" center="80,100" start="100" end="125" time="500" tween="back" easing="out"/>
-		</animation>
-		<animation type="UnFocus" reversible="false">
-			<effect type="zoom" center="80,100" start="125" end="100" time="200" tween="cubik" easing="out"/>
-		</animation>
-	</include>-->
 	<!-- SLIDE -->
 	<include name="focus_SlidePoster">
 		<animation type="focus">			
@@ -280,16 +282,6 @@
 			<effect type="zoom" center="0,240" tween="Cubic" start="120,120" end="100,100" easing="Out" reversible="false" time="500"/>
 		</animation>
 	</include>
-	<!--<include name="focus_SlideShadow">
-		<animation type="Focus" reversible="false">
-			<effect type="zoom" center="auto" start="100" end="100" time="400" tween="back" easing="out" />
-			<effect type="fade" center="auto" start="0" end="100" time="100" tween="back" easing="out" />
-		</animation>
-		<animation type="UnFocus" reversible="false">
-			<effect type="zoom" center="auto" start="100" end="100" time="150" tween="back" easing="out" />
-			<effect type="fade" center="auto" start="100" end="0" time="150" tween="back" easing="out" />
-		</animation>
-	</include>-->
 	<!-- END CUSTOM NOSTALGIA ANIMATIONS -->
 	<include name="homeRecentThumb">
 		<animation effect="zoom" tween="Back" start="100" end="130" center="110,80" time="200">Focus</animation>
@@ -315,15 +307,6 @@
 			<effect type="zoom" tween="Cubic" start="120" end="100" center="105,150" time="250"/>
 		</animation>
 	</include>
-	<!-- Copied From Above Listing -->
-	<!--<include name="focus_PosterSlideOverlay">
-		<animation type="focus">
-			<effect type="zoom" tween="Back" start="100" end="120" easing="Out" reversible="false" center="55,85" time="250"/>
-		</animation>
-		<animation type="unfocus">
-			<effect type="zoom" tween="Cubic" start="120" end="100" center="105,150" time="250" />
-		</animation>
-	</include>-->
 	<include name="focus_SlideWide">
 		<animation type="focus">
 			<effect type="zoom" tween="quadratic" start="100,100" end="125,125" reversible="false" center="auto" time="250"/>

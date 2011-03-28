@@ -21,6 +21,7 @@
 			<include>transition2</include>
 			<texture border="100" flipy="true">search/activesectionbgbasic.png</texture>
 			<visible>ControlGroup(9100).HasFocus(9013)</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="0" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9013)">Conditional</animation>
 		</control>
 		<control type="image">
 			<posy>160</posy>
@@ -29,7 +30,8 @@
 			<height>450</height>
 			<include>transition2</include>
 			<texture border="100" flipy="true">settings/activesectionbgsansarrow.png</texture>
-			<visible>ControlGroup(9100).HasFocus(9001) | ControlGroup(9100).HasFocus(9005) | ControlGroup(9100).HasFocus(9007) | ControlGroup(9100).HasFocus(9019)</visible>
+			<visible>ControlGroup(9100).HasFocus(9001) | ControlGroup(9100).HasFocus(9005) | ControlGroup(9100).HasFocus(9007)</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="0" condition="!Control.HasFocus(300) + [ControlGroup(9100).HasFocus(9001) | ControlGroup(9100).HasFocus(9005) | ControlGroup(9100).HasFocus(9007)]">Conditional</animation>
 		</control>
 		<control type="image">
 			<posy>160</posy>
@@ -38,7 +40,8 @@
 			<height>480</height>
 			<include>transition2</include>
 			<texture border="100" flipy="true">settings/activesectionbgsansarrow.png</texture>
-			<visible>ControlGroup(9100).HasFocus(9017)</visible>
+			<visible>ControlGroup(9100).HasFocus(9017) | ControlGroup(9100).HasFocus(9019)</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="0" condition="!Control.HasFocus(300) + [ControlGroup(9100).HasFocus(9017) | ControlGroup(9100).HasFocus(9019)]">Conditional</animation>
 		</control>
 		<include>grainyeditionback</include>
 		<include>settingstypologo</include>
@@ -83,7 +86,7 @@
 			<aligny>center</aligny>
 			<include>transition2</include>
 			<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
-			<visible>ControlGroup(9100).HasFocus(9001) | ControlGroup(9100).HasFocus(9005) | ControlGroup(9100).HasFocus(9007) | ControlGroup(9100).HasFocus(9013) | ControlGroup(9100).HasFocus(9019)</visible>
+			<visible>ControlGroup(9100).HasFocus(9001) | ControlGroup(9100).HasFocus(9005) | ControlGroup(9100).HasFocus(9007) | ControlGroup(9100).HasFocus(9013)</visible>
 		</control>
 		<control type="label">
 			<posx>790</posx>
@@ -98,7 +101,7 @@
 			<aligny>center</aligny>
 			<include>transition2</include>
 			<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
-			<visible>ControlGroup(9100).HasFocus(9017)</visible>
+			<visible>ControlGroup(9100).HasFocus(9017) | ControlGroup(9100).HasFocus(9019)</visible>
 		</control>
 		<!-- CATEGORIES -->
 		<control type="group" id="9000">
@@ -226,7 +229,7 @@
 				<itemgap>0</itemgap>
 				<include>transition2</include>
 				<visible>!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9001)</visible>
-				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9001)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="200" delay="0" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9001)">Conditional</animation>
 				<control type="radiobutton" id="201">
 					<description>Show weather widget</description>
 					<label>Show Weather pin-up (Veronica)</label>
@@ -264,7 +267,7 @@
 				<ondown>200</ondown>
 				<itemgap>0</itemgap>
 				<visible>!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9005)</visible>
-				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9005)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="200" delay="0" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9005)">Conditional</animation>
 				<control type="radiobutton" id="221">
 					<label>Turn OFF fanart in library views</label>
 					<onclick>Skin.ToggleSetting(FanartGlobal)</onclick>
@@ -313,7 +316,7 @@
 				<ondown>200</ondown>
 				<itemgap>0</itemgap>
 				<visible>!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9007)</visible>
-				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9007)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="200" delay="0" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9007)">Conditional</animation>
 				<include>transition2</include>
 				<control type="radiobutton" id="281">
 					<description>use retroplex slideshow</description>
@@ -342,7 +345,7 @@
 				<include>transition2</include>
 				<include>contextMenuHide</include>
 				<visible>!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9013)</visible>
-				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9013)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="200" delay="0" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9013)">Conditional</animation>
 				<!-- separator between credits -->
 				<control type="image">
 					<posx>210</posx>
@@ -385,7 +388,7 @@
 				<ondown>200</ondown>
 				<itemgap>0</itemgap>
 				<visible>!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9017)</visible>
-				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9017)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="200" delay="0" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9017)">Conditional</animation>
 				<include>transition2</include>
 				<control type="radiobutton" id="261">
 					<description>scrollbars</description>
@@ -466,22 +469,29 @@
 				<ondown>200</ondown>
 				<itemgap>0</itemgap>
 				<visible>!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9019)</visible>
-				<animation effect="fade" start="0" end="100" time="250" delay="250" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9019)">Conditional</animation>
+				<animation effect="fade" start="0" end="100" time="200" delay="0" condition="!Control.HasFocus(300) + ControlGroup(9100).HasFocus(9019)">Conditional</animation>
 				<include>transition2</include>
+				<control type="radiobutton" id="212">
+					<description>show Search menu entry</description>
+					<label>Hide "Search" from main menu</label>
+					<onclick>Skin.ToggleSetting(hidesearchmainmenu)</onclick>
+					<selected>Skin.HasSetting(hidesearchmainmenu)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="217">
+					<description>show Plex Online menu entry</description>
+					<label>Hide "Plex Online" from main menu</label>
+					<onclick>Skin.ToggleSetting(hideplexonlinemainmenu)</onclick>
+					<selected>Skin.HasSetting(hideplexonlinemainmenu)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
 				<control type="radiobutton" id="211">
 					<description>show iTunes menu entry</description>
 					<label>Show "iTunes" in main menu</label>
 					<onclick>Skin.ToggleSetting(showitunesmainmenu)</onclick>
 					<selected>Skin.HasSetting(showitunesmainmenu)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
-				</control>
-				<control type="radiobutton" id="212">
-					<description>show Search menu entry</description>
-					<label>Show "Search" in main menu</label>
-					<onclick>Skin.ToggleSetting(showsearchmainmenu)</onclick>
-					<selected>Skin.HasSetting(showsearchmainmenu)</selected>
-					<include>newHomeMenuSubSettingsButton</include>
-				</control>
+				</control>				
 				<control type="radiobutton" id="213">
 					<description>show Favourites menu entry</description>
 					<label>Show "Favourites" in main menu</label>
@@ -509,14 +519,7 @@
 					<onclick>Skin.ToggleSetting(showpicturesplugsmainmenu)</onclick>
 					<selected>Skin.HasSetting(showpicturesplugsmainmenu)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
-				</control>
-				<control type="radiobutton" id="217">
-					<description>show Plex Online menu entry</description>
-					<label>Show "Plex Online" in main menu</label>
-					<onclick>Skin.ToggleSetting(showplexonlinemainmenu)</onclick>
-					<selected>Skin.HasSetting(showplexonlinemainmenu)</selected>
-					<include>newHomeMenuSubSettingsButton</include>
-				</control>
+				</control>				
 				<control type="radiobutton" id="218">
 					<description>show Programs menu entry</description>
 					<label>Show "Programs" in main menu</label>
@@ -529,6 +532,13 @@
 					<label>Show "Weather" in main menu</label>
 					<onclick>Skin.ToggleSetting(showweathermainmenu)</onclick>
 					<selected>Skin.HasSetting(showweathermainmenu)</selected>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="220">
+					<description>hide Help menu entry</description>
+					<label>Hide "Retroplex Help" from main menu</label>
+					<onclick>Skin.ToggleSetting(hidehelpmainmenu)</onclick>
+					<selected>Skin.HasSetting(hidehelpmainmenu)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
 			</control>

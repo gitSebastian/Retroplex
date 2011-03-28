@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<includes>
+	<include name="RetroplexHelp">
+		<control type="group">
+			<!-- HELP pin-up -->
+			<control type="image">
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="350"/>
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="450"/>
+				</animation>
+				<width>500</width>
+				<height>500</height>
+				<posx>710</posx>
+				<posy>199</posy>
+				<aligny>bottom</aligny>
+				<aspectratio>keep</aspectratio>
+				<include>transition2</include>
+				<texture background="true" align="left">help/natalie2.png</texture>
+				<visible>Skin.HasSetting(showmainhelp)</visible>
+			</control>
+			<!-- blue bubble -->
+			<control type="image">
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="350"/>
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="350"/>
+				</animation>
+				<width>467</width>
+				<height>204</height>
+				<posx>640</posx>
+				<posy>20</posy>
+				<aligny>bottom</aligny>
+				<aspectratio>stretch</aspectratio>
+				<include>transition2</include>
+				<texture background="true" align="left" border="80">help/homebluebubble2.png</texture>
+				<visible>Skin.HasSetting(showmainhelp)</visible>
+			</control>
+			<control type="group">
+				<posx>660</posx>
+				<posy>25</posy>
+				<include>transition2</include>
+				<visible>Skin.HasSetting(showmainhelp)</visible>
+				<control type="textbox" id="8">
+					<width>450</width>
+					<height>200</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<label>Hello and welcome to Retroplex![CR][CR]
+					My name is Natalie, and i'm here to guide you.[CR]
+					It's very simple, just have a look at the hints.[CR][CR]
+					To quit Help, just click "Retroplex Help" again.</label>
+					<textcolor>ivory1</textcolor>
+					<font>titilliumMedium</font>
+					<animation type="Visible">
+						<effect type="fade" start="0" end="100" time="350"/>
+					</animation>
+					<animation type="Hidden">
+						<effect type="fade" start="100" end="0" time="250"/>
+					</animation>
+				</control>
+			</control>
+			<!-- red bubble -->
+			<control type="image">
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="350"/>
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="350"/>
+				</animation>
+				<width>523</width>
+				<height>175</height>
+				<posx>300</posx>
+				<posy>530</posy>
+				<aligny>bottom</aligny>
+				<aspectratio>stretch</aspectratio>
+				<include>transition2</include>
+				<texture background="true" align="left" border="70">help/homeredbubble2.png</texture>
+				<visible>Skin.HasSetting(showmainhelp) + Control.HasFocus(300)</visible>
+			</control>
+			<control type="group">
+				<posx>320</posx>
+				<posy>580</posy>
+				<include>transition2</include>
+				<visible>Skin.HasSetting(showmainhelp) + Control.HasFocus(300)</visible>
+				<control type="textbox" id="8">
+					<width>500</width>
+					<height>200</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<label>1. This is the main menu. It's pretty empty in the beginning, but you can fully customize what shows there in the skin Settings. It fades automatically to invisible after 30 seconds of inactivity, and springs back to life when you do something again, not to worry.</label>
+					<textcolor>ivory2</textcolor>
+					<font>titilliumMedium</font>
+					<animation type="Visible">
+						<effect type="fade" start="0" end="100" time="350"/>
+					</animation>
+					<animation type="Hidden">
+						<effect type="fade" start="100" end="0" time="250"/>
+					</animation>
+				</control>
+			</control>
+			<!-- ivory bubble -->
+			<control type="image">
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="350"/>
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="350"/>
+				</animation>
+				<width>515</width>
+				<height>160</height>
+				<posx>10</posx>
+				<posy>200</posy>
+				<aligny>bottom</aligny>
+				<aspectratio>stretch</aspectratio>
+				<include>transition2</include>
+				<texture background="true" align="left" border="80">help/homeivorybubble2.png</texture>
+				<visible>Skin.HasSetting(showmainhelp) + Control.HasFocus(300)</visible>
+			</control>
+			<control type="group">
+				<posx>110</posx>
+				<posy>210</posy>
+				<include>transition2</include>
+				<visible>Skin.HasSetting(showmainhelp) + Control.HasFocus(300)</visible>
+				<control type="textbox" id="8">
+					<width>390</width>
+					<height>200</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<label>2. There is a secondary menu available in Retroplex, that you can always access by pressing "left". There you can find additional options, and access the Settings for example.[CR][CR]Go ahead, try it.</label>
+					<textcolor>ivoryBlack</textcolor>
+					<font>titilliumMedium</font>
+					<animation type="Visible">
+						<effect type="fade" start="0" end="100" time="350"/>
+					</animation>
+					<animation type="Hidden">
+						<effect type="fade" start="100" end="0" time="250"/>
+					</animation>
+				</control>
+			</control>
+			<!-- left menu red bubble -->
+			<control type="image">
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="350"/>
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="250"/>
+				</animation>
+				<width>453</width>
+				<height>464</height>
+				<posx>280</posx>
+				<posy>200</posy>
+				<aligny>bottom</aligny>
+				<aspectratio>stretch</aspectratio>
+				<include>transition2</include>
+				<texture background="true" align="left">help/leftmenuredbubble2.png</texture>
+				<visible>Skin.HasSetting(showmainhelp) + !Control.HasFocus(300)</visible>
+			</control>
+			<control type="group">
+				<posx>360</posx>
+				<posy>210</posy>
+				<include>transition2</include>
+				<visible>Skin.HasSetting(showmainhelp) + !Control.HasFocus(300)</visible>
+				<control type="textbox" id="8">
+					<width>340</width>
+					<height>450</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<label>3. So this is the secondary menu.[CR][CR]
+					In here, you can access those sections that are not visible in the main menu, and also find specific options concerning the window that you're in at that moment. It works the same everywhere.[CR][CR]Since here you're in Home, you'll have a few specific options only for Home screen, of which the lovely Retroplex slideshow that will take you back to the golden age of cinema. You should really try it when finished here.[CR][CR]
+					And that's all you need to know to fully master Retroplex. Easy, right?[CR][CR]
+					Enjoy the experience.</label>
+					<textcolor>ivory2</textcolor>
+					<font>titilliumMedium</font>
+					<animation type="Visible">
+						<effect type="fade" start="0" end="100" time="350"/>
+					</animation>
+					<animation type="Hidden">
+						<effect type="fade" start="100" end="0" time="250"/>
+					</animation>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

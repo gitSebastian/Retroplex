@@ -18,7 +18,7 @@
 			<include>transition2</include>
 			<include>HomeScreenLeftMenuSlide</include>
 			<include>HomeScreenLeftMenuSlideFade</include>
-			<animation effect="fade" start="100" end="0" time="350" condition="System.IdleTime(30)">Conditional</animation>
+			<include>homeMenuFade</include>
 			<!-- Unfocused -->
 			<itemlayout width="870" height="60">
 				<control type="group">
@@ -86,7 +86,7 @@
 					<description>Search Menu</description>
 					<label>Search</label>
 					<onclick>Plex.ActivateWindow(10051)</onclick>
-					<visible>Skin.HasSetting(showsearchmainmenu)</visible>
+					<visible>!Skin.HasSetting(hidesearchmainmenu)</visible>
 				</item>
 				<item id="4">
 					<description>Favourites</description>
@@ -116,7 +116,7 @@
 					<description>Plex Online</description>
 					<label>31976</label>
 					<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
-					<visible>Skin.HasSetting(showplexonlinemainmenu)</visible>
+					<visible>!Skin.HasSetting(hideplexonlinemainmenu)</visible>
 				</item>
 				<item id="9">
 					<description>Weather</description>
@@ -124,7 +124,14 @@
 					<onclick>ActivateWindow(weather)</onclick>
 					<visible>Skin.HasSetting(showweathermainmenu)</visible>
 				</item>
-				<!--<item id="10">
+				<item id="9">
+					<description>Help</description>
+					<label>Retroplex Help</label>
+					<onclick>-</onclick>
+					<onclick>Skin.ToggleSetting(showmainhelp)</onclick>
+					<visible>!Skin.HasSetting(hidehelpmainmenu)</visible>
+				</item>
+				<!--<item id="11">
 					<label>test</label>
 					<onclick>ActivateWindow(000)</onclick>
 				</item>-->
@@ -176,7 +183,7 @@
 					<label>Search</label>
 					<onclick>Plex.ActivateWindow(10051)</onclick>
 					<include>leftMenuViewOptions</include>
-					<visible>!Skin.HasSetting(showsearchmainmenu)</visible>
+					<visible>!Skin.HasSetting(hidesearchmainmenu)</visible>
 				</control>
 				<control type="button" id="9080">
 					<label>iTunes</label>
@@ -216,7 +223,7 @@
 					<label>31976</label>
 					<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
 					<include>leftMenuViewOptions</include>
-					<visible>!Skin.HasSetting(showplexonlinemainmenu)</visible>
+					<visible>!Skin.HasSetting(hideplexonlinemainmenu)</visible>
 				</control>
 				<control type="button" id="9082">
 					<label>$LOCALIZE[0]</label>

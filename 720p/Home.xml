@@ -59,5 +59,7 @@
 				<include>fadeinout</include>
 			</control>
 		</control>		
+		<!-- HELP -->
+		<include>RetroplexHelp</include>
 	</controls>
 </window>
