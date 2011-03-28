@@ -27,7 +27,7 @@
 			<include>transition2</include>
 			<posx>195r</posx>
 			<posy>50</posy>
-			<visible>Skin.HasSetting(showweatherwidget) + !Skin.HasSetting(RetroplexSlideShow)</visible>
+			<visible>Skin.HasSetting(showweatherwidget) + !Skin.HasSetting(RetroplexSlideShow) + !Skin.HasSetting(showmainhelp)</visible>
 			<!--<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>

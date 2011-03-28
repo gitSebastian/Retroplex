@@ -7,7 +7,7 @@
 		<control type="group">
 			<posx>698</posx>
 			<posy>180</posy>
-			<visible>Player.HasMusicPlaylist</visible>
+			<visible>Player.HasMusicPlaylist + !Skin.HasSetting(showmainhelp)</visible>
 			<animation condition="!Player.Paused" type="Conditional">
 				<effect type="rotatey" center="1085" start="-180" end="0" time="500" easing="out" reversible="false"/>
 				<effect type="fade" start="50" end="90" time="250" delay="0"/>
