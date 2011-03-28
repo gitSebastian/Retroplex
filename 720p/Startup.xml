@@ -1,40 +1,19 @@
 <?xml version="1.0"?>
 <window>
-	<defaultcontrol always="true">9</defaultcontrol>
+	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>		
-		<control type="button" id="9">
-			<posx>-20</posx>
-			<posy>-20</posy>
-			<width>1</width>
-			<height>1</height>
-			<onfocus>XBMC.PlayMedia(U:/skin/Retroplex/sounds/startup2.wav)</onfocus>
+		<control type="button" id="10">
+			<onfocus>ReplaceWindow(7777)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<onfocus>SetFocus(10)</onfocus>
 			<visible>!Skin.HasSetting(DisableStartupSound)</visible>
-		</control>
-		<control type="button" id="9">
-			<posx>-20</posx>
-			<posy>-20</posy>
-			<width>1</width>
-			<height>1</height>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>
-			<onfocus>SetFocus(10)</onfocus>
-			<visible>Skin.HasSetting(DisableStartupSound)</visible>
-		</control>
-		<control type="group">
-			<animation type="WindowClose">
-				<effect type="fade" start="100" end="100" time="250" delay="4700"/>
-			</animation>
-			<include>startupSlides</include>
 		</control>
 		<control type="button" id="10">
 			<onfocus>ReplaceWindow(Home)</onfocus>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<!--<animation effect="fade" delay="6000" end="100" condition="true">Focus</animation>-->
+			<visible>Skin.HasSetting(DisableStartupSound)</visible>
 		</control>
 		</controls>
 </window>

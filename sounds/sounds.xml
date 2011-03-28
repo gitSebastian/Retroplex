@@ -74,8 +74,8 @@
       <deactivate>out.wav</deactivate>
     </window>
     <window>
-      <name>startup</name>
-      <activate>-</activate>
+      <name>7777</name>
+      <activate>startup2.wav</activate>
     </window>
   </windows>
 </sounds>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<window id="7777">
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>startupSlides</include>
+		<control type="button" id="10">
+			<onfocus>ReplaceWindow(Home)</onfocus>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<animation effect="fade" delay="6000" end="100" condition="true">Focus</animation>
+		</control>
+		</controls>
+</window>

@@ -183,7 +183,7 @@
 					<label>Search</label>
 					<onclick>Plex.ActivateWindow(10051)</onclick>
 					<include>leftMenuViewOptions</include>
-					<visible>!Skin.HasSetting(hidesearchmainmenu)</visible>
+					<visible>Skin.HasSetting(hidesearchmainmenu)</visible>
 				</control>
 				<control type="button" id="9080">
 					<label>iTunes</label>
@@ -223,7 +223,7 @@
 					<label>31976</label>
 					<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
 					<include>leftMenuViewOptions</include>
-					<visible>!Skin.HasSetting(hideplexonlinemainmenu)</visible>
+					<visible>Skin.HasSetting(hideplexonlinemainmenu)</visible>
 				</control>
 				<control type="button" id="9082">
 					<label>$LOCALIZE[0]</label>
