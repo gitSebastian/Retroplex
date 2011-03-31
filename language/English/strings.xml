@@ -54,7 +54,8 @@ Without you guys Retroplex just wouldn't be the same. Thanks.
 	<string id="41025">Show "First Letter Offset" while fast scrolling the library</string>
 	<!-- Settings Music Visualizer and Sounds -->
 	<string id="41026">Music Visualizer and Sounds</string>
-	<string id="41027">Turn Retroplex slideshow in "Now Playing" screen ON</string>
+	<string id="41027">Show Retroplex slideshow in "Now Playing" screen</string>
+	<string id="41959">Set your own slideshow for "Now Playing" screen</string>
 	<string id="41028">Hide Retroplex logo in "Now Playing" screen</string>
 	<string id="41029">Turn OFF the Startup window (when Plex starts)</string>
 	<!-- Settings Categories window -->

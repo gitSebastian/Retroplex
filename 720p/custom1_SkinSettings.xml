@@ -330,7 +330,7 @@
 				</control>
 				<control type="radiobutton" id="284">
 					<description>Set your own slideshow for "Now Playing" screen</description>
-					<label>Set your own slideshow for "Now Playing" screen</label>
+					<label>$LOCALIZE[41959]</label>
 					<onclick>Skin.SetPath(PersonalMusicSlideShow)</onclick>
 					<onclick>Skin.ToggleSetting(personalMusicSlideShow)</onclick>
 					<selected>Skin.HasSetting(personalMusicSlideShow)</selected>
