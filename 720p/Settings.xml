@@ -186,8 +186,8 @@
 						<onclick>ActivateWindow(59)</onclick>
 					</item>
 					<item id="11">
-						<label>Done</label>
-						<label2>Exit settings</label2>
+						<label>$LOCALIZE[41932]</label>
+						<label2>$LOCALIZE[41933]</label2>
 						<thumb>settings/exit.png</thumb>
 						<onclick>ActivateWindow(0)</onclick>
 					</item>
@@ -198,10 +198,7 @@
 			<posx>55</posx>
 			<posy>290</posy>
 			<control type="textbox">
-				<label>Hello, Retroplex Settings are the command center of the skin.[CR][CR]
-					Here you can tweak everything to your liking, and also set up Plex preferences.[CR][CR]
-					Please select one of the main sections on the right.[CR][CR]
-					Contact Barbara at our helpdesk should you experience any problems.[CR][CR]Thank you.</label>
+				<label>41030</label>
 				<width>220</width>
 				<height>500</height>
 				<align>left</align>

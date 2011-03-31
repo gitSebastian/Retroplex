@@ -418,7 +418,7 @@
 		<!-- Plex Online & Programs -->
 		<control type="group">
 			<posx>770</posx>
-			<posy>438</posy>
+			<posy>388</posy>
 			<include>transition2</include>
 			<include>ListLeftMenuSlide</include>
 			<include>infoDialogHide</include>
@@ -1675,6 +1675,7 @@
 	</include>
 	<!-- SLIDESHOWS -->
 	<include name="slideshows">
+		<!-- Home Fanart slideshow -->
 		<control type="multiimage" id="1">
 			<include>transition2</include>
 			<include>screentype</include>
@@ -1689,6 +1690,7 @@
 				<effect type="fade" start="0" end="100" time="2000" delay="100"/>
 			</animation>
 		</control>
+		<!-- Home Retroplex slideshow -->
 		<control type="multiimage" id="1">
 			<include>transition2</include>
 			<posx>0</posx>
@@ -1707,6 +1709,22 @@
 				<effect type="fade" start="0" end="100" time="2000" delay="100"/>
 			</animation>
 		</control>
+		<!-- Home Personal slideshow -->
+		<control type="multiimage" id="1">
+			<include>transition2</include>
+			<include>screentype</include>
+			<aspectratio>scale</aspectratio>
+			<info>Skin.String(SlideShow)</info>
+			<timeperimage>8000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<visible>Skin.HasSetting(personalSlideShow) + ![Skin.HasSetting(FanartSlideShow) | Skin.HasSetting(RetroplexSlideShow)] + ![Player.HasVideo + !Skin.HasSetting(backgroundVideo)]</visible>
+			<include>fadeinout</include>
+		</control>
+	</include>
+	<include name="nowplayingretroplexslideshow">
+		<!-- Music Visualizer Retroplex Slideshow -->
 		<control type="multiimage" id="1">
 			<include>transition2</include>
 			<posx>0</posx>
@@ -1720,18 +1738,21 @@
 			<fadetime>1000</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>
-			<visible>[Window.IsActive(50) + Skin.HasSetting(retroplexmusicslideshow)] + Player.HasAudio</visible>
+			<visible>Window.IsActive(50) + !Skin.HasSetting(personalMusicSlideShow) + Skin.HasSetting(retroplexmusicslideshow) + Player.HasAudio</visible>
 		</control>
+	</include>
+	<include name="nowplayingpersonalslideshow">	
+		<!-- Music Visualizer Personal slideshow -->
 		<control type="multiimage" id="1">
 			<include>transition2</include>
 			<include>screentype</include>
 			<aspectratio>scale</aspectratio>
-			<info>Skin.String(SlideShow)</info>
+			<info>Skin.String(PersonalMusicSlideShow)</info>
 			<timeperimage>8000</timeperimage>
 			<fadetime>1000</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>
-			<visible>Skin.HasSetting(personalSlideShow) + ![Skin.HasSetting(FanartSlideShow) | Skin.HasSetting(RetroplexSlideShow)] + ![Player.HasVideo + !Skin.HasSetting(backgroundVideo)]</visible>
+			<visible>Window.IsActive(50) + Skin.HasSetting(personalMusicSlideShow) + !Skin.HasSetting(retroplexmusicslideshow) + Player.HasAudio</visible>
 			<include>fadeinout</include>
 		</control>
 	</include>
@@ -2029,10 +2050,10 @@
 		</animation>
 	</include>
 	<include name="leftMenuTitle">
-		<textoffsety>-5</textoffsety>
+		<textoffsety>-8</textoffsety>
 		<textoffsetx>20</textoffsetx>
 		<font>lobsterSmall</font>
-		<height>50</height>
+		<height>45</height>
 		<textcolor>ivory3</textcolor>
 		<disabledcolor>greenlime</disabledcolor>
 		<texturenofocus>settings/red.png</texturenofocus>
@@ -2094,7 +2115,7 @@
 		<texturefocus>settings/chocolate50.png</texturefocus>
 		<textoffsety>3</textoffsety>
 		<textoffsetx>40</textoffsetx>
-		<font>qlassikSmall2</font>
+		<font>qlassikMedium1</font>
 		<height>30</height>
 		<textcolor>ivory2</textcolor>
 		<focusedcolor>Color1</focusedcolor>

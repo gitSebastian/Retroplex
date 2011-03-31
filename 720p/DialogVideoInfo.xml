@@ -141,7 +141,7 @@
 			<!-- PLOT -->
 			<control type="textbox" id="4">
 				<width>740</width>
-				<height>270</height>
+				<height>220</height>
 				<label>$INFO[ListItem.PlotOutline]</label>
 				<textcolor>ivory2</textcolor>
 				<font>titilliumMedium</font>

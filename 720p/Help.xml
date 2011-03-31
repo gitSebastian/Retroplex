@@ -48,10 +48,7 @@
 					<height>200</height>
 					<align>left</align>
 					<aligny>top</aligny>
-					<label>Hello and welcome to Retroplex![CR][CR]
-					My name is Natalie, and i'm here to guide you.[CR]
-					It's very simple, just have a look at the hints.[CR][CR]
-					To quit Help, just click "Retroplex Help" again.</label>
+					<label>$LOCALIZE[41934]</label>
 					<textcolor>ivory1</textcolor>
 					<font>titilliumMedium</font>
 					<animation type="Visible">
@@ -90,7 +87,7 @@
 					<height>200</height>
 					<align>left</align>
 					<aligny>top</aligny>
-					<label>1. This is the main menu. It's pretty empty in the beginning, but you can fully customize what shows there in the skin Settings. It fades automatically to invisible after 30 seconds of inactivity, and springs back to life when you do something again, not to worry.</label>
+					<label>$LOCALIZE[41935]</label>
 					<textcolor>ivory2</textcolor>
 					<font>titilliumMedium</font>
 					<animation type="Visible">
@@ -129,7 +126,7 @@
 					<height>200</height>
 					<align>left</align>
 					<aligny>top</aligny>
-					<label>2. There is a secondary menu available in Retroplex, that you can always access by pressing "left". There you can find additional options, and access the Settings for example.[CR][CR]Go ahead, try it.</label>
+					<label>$LOCALIZE[41936]</label>
 					<textcolor>ivoryBlack</textcolor>
 					<font>titilliumMedium</font>
 					<animation type="Visible">
@@ -168,10 +165,7 @@
 					<height>450</height>
 					<align>left</align>
 					<aligny>top</aligny>
-					<label>3. So this is the secondary menu.[CR][CR]
-					In here, you can access those sections that are not visible in the main menu, and also find specific options concerning the window that you're in at that moment. It works the same everywhere.[CR][CR]Since here you're in Home, you'll have a few specific options only for Home screen, of which the lovely Retroplex slideshow that will take you back to the golden age of cinema. You should really try it when finished here.[CR][CR]
-					And that's all you need to know to fully master Retroplex. Easy, right?[CR][CR]
-					Enjoy the experience.</label>
+					<label>$LOCALIZE[41937]</label>
 					<textcolor>ivory2</textcolor>
 					<font>titilliumMedium</font>
 					<animation type="Visible">

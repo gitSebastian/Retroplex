@@ -125,8 +125,8 @@
 					<visible>Skin.HasSetting(showweathermainmenu)</visible>
 				</item>
 				<item id="9">
-					<description>Help</description>
-					<label>Retroplex Help</label>
+					<description>Retroplex Help</description>
+					<label>$LOCALIZE[41938]</label>
 					<onclick>-</onclick>
 					<onclick>Skin.ToggleSetting(showmainhelp)</onclick>
 					<visible>!Skin.HasSetting(hidehelpmainmenu)</visible>
@@ -162,7 +162,7 @@
 				<onright>300</onright>
 				<itemgap>0</itemgap>
 				<control type="button" id="9099">
-					<label>More :</label>
+					<label>$LOCALIZE[41939]</label>
 					<include>leftMenuTitle</include>
 					<enable>false</enable>
 				</control>
@@ -240,7 +240,7 @@
 				</control>
 				<!-- Home screen options -->
 				<control type="button" id="9011">
-					<label>Home :</label>
+					<label>$LOCALIZE[41940]</label>
 					<include>leftMenuTitle</include>
 					<enable>false</enable>
 				</control>
@@ -268,8 +268,8 @@
 					<include>leftMenuRadioButton</include>
 				</control>-->
 				<control type="radiobutton" id="9021">
-					<description>use Retroplex slideshow on home screen</description>
-					<label>Turn Retroplex slideshow ON</label>
+					<description>Turn Retroplex slideshow ON</description>
+					<label>$LOCALIZE[41941]</label>
 					<onclick>Skin.ToggleSetting(RetroplexSlideShow)</onclick>
 					<selected>Skin.HasSetting(RetroplexSlideShow)</selected>
 					<enable>![Skin.HasSetting(FanartSlideShow) | Skin.HasSetting(personalSlideShow)]</enable>
@@ -277,8 +277,8 @@
 					<include>leftMenuRadioButton</include>
 				</control>
 				<control type="radiobutton" id="9023">
-					<description>set personalised slideshow folder</description>
-					<label>Set your own slideshow</label>
+					<description>Set your own slideshow</description>
+					<label>$LOCALIZE[41942]</label>
 					<onclick>Skin.SetPath(SlideShow)</onclick>
 					<onclick>Skin.ToggleSetting(personalSlideShow)</onclick>
 					<selected>Skin.HasSetting(personalSlideShow)</selected>
@@ -288,7 +288,7 @@
 				</control>
 				<!-- EXTRAS -->
 				<control type="button" id="9094">
-					<label>System :</label>
+					<label>$LOCALIZE[41943]</label>
 					<include>leftMenuTitle</include>
 					<enable>false</enable>
 				</control>
@@ -306,21 +306,21 @@
 				</control>
 				<control type="button" id="9015">
 				    <description>Shutdown System</description>
-				    <label>Shutdown</label>
+				    <label>$LOCALIZE[41944]</label>
 				    <onclick>Dialog.Close(shutdownmenu)</onclick>
 				    <onclick>XBMC.ShutDownSystem()</onclick>
 				    <include>leftMenuViewOptions</include>
 				</control>
 				<control type="button" id="9014">
 					<description>Sleep System</description>
-					<label>Sleep</label>
+					<label>$LOCALIZE[41945]</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
 					<onclick>XBMC.SleepSystem()</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
 				<control type="button" id="9013">
 					<description>Quit Plex</description>
-					<label>Quit Plex</label>
+					<label>$LOCALIZE[41946]</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
 					<onclick>dialog.close(all,true)</onclick>
 					<onclick>Plex.Shutdown()</onclick>

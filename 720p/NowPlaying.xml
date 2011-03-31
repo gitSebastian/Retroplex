@@ -5,10 +5,8 @@
 	<animation effect="fade" start="100" end="0" time="1000" reversible="true">WindowClose</animation>
 	<controls>
 		<include>themeBackground2</include>
-		<control type="group">
-			<visible>Skin.HasSetting(retroplexmusicslideshow)</visible>
-		<include>slideshows</include>
-		</control>
+		<include condition="Skin.HasSetting(retroplexmusicslideshow)">nowplayingretroplexslideshow</include>
+		<include condition="Skin.HasSetting(personalMusicSlideShow)">nowplayingpersonalslideshow</include>
 		<!--<control type="image">
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>

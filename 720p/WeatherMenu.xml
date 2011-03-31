@@ -89,7 +89,7 @@
 				<itemgap>0</itemgap>
 				<!-- view selection -->
 				<control type="button" id="9099">
-					<label>Weather :</label>
+					<label>$LOCALIZE[8] :</label>
 					<include>leftMenuTitle</include>
 					<enable>false</enable>
 				</control>	
@@ -112,7 +112,7 @@
 				</control>		
 				<!-- Home screen options -->
 				<control type="button" id="9070">
-					<label>System :</label>
+					<label>$LOCALIZE[41943]</label>
 					<include>leftMenuTitle</include>
 					<enable>false</enable>
 				</control>
@@ -123,21 +123,21 @@
 				</control>
 				<control type="button" id="9072">
 				    <description>Shutdown System</description>
-				    <label>Shutdown</label>
+				    <label>$LOCALIZE[41944]</label>
 				    <onclick>Dialog.Close(shutdownmenu)</onclick>
 				    <onclick>XBMC.ShutDownSystem()</onclick>
 				    <include>leftMenuViewOptions</include>
 				</control>
 				<control type="button" id="9073">
 					<description>Sleep System</description>
-					<label>Sleep</label>
+					<label>$LOCALIZE[41945]</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
 					<onclick>XBMC.SleepSystem()</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
 				<control type="button" id="9074r">
 					<description>Quit Plex</description>
-					<label>Quit Plex</label>
+					<label>$LOCALIZE[41946]</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
 					<onclick>dialog.close(all,true)</onclick>
 					<onclick>Plex.Shutdown()</onclick>

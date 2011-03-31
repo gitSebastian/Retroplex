@@ -303,7 +303,7 @@
 				<visible>Control.IsVisible(555) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Window.IsActive(2)</visible>
 				<control type="label">
 					<posx>710</posx>
-					<posy>477</posy>
+					<posy>427</posy>
 					<width>700</width>
 					<height>30</height>
 					<align>left</align>
@@ -317,7 +317,7 @@
 				</control>
 				<control type="group">
 					<posx>700</posx>
-					<posy>515</posy>
+					<posy>465</posy>
 					<include>transition2</include>
 					<control type="textbox" id="8">
 						<width>450</width>
@@ -330,7 +330,7 @@
 					</control>
 				</control>
 			</control>
-			<!-- faux frame non-library -->
+			<!-- faux frame non-library without plot -->
 			<control type="image">
 				<animation type="WindowOpen">
 					<effect type="fade" start="0" end="20" time="2000" delay="300"/>
@@ -352,9 +352,9 @@
 				<include>grainypagefade</include>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<texture background="true" diffuse="frames/albumFrameMask.png">$INFO[Container(555).ListItem.Icon]</texture>
-				<visible>!ControlGroup(300).HasFocus + Control.IsVisible(555) + !Window.IsActive(musicplaylist) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(artists) | Container.Content(singles) | Container.Content(songs)]</visible>
+				<visible>IsEmpty(ListItem.Plot) + !ControlGroup(300).HasFocus + Control.IsVisible(555) + !Window.IsActive(musicplaylist) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(artists) | Container.Content(singles) | Container.Content(songs)]</visible>
 			</control>
-			<!-- icon non-library -->
+			<!-- icon non-library without plot -->
 			<control type="image" id="5555">
 				<posx>830</posx>
 				<posy>200</posy>
@@ -367,7 +367,46 @@
 				<include>grainypagefade</include>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<texture background="true" diffuse="frames/albumFrameMask.png">$INFO[Container(555).ListItem.Icon]</texture>
-				<visible>!ControlGroup(300).HasFocus + Control.IsVisible(555) + !Window.IsActive(musicplaylist) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(artists) | Container.Content(singles) | Container.Content(songs)]</visible>
+				<visible>IsEmpty(ListItem.Plot) + !ControlGroup(300).HasFocus + Control.IsVisible(555) + !Window.IsActive(musicplaylist) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(artists) | Container.Content(singles) | Container.Content(songs)]</visible>
+			</control>
+			<!-- faux frame non-library with plot -->
+			<control type="image">
+				<animation type="WindowOpen">
+					<effect type="fade" start="0" end="20" time="2000" delay="300"/>
+				</animation>
+				<animation type="WindowClose">
+					<effect type="fade" start="20" end="0" time="700"/>
+				</animation>
+				<animation type="Visible">
+					<effect type="fade" start="0" end="20" time="1000" delay="300"/>
+				</animation>
+				<posx>824</posx>
+				<posy>96</posy>
+				<width>373</width>
+				<height>368</height>
+				<fadetime>400</fadetime>
+				<include>transition2</include>
+				<include>infoDialogHide</include>
+				<include>contextMenuHide</include>
+				<include>grainypagefade</include>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture background="true" diffuse="frames/albumFrameMask.png">$INFO[Container(555).ListItem.Icon]</texture>
+				<visible>!IsEmpty(ListItem.Plot) + !ControlGroup(300).HasFocus + Control.IsVisible(555) + !Window.IsActive(musicplaylist) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(artists) | Container.Content(singles) | Container.Content(songs)]</visible>
+			</control>
+			<!-- icon non-library with plot -->
+			<control type="image" id="5555">
+				<posx>830</posx>
+				<posy>100</posy>
+				<width>360</width>
+				<height>360</height>
+				<fadetime>400</fadetime>
+				<include>transition2</include>
+				<include>infoDialogHide</include>
+				<include>contextMenuHide</include>
+				<include>grainypagefade</include>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture background="true" diffuse="frames/albumFrameMask.png">$INFO[Container(555).ListItem.Icon]</texture>
+				<visible>!IsEmpty(ListItem.Plot) + !ControlGroup(300).HasFocus + Control.IsVisible(555) + !Window.IsActive(musicplaylist) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(artists) | Container.Content(singles) | Container.Content(songs)]</visible>
 			</control>
 			<!-- VIDEO LIBRARY SPECIFICS -->
 			<!-- List view infos -->
