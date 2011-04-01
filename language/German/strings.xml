@@ -54,7 +54,8 @@ Without you guys Retroplex just wouldn't be the same. Thanks.
 	<string id="41025">Show "First Letter Offset" while fast scrolling the library</string>
 	<!-- Settings Music Visualizer and Sounds -->
 	<string id="41026">Music Visualizer and Sounds</string>
-	<string id="41027">Turn Retroplex slideshow in "Now Playing" screen ON</string>
+	<string id="41027">Show Retroplex slideshow in "Now Playing" screen</string>
+	<string id="41959">Set your own slideshow for "Now Playing" screen</string>
 	<string id="41028">Hide Retroplex logo in "Now Playing" screen</string>
 	<string id="41029">Turn OFF the Startup window (when Plex starts)</string>
 	<!-- Settings Categories window -->
@@ -94,7 +95,7 @@ And that's all you need to know to fully master Retroplex. Easy, right?[CR][CR]
 Enjoy the experience.
 	</string>
 	<!-- Home main menu -->
-	<string id="41938">Retroplex Help</string>
+	<string id="41938">Natalie - Retroplex Help</string>
 	<!-- Home left-side menu -->
 	<string id="41939">More :</string>
 	<string id="41940">Home :</string>
