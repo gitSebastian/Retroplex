@@ -1738,7 +1738,7 @@
 			<fadetime>1000</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>
-			<visible>Window.IsActive(50) + !Skin.HasSetting(personalMusicSlideShow) + Skin.HasSetting(retroplexmusicslideshow) + Player.HasAudio</visible>
+			<visible>Window.IsActive(50) + !Skin.HasSetting(fanartMusicSlideShow) + !Skin.HasSetting(personalMusicSlideShow) + Skin.HasSetting(retroplexmusicslideshow) + Player.HasAudio</visible>
 		</control>
 	</include>
 	<include name="nowplayingpersonalslideshow">	
@@ -1752,8 +1752,26 @@
 			<fadetime>1000</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>
-			<visible>Window.IsActive(50) + Skin.HasSetting(personalMusicSlideShow) + !Skin.HasSetting(retroplexmusicslideshow) + Player.HasAudio</visible>
+			<visible>Window.IsActive(50) + !Skin.HasSetting(fanartMusicSlideShow) + Skin.HasSetting(personalMusicSlideShow) + !Skin.HasSetting(retroplexmusicslideshow) + Player.HasAudio</visible>
 			<include>fadeinout</include>
+		</control>
+	</include>
+	<include name="nowplayingfanartslideshow">
+		<!-- Music Visualizer Fanart Slideshow -->
+		<control type="multiimage" id="1">
+			<include>transition2</include>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>scale</aspectratio>
+			<aligny>top</aligny>
+			<imagepath>../../../userdata/Thumbnails/PlexMediaServer/Fanart/</imagepath>
+			<timeperimage>8000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<visible>Window.IsActive(50) + Skin.HasSetting(fanartMusicSlideShow) + !Skin.HasSetting(personalMusicSlideShow) + !Skin.HasSetting(retroplexmusicslideshow) + Player.HasAudio</visible>
 		</control>
 	</include>
 	<!-- STARTUP SLIDES -->

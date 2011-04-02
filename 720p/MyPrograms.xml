@@ -158,7 +158,7 @@
 				<visible>!IsEmpty(ListItem.Plot)</visible>
 				<control type="group">
 					<posx>700</posx>
-					<posy>515</posy>
+					<posy>465</posy>
 					<include>transition2</include>
 					<control type="textbox" id="8">
 						<width>450</width>
@@ -171,7 +171,7 @@
 					</control>
 				</control>
 			</control>
-			<!-- faux frame -->
+			<!-- faux frame without plot -->
 			<control type="image">
 				<animation type="WindowOpen">
 					<effect type="fade" start="0" end="20" time="2000" delay="300"/>
@@ -193,8 +193,9 @@
 				<include>grainypagefade</include>
 				<aspectratio align="right" aligny="center">keep</aspectratio>
 				<texture background="true" diffuse="frames/albumFrameMask.png">$INFO[Container(555).ListItem.Icon]</texture>
+				<visible>IsEmpty(ListItem.Plot)</visible>
 			</control>
-			<!-- icon -->
+			<!-- icon without plot -->
 			<control type="image" id="5555">
 				<posx>830</posx>
 				<posy>150</posy>
@@ -207,6 +208,46 @@
 				<include>grainypagefade</include>
 				<aspectratio align="right" aligny="center">keep</aspectratio>
 				<texture background="true" diffuse="frames/albumFrameMask.png">$INFO[Container(555).ListItem.Icon]</texture>
+				<visible>IsEmpty(ListItem.Plot)</visible>
+			</control>
+			<!-- faux frame with plot -->
+			<control type="image">
+				<animation type="WindowOpen">
+					<effect type="fade" start="0" end="20" time="2000" delay="300"/>
+				</animation>
+				<animation type="WindowClose">
+					<effect type="fade" start="20" end="0" time="700"/>
+				</animation>
+				<animation type="Visible">
+					<effect type="fade" start="0" end="20" time="1000" delay="300"/>
+				</animation>
+				<posx>821</posx>
+				<posy>96</posy>
+				<width>373</width>
+				<height>368</height>
+				<fadetime>400</fadetime>
+				<include>transition2</include>
+				<include>infoDialogHide</include>
+				<include>contextMenuHide</include>
+				<include>grainypagefade</include>
+				<aspectratio align="right" aligny="center">keep</aspectratio>
+				<texture background="true" diffuse="frames/albumFrameMask.png">$INFO[Container(555).ListItem.Icon]</texture>
+				<visible>!IsEmpty(ListItem.Plot)</visible>
+			</control>
+			<!-- icon with plot -->
+			<control type="image" id="5555">
+				<posx>830</posx>
+				<posy>100</posy>
+				<width>360</width>
+				<height>360</height>
+				<fadetime>400</fadetime>
+				<include>transition2</include>
+				<include>infoDialogHide</include>
+				<include>contextMenuHide</include>
+				<include>grainypagefade</include>
+				<aspectratio align="right" aligny="center">keep</aspectratio>
+				<texture background="true" diffuse="frames/albumFrameMask.png">$INFO[Container(555).ListItem.Icon]</texture>
+				<visible>!IsEmpty(ListItem.Plot)</visible>
 			</control>
 		</control>
 		<!-- infos for new list -->

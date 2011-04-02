@@ -172,7 +172,7 @@
 				<control type="button" id="9007">
 					<label>$LOCALIZE[41026]</label>
 					<include>settingsLeftMenuFormat</include>
-					<visible allowhiddenfocus="true">![Control.HasFocus(281) | Control.HasFocus(282) | Control.HasFocus(283) | Control.HasFocus(284) | Control.HasFocus(286)]</visible>
+					<visible allowhiddenfocus="true">![Control.HasFocus(281) | Control.HasFocus(282) | Control.HasFocus(283) | Control.HasFocus(284) | Control.HasFocus(285) | Control.HasFocus(286)]</visible>
 				</control>
 				<control type="button" id="9008">
 					<label>$LOCALIZE[41026]</label>
@@ -275,7 +275,7 @@
 					<selected>Skin.HasSetting(FanartGlobal)</selected>
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
-				<control type="radiobutton" id="222">
+				<!--<control type="radiobutton" id="222">
 					<description>Use Fanart in Music Visualisation Screen</description>
 					<label>$LOCALIZE[41017]</label>
 					<onclick>Skin.ToggleSetting(musicVis)</onclick>
@@ -290,7 +290,7 @@
 					<selected>Skin.HasSetting(musicVisBlend)</selected>
 					<enable>Skin.HasSetting(musicVis)</enable>
 					<include>newHomeMenuSubSettingsButton</include>
-				</control>
+				</control>-->
 				<!--<control type="button" id="224">
 					<description>go to Artists</description>
 					<label>go to Artists</label>
@@ -326,6 +326,7 @@
 					<label>$LOCALIZE[41027]</label>
 					<onclick>Skin.ToggleSetting(retroplexmusicslideshow)</onclick>
 					<selected>Skin.HasSetting(retroplexmusicslideshow)</selected>
+					<enable>![Skin.HasSetting(personalMusicSlideShow) | Skin.HasSetting(fanartMusicSlideShow)]</enable>
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
 				<control type="radiobutton" id="284">
@@ -334,7 +335,15 @@
 					<onclick>Skin.SetPath(PersonalMusicSlideShow)</onclick>
 					<onclick>Skin.ToggleSetting(personalMusicSlideShow)</onclick>
 					<selected>Skin.HasSetting(personalMusicSlideShow)</selected>
-					<enable>!Skin.HasSetting(retroplexmusicslideshow)</enable>
+					<enable>![Skin.HasSetting(retroplexmusicslideshow) | Skin.HasSetting(fanartMusicSlideShow)]</enable>
+					<include>newHomeMenuSubSettingsButton</include>
+				</control>
+				<control type="radiobutton" id="285">
+					<description>Show Fanart slideshow in "Now Playing" screen</description>
+					<label>Show Fanart slideshow in "Now Playing" screen</label>
+					<onclick>Skin.ToggleSetting(fanartMusicSlideShow)</onclick>
+					<selected>Skin.HasSetting(fanartMusicSlideShow)</selected>
+					<enable>![Skin.HasSetting(retroplexmusicslideshow) | Skin.HasSetting(personalMusicSlideShow)]</enable>
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
 				<control type="radiobutton" id="282">

@@ -7,6 +7,7 @@
 		<include>themeBackground2</include>
 		<include condition="Skin.HasSetting(retroplexmusicslideshow)">nowplayingretroplexslideshow</include>
 		<include condition="Skin.HasSetting(personalMusicSlideShow)">nowplayingpersonalslideshow</include>
+		<include condition="Skin.HasSetting(fanartMusicSlideShow)">nowplayingfanartslideshow</include>
 		<!--<control type="image">
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
