@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+	<!-- RETROPLEX SPECIFIC STRINGS -->
+	<!-- SETTINGS -->
+	<!-- Settings Credits -->
+	<string id="31909">Over</string>
+	<!-- !!! NOTE : please be careful about the total length of the translation, the "box" is not dynamic
+	 				and ideally a wording is found that maintains its visual aspect to how it appears in english -->
+	<string id="41000">
+[COLOR=ivory2]Retroplex[/COLOR] is ontworpen, geprogrammeerd en onderhouden door [COLOR=ivory2]Sebastian[/COLOR] (se.bastian).[CR][CR]
+Bij vragen en opmerkingen, bezoek alstublieft de Plex Forums, in het onderdeel skins.[CR]
+Hier kun je ook de laatste updates en nieuws volgen, hulp krijgen en suggesties toevoegen.[CR][CR]
+Om er zeker van te zijn dat je altijd de meest recente versie gebruikt, gebruik [COLOR=ivory2]Preen[/COLOR] om te updaten :[CR]
+http://www.anomiesoftware.com/Anomie_Software/Preen.html[CR][CR][COLOR=ivory2]Hartelijk dank[/COLOR] dat Retroplex jouw goedkeuring weg kan dragen.[CR][CR][CR][CR]
+Extra dank aan :[CR][CR]
+Een extra dankwoord voor [COLOR=ivory2]gedoode[/COLOR] voor alle media gerelateerde symbolen die hij gemaakt heeft.[CR][CR]
+Een extra dankwoord voor [COLOR=ivory2]scottu[/COLOR] voor het uitmuntende retro-licious opstartgeluid.[CR][CR]
+Zonder jullie zou Retroplex nu niet zijn wat het is. Bedankt!
+	</string>
+	<!-- Settings Home -->
+	<string id="31124">Startscherm</string><!-- -->
+	<string id="41001">Toon weervrouw</string>
+	<string id="41002">Toon RSS feed</string>
+	<string id="41003">Alle slideshows uitschakelen</string>
+	<string id="41004">Verberg Retroplex logo</string>
+	<!-- Settings Home Main Menu -->
+	<string id="31961">Hoofdmenu</string><!-- -->
+	<string id="41006">Toon "Zoeken" in het hoofdmenu</string>
+	<string id="41007">Toon "Plex Online" in het hoofdmenu</string>
+	<string id="41008">Toon "iTunes" in het hoofdmenu</string>
+	<string id="41009">Toon "Favorieten" in het hoofdmenu</string>
+	<string id="41010">Toon "Video Plugins" in het hoofdmenu</string>
+	<string id="41011">Toon "Muziek Plugins" in het hoofdmenu</string>
+	<string id="41012">Toon "Afbeeldingen Plugins" in het hoofdmenu</string>
+	<string id="41013">Toon "Programma's" in het hoofdmenu</string>
+	<string id="41014">Toon "Het Weer" in het hoofdmenu</string>
+	<string id="41015">Toon "Retroplex Help" in het hoofdmenu</string>
+	<!-- Settings Fanart -->
+	<string id="41931">Fanart</string>
+	<string id="41016">Fanart uitzetten in bibliotheek weergave</string>
+	<string id="41017">Fanart gebruiken tijdens Muziekvisualisaties</string>
+	<string id="41018">Meng Muziekvisualisaties en Fanart</string>
+	<!-- Settings Views -->
+	<string id="31015">Instellingen</string><!-- -->
+	<string id="31097">Gebruik scrollbalk</string><!-- -->
+	<string id="31055">Verberg scrollbalk tot focus</string><!-- -->
+	<string id="31035">Virtueel toetsenbord gebruiken</string><!-- -->
+	<string id="41019">Onbekeken Icoon : toon voor Films</string>
+	<string id="41020">Onbekeken Icoon : toon voor TV Shows en seizoenen</string>
+	<string id="41021">Onbekeken Icoon : toon voor TV afleveringen</string>
+	<string id="41022">HD Icoon : toon voor alle films</string>
+	<string id="41023">HD Icoon : alleen voor geselecteerd item</string>
+	<string id="41024">Waardering in getallen weergeven in plaats van sterren</string>
+	<string id="41025">Toon de letter uit het alfabet bij snel scrollen</string>
+	<!-- Settings Music Visualizer and Sounds -->
+	<string id="41026">Geluid en muziekvisualisaties</string>
+	<string id="41027">Toon Retroplex Slideshow in "Nu afspelen" scherm</string>
+	<string id="41959">Gebruik eigen Slideshow in "Nu afspelen" scherm</string>
+	<string id="41028">Retroplex Logo verbergen in "Nu afspelen" scherm</string>
+	<string id="41029">Plex opstartscherm uitschakelen</string>
+	<!-- Settings Categories window -->
+	<!-- !!! NOTE : please be careful about the total length of the translation, the "box" is not dynamic
+	 				and ideally a wording is found that maintains its visual aspect to how it appears in english -->
+	<string id="41030">
+Hallo, Retroplex Instellingen is het centrale deel van de skin.[CR][CR]
+Hier kun je alles naar wens instellen, waaronder de skin, maar ook Plex zelf.[CR][CR]
+Selecteer een van de onderdelen aan de rechterzijde.[CR][CR]
+Vraag hulp aan Natalie als je er niet uitkomt.[CR][CR]
+Bedankt.
+	</string>
+	<string id="41932">Opslaan</string>
+	<string id="41933">Terug naar hoofdmenu</string>
+	<!-- HOME -->
+	<!-- Home window Help -->
+	<!-- !!! NOTE : please be careful about the total length of each translation, the "bubbles" are not dynamic
+	 				and ideally a wording is found that maintains their visual aspect to how it appears in english -->
+	<string id="41934">
+Welkom bij Retroplex![CR][CR]
+Mijn naam is Natalie en ik maak je wegwijs.[CR]
+Het is heel makkelijk, bekijk even alle tips.[CR][CR]
+Klik opnieuw op "Retroplex Help" om het uit te schakelen.
+	</string>
+	<string id="41935">
+1. Dit is het hoofdmenu. Het is vrij leeg in het begin, maar je kunt zelf volledig aanpassen wat je wilt weergeven in de skin Instellingen. Na 30 seconden inactiviteit zal het verdwijnen, maar je hoeft maar met de muis te bewegen om het weer tot leven te wekken!
+	</string>
+	<string id="41936">
+2. Er is een extra menu beschikbaar in Retroplex, dat te bereiken is door de cursorknop "links" te gebruiken. Hier vind je contextafhankelijke opties en een snelkoppeling naar de instellingen.[CR][CR]
+Probeer het maar!
+	</string>
+	<string id="41937">
+3. Dit is het extra menu.[CR][CR]
+Hier vind je onderdelen die verborgen zijn in het hoofdmenu en specifieke opties voor de huidige schermweergave. Het werkt in ieder scherm hetzelfde.[CR][CR]
+Omdat je nu in het Hoofdmenu bent, vind je een aantal specifieke opties, waaronder een uitmuntende Retroplex slideshow die je mee terugneemt in de gouden tijden van de film. Probeer het zometeen zeker even uit![CR][CR]
+Dat is het belangrijkste wat je moet weten om met Retroplex overweg te kunnen! Makkelijk toch?[CR][CR]
+Veel plezier!
+	</string>
+	<!-- Home main menu -->
+	<string id="41938">Natalie - Retroplex Help</string>
+	<!-- Home left-side menu -->
+	<string id="41939">Meer :</string>
+	<string id="41940">Hoofdmenu :</string>
+	<string id="41941">Retroplex slideshows AAN</string>
+	<string id="41942">Eigen slideshow instellen</string>
+	<string id="41943">Computer :</string>
+	<string id="41944">Uitschakelen</string>
+	<string id="41945">Slaapstand</string>
+	<string id="41946">Plex Afsluiten</string>
+	<string id="41947">Zoeken</string>
+	<!-- Home menu -->
+	<string id="41980">Playlist Now Playing</string>
+	<string id="41981">Plugins Video</string>
+	<string id="41982">Plugins Music</string>
+	<string id="41983">Plugins Picture</string>
+	<string id="41984">iTunes</string>
+	<!-- Video views left-side menu -->
+	<string id="41948">Bekijk :</string>
+	<string id="31003">Slide</string>
+	<string id="41949">Grote Miniaturen</string>
+	<string id="41950">Kleine Miniaturen</string>
+	<string id="31093">Banners</string>
+	<string id="41951">Multi Banners</string>
+	<string id="41952">Verberg TV Waarderingen</string>
+	<string id="41953">Verberg Film Waarderingen</string>
+	<string id="41954">Verberg Media Iconen</string>
+	<string id="41955">Toon studio logo</string>
+	<string id="41956">Verberg "genre"</string>
+	<!-- iPhoto view left-side menu -->
+	<string id="41957">Miniaturen</string>
+	<!-- iTunes view left-side menu -->
+	<string id="41958">Achtergrond in moderne stijl</string>
+	<!-- END OF RETROPLEX SPECIFIC STRINGS -->
+	<string id="31000"/>
+	<string id="31001">Posters</string>
+	<string id="31002">Gallerij</string>
+	<string id="31004">Show</string>
+	<string id="31006">Accessoires</string>
+	<string id="31007">Programma Instelligen</string>
+	<string id="31008">Web</string>
+	<string id="31009">Miniaturen</string>
+	<string id="31010">Afbeeldingen</string>
+	<string id="31011">Apple Film Trailers</string>
+	<string id="31012">Video Afspeellijst</string>
+	<string id="31013">Afsluiten</string>
+	<string id="31014">Miniaturen</string>
+	<string id="31016">Fanart</string>
+	<string id="31017">Profielen beheren</string>
+	<string id="31018">Aangepast</string>
+	<string id="31019">Miniatuur</string>
+	<string id="31020">Achtergronden</string>
+	<string id="31021">Profielen</string>
+	<string id="31022">Weergaves</string>
+	<string id="31023">TV Shows</string>
+	<string id="31024">Muziek Videos</string>
+	<string id="31025">Toon Media Overlays</string>
+	<string id="31026">Inlogscherm gebruiken</string>
+	<string id="31027">Toon partymodus</string>
+	<string id="31028">Toon huidige video op de Achtergrond</string>
+	<string id="31029">Toon visualisatie op de Achtergrond</string>
+	<string id="31030">Toon Artiesten</string>
+	<string id="31031">Toon Genres</string>
+	<string id="31032">Toon Afspeellijsten</string>
+	<string id="31033">Visuele Instellingen</string>
+	<string id="31034">Toon recent toegevoegde en afgespeelde Albums</string>
+	<string id="31036">Waardering</string>
+	<string id="31037">Eerste letter weergeven tijdens scrollen</string>
+	<string id="31038">Toon recent toegevoegde en afgespeelde Video's</string>
+	<string id="31039">Gebruik Fanart</string>
+	<string id="31040">PAUZE</string>
+	<string id="31041">VOORUIT 2X</string>
+	<string id="31042">VOORUIT 4X</string>
+	<string id="31043">VOORUIT 8X</string>
+	<string id="31044">VOORUIT 16X</string>
+	<string id="31045">VOORUIT 32X</string>
+	<string id="31046">TERUG 2X</string>
+	<string id="31047">TERUG 4X</string>
+	<string id="31048">TERUG 8X</string>
+	<string id="31049">TERUG 16X</string>
+	<string id="31050">TERUG 32X</string>
+	<string id="31051">AFSPELEN</string>
+	<string id="31052">Trailers</string>
+	<string id="31053">Bekijk Trailer</string>
+	<string id="31054">Poster</string>
+	<string id="31057">Gebruik volledig scherm voor afbeeldingsweergave</string>
+	<string id="31058">Volledig Scherm</string>
+	<string id="31059">Terug</string>
+	<string id="31060">Selecteer Zoekmachine</string>
+	<string id="31061">Gebruik Posters</string>
+	<string id="31062">Toon volledig scherm</string>
+	<string id="31063">Toon Strip</string>
+	<string id="31064">Hoog</string>
+	<string id="31065">Laag</string>
+	<string id="31066">Bannerweergave voor TV Shows gebruiken</string>
+	<string id="31067">[LOWERCASE]$INFO[ListItem.VideoResolution]p[/LOWERCASE][UPPERCASE] $INFO[ListItem.VideoCodec][/UPPERCASE][LOWERCASE] - $INFO[ListItem.AudioChannels] $LOCALIZE[31055][/LOWERCASE][UPPERCASE] $INFO[ListItem.AudioCodec][/UPPERCASE]</string>
+	<string id="31068">Eindtijd: $INFO[Player.FinishTime]</string>
+	<string id="31069">Videoinstellingen</string>
+	<string id="31070">Algemeen</string>
+	<string id="31071">Achtergrond</string>
+	<string id="31072">$INFO[ListItem.episode] $LOCALIZE[20360] ($INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[16101])</string>
+	<string id="31073">$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101] $LOCALIZE[20360]]</string>
+	<string id="31074">$INFO[ListItem.Season,$LOCALIZE[20373] , -] $INFO[ListItem.Episode,$LOCALIZE[20359] ]</string>
+	<string id="31075">$INFO[ListItem.Premiered ,$LOCALIZE[31089]: ]</string>
+	<string id="31076">[COLOR=Color3]$LOCALIZE[209] : $INFO[MusicPlayer.offset(1).Artist,, - ]$INFO[MusicPlayer.offset(1).Title][/COLOR]</string>
+	<string id="31077">[COLOR=Color3]$INFO[MusicPlayer.Playlistposition,$LOCALIZE[554]: ]$INFO[MusicPlayer.Playlistlength, / ][/COLOR]</string>
+	<string id="31078">$INFO[Player.Time]$INFO[Player.Duration, / ]</string>
+	<string id="31079">$INFO[ListItem.episode] total ($INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[16101])</string>
+	<string id="31080">[UPPERCASE]$INFO[ListItem.episode] $LOCALIZE[20360][/UPPERCASE]</string>
+	<string id="31081">$INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[16101]</string>
+	<string id="31082">$LOCALIZE[31106] $INFO[MusicPlayer.Artist]</string>
+	<string id="31083">Van Het Album $INFO[MusicPlayer.Album]</string>
+	<string id="31084">[UPPERCASE][COLOR=Color3]Afspelen: [/COLOR] $INFO[VideoPlayer.Title] [COLOR=Color3]van[/COLOR] $INFO[VideoPlayer.TVShowTitle][/UPPERCASE]</string>
+	<string id="31085">$INFO[ListItem.Season ,$LOCALIZE[20373] ] - $INFO[ListItem.Episode ,$LOCALIZE[20359] ]</string>
+	<string id="31086">Bestanden</string>
+	<string id="31087">seizoen</string>
+	<string id="31088">aflevering</string>
+	<string id="31089">Totaal</string>
+	<string id="31090">*</string>
+	<string id="31091">*</string>
+	<string id="31092">Seizoenen</string>
+	<string id="31094">Nieuwe afleveringen</string>
+	<string id="31095">Nieuwe Films</string>
+	<string id="31096">$INFO[VideoPlayer.TVShowTitle,,: ]$INFO[VideoPlayer.Season,$LOCALIZE[20373] , -] $INFO[VideoPlayer.Episode,$LOCALIZE[20359] ]</string>
+	<string id="31098">waardering</string>
+	<string id="31099">Fanart achtergrond aanzetten</string>
+	<string id="31100">Min</string>
+	<string id="31101">Temperatuur</string>
+	<string id="31102">Bookmark</string>
+	<string id="31103">Geen waardering beschikbaar</string>
+	<string id="31104">Toon Details</string>
+	<string id="31105">Geen Details</string>
+	<string id="31106">Met</string>
+	<string id="31107">Don't Flatten</string>
+	<string id="31108">Of</string>
+	<string id="31109">Later</string>
+	<string id="31110">$INFO[ListItem.TVShowTitle,,: ]$INFO[ListItem.Season,$LOCALIZE[20373] , -] $INFO[ListItem.Episode,$LOCALIZE[20359] ]</string>
+	<string id="31111">Playlist Opties</string>
+	<string id="31112">Plot weergeven in Lijstweergave</string>
+	<string id="31113">Shuffle: Uit</string>
+	<string id="31114">Shuffle: Aan</string>
+	<string id="31115">Toon datum</string>
+	<!--settings.xml-->
+	<string id="31120">Playback</string>
+	<string id="31121">Repositories</string>
+	<string id="31122">Plugin</string>
+	<string id="31123">Output</string>
+	<string id="31125">Open instellingenscherm in plaats van menu</string>
+	<string id="31126">Versie</string>
+	<string id="31127">Met</string>
+	<string id="31127">Min</string>
+	<string id="31900">Toon alles</string>
+	<string id="31901">Bestandsweergave</string>
+	<string id="31902">Netwerkinstellingen</string>
+	<string id="31903">Weerinstellingen</string>
+	<string id="31904">Systeeminstellingen</string>
+	<string id="31905">[COLOR=Color2]$LOCALIZE[0][/COLOR] Plugins</string>
+	<string id="31906">[COLOR=Color2]$LOCALIZE[1][/COLOR] Plugins</string>
+	<string id="31907">Verberg Tijd</string>
+	<string id="31908">Achtergronden</string>
+	<string id="31910">Sluit computer af </string>
+	<string id="31911">over 30 min.</string>
+	<string id="31912">over 60 min.</string>
+	<string id="31913">over 120 min.</string>
+	<string id="31914">Plugins</string>
+	<string id="31915">Fanart</string>
+	<string id="31916">Eigen tijd</string>
+	<string id="31917"/>
+	<string id="31920">Toon Onbekeken Icoon in Bestandsweergave</string>
+	<string id="31921">Toon Onbekeken Icoon voor TV Shows</string>
+	<string id="31922">Toon Onbekeken Icoon voor Films</string>
+	<string id="31923">Toon Onbekeken Icoon voor TV Show Seizoenen</string>
+	<string id="31924">Toon Onbekeken Icoon voor afleveringen</string>
+	<string id="31925">[COLOR=Color2]New[/COLOR] Episodes</string>
+	<string id="31926">[COLOR=Color2]New[/COLOR] Movies</string>
+	<string id="31927">Schakel Timer Opties in Afsluitmenu in</string>
+	<string id="31928">[COLOR=Color2]$LOCALIZE[157][/COLOR] Plugins</string>
+	<string id="31929">Alternate Global Fanart Overlay</string>
+	<string id="31930">Choose Viewtype</string>
+	<string id="31931">[COLOR=Color2]New[/COLOR] Music Videos</string>
+	<string id="31932">[COLOR=Color2]New[/COLOR] Albums</string>
+	<string id="31933">Toon Fanart in Lijstweergave</string>
+	<string id="31934">Toon Poster</string>
+	<string id="31935">Toon Fanart</string>
+	<string id="31936">Gebruik Fanart Slideshow</string>
+	<string id="31937">Stel eigen Slideshow in</string>
+	<string id="31938">Toon Reload Skin</string>
+	<string id="31940">Toon Label Extensions In Menu Entries</string>
+	<string id="31941">[COLOR=Color2]Recent[/COLOR] Afgespeeld</string>
+	<string id="31942">[COLOR=Color2]$LOCALIZE[2][/COLOR] Plugins</string>
+	<string id="31943">Shows</string>
+	<string id="31944">Items</string>
+	<string id="31945">Video's</string>
+	<string id="31946">Muziek</string>
+	<string id="31947">Toon "Nu afspelen"</string>
+	<string id="31948">Informatie</string>
+	<string id="31949">Goedenavond</string>
+	<string id="31950">Goedemorgen</string>
+	<string id="31951">Goedenacht</string>
+	<string id="31952">Afsluiten</string>
+	<string id="31953">Toon Trailers</string>
+	<string id="31954">Hoofdmenu Opties</string>
+	<string id="31955">Toon extra's</string>
+	<string id="31956">Toon Applicaties in Hoofdmenu</string>
+	<string id="31957">Toon Weer in Hoofdmenu</string>
+	<string id="31958">Toon Afsluitopties</string>
+	<string id="31959">Toon Favorieten in Hoofdmenu</string>
+	<string id="31960">Toon Scripts In Hoofdmenu</string>
+	<string id="31962">Video Menu</string>
+	<string id="31963">Muziek Menu</string>
+	<string id="31966">Gebruik Weer Fanart</string>
+	<string id="31967">Weer Fanart map</string>
+	<string id="31968">Systeem [COLOR=Color2]Informatie[/COLOR]</string>
+	<string id="31969">Bestands [COLOR=Color2]Beheer[/COLOR]</string>
+	<string id="31970">Nieuwe Albums</string>
+	<string id="31971">Recent afgespeeld</string>
+	<string id="31972">Welterusten</string>
+	<string id="31973">Afspeellijst sneltoets</string>
+	<string id="31974">Groot raster</string>
+	<string id="31975">Klein raster</string>
+	<!--plex-->
+	<string id="31976">Plex Online</string>
+	<string id="31977">RSS Feed uitschakelen</string>
+	<string id="31978"/>
+	<string id="31979">exif</string>
+	<string id="31980">Update Plex</string>
+	<string id="31981">Automatische updates</string>
+	<string id="31982">Video</string>
+	<string id="31983">Geluid</string>
+	<string id="31984">Media Server</string>
+	<string id="31985">Energie besparen</string>
+	<string id="31986">Fanart</string>
+	<string id="31987">Gebruik Tijdgevoelige Slideshow</string>
+	<string id="3300">Stil</string>
+	<string id="33006">Vandaag</string>
+	<string id="33020">Voorwaarde</string>
+</strings>

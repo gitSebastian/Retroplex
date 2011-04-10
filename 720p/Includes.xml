@@ -453,7 +453,7 @@
 			<control type="image">
 				<posx>10</posx>
 				<posy>103</posy>
-				<height>173</height>
+				<height>180</height>
 				<width>460</width>
 				<texture border="100" flipy="true">backgrounds/boxvertbeige5.png</texture>
 				<aspectratio>stretch</aspectratio>

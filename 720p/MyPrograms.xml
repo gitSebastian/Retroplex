@@ -162,7 +162,7 @@
 					<include>transition2</include>
 					<control type="textbox" id="8">
 						<width>450</width>
-						<height>85</height>
+						<height>92</height>
 						<align>left</align>
 						<aligny>top</aligny>
 						<label>$INFO[ListItem.Plot]</label>
