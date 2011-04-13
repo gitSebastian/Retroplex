@@ -79,12 +79,12 @@
 				<item id="2">
 					<description>iTunes</description>
 					<onclick>Plex.ActivateWindow(10501,http://127.0.0.1:32400/music/iTunes/,return)</onclick>
-					<label>iTunes</label>
+					<label>$LOCALIZE[41984]</label>
 					<visible>Skin.HasSetting(showitunesmainmenu)</visible>
 				</item>
 				<item id="3">
 					<description>Search Menu</description>
-					<label>Search</label>
+					<label>$LOCALIZE[41947]</label>
 					<onclick>Plex.ActivateWindow(10051)</onclick>
 					<visible>!Skin.HasSetting(hidesearchmainmenu)</visible>
 				</item>
@@ -96,19 +96,19 @@
 				</item>
 				<item id="5">
 					<description>Video Plugins</description>
-					<label>Plugins Video</label>
+					<label>$LOCALIZE[41981]</label>
 					<onclick>ActivateWindow(6)</onclick>
 					<visible>Skin.HasSetting(showvideoplugsmainmenu)</visible>
 				</item>
 				<item id="6">
 					<description>Music Plugins</description>
-					<label>Plugins Music</label>
+					<label>$LOCALIZE[41982]</label>
 					<onclick>ActivateWindow(MyMusic)</onclick>
 					<visible>Skin.HasSetting(showmusicplugsmainmenu)</visible>
 				</item>
 				<item id="7">
 					<description>Pictures Plugins</description>
-					<label>Plugins Picture</label>
+					<label>$LOCALIZE[41983]</label>
 					<onclick>ActivateWindow(2)</onclick>
 					<visible>Skin.HasSetting(showpicturesplugsmainmenu)</visible>
 				</item>
@@ -180,40 +180,40 @@
 					<visible>!Skin.HasSetting(showfavouritesmainmenu)</visible>
 				</control>
 				<control type="button" id="9081">
-					<label>Search</label>
+					<label>$LOCALIZE[41947]</label>
 					<onclick>Plex.ActivateWindow(10051)</onclick>
 					<include>leftMenuViewOptions</include>
 					<visible>Skin.HasSetting(hidesearchmainmenu)</visible>
 				</control>
 				<control type="button" id="9080">
-					<label>iTunes</label>
+					<label>$LOCALIZE[41984]</label>
 					<onclick>Plex.ActivateWindow(10501,http://127.0.0.1:32400/music/iTunes/,return)</onclick>
 					<include>leftMenuViewOptions</include>
 					<visible>!Skin.HasSetting(showitunesmainmenu)</visible>
 				</control>
 				<control type="button" id="9090">
-					<label>Playlist Now Playing</label>
+					<label>$LOCALIZE[41980]</label>
 					<onclick>ActivateWindow(MusicPlaylist)</onclick>
 					<visible>Player.HasAudio</visible>
 					<include>leftMenuViewOptions</include>
 				</control>
 				<control type="button" id="9003">
 					<description>go to Video Plug-Ins</description>
-					<label>Plugins Video</label>
+					<label>$LOCALIZE[41981]</label>
 					<onclick>ActivateWindow(6)</onclick>
 					<include>leftMenuViewOptions</include>
 					<visible>!Skin.HasSetting(showvideoplugsmainmenu)</visible>
 				</control>
 				<control type="button" id="9004">
 					<description>go to Music Plug-Ins</description>
-					<label>Plugins Music</label>
+					<label>$LOCALIZE[41982]</label>
 					<onclick>ActivateWindow(MyMusic)</onclick>
 					<include>leftMenuViewOptions</include>
 					<visible>!Skin.HasSetting(showmusicplugsmainmenu)</visible>
 				</control>
 				<control type="button" id="9005">
 					<description>go to Picture Plug-Ins</description>
-					<label>Plugins Picture</label>
+					<label>$LOCALIZE[41983]</label>
 					<onclick>ActivateWindow(2)</onclick>
 					<include>leftMenuViewOptions</include>
 					<visible>!Skin.HasSetting(showpicturesplugsmainmenu)</visible>
