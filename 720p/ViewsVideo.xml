@@ -301,7 +301,7 @@
 				<include>contextMenuHide</include>
 				<include>grainypagefade</include>
 				<visible>Control.IsVisible(555) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Window.IsActive(2)</visible>
-				<control type="label">
+				<!--<control type="label">
 					<posx>710</posx>
 					<posy>427</posy>
 					<width>700</width>
@@ -314,7 +314,7 @@
 					<selectedcolor>ivory3</selectedcolor>
 					<scroll>true</scroll>
 					<visible>Container.Content(plugincontent)</visible>
-				</control>
+				</control>-->
 				<control type="group">
 					<posx>700</posx>
 					<posy>465</posy>

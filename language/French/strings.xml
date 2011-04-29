@@ -3,146 +3,137 @@
 	<!-- RETROPLEX SPECIFIC STRINGS -->
 	<!-- SETTINGS -->
 	<!-- Settings Credits -->
-	<string id="31909">About</string>
+	<string id="31909">À propos</string>
 	<!-- !!! NOTE : please be careful about the total length of the translation, the "box" is not dynamic
 	 				and ideally a wording is found that maintains its visual aspect to how it appears in english -->
 	<string id="41000">
-[COLOR=ivory2]Retroplex[/COLOR] is designed, coded and maintained by [COLOR=ivory2]Sebastian[/COLOR] (se.bastian).[CR][CR]
-Please come and discuss it in the Plex community Forums, in the skins section.[CR]
-There you can also follow the latest updates and news, get help and submit suggestions.[CR][CR]
-To ensure you're always having the latest version, please use [COLOR=ivory2]Preen[/COLOR] for updating :[CR]
-http://www.anomiesoftware.com/Anomie_Software/Preen.html[CR][CR][COLOR=ivory2]Thank YOU[/COLOR] for considering Retroplex to be worthy of your delicate eyes.[CR][CR][CR][CR]
-Additional credits :[CR][CR]
-A huge thanks to [COLOR=ivory2]gedoode[/COLOR] for all the wonderful media flags that he has made and donated to Retroplex.[CR][CR]
-A huge thanks to [COLOR=ivory2]scottu[/COLOR] who made and donated the amazing retro-licious startup sound.[CR][CR]
-Without you guys Retroplex just wouldn't be the same. Thanks.
+[COLOR=ivory2]Retroplex[/COLOR] est conçu, codé et maintenu par [COLOR=ivory2]Sebastian[/COLOR] (se.bastian).[CR][CR]
+Vous pouvez discuter de Retroplex dans les forums de la communauté de Plex, dans la section réservée[CR]
+aux thèmes. Vous pouvez également y suivre son évolution, obtenir des infos et de l'aide et même[CR]
+proposer des améliorations.[CR][CR]
+Afin d'être sûr de posséder toujours la dernière version, merci d'utiliser [COLOR=ivory2]Preen[/COLOR] pour les mises à jour :[CR]
+http://www.anomiesoftware.com/Anomie_Software/Preen.html[CR][CR]
+[COLOR=ivory2]Merci[/COLOR] de votre soutien.[CR][CR][CR]
+Remerciements :[CR][CR]
+Un énorme merci à [COLOR=ivory2]gedoode[/COLOR] pour les images "média" fournies à Retroplex.[CR]
+Un énorme merci à [COLOR=ivory2]scottu[/COLOR] pour le fabuleux et rétro-licieux son de démarrage.[CR][CR]
+Sans vous Retroplex ne serait pas ce qu'il est aujourd'hui. Merci.
 	</string>
 	<!-- Settings Home -->
-	<string id="31124">Ecran d'accueil</string>
-	<string id="41001">Show Weather pin-up</string>
-	<string id="41002">Show RSS feed</string>
-	<string id="41003">Turn all slideshows OFF</string>
-	<string id="41004">Hide Retroplex logo</string>
+	<string id="31124">Écran d'accueil</string>
+	<string id="41001">Montrer pin-up météo</string>
+	<string id="41002">Montrer Flux RSS</string>
+	<string id="41003">Désactiver les slideshows</string>
+	<string id="41004">Cacher le logo Retroplex</string>
 	<!-- Settings Home Main Menu -->
 	<string id="31961">Menu principal</string>
-	<string id="41006">Show "Search" in main menu</string>
-	<string id="41007">Show "Plex Online" in main menu</string>
-	<string id="41008">Show "iTunes" in main menu</string>
-	<string id="41009">Show "Favourites" in main menu</string>
-	<string id="41010">Show "Video Plugins" in main menu</string>
-	<string id="41011">Show "Music Plugins" in main menu</string>
-	<string id="41012">Show "Pictures Plugins" in main menu</string>
-	<string id="41013">Show "Programs" in main menu</string>
-	<string id="41014">Show "Weather" in main menu</string>
-	<string id="41015">Show "Retroplex Help" in main menu</string>
+	<string id="41006">Montrer "Recherche" dans le menu principal</string>
+	<string id="41007">Montrer "Plex Online" dans le menu principal</string>
+	<string id="41008">Montrer "iTunes" dans le menu principal</string>
+	<string id="41009">Montrer "Favorites" dans le menu principal</string>
+	<string id="41010">Montrer "Plugins Vidéo" dans le menu principal</string>
+	<string id="41011">Montrer "Plugins Musique" dans le menu principal</string>
+	<string id="41012">Montrer "Plugins Images" dans le menu principal</string>
+	<string id="41013">Montrer "Applications" dans le menu principal</string>
+	<string id="41014">Montrer "Météo" dans le menu principal</string>
+	<string id="41015">Montrer "Aide Retroplex" dans le menu principal</string>
 	<!-- Settings Fanart -->
 	<string id="41931">Fanart</string>
-	<string id="41016">Turn OFF fanart in library views</string>
-	<string id="41017">Use Fanart in Music Visualisation Screen</string>
-	<string id="41018">Blend Music Visualisation and Fanart</string>
+	<string id="41016">Désactiver les Fanart dans la vue bibliothèque</string>
+	<string id="41017">Utiliser les Fanart dans l'écran d'effets de musique</string>
+	<string id="41018">Mélanger effets de musique et Fanart</string>
 	<!-- Settings Views -->
 	<string id="31015">Voir paramètres</string>
 	<string id="31097">Utiliser barre de défilement</string>
 	<string id="31055">Cacher barre défilement jusqu'à focalisation</string>
 	<string id="31035">Autoriser clavier virtuel</string>
-	<string id="41019">Unwatched Icon : show for Movies</string>
-	<string id="41020">Unwatched Icon : show for TV Shows and Seasons</string>
-	<string id="41021">Unwatched Icon : show for TV Show Episodes</string>
-	<string id="41022">HD Icon : show for all movies</string>
-	<string id="41023">HD Icon : show only for Focused Item</string>
-	<string id="41024">Show Ratings as Numerals instead of Stars</string>
-	<string id="41025">Show "First Letter Offset" while fast scrolling the library</string>
+	<string id="41019">Icône Non Vu : Activer pour Films</string>
+	<string id="41020">Icône Non Vu : Activer pour Séries et Saisons</string>
+	<string id="41021">Icône Non Vu : Activer pour Épisodes de séries</string>
+	<string id="41022">Icône HD : Activer pour tous les films</string>
+	<string id="41023">Icône HD : Activer seulement pour l'élément sélectionné</string>
+	<string id="41024">Utiliser des chiffres à la places des étoiles pour la note</string>
+	<string id="41025">Montrer l'initiale du titre lors du défilement rapide</string>
 	<!-- Settings Music Visualizer and Sounds -->
-	<string id="41026">Music Visualizer and Sounds</string>
-	<string id="41027">Show Retroplex slideshow in "Now Playing" screen</string>
-	<string id="41959">Set your own slideshow for "Now Playing" screen</string>
-	<string id="41028">Hide Retroplex logo in "Now Playing" screen</string>
-	<string id="41029">Turn OFF the Startup window (when Plex starts)</string>
+	<string id="41026">Visualiseur de musique et sons</string>
+	<string id="41027">Activer le slideshow Retroplex sur l'écran "En Cours"</string>
+	<string id="41028">Désactiver le logo Retroplex sur l'écran "En Cours"</string>
+	<string id="41029">Désactiver l'écran de démarrage (au lancement de Plex)</string>
 	<!-- Settings Categories window -->
 	<!-- !!! NOTE : please be careful about the total length of the translation, the "box" is not dynamic
 	 				and ideally a wording is found that maintains its visual aspect to how it appears in english -->
 	<string id="41030">
-Hello, Retroplex Settings are the command center of the skin.[CR][CR]
-Here you can tweak everything to your liking, and also set up Plex preferences.[CR][CR]
-Please select one of the main sections on the right.[CR][CR]
-Contact Barbara at our helpdesk should you experience any problems.[CR][CR]
-Thank you.
+Bonjour, Le panneau de Paramètres Retroplex est le centre de commandes du thème.[CR][CR]
+Ici, vous pouvez modifier tout à votre guise. Vous pouvez aussi configurer les préférences de Plex.[CR][CR]
+Sélectionnez une des sections sur la droite.[CR][CR]
+En cas de problème, merci de prendre contact avec Natalie de notre service clientèle.[CR][CR]
 	</string>
-	<string id="41932">Done</string>
-	<string id="41933">Exit settings</string>
+	<string id="41932">OK</string>
+	<string id="41933">Quitter</string>
 	<!-- HOME -->
 	<!-- Home window Help -->
 	<!-- !!! NOTE : please be careful about the total length of each translation, the "bubbles" are not dynamic
 	 				and ideally a wording is found that maintains their visual aspect to how it appears in english -->
 	<string id="41934">
-Hello and welcome to Retroplex![CR][CR]
-My name is Natalie, and i'm here to guide you.[CR]
-It's very simple, just have a look at the hints.[CR][CR]
-To quit Help, just click "Retroplex Help" again.
-	</string>
+Bonjour et bienvenue dans Retroplex ![CR][CR]
+Je m'appelle Natalie et je suis là pour vous guider.[CR]
+C'est très simple, lisez juste ces quelques conseils.[CR]
+Pour quitter l'aide, cliquez sur "Aide Retroplex" à nouveau.</string>
 	<string id="41935">
-1. This is the main menu. It's pretty empty in the beginning, but you can fully customize what shows there in the skin Settings. It fades automatically to invisible after 30 seconds of inactivity, and springs back to life when you do something again, not to worry.
+1. Ceci est le menu principal. Il est assez vide pour le moment, mais vous pouvez entièrement personnaliser ce qui doit apparaître dans les paramètres du thème. Il disparaît automatiquement après 30 secondes d'inactivité et réapparaît au moindre mouvement.
 	</string>
 	<string id="41936">
-2. There is a secondary menu available in Retroplex, that you can always access by pressing "left". There you can find additional options, and access the Settings for example.[CR][CR]
-Go ahead, try it.
+2. Un menu secondaire est disponible dans Retroplex. Vous pouvez y accéder à tout moment en appuyant sur la touche «gauche». Vous y trouverez des options supplémentaires et un accès rapide aux paramètres par exemple.
 	</string>
 	<string id="41937">
-3. So this is the secondary menu.[CR][CR]
-In here, you can access those sections that are not visible in the main menu, and also find specific options concerning the window that you're in at that moment. It works the same everywhere.[CR][CR]
-Since here you're in Home, you'll have a few specific options only for Home screen, of which the lovely Retroplex slideshow that will take you back to the golden age of cinema. You should really try it when finished here.[CR][CR]
-And that's all you need to know to fully master Retroplex. Easy, right?[CR][CR]
-Enjoy the experience.
-	</string>
+3. Ceci est le menu secondaire de Retroplex.[CR][CR]
+Ici, vous pouvez accéder à tout ce qui n'est pas disponible dans le menu principal, ainsi qu'à des options spécifiques concernant la présente fenêtre. Le fonctionnement reste le même partout.[CR][CR]
+Ici vous êtes à l'Accueil, et voyez donc les options spécifiques à l'Accueil, dont le diaporama Retroplex qui vous ramène à l'âge d'or du cinéma. Vous devriez vraiment l'essayer. [CR][CR]
+C'est tout ce que vous devez savoir pour maîtriser pleinement Retroplex.[CR][CR]
+Facile, non ?</string>
 	<!-- Home main menu -->
-	<string id="41938">Natalie - Retroplex Help</string>
+	<string id="41938">Aide Retroplex</string>
 	<!-- Home left-side menu -->
-	<string id="41939">More :</string>
-	<string id="41940">Home :</string>
-	<string id="41941">Turn Retroplex slideshow ON</string>
-	<string id="41942">Set your own slideshow</string>
-	<string id="41943">System :</string>
-	<string id="41944">Shutdown</string>
-	<string id="41945">Sleep</string>
-	<string id="41946">Quit Plex</string>
-	<string id="41947">Search</string>
-	<!-- Home menu -->
-	<string id="41980">Playlist Now Playing</string>
-	<string id="41981">Plugins Video</string>
-	<string id="41982">Plugins Music</string>
-	<string id="41983">Plugins Picture</string>
-	<string id="41984">iTunes</string>
+	<string id="41939">Extra :</string>
+	<string id="41940">Menu Principal :</string>
+	<string id="41941">Activer slideshow Retroplex</string>
+	<string id="41942">Sélectionner votre slideshow</string>
+	<string id="41943">Système :</string>
+	<string id="41944">Éteindre</string>
+	<string id="41945">Veille</string>
+	<string id="41946">Quitter Plex</string>
+	<string id="41947">Recherche</string>
 	<!-- Video views left-side menu -->
-	<string id="41948">View :</string>
+	<string id="41948">Vue :</string>
 	<string id="31003">Slide</string>
-	<string id="41949">Big Thumbnails</string>
-	<string id="41950">Small Thumbnails</string>
-	<string id="31093">Banners</string>
-	<string id="41951">Multi Banners</string>
-	<string id="41952">Hide TV Ratings</string>
-	<string id="41953">Hide Movie Ratings</string>
-	<string id="41954">Hide Media Flags</string>
-	<string id="41955">Show studio logo</string>
-	<string id="41956">Hide "genre" description</string>
+	<string id="41949">Grandes vignettes</string>
+	<string id="41950">Petites vignettes</string>
+	<string id="31093">bannières</string>
+	<string id="41951">Multi bannières</string>
+	<string id="41952">Cacher note Séries TV</string>
+	<string id="41953">Cacher note Films</string>
+	<string id="41954">Cacher infos du média</string>
+	<string id="41955">Cacher le logo du studio</string>
+	<string id="41956">Cacher la description du genre</string>
 	<!-- iPhoto view left-side menu -->
-	<string id="41957">Thumbnails</string>
+	<string id="41957">Vignettes</string>
 	<!-- iTunes view left-side menu -->
-	<string id="41958">Use modern style background</string>
+	<string id="41958">Utiliser un fond d'écran de style moderne</string>
 	<!-- END OF RETROPLEX SPECIFIC STRINGS -->
 	<string id="31000"/>
 	<string id="31001">Posters</string>
-	<string id="31002">Gallerie</string>
+	<string id="31002">Galerie</string>
 	<string id="31003">Diaporama</string>
-	<string id="31004">montrer</string>
+	<string id="31004">Montrer</string>
 	<string id="31006">Accessoires</string>
 	<string id="31007">Paramètres programmes</string>
 	<string id="31008">Web</string>
-	<string id="31009">Thumbs</string>
+	<string id="31009">Vignettes</string>
 	<string id="31010">Images</string>
 	<string id="31011">Apple film Trailers</string>
 	<string id="31012">Liste de lecture vidéo</string>
 	<string id="31013">Sortir</string>
-	<string id="31014">Thumbnails</string>
+	<string id="31014">Vignettes</string>
 	<string id="31016">Fanart</string>
 	<string id="31017">Gestion Profiles</string>
 	<string id="31018">Personnaliser</string>
@@ -162,7 +153,7 @@ Enjoy the experience.
 	<string id="31032">Montrer Playlists</string>
 	<string id="31033">Paramètres d'apparence</string>
 	<string id="31034">Montrer ajouts récents et les albums lus</string>
-	<string id="31036">Rating</string>
+	<string id="31036">Notes</string>
 	<string id="31037">Montrer la première lettre en défilement</string>
 	<string id="31038">Montrer ajouts récents et vidéos lues</string>
 	<string id="31039">Utiliser Fanart</string>
@@ -181,7 +172,7 @@ Enjoy the experience.
 	<string id="31052">Trailers</string>
 	<string id="31053">Lire Trailer</string>
 	<string id="31054">Poster</string>
-	<string id="31057">Utiliser Gallerie plein écran en Viewtype</string>
+	<string id="31057">Utiliser Galerie plein écran en Viewtype</string>
 	<string id="31058">Plein écran</string>
 	<string id="31059">Retour</string>
 	<string id="31060">Sélect Scanner</string>
@@ -211,24 +202,24 @@ Enjoy the experience.
 	<string id="31084">[UPPERCASE][COLOR=Color3]Playing[/COLOR] $INFO[VideoPlayer.Title] [COLOR=Color3]from[/COLOR] $INFO[VideoPlayer.TVmontrerTitle][/UPPERCASE]</string>
 	<string id="31085">$INFO[ListItem.Season ,$LOCALIZE[20373] ] - $INFO[ListItem.Episode ,$LOCALIZE[20359] ]</string>
 	<string id="31086">Fichiers</string>
-	<string id="31087">saison</string>
-	<string id="31088">épisode</string>
+	<string id="31087">Saison</string>
+	<string id="31088">Épisode</string>
 	<string id="31089">Total</string>
 	<string id="31090">*</string>
 	<string id="31091">*</string>
 	<string id="31092">Saisons</string>
 	<string id="31093">Bannières</string>
-	<string id="31094">Nouveaux Episodes</string>
-	<string id="31095">Nouveaux Film</string>
+	<string id="31094">Nouveaux Épisodes</string>
+	<string id="31095">Nouveaux Films</string>
 	<string id="31096">$INFO[VideoPlayer.TVmontrerTitle,,: ]$INFO[VideoPlayer.Season,$LOCALIZE[20373] , -] $INFO[VideoPlayer.Episode,$LOCALIZE[20359] ]</string>
-	<string id="31098">notée</string>
-	<string id="31099">Activer fanart en arrière plan</string>
-	<string id="31100">Min</string>
+	<string id="31098">Notée</string>
+	<string id="31099">Activer Fanart en arrière plan</string>
+	<string id="31100">Min.</string>
 	<string id="31101">Température</string>
-	<string id="31102">Bookmark</string>
-	<string id="31103">Pas de notes disponible</string>
+	<string id="31102">Favoris</string>
+	<string id="31103">Pas de note disponible</string>
 	<string id="31104">Montrer détails</string>
-	<string id="31105">Pas de détails</string>
+	<string id="31105">Cacher détails</string>
 	<string id="31106">Par</string>
 	<string id="31107">Ne pas aplatir</string>
 	<string id="31108">De</string>
@@ -240,7 +231,7 @@ Enjoy the experience.
 	<string id="31114">Aléatoire: On</string>
 	<string id="31115">Afficher la date</string>
 	<!--settings.xml-->
-	<string id="31120">Playback</string>
+	<string id="31120">Lecture</string>
 	<string id="31121">Référentiels</string>
 	<string id="31122">Plugin</string>
 	<string id="31123">Sortie</string>
@@ -257,11 +248,11 @@ Enjoy the experience.
 	<string id="31906">[COLOR=Color2]$LOCALIZE[1][/COLOR] Plugins</string>
 	<string id="31907">Cacher l'heure</string>
 	<string id="31908">Fond d'écran</string>
-	<string id="31909">A propos</string>
-	<string id="31910">Eteindre Système</string>
-	<string id="31911">dans 30 min.</string>
-	<string id="31912">dans 60 min.</string>
-	<string id="31913">dans 120 min.</string>
+	<string id="31909">À propos</string>
+	<string id="31910">Éteindre Système</string>
+	<string id="31911">Dans 30 min.</string>
+	<string id="31912">Dans 60 min.</string>
+	<string id="31913">Dans 120 min.</string>
 	<string id="31914">Plugins</string>
 	<string id="31915">Fanart</string>
 	<string id="31916">Minuteur personnalisé</string>
@@ -271,9 +262,9 @@ Enjoy the experience.
 	<string id="31922">Afficher les indicateurs 'Non vues' pour les films</string>
 	<string id="31923">Afficher les indicateurs 'Non vues' pour les saisons série TV</string>
 	<string id="31924">Afficher les indicateurs 'Non vues' pour les épisodes</string>
-	<string id="31925">[COLOR=Color2]Nouveaux[/COLOR] Episodes</string>
-	<string id="31926">[COLOR=Color2]Nouveaux[/COLOR] films</string>
-	<string id="31927">Activer minuteur pour le menu Eteindre</string>
+	<string id="31925">[COLOR=Color2]Nouveaux[/COLOR] Épisodes</string>
+	<string id="31926">[COLOR=Color2]Nouveaux[/COLOR] Films</string>
+	<string id="31927">Activer minuteur pour le menu Éteindre</string>
 	<string id="31928">[COLOR=Color2]$LOCALIZE[157][/COLOR] Plugins</string>
 	<string id="31929">Alterner les couvertures Fanarts</string>
 	<string id="31930">Choisir le type de vue</string>
@@ -297,7 +288,7 @@ Enjoy the experience.
 	<string id="31949">Bonsoir</string>
 	<string id="31950">Bonjour</string>
 	<string id="31951">Bonjour</string>
-	<string id="31952">Exctinction</string>
+	<string id="31952">Extinction</string>
 	<string id="31953">Afficher Trailers</string>
 	<string id="31954">Options du menu d'accueil</string>
 	<string id="31955">Afficher Accessoires</string>
@@ -322,9 +313,9 @@ Enjoy the experience.
 	<string id="31976">Plex Online</string>
 	<string id="31977">Désactiver flux RSS</string>
 	<string id="31978">-</string>
-	<string id="31979">exif</string>
-	<string id="31980">MAJ Plex</string>
-	<string id="31981">Plex MAJ automatique</string>
+	<string id="31979">Exif</string>
+	<string id="31980">MÀJ Plex</string>
+	<string id="31981">MÀJ Plex automatique</string>
 	<string id="31982">Vidéo</string>
 	<string id="31983">Audio</string>
 	<string id="31984">Media Server</string>
