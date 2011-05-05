@@ -495,7 +495,6 @@
 					<label>HD Icon : show for TV Show Episodes</label>
 					<onclick>Skin.ToggleSetting(enableepisodehdflags)</onclick>
 					<selected>Skin.HasSetting(enableepisodehdflags)</selected>
-					<enable>!Skin.HasSetting(enablehdflags)</enable>
 					<include>newHomeMenuSubSettingsButton</include>
 				</control>
 				<control type="radiobutton" id="269">
