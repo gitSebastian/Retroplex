@@ -202,6 +202,15 @@
 					<include>leftMenuRadioButton</include>
 					<visible>[Control.IsVisible(52) | Control.IsVisible(55) | Control.IsVisible(555) | Control.IsVisible(571)] + Container.Content(movies)</visible>
 				</control>
+				<control type="radiobutton" id="9053">
+					<!--<label>$LOCALIZE[41954]</label>-->
+					<label>Show Media Flags</label>
+					<onclick>Skin.ToggleSetting(showepisodemediaflags)</onclick>
+					<selected>Skin.HasSetting(showepisodemediaflags)</selected>
+					<include>leftMenuViewOptions</include>
+					<include>leftMenuRadioButton</include>
+					<visible>[Control.IsVisible(51) | Control.IsVisible(555)] + Container.Content(episodes)</visible>
+				</control>
 				<!--<control type="radiobutton" id="9053">
 					<label>hide rating</label>
 					<onclick>Container.SetViewMode(52)</onclick>
@@ -333,7 +342,7 @@
 					<onclick>XBMC.SleepSystem()</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
-				<control type="button" id="9074r">
+				<control type="button" id="9074">
 					<description>Quit Plex</description>
 					<label>$LOCALIZE[41946]</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>

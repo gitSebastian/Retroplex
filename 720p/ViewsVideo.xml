@@ -214,16 +214,7 @@
 						<textcolor>ivory3</textcolor>
 						<align>right</align>
 						<visible>!IsEmpty(Container.Property(mixedParents))</visible>
-					</control>
-					<control type="label">
-						<posx>1010</posx>
-						<posy>48</posy>
-						<width>500</width>
-						<font>qlassikMedium1</font>
-						<label>$LOCALIZE[31074,,]$INFO[ListItem.date, &#xB7; ] &#xB7; $INFO[ListItem.Duration,, ]</label>
-						<textcolor>ivory2</textcolor>
-						<align>center</align>
-					</control>
+					</control>					
 				</focusedlayout>
 			</control>
 			<!-- EPISODE LEVEL SPECIFICS -->
@@ -289,6 +280,48 @@
 							<font>titilliumMedium</font>
 						</control>
 					</control>
+				</control>
+				<control type="label">
+					<posx>-50</posx>
+					<posy>295</posy>
+					<width>500</width>
+					<font>qlassikMedium1</font>
+					<label>$LOCALIZE[31074,,]$INFO[ListItem.date, &#xB7; ] &#xB7; $INFO[ListItem.Duration,, ]</label>
+					<textcolor>ivory2</textcolor>
+					<align>center</align>
+					<visible>!Skin.HasSetting(showepisodemediaflags)</visible>
+				</control>
+				<control type="label">
+					<posx>-50</posx>
+					<posy>280</posy>
+					<width>500</width>
+					<font>qlassikMedium1</font>
+					<label>$LOCALIZE[31074,,]$INFO[ListItem.date, &#xB7; ] &#xB7; $INFO[ListItem.Duration,, ]</label>
+					<textcolor>ivory2</textcolor>
+					<align>center</align>
+					<visible>Skin.HasSetting(showepisodemediaflags)</visible>
+				</control>
+				<!-- HD Label -->
+				<control type="image">
+					<posx>382</posx>
+					<posy>207</posy>
+					<width>48</width>
+					<height>27</height>
+					<include>focus_Banner</include>
+					<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+					<aspectratio align="right">keep</aspectratio>
+					<visible>Skin.HasSetting(enableepisodehdflags) + Container.Content(episodes)</visible>
+				</control>
+				<!-- media flags library -->
+				<control type="group">
+					<posx>0</posx>
+					<posy>295</posy>
+					<include>transition2</include>
+					<include>infoDialogHide</include>
+					<include>contextMenuHide</include>
+					<include>grainypagefade</include>
+					<include>typeFlagsEpisodes</include>
+					<visible>Skin.HasSetting(showepisodemediaflags)</visible>
 				</control>
 			</control>
 			<!-- NON-VIDEO/MUSIC LIBRARY SPECIFICS -->
@@ -724,6 +757,15 @@
 					<include>watchedOverlaySmall</include>
 					<visible>Skin.HasSetting(overlayEpisodes)</visible>
 				</control>
+				<control type="image">
+					<posx>40</posx>
+					<posy>112</posy>
+					<width>30</width>
+					<height>17</height>
+					<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+					<aspectratio align="right">keep</aspectratio>
+					<visible>Skin.HasSetting(enableepisodehdflags) + Container.Content(episodes)</visible>
+				</control>
 				<!-- Unfocused TITLE simple -->
 				<control type="label" id="1">
 					<posx>270</posx>
@@ -823,6 +865,16 @@
 					<include>watchedOverlay</include>
 					<visible>Skin.HasSetting(overlayEpisodes)</visible>
 				</control>
+				<control type="image">
+					<posx>28</posx>
+					<posy>206</posy>
+					<width>48</width>
+					<height>27</height>
+					<include>focus_Banner</include>
+					<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+					<aspectratio align="right">keep</aspectratio>
+					<visible>Skin.HasSetting(enableepisodehdflags) + Container.Content(episodes)</visible>
+				</control>				
 				<!--<control type="image">
 					<posx>1090</posx>
 					<posy>64</posy>
@@ -921,7 +973,20 @@
 					<effect type="fade" start="0" end="100" delay="100" time="1200"/>
 				</animation>
 				<visible>Control.IsVisible(51)</visible>
-			</control>
+			</control>			
+		</control>
+		<!-- media flags library -->
+		<control type="group">
+			<posx>850</posx>
+			<posy>255</posy>
+			<visible>![Control.IsVisible(4001) | Control.IsVisible(4002)] + Control.IsVisible(51)</visible>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<include>BigListLeftMenuRightSlide</include>
+			<include>focus_Banner</include>
+			<include>typeFlagsEpisodes</include>
+			<visible>Control.IsVisible(51) + Skin.HasSetting(showepisodemediaflags)</visible>
 		</control>
 	</include>
 	<!-- SLIDE VIEW POSTER -->
