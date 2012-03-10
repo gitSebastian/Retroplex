@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<includes>
+	<!-- startup illustration slideshows -->
+	<include name="startupSlides">
+		<control type="multiimage" id="1">
+			<include>startupBackground</include>
+			<include>fullScreenScale</include>
+			<imagepath background="true">slideshows/startup/</imagepath>
+		</control>
+		<control type="group">
+			<control type="group">
+				<posx>20</posx>
+				<posy>18</posy>
+				<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture background="true">logos/Retroplexlogo2.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<posx>20</posx>
+				<posy>18</posy>
+				<control type="group">
+					<posx>27</posx>
+					<posy>13</posy>
+					<control type="label">
+						<posx>42</posx>
+						<posy>14</posy>
+						<width>200</width>
+						<label>ORIGINAL</label>
+						<font>telegraficoSmallest</font>
+						<height>40</height>
+						<textcolor>ivory2</textcolor>
+					</control>
+					<control type="label">
+						<posx>3</posx>
+						<posy>38</posy>
+						<width>200</width>
+						<label>RETROPLEX</label>
+						<font>dock24</font>
+						<height>40</height>
+						<textcolor>ivory2</textcolor>
+					</control>
+					<control type="label">
+						<posx>39</posx>
+						<posy>63</posy>
+						<width>600</width>
+						<label>UNLIMITED</label>
+						<font>telegraficoSmallest</font>
+						<height>40</height>
+						<textcolor>ivory2</textcolor>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+	<!-- home screen Retroplex & personal slideshows -->
+	<include name="slideshows">
+		<!-- Home Retroplex slideshow -->
+		<control type="multiimage" id="1">
+			<include>fadeinout</include>
+			<include>fullScreenScale</include>
+			<imagepath background="true">../media/slideshows/retroplex/</imagepath>
+			<timeperimage>10000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<visible>Window.IsActive(0) + !Skin.HasSetting(RetroplexSlideShow) + ![Skin.HasSetting(FanartSlideShow) | Skin.HasSetting(personalSlideShow)]</visible>
+			<animation type="WindowOpen">
+				<effect type="fade" start="10" end="100" time="0"/>
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="10" time="0"/>
+			</animation>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="0"/>
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="0"/>
+			</animation>
+		</control>
+		<!-- Home Personal slideshow -->
+		<control type="multiimage" id="1">
+			<include>transition2</include>
+			<include>fullScreenScale</include>
+			<info>Skin.String(SlideShow)</info>
+			<timeperimage>8000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<visible>Window.IsActive(0) + Skin.HasSetting(personalSlideShow) + [!Skin.HasSetting(FanartSlideShow) | Skin.HasSetting(RetroplexSlideShow)]</visible>
+			<include>fadeinout</include>
+		</control>
+	</include>
+	<!-- Now Playing Pin-Up slideshow -->
+	<include name="nowplayingpinupslideshow">
+		<control type="multiimage" id="1">
+			<include>transition2</include>
+			<include>fullScreenScale</include>
+			<imagepath background="true">../media/slideshows/pinups/</imagepath>
+			<timeperimage>15000</timeperimage>
+			<fadetime>2000</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<visible>Window.IsActive(50) + !Skin.HasSetting(fanartMusicSlideShow) + !Skin.HasSetting(personalMusicSlideShow) + !Skin.HasSetting(retroplexmusicslideshow) + Player.HasAudio</visible>
+		</control>
+	</include>
+	<!-- Now Playing Retroplex slideshow -->
+	<include name="nowplayingretroplexslideshow">
+		<control type="multiimage" id="1">
+			<include>transition2</include>
+			<include>fullScreenScale</include>
+			<imagepath background="true">../media/slideshows/retroplex/</imagepath>
+			<timeperimage>8000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<visible>Window.IsActive(50) + !Skin.HasSetting(fanartMusicSlideShow) + !Skin.HasSetting(personalMusicSlideShow) + Skin.HasSetting(retroplexmusicslideshow) + Player.HasAudio</visible>
+		</control>
+	</include>
+	<!-- Now Playing Personal slideshow -->
+	<include name="nowplayingpersonalslideshow">
+		<control type="multiimage" id="1">
+			<include>transition2</include>
+			<include>fullScreenScale</include>
+			<info>Skin.String(PersonalMusicSlideShow)</info>
+			<timeperimage>8000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<visible>Window.IsActive(50) + !Skin.HasSetting(fanartMusicSlideShow) + Skin.HasSetting(personalMusicSlideShow) + !Skin.HasSetting(retroplexmusicslideshow) + Player.HasAudio</visible>
+			<include>fadeinout</include>
+		</control>
+	</include>
+	<!-- Now Playing Fanart slideshow -->
+	<!-- not sure it's working for the moment, will need to find the paths again -->
+	<!--><include name="nowplayingfanartslideshow">
+		<control type="multiimage" id="1">
+			<include>transition2</include>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>scale</aspectratio>
+			<aligny>top</aligny>
+			<imagepath background="true">../../../userdata/Thumbnails/PlexMediaServer/Media/Artists/</imagepath>
+			<timeperimage>8000</timeperimage>
+			<fadetime>1000</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<visible>Window.IsActive(50) + Skin.HasSetting(fanartMusicSlideShow) + !Skin.HasSetting(personalMusicSlideShow) + !Skin.HasSetting(retroplexmusicslideshow) + Player.HasAudio</visible>
+		</control>
+	</include>-->
+</includes>

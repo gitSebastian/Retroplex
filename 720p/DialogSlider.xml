@@ -14,6 +14,7 @@
 			<include>dialogWindow</include>
 		</control>
 		<control type="label" id="10">
+			<posy>22</posy>
 			<description>heading label</description>
 			<width>417</width>
 			<scroll>true</scroll>
@@ -21,31 +22,33 @@
 		</control>
 		<control type="image">
 			<posx>34</posx>
-			<posy>42</posy>
+			<posy>22</posy>
 			<width>32</width>
 			<height>32</height>
 			<texture>dialogs/scrollLeftIndicator.png</texture>
+			<colordiffuse>FF555555</colordiffuse>
 			<aspectratio>keep</aspectratio>
 			<include>fadeinout</include>
 		</control>
 		<control type="image">
 			<posx>419</posx>
-			<posy>42</posy>
+			<posy>22</posy>
 			<width>32</width>
 			<height>32</height>
 			<texture>dialogs/scrollRightIndicator.png</texture>
+			<colordiffuse>FF777777</colordiffuse>
 			<aspectratio>keep</aspectratio>
 			<include>fadeinout</include>
 		</control>
 		<control type="label" id="12">
 			<description>Slider Value</description>
 			<posx>34</posx>
-			<posy>60</posy>
+			<posy>80</posy>
 			<width>417</width>
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>normalLow</font>
-			<textcolor>Color4</textcolor>
+			<textcolor>ivory1</textcolor>
 		</control>
 		<control type="slider" id="11">
 			<description>Slider</description>

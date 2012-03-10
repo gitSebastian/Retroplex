@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+	<?xml version="1.0"?>
 <window id="106">
 	<defaultcontrol>1000</defaultcontrol>
 	<include>dialogOpen</include>
@@ -15,7 +15,7 @@
 			<posy>-30</posy>
 			<width>347</width>
 			<height>30</height>
-			<texture border="10">dialogs/dialogtop.png</texture>
+			<texture border="15">dialogs/dialogtop.png</texture>
 			<animation effect="fade" start="0" end="100" time="250">WindowOpen</animation>
 		</control>
 		<control type="image" id="999">
@@ -23,24 +23,17 @@
 			<posx>1</posx>
 			<posy>0</posy>
 			<width>347</width>
-			<texture border="10">dialogs/dialogmiddle.png</texture>
-			<animation effect="fade" start="0" end="95" time="250">WindowOpen</animation>
+			<texture border="5">dialogs/dialogmiddle.png</texture>
+			<animation effect="fade" start="0" end="100" time="250">WindowOpen</animation>
 		</control>
 		<control type="image" id="998">
 			<description>background bottom image</description>
 			<posx>1</posx>
 			<posy>145</posy>
 			<width>347</width>
-			<height>35</height>
-			<texture border="10">dialogs/dialogbottom.png</texture>
-			<animation effect="fade" start="0" end="95" time="250">WindowOpen</animation>
-		</control>
-		<control type="image" id="1">
-			<posx>18</posx>
-			<posy>0</posy>
-			<width>335</width>
-			<height>1</height>
-			<texture>dialogs/separator.png</texture>
+			<height>30</height>
+			<texture border="15">dialogs/dialogbottom.png</texture>
+			<animation effect="fade" start="0" end="100" time="250">WindowOpen</animation>
 		</control>
 		<control type="button" id="1000">
 			<description>button template</description>

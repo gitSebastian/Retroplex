@@ -1,5 +1,29 @@
 <?xml version="1.0"?>
 <includes>
+	<!-- new big list focused title fade-in -->
+	<include name="grainybiglisttextfade">
+		<animation type="Unfocus" condition="Container.OnNext">
+			<effect type="fade" start="0" end="100" delay="200" time="100"/>
+		</animation>
+		<animation type="Unfocus" condition="Container.OnPrevious">
+			<effect type="fade" start="0" end="100" delay="200" time="100"/>
+		</animation>
+	</include>
+	<!-- page fade-in -->
+	<!-- view_ListVideo, view_BigList, view_BigList, view_Poster, view_PosterInfo -->
+	<include name="grainypagefade">
+		<animation type="Focus">
+			<effect type="fade" start="0" end="100" delay="50" time="700"/>
+		</animation>
+	</include>
+	<!-- page zoom-in -->
+	<!-- no pages -->
+	<include name="grainypagezoom">
+		<animation type="Conditional" condition="Control.HasFocus(57)">
+			<effect type="zoom" time="400" center="640,360" start="50" end="100" tween="cubic" easing="out"/>
+			<effect type="fade" time="400" center="640,360" start="0" end="100"/>
+		</animation>
+	</include>
 	<!-- CUSTOM -->
 	<include name="viewZapper">
 		<animation type="Visible">
@@ -7,6 +31,97 @@
 		</animation>
 		<animation type="Hidden">
 			<effect type="fade" start="100" end="0" time="1000"/>
+		</animation>
+	</include>
+	<!-- home new menus slide animations -->
+	<include name="focus_newlist_top">
+		<animation type="focus">
+			<effect type="zoom" center="140,55" tween="Linear" start="100,100" end="120,120" easing="out" reversible="true" time="200"/>
+			<animation effect="fade" start="0" end="100" time="100" condition="true">Conditional</animation>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" center="140,55" tween="Linear" start="120,120" end="100,100" easing="in" reversible="true" time="200"/>
+			<animation effect="fade" start="100" end="0" time="100" condition="true">Conditional</animation>
+		</animation>
+	</include>
+	<include name="focus_newlist_top_card">
+		<animation type="focus">
+			<effect type="zoom" center="140,-80" tween="Linear" start="83,92" end="100,100" easing="out" reversible="true" time="200"/>
+			<animation effect="fade" start="30" end="100" time="100" condition="true">Conditional</animation>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" center="140,-80" tween="Linear" start="100,100" end="83,92" easing="in" reversible="true" time="200"/>
+			<animation effect="fade" start="100" end="30" time="100" condition="true">Conditional</animation>
+		</animation>
+	</include>
+	<include name="focus_newlist_top_text">
+		<animation type="focus">
+			<effect type="zoom" center="137,100" tween="Linear" start="80,78" end="100,100" easing="out" reversible="true" time="200"/>
+			<animation effect="fade" start="20" end="100" time="100" delay="0" condition="true">Conditional</animation>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" center="137,100" tween="Linear" start="100,100" end="80,78" easing="in" reversible="true" time="200"/>
+			<animation effect="fade" start="100" end="20" time="100" condition="true">Conditional</animation>
+		</animation>
+	</include>
+	<include name="focus_newlist_bottom">
+		<animation type="focus">
+			<effect type="zoom" center="140,195" tween="Linear" start="100,100" end="120,120" easing="out" reversible="true" time="200"/>
+			<animation effect="fade" start="0" end="100" time="200" condition="true">Conditional</animation>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" center="140,195" tween="Linear" start="120,120" end="100,100" easing="in" reversible="true" time="200"/>
+			<animation effect="fade" start="100" end="0" time="100" condition="true">Conditional</animation>
+		</animation>
+	</include>
+	<include name="focus_newlist_bottom_card">
+		<animation type="focus">
+			<effect type="zoom" center="140,350" tween="Linear" start="83,92" end="100,100" easing="out" reversible="true" time="200"/>
+			<animation effect="fade" start="30" end="100" time="100" condition="true">Conditional</animation>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" center="140,350" tween="Linear" start="100,100" end="83,92" easing="in" reversible="true" time="200"/>
+			<animation effect="fade" start="100" end="30" time="100" condition="true">Conditional</animation>
+		</animation>
+	</include>
+	<include name="focus_newlist_bottom_text">
+		<animation type="focus">
+			<effect type="zoom" center="126,330" tween="Linear" start="75,78" end="100,100" easing="out" reversible="true" time="200"/>
+			<animation effect="fade" start="20" end="100" time="100" condition="true">Conditional</animation>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" center="126,330" tween="Linear" start="100,100" end="75,78" easing="in" reversible="true" time="200"/>
+			<animation effect="fade" start="100" end="20" time="100" condition="true">Conditional</animation>
+		</animation>
+	</include>
+	<include name="focus_newlist_square_bottom">
+		<animation type="focus">
+			<effect type="zoom" center="120,150" tween="Linear" start="100,100" end="130,130" easing="out" reversible="true" time="200"/>
+			<animation effect="fade" start="0" end="100" time="100" condition="true">Conditional</animation>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" center="120,150" tween="Linear" start="130,130" end="100,100" easing="in" reversible="true" time="200"/>
+			<animation effect="fade" start="100" end="0" time="100" condition="true">Conditional</animation>
+		</animation>
+	</include>
+	<include name="focus_newlist_wide_top">
+		<animation type="focus">
+			<effect type="zoom" center="40,90" tween="Linear" start="100,100" end="120,120" easing="out" reversible="true" time="200"/>
+			<animation effect="fade" start="0" end="100" time="100" condition="true">Conditional</animation>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" center="40,90" tween="Linear" start="120,120" end="100,100" easing="in" reversible="true" time="200"/>
+			<animation effect="fade" start="100" end="0" time="100" condition="true">Conditional</animation>
+		</animation>
+	</include>
+	<include name="focus_newlist_wide_bottom">
+		<animation type="focus">
+			<effect type="zoom" center="40,140" tween="Linear" start="100,100" end="120,120" easing="out" reversible="true" time="200"/>
+			<animation effect="fade" start="0" end="100" time="100" condition="true">Conditional</animation>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" center="40,140" tween="Linear" start="120,120" end="100,100" easing="in" reversible="true" time="200"/>
+			<animation effect="fade" start="100" end="0" time="100" condition="true">Conditional</animation>
 		</animation>
 	</include>
 	<!-- Home screen left menu animations -->
@@ -25,12 +140,6 @@
 		<animation effect="slide" start="0" end="300" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
 		<animation effect="slide" start="300" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
 		<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus()">Conditional</animation>
-	</include>	
-	<!-- Weather left menu animations -->
-	<include name="WeatherLeftMenuSlide">
-		<animation effect="slide" start="0" end="193" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
-		<animation effect="slide" start="193" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
-		<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus() | Control.HasFocus(1110) | Control.HasFocus(1130) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
 	</include>
 	<!-- Library logo animations -->
 	<include name="LibraryLeftMenuLogoSlide">
@@ -79,7 +188,7 @@
 	</include>
 	<include name="ThumbnailsPhotosLeftMenuThumbsSlide">
 		<animation effect="slide" start="0" end="213" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
-		<animation effect="slide" start="213" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
+		<animation effect="slide" start="180" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
 		<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus() | Control.HasFocus(1110) | Control.HasFocus(1130) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
 	</include>
 	<!-- Slide Posters left menu animations -->
@@ -112,16 +221,20 @@
 	</include>
 	<!-- Multi-banners left menu animations -->
 	<include name="MultibannersLeftMenuSlide">
-		<animation effect="slide" start="0" end="130" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
-		<animation effect="slide" start="130" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
+		<animation effect="slide" start="0" end="250" time="445" delay="30"  condition="ControlGroup(9100).HasFocus()">Conditional</animation>
 		<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus()">Conditional</animation>
 	</include>
 	<!-- Multi-banners studio logo left menu animations -->
 	<include name="MultibannersStudioLogoLeftMenuSlide">
-		<animation effect="slide" start="0" end="150" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
-		<animation effect="slide" start="150" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
+		<animation effect="slide" start="0" end="290" time="445" delay="30" tween="Linear" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="400" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus()">Conditional</animation>
+	</include>
+	<!-- Multi-banners infos left menu animations -->
+	<include name="MultibannersInfosRightSlide">
+		<animation effect="slide" start="0" end="350" time="445" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
+		<animation effect="slide" start="350" end="0" time="350" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
 		<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus()">Conditional</animation>
-	</include>	
+	</include>
 	<!-- Big List left menu animations -->
 	<include name="BigListLeftMenuRightSlide">
 		<animation effect="slide" start="0" end="450" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
@@ -138,7 +251,7 @@
 		<animation effect="slide" start="0" end="250" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
 		<animation effect="slide" start="250" end="0" time="500" condition="!ControlGroup(9100).HasFocus()">Conditional</animation>
 		<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus()">Conditional</animation>
-	</include>	
+	</include>
 	<!-- Page Labels left menu animations -->
 	<include name="PageLabelsLeftMenuSlide">
 		<animation effect="slide" start="0" end="160" time="500" condition="ControlGroup(9100).HasFocus()">Conditional</animation>
@@ -159,18 +272,37 @@
 	<!-- LEFT MENU ANIMATIONS -->
 	<include name="leftMenuSlide">
 		<!-- HOME -->
-		<animation effect="slide" start="162" end="0" time="500" condition="Window.IsActive(0) + Control.HasFocus(300)">Conditional</animation>
-		<animation effect="slide" start="0" end="162" time="500" condition="Window.IsActive(0) + !Control.HasFocus(300)">Conditional</animation>
+		<animation effect="slide" start="162" end="0" time="500" condition="Window.IsActive(0) + [Control.HasFocus(300) | [ControlGroup(5000).HasFocus()]]">Conditional</animation>
+		<animation effect="slide" start="0" end="162" time="500" condition="Window.IsActive(0) + !Control.HasFocus(300) + ![ControlGroup(5000).HasFocus()]">Conditional</animation>
 		<!-- -->
-		<animation effect="slide" start="162" end="0" time="500" condition="!ControlGroup(300).HasFocus() | Window.IsVisible(134)">Conditional</animation>
+		<animation effect="slide" start="162" end="0" time="500" condition="!ControlGroup(300).HasFocus() | Window.IsVisible(134) + ![ControlGroup(5000).HasFocus()]">Conditional</animation>
+		<animation effect="slide" start="0" end="162" time="500" condition="ControlGroup(300).HasFocus()">Conditional</animation>
+	</include>
+	<include name="cutieLeftMenuSlide">
+		<!-- HOME -->
+		<animation effect="slide" start="162" end="0" time="500" condition="Window.IsActive(0) + [Control.HasFocus(300) | [ControlGroup(5000).HasFocus()]]">Conditional</animation>
+		<animation effect="slide" start="0" end="162" time="500" condition="Window.IsActive(0) + !Control.HasFocus(300) + ![ControlGroup(5000).HasFocus()]">Conditional</animation>
+		<!-- -->
+		<animation effect="slide" start="162" end="0" time="500" condition="!ControlGroup(300).HasFocus() | Window.IsVisible(134) + ![ControlGroup(5000).HasFocus()]">Conditional</animation>
 		<animation effect="slide" start="0" end="162" time="500" condition="ControlGroup(300).HasFocus()">Conditional</animation>
 	</include>
 	<!-- HOME MENU & MAIN HELP ANIMATIONS -->
 	<include name="homeMenuFade">
-		<animation effect="fade" start="100" end="0" time="350" condition="System.IdleTime(30) + !Skin.HasSetting(showmainhelp)">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="350" condition="Window.IsActive(0) + System.IdleTime(30) + !Skin.HasSetting(showmainhelp)">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="350" condition=" ControlGroup(5000).HasFocus">Conditional</animation>
+	</include>
+	<include name="homelistsfade">
+		<animation effect="fade" start="100" end="100" time="350" condition="Window.IsActive(0) + !ControlGroup(5000).HasFocus">Conditional</animation>
+	</include>
+	<include name="homeMenuFade2">
+		<animation effect="fade" start="100" end="0" time="350" condition="Window.IsActive(0) + System.IdleTime(30) + [!Skin.HasSetting(showmainhelp) + !ControlGroup(5000).HasFocus()]">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="350" condition="Window.IsActive(0) + System.IdleTime(120) + !Skin.HasSetting(showmainhelp) + ControlGroup(5000).HasFocus()">Conditional</animation>
+	</include>
+	<include name="homeMenuFade3">
+		<animation effect="fade" start="0" end="100" time="350" condition="Window.IsActive(0) + System.IdleTime(30)">Conditional</animation>
 	</include>
 	<include name="homeLogoFade">
-		<animation effect="fade" start="100" end="60" time="350" condition="System.IdleTime(30) + !Skin.HasSetting(showmainhelp)">Conditional</animation>
+		<animation effect="fade" start="100" end="60" time="350" condition="Window.IsActive(0) + System.IdleTime(30) + !Skin.HasSetting(showmainhelp)">Conditional</animation>
 	</include>
 	<!-- GENERAL -->
 	<include name="thumbFadeTime">
@@ -228,7 +360,7 @@
 		</animation>
 	</include>
 	<!-- VIEWTYPE -->
-	<!-- CUSTOM GRAINY EDITION ANIMATIONS -->
+	<!-- CUSTOM ANIMATIONS -->
 	<!-- option "no effects" -->
 	<!-- THUMBNAILS BIG -->
 	<include name="focus_Poster">
@@ -263,15 +395,28 @@
 			<effect type="fade" center="auto" start="100" end="0" time="150" tween="back" easing="out"/>
 		</animation>
 	</include>
-	<!-- SLIDE -->
+	
+	<!-- home new menus slide animations -->
 	<include name="focus_SlidePoster">
-		<animation type="focus">			
-			<effect type="zoom" center="0,40" tween="quadratic" start="120,120" end="190,190" easing="in" reversible="false" time="400"/>
+		<animation type="focus">
+			<effect type="fade" start="40" end="100" time="300" delay="20"/>
+			<effect type="zoom" center="35,40" tween="Linear" start="100,100" end="190,190" easing="out" reversible="true" time="400"/>
 		</animation>
 		<animation type="unfocus">
-			<effect type="zoom" center="0,40" tween="Cubic" start="150,150" end="100,100" easing="Out" reversible="false" time="500"/>
+			<effect type="fade" start="20" end="80" time="200" delay="70"/>
+			<effect type="zoom" center="0,0" tween="Quadratic" start="140,140" end="100,100" easing="out" reversible="true" time="300"/>
 		</animation>
 	</include>
+	
+	<!-- SLIDE -->
+	<!--><include name="focus_SlidePoster">
+		<animation type="focus">
+			<effect type="zoom" center="20,25" tween="Cubik" start="54,54" end="100,100" easing="out" reversible="false" time="350"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" center="20,25" tween="Cubik" start="70,70" end="54,54" easing="in" reversible="false" time="350"/>
+		</animation>
+	</include>-->
 	<include name="focus_SlidePosterFlags">
 		<animation type="focus">
 			<effect type="fade" start="0" end="100" time="0" delay="500"/>
@@ -282,7 +427,7 @@
 			<effect type="zoom" center="0,240" tween="Cubic" start="120,120" end="100,100" easing="Out" reversible="false" time="500"/>
 		</animation>
 	</include>
-	<!-- END CUSTOM NOSTALGIA ANIMATIONS -->
+	<!-- END CUSTOM ANIMATIONS -->
 	<include name="homeRecentThumb">
 		<animation effect="zoom" tween="Back" start="100" end="130" center="110,80" time="200">Focus</animation>
 	</include>
@@ -360,6 +505,20 @@
 		</animation>
 	</include>
 	<include name="transition2">
+		<!--><animation type="WindowOpen">
+			<effect type="fade" time="500" start="0" end="100"/>
+		</animation>
+		<animation type="WindowClose">
+			<effect type="fade" time="0" start="100" end="0"/>
+		</animation>
+		<animation type="Visible">
+			<effect type="fade" time="500" start="0" end="100"/>
+		</animation>
+		<animation type="Hidden">
+			<effect type="fade" time="0" start="100" end="0"/>
+		</animation>-->
+	</include>
+	<include name="transition2_">
 		<animation type="WindowOpen">
 			<effect type="zoom" time="300" center="640,360" start="180" end="100" tween="cubic" easing="out"/>
 			<effect type="fade" time="300" center="640,360" start="0" easing="out" end="100"/>
@@ -377,7 +536,7 @@
 			<effect type="fade" time="250" center="640,360" start="100" easing="in" end="0"/>
 		</animation>
 	</include>
-	<include name="transition2.5">
+	<include name="transition2.5_">
 		<animation type="WindowOpen" condition="Skin.HasSetting(FanartGlobal) | Skin.HasSetting(backgroundVideoGlobal)">
 			<effect type="zoom" time="400" center="640,360" start="180" end="100" tween="cubic" easing="out"/>
 			<effect type="fade" time="400" center="640,360" start="0" easing="out" end="95"/>
@@ -396,14 +555,14 @@
 		</animation>
 	</include>
 	<include name="transition3">
-		<animation type="WindowOpen">
+		<!--><animation type="WindowOpen">
 			<effect type="zoom" time="400" center="640,360" start="50" end="100" tween="cubic" easing="out"/>
 			<effect type="fade" time="400" center="640,360" start="0" end="100"/>
 		</animation>
 		<animation type="WindowClose">
 			<effect type="zoom" time="250" center="640,360" start="100" end="50" tween="cubic" easing="in"/>
 			<effect type="fade" time="250" center="640,360" start="100" end="0"/>
-		</animation>
+		</animation>-->
 	</include>
 	<!-- TOGGLES / SELECTS -->
 	<include name="pagemenus">
@@ -419,11 +578,9 @@
 	</include>
 	<include name="dialogOpen">
 		<animation type="WindowOpen">
-			<effect type="zoom" start="80" end="100" center="640,360" tween="back" time="350"/>
 			<effect type="fade" start="0" end="100" time="400"/>
 		</animation>
 		<animation type="WindowClose">
-			<effect type="zoom" start="100" end="90" center="640,360" time="150"/>
 			<effect type="fade" start="100" end="0" time="200"/>
 		</animation>
 		<!--animation type="Visible">
@@ -513,6 +670,7 @@
 		<animation type="Hidden">
 			<effect type="slide" start="0,0" end="0,75" tween="Cubic" easing="In" time="150"/>
 		</animation>
+		<!--<animation effect="slide" start="0,0" end="0,75" tween="Cubic" easing="In" time="150" condition="System.IdleTime(5)">Conditional</animation>-->
 	</include>
 	<include name="open_PlayerControls">
 		<animation type="WindowOpen">

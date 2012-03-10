@@ -2,8 +2,7 @@
 	<defaultcontrol>888</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
-		<include>themeBackground2</include>
-		<include>newlogo</include>
+		<include>Backgrounds</include>
 		<control type="image">
 			<posy>160</posy>
 			<posx>360</posx>
@@ -12,8 +11,7 @@
 			<include>transition2</include>
 			<texture border="100" flipy="true">settings/activesectionbgsansarrow.png</texture>
 		</control>
-		<include>grainyeditionback</include>
-		<include>settingstypologo</include>
+		<include>retroOverlay</include>
 		<include>allscreens</include>
 		<!-- settings icons -->
 		<control type="image">
@@ -67,14 +65,14 @@
 			<posy>520</posy>
 			<aspectratio>keep</aspectratio>
 			<include>transition2</include>
-			<texture background="true">settings/weather.png</texture>
-			<visible>Window.IsActive(weathersettings)</visible>
+			<texture background="true">settings/network.png</texture>
+			<visible>Window.IsActive(networksettings)</visible>
 		</control>
 		<!-- type separator -->
 		<control type="label">
-			<posx>790</posx>
+			<posx>355</posx>
 			<posy>105</posy>
-			<width>100</width>
+			<width>925</width>
 			<label>y</label>
 			<font>nymphetteMedium</font>
 			<textcolor>chocolate</textcolor>
@@ -86,9 +84,9 @@
 		</control>
 		<!-- type separator -->
 		<control type="label">
-			<posx>790</posx>
+			<posx>355</posx>
 			<posy>630</posy>
-			<width>100</width>
+			<width>925</width>
 			<label>B</label>
 			<font>nymphetteMedium</font>
 			<textcolor>chocolate</textcolor>
@@ -106,41 +104,37 @@
 			</control>
 			<control type="label">
 				<include>settingsPageLabel</include>
-				<label>&#xB7; $LOCALIZE[5] : $LOCALIZE[480] &#xB7;</label>
+				<label>&#xB7; $LOCALIZE[480] &#xB7;</label>
 				<visible>Window.IsActive(appearancesettings)</visible>
 			</control>
 			<control type="label">
 				<include>settingsPageLabel</include>
-				<label>&#xB7; $LOCALIZE[157] : $LOCALIZE[5] &#xB7;</label>
+				<label>&#xB7; $LOCALIZE[157] &#xB7;</label>
 				<visible>Window.IsActive(videossettings)</visible>
 			</control>
 			<control type="label">
 				<include>settingsPageLabel</include>
-				<label>&#xB7; $LOCALIZE[0] : $LOCALIZE[5] &#xB7;</label>
+				<label>&#xB7; $LOCALIZE[0] &#xB7;</label>
 				<visible>Window.IsActive(programssettings)</visible>
 			</control>
 			<control type="label">
 				<include>settingsPageLabel</include>
-				<label>&#xB7; $LOCALIZE[2] : $LOCALIZE[5] &#xB7;</label>
+				<label>&#xB7; $LOCALIZE[2] &#xB7;</label>
 				<visible>Window.IsActive(musicsettings)</visible>
 			</control>
 			<control type="label">
 				<include>settingsPageLabel</include>
-				<label>&#xB7; $LOCALIZE[1] : $LOCALIZE[5] &#xB7;</label>
+				<label>&#xB7; $LOCALIZE[1] &#xB7;</label>
 				<visible>Window.IsActive(picturessettings)</visible>
 			</control>
 			<control type="label">
 				<include>settingsPageLabel</include>
-				<label>&#xB7; $LOCALIZE[705] : $LOCALIZE[5] &#xB7;</label>
+				<label>&#xB7; $LOCALIZE[705] &#xB7;</label>
 				<visible>Window.IsActive(networksettings)</visible>
 			</control>
 			<control type="label">
 				<include>settingsPageLabel</include>
-				<label>&#xB7; $LOCALIZE[12600] : $LOCALIZE[5] &#xB7;</label>
-				<visible>Window.IsActive(weathersettings)</visible></control>
-			<control type="label">
-				<include>settingsPageLabel</include>
-				<label>&#xB7; $LOCALIZE[13000] : $LOCALIZE[5] &#xB7;</label>
+				<label>&#xB7; $LOCALIZE[13000] &#xB7;</label>
 				<visible>Window.IsActive(systemsettings)</visible>
 			</control>
 		</control>
@@ -160,9 +154,9 @@
 			</control>
 			<control type="grouplist" id="5">
 				<description>control area</description>
-				<posx>425</posx>
+				<posx>415</posx>
 				<posy>200</posy>
-				<width>770</width>
+				<width>783</width>
 				<height>595</height>
 				<itemgap>0</itemgap>
 				<onleft>3</onleft>
@@ -174,16 +168,16 @@
 			</control>
 			<control type="button" id="7">
 				<description>Default Button</description>
-				<include>newHomeMenuSubSettingsButton</include>
+				<include>MenuSubSettingsButton</include>
 			</control>
 			<control type="radiobutton" id="8">
 				<description>Default RadioButton</description>
-				<include>newHomeMenuSubSettingsButton</include>
+				<include>MenuSubSettingsButton</include>
 			</control>
 			<control type="spincontrolex" id="9">
 				<description>Default SpinControlex</description>
 				<colordiffuse>Color1</colordiffuse>
-				<include>newHomeMenuSubSettingsSpincontrol</include>
+				<include>MenuSubSettingsSpincontrol</include>
 			</control>
 			<control type="button" id="10">
 				<description>Default Category Button</description>
@@ -191,6 +185,6 @@
 				<include>settingsLeftMenuFormat</include>
 			</control>
 		</control>
-		<include>settingslogo</include>
+		<include>RetroplexLogo</include>
 	</controls>
 </window>

@@ -1,0 +1,319 @@
+<?xml version="1.0"?>
+<includes>
+	<!-- formatting -->
+	<include name="BiglistMenuUnfocused">
+		<posx>710</posx>
+		<posy>-3</posy>
+		<width>770</width>
+		<height>46</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>qlassikMedium1</font>
+		<textcolor>ivory2</textcolor>
+		<shadowcolor>ff333333</shadowcolor>
+	</include>
+	<include name="BiglistMenuFocused">
+		<width>770</width>
+		<height>50</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>lobsterMedium</font>
+		<scroll>true</scroll>
+		<textcolor>oldBlue2</textcolor>
+		<shadowcolor>ff222222</shadowcolor>
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" center="100,100" start="80" end="100" time="250" tween="Cubik" easing="out"/>
+			<effect type="fade" start="0" end="100" delay="0" time="450"/>
+		</animation>
+	</include>
+	<include name="BiglistMenuFocusedLabel2">
+		<width>770</width>
+		<font>qlassikMedium2</font>
+		<textcolor>ivory2</textcolor>
+		<shadowcolor>ff222222</shadowcolor>
+		<align>left</align>
+	</include>
+	<include name="BiglistMenuFocusedLabel2Small">
+		<width>770</width>
+		<font>qlassikSmall</font>
+		<textcolor>ivory2</textcolor>
+		<shadowcolor>ff222222</shadowcolor>
+		<align>left</align>
+	</include>
+	<include name="BiglistUnfocusedBorder">
+		<bordertexture border="30">frames/oldbluercorners3b.png</bordertexture>
+		<bordersize>14</bordersize>
+	</include>
+	<include name="BiglistFocusedBorder">
+		<bordertexture border="30">frames/oldgreyrcorners.png</bordertexture>
+		<bordersize>16</bordersize>
+	</include>
+	<!-- BIG LIST (episodes & clips) -->
+	<include name="view_BigList">
+		<!-- list -->
+		<control type="fixedlist" id="51">
+			<viewtype label="537">biglist</viewtype>
+			<posy>75</posy>
+			<width>1400</width>
+			<height>610</height>
+			<onleft>300</onleft>
+			<onright>78</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<scrolltime>150</scrolltime>
+			<focusposition>1</focusposition>
+			<wraparound>true</wraparound>
+			<movement>0</movement>
+			<pagecontrol>78</pagecontrol>
+			<orientation>vertical</orientation>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<include>grainypagefade</include>
+			<visible>[!Window.IsActive(progressdialog) + Container.Content(episodes)] | Container.Content(plugincontent)</visible>
+			<include>BigListLeftMenuSlide</include>
+			<itemlayout width="625" height="120">
+				<control type="group">
+					<posx>150</posx>
+					<!-- separator -->
+					<control type="image">
+						<posx>250</posx>
+						<posy>85</posy>
+						<width>750</width>
+						<height>1</height>
+						<texture>dialogs/grayline_h.png</texture>
+					</control>
+					<control type="image">
+						<posx>250</posx>
+						<posy>85</posy>
+						<width>750</width>
+						<height>1</height>
+						<texture>dialogs/grayline_h.png</texture>
+					</control>
+					<control type="image">
+						<posx>39</posx>
+						<posy>36</posy>
+						<width>207</width>
+						<height>94</height>
+						<texture diffuse="frames/bannerMask.png" fallback="backgrounds/library/TVShowsNoFanartSmall.png">$INFO[ListItem.Thumb]</texture>
+						<include>BiglistUnfocusedBorder</include>
+						<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+					</control>
+					<control type="image">
+						<posx>215</posx>
+						<posy>99</posy>
+						<include>watchedOverlaySmall</include>
+						<visible>!Skin.HasSetting(overlayEpisodes)</visible>
+					</control>
+					<control type="image">
+						<posx>40</posx>
+						<posy>112</posy>
+						<width>30</width>
+						<height>17</height>
+						<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+						<aspectratio align="right">keep</aspectratio>
+						<visible>Skin.HasSetting(enableepisodehdflags) + Container.Content(episodes)</visible>
+					</control>
+					<!-- Unfocused TITLE simple -->
+					<control type="label" id="1">
+						<posx>270</posx>
+						<posy>40</posy>
+						<include>BiglistMenuUnfocused</include>
+						<label>$INFO[ListItem.Title]</label>
+						<visible>IsEmpty(Container.Property(mixedParents))</visible>
+					</control>
+					<!-- Unfocused TITLE with show name -->
+					<control type="label">
+						<posx>270</posx>
+						<posy>40</posy>
+						<include>BiglistMenuUnfocused</include>
+						<label>$INFO[ListItem.TVShowTitle] : $INFO[ListItem.Title]</label>
+						<visible>!IsEmpty(Container.Property(mixedParents))</visible>
+					</control>
+					<!-- Unfocused TITLE backup label -->
+					<control type="label" id="1">
+						<posx>270</posx>
+						<posy>40</posy>
+						<include>BiglistMenuUnfocused</include>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>IsEmpty(ListItem.Title)</visible>
+					</control>
+					<!-- MOD TITLES : end -->
+					<control type="label" id="1">
+						<posx>270</posx>
+						<posy>92</posy>
+						<width>975</width>
+						<label>$LOCALIZE[31074,,]$INFO[ListItem.Date, &#xB7; ]</label>
+						<font>qlassikSmall</font>
+						<textcolor>ivory3</textcolor>
+						<include>grainybiglisttextfade</include>
+					</control>
+					<control type="label" id="1">
+						<posx>270</posx>
+						<posy>92</posy>
+						<width>975</width>
+						<label>$INFO[ListItem.Year]</label>
+						<font>qlassikSmall</font>
+						<textcolor>ivory3</textcolor>
+						<include>grainybiglisttextfade</include>
+						<visible>Container.Content(plugincontent) + IsEmpty(ListItem.Label2)</visible>
+					</control>
+					<control type="label" id="1">
+						<posx>270</posx>
+						<posy>92</posy>
+						<width>975</width>
+						<label>$INFO[ListItem.Label2]</label>
+						<font>qlassikSmall</font>
+						<textcolor>ivory3</textcolor>
+						<include>grainybiglisttextfade</include>
+						<visible>Container.Content(plugincontent) + IsEmpty(ListItem.Year)</visible>
+					</control>
+				</control>
+			</itemlayout>
+			<focusedlayout width="625" height="225">
+				<control type="group">
+					<posx>150</posx>
+					<!-- Unfocused TITLE simple -->
+					<control type="label" id="1">
+						<posx>270</posx>
+						<posy>25</posy>
+						<include>BiglistMenuFocused</include>
+						<label>$INFO[ListItem.Title]</label>
+						<visible>IsEmpty(Container.Property(mixedParents))</visible>
+					</control>
+					<!-- Unfocused TITLE with show name -->
+					<control type="label" id="1">
+						<posx>270</posx>
+						<posy>25</posy>
+						<include>BiglistMenuFocused</include>
+						<label>$INFO[ListItem.TVShowTitle] : $INFO[ListItem.Title]</label>
+						<visible>!IsEmpty(Container.Property(mixedParents))</visible>
+					</control>
+					<!-- Unfocused TITLE backup label -->
+					<control type="label" id="1">
+						<posx>270</posx>
+						<posy>25</posy>
+						<include>BiglistMenuFocused</include>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>IsEmpty(ListItem.Title)</visible>
+					</control>
+					<!-- MOD TITLES : end -->
+					<control type="label" id="1">
+						<posx>270</posx>
+						<posy>82</posy>
+						<width>975</width>
+						<label>$LOCALIZE[31074,,]$INFO[ListItem.Date, &#xB7; ]</label>
+						<font>qlassikSmall</font>
+						<textcolor>ivory3</textcolor>
+					</control>
+					<control type="label" id="1">
+						<posx>270</posx>
+						<posy>82</posy>
+						<width>975</width>
+						<label>$INFO[ListItem.Year]</label>
+						<font>qlassikSmall</font>
+						<textcolor>ivory3</textcolor>
+						<visible>Container.Content(plugincontent) + IsEmpty(ListItem.Label2)</visible>
+					</control>
+					<control type="label" id="1">
+						<posx>270</posx>
+						<posy>82</posy>
+						<width>975</width>
+						<label>$INFO[ListItem.Label2]</label>
+						<font>qlassikSmall</font>
+						<textcolor>ivory3</textcolor>
+						<visible>Container.Content(plugincontent) + IsEmpty(ListItem.Year)</visible>
+					</control>
+					<control type="textbox" id="4">
+						<posx>270</posx>
+						<posy>120</posy>
+						<width>810</width>
+						<height>114</height>
+						<label>$INFO[ListItem.Plot]</label>
+						<autoscroll delay="10000" time="3000" repeat="5000">!Control.HasFocus(13)</autoscroll>
+						<font>titilliumMedium</font>
+						<textcolor>ivory2</textcolor>
+						<shadowcolor>ff555555</shadowcolor>
+						<include>textBox</include>
+						<include>BiglistMenuFocused</include>
+					</control>
+					<control type="image">
+						<posx>-135</posx>
+						<posy>25</posy>
+						<width>380</width>
+						<height>221</height>
+						<fadetime>200</fadetime>
+						<texture diffuse="frames/bannerMask.png" fallback="backgrounds/library/TVShowsNoFanartSmall.png">$INFO[ListItem.Thumb]</texture>
+						<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+						<include>BiglistFocusedBorder</include>
+						<include>focus_Banner</include>
+					</control>
+					<control type="image">
+						<posx>205</posx>
+						<posy>206</posy>
+						<width>25</width>
+						<height>25</height>
+						<texture>$INFO[ListItem.Overlay]</texture>
+						<include>focus_Banner</include>
+						<visible>!Skin.HasSetting(overlayEpisodes)</visible>
+					</control>
+					<control type="image">
+						<posx>40</posx>
+						<posy>112</posy>
+						<width>30</width>
+						<height>17</height>
+						<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+						<aspectratio align="right">keep</aspectratio>
+						<include>focus_Banner</include>
+						<visible>Skin.HasSetting(enableepisodehdflags) + Container.Content(episodes)</visible>
+					</control>
+				</control>
+			</focusedlayout>
+		</control>
+		<!--><control type="group">
+			<posx>152</posx>
+			<posy>195</posy>
+			<visible>![Control.IsVisible(4001) | Control.IsVisible(4002)] + Control.IsVisible(51)</visible>
+			<include>BigListLeftMenuSlide</include>
+			<control type="image">
+				<posx>-135</posx>
+				<posy>25</posy>
+				<width>380</width>
+				<height>221</height>
+				<fadetime>200</fadetime>
+				<texture diffuse="frames/bannerMask.png" fallback="backgrounds/library/TVShowsNoFanartSmall.png">$INFO[ListItem.Thumb]</texture>
+				<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+				<include>BiglistFocusedBorder</include>
+			</control>
+			<control type="image">
+				<posx>205</posx>
+				<posy>206</posy>
+				<width>25</width>
+				<height>25</height>
+				<texture>$INFO[ListItem.Overlay]</texture>
+				<visible>!Skin.HasSetting(overlayEpisodes)</visible>
+			</control>
+			<control type="image">
+				<posx>40</posx>
+				<posy>112</posy>
+				<width>30</width>
+				<height>17</height>
+				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<visible>Skin.HasSetting(enableepisodehdflags) + Container.Content(episodes)</visible>
+			</control>
+		</control>-->
+		<!-- media flags library -->
+		<control type="group">
+			<posx>930r</posx>
+			<posy>280</posy>
+			<visible>![Control.IsVisible(4001) | Control.IsVisible(4002)] + Control.IsVisible(51)</visible>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<include>BigListLeftMenuRightSlide</include>
+			<include>typeFlagsEpisodes</include>
+			<visible>Control.IsVisible(51) + Skin.HasSetting(showepisodemediaflags)</visible>
+		</control>
+	</include>
+</includes>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<window id="100">
+	<defaultcontrol always="false">555</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<backgroundcolor>0</backgroundcolor>
+	<views>50,51,52,54,55,56,57,58,59,555,566,571</views>
+	<controls>		
+		<include>Backgrounds</include>
+		<include>MultiBannerDressing</include>
+		<include>plotBoxesLibrary</include>
+		<include>listMenuFocusedBg</include>
+		<include>frameOverlay</include>
+		<include>leftMenuBg</include>	
+		<include>retroOverlay</include>		
+		<include>leftMenuDressing</include>
+		<include>allscreens</include>
+		<include>AllViewCommonPageControls</include>
+		<include>PageLabels</include>
+		<include>view_Banner</include>
+		<include>view_MultiBanner</include>
+		<include>view_BigList</include>
+		<include>view_Poster</include>
+		<include>view_PosterInfo</include>
+		<!-- FAKE INFO TRIGGER BUTTON -->
+		<control type="button" id="8000">
+			<label>SHOULD NOT SEE ME</label>
+			<onup>53</onup>
+			<ondown>53</ondown>
+			<onleft>53</onleft>
+			<onright>53</onright>
+			<width>500</width>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+		<include>view_List</include>
+		<include>view_SlidePoster</include>
+		<include>LeftSideMenu</include>
+		<include>leftMenuViewPreviews</include>
+		<include>debugInfos</include>
+		<include>musicOSDInfoNew</include>
+	</controls>
+</window>

@@ -6,25 +6,26 @@
 		<control type="group">
 			<posx>0</posx>
 			<posy>70</posy>
-			<include>open_PlayerControls</include>
+			<include>fadeinout3</include>
 			<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(Visualisation) + !Window.IsActive(2901)</visible>
 			<control type="image" id="1">
 				<posx>325</posx>
-				<posy>530</posy>
+				<posy>525</posy>
 				<width>650</width>
 				<height>79</height>
-				<texture border="35,0,35,0">osd/background_slim.png</texture>				
+				<texture border="35">dialogs/bigbg5.png</texture>				
 			</control>
 			<control type="group" id="213">
 				<posx>341</posx>
-				<posy>549</posy>
-				<include>open_PlayerControls</include>
+				<posy>527</posy>
+				<include>fadeinout3</include>
 				<control type="button" id="1">
 					<posx>195</posx>
 					<width>40</width>
 					<height>40</height>
-					<onleft>8</onleft>
+					<onleft>6</onleft>
 					<onright>2</onright>
+					<ondown>214</ondown>
 					<texturefocus>OSD/osd-button-prev-focus.png</texturefocus>
 					<texturenofocus>OSD/osd-button-prev.png</texturenofocus>
 					<onclick>XBMC.PlayerControl(Previous)</onclick>
@@ -35,6 +36,7 @@
 					<height>40</height>
 					<onleft>1</onleft>
 					<onright>3</onright>
+					<ondown>214</ondown>
 					<texturefocus>OSD/osd-button-rwd-focus.png</texturefocus>
 					<texturenofocus>OSD/osd-button-rwd.png</texturenofocus>
 					<onclick>XBMC.PlayerControl(Rewind)</onclick>
@@ -45,6 +47,7 @@
 					<height>40</height>
 					<onleft>2</onleft>
 					<onright>4</onright>
+					<ondown>214</ondown>
 					<texturefocus>OSD/osd-button-play-focus.png</texturefocus>
 					<texturenofocus>OSD/osd-button-play.png</texturenofocus>
 					<onclick>XBMC.PlayerControl(Play)</onclick>
@@ -55,6 +58,7 @@
 					<height>40</height>
 					<onleft>3</onleft>
 					<onright>5</onright>
+					<ondown>214</ondown>
 					<texturefocus>OSD/osd-button-fwd-focus.png</texturefocus>
 					<texturenofocus>OSD/osd-button-fwd.png</texturenofocus>
 					<onclick>XBMC.PlayerControl(Forward)</onclick>
@@ -65,6 +69,7 @@
 					<height>40</height>
 					<onleft>4</onleft>
 					<onright>6</onright>
+					<ondown>214</ondown>
 					<texturefocus>OSD/osd-button-next-focus.png</texturefocus>
 					<texturenofocus>OSD/osd-button-next.png</texturenofocus>
 					<onclick>XBMC.PlayerControl(Next)</onclick>
@@ -76,21 +81,26 @@
 					<texturefocus>OSD/osd-button-stop-focus.png</texturefocus>
 					<texturenofocus>OSD/osd-button-stop.png</texturenofocus>
 					<onleft>5</onleft>
-					<onright>7</onright>
+					<onright>1</onright>
+					<ondown>214</ondown>
 					<onclick>PlayerControl(Stop)</onclick>
 				</control>
+			</control>
+			<control type="group" id="214">
+				<posx>105</posx>
+				<posy>577</posy>
+				<include>fadeinout3</include>
 				<!-- repeat -->
 				<control type="button" id="7">
-					<posy>-9</posy>
-					<posx>435</posx>
-					<width>48</width>
-					<height>48</height>
-					<onleft>6</onleft>
+					<posy>-6</posy>
+					<posx>455</posx>
+					<width>30</width>
+					<height>30</height>
+					<onleft>8</onleft>
 					<onright>8</onright>
-					<label>repeat</label>
-					<font>qlassikSmall</font>
-					<textcolor>Color4</textcolor>
-					<focusedcolor>greenlime</focusedcolor>
+					<onup>213</onup>
+					<texturefocus>OSD/osd-button-repeat-focus.png</texturefocus>
+					<texturenofocus>OSD/osd-button-repeat.png</texturenofocus>
 					<onclick>XBMC.PlayerControl(Repeat)</onclick>
 				</control>
 				<control type="group">
@@ -123,21 +133,20 @@
 				</control>
 				<!-- shuffle -->
 				<control type="button" id="8">
-					<posy>-9</posy>
-					<posx>520</posx>
-					<width>48</width>
-					<height>48</height>
+					<posy>-6</posy>
+					<posx>543</posx>
+					<width>30</width>
+					<height>30</height>
 					<onleft>7</onleft>
-					<onright>1</onright>
-					<label>shuffle</label>
-					<font>qlassikSmall</font>
-					<textcolor>Color4</textcolor>
-					<focusedcolor>greenlime</focusedcolor>
+					<onright>7</onright>
+					<onup>213</onup>
+					<texturefocus>OSD/osd-button-shuffle-focus.png</texturefocus>
+					<texturenofocus>OSD/osd-button-shuffle.png</texturenofocus>
 					<onclick>XBMC.PlayerControl(Random)</onclick>
 				</control>
 				<control type="group">
 					<posy>-17</posy>
-					<posx>580</posx>
+					<posx>583</posx>
 					<control type="label">
 						<width>48</width>
 						<height>48</height>

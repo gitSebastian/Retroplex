@@ -1,8 +1,50 @@
 <?xml version="1.0"?>
 <includes>
-	<include name="HomeMenu">		
+	<!-- formatting -->
+	<include name="homeMenuFocusedBg">
+		<control type="image">
+			<posx>0</posx>
+			<posy>460</posy>
+			<width>1300</width>
+			<height>90</height>
+			<texture flipx="true">dialogs/square_menu_background2.png</texture>
+			<animation effect="fade" start="40" end="80" time="0" condition="true">Conditional</animation>
+			<include>transition2</include>
+			<include>HomeScreenLeftMenuSlide</include>
+			<include>HomeScreenLeftMenuBgSlideFade</include>
+			<include>homeMenuFade2</include>
+			<!--><visible>Window.IsActive(0) + !ControlGroup(5000).HasFocus() + !Control.IsVisible(5000)</visible>-->
+		</control>
+	</include>
+	<include name="homeMenuUnfocused">
+		<!-- opacity -->
+		<animation effect="fade" start="100" end="100" time="350" condition="true">Conditional</animation>
+		<posx>85</posx>
+		<posy>230</posy>
+		<!--<font>geoSmall2</font>-->
+		<font>qlassikMedium</font>
+		<textcolor>ivory3</textcolor>
+		<shadowcolor>ff222222</shadowcolor>
+		<align>left</align>
+		<width>1100</width>
+	</include>
+	<include name="homeMenuFocused">
+		<posx>105</posx>
+		<posy>250</posy>
+		<!--<font>geoMiddle</font>-->
+		<font>lobsterBig</font>
+		<textcolor>oldBlue2</textcolor>
+		<shadowcolor>ff333333</shadowcolor>
+		<align>left</align>
+		<width>1100</width>
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" center="85,250" start="60" end="100" time="450" tween="Cubic" easing="out"/>
+			<effect type="fade" start="0" end="100" time="550"/>
+		</animation>
+	</include>
+	<include name="HomeMenu">
 		<!-- HOME MENU -->
-		<control type="fixedlist" id="300">
+		<control type="wraplist" id="300">
 			<posx>-40</posx>
 			<posy>0</posy>
 			<width>910</width>
@@ -10,7 +52,7 @@
 			<onup>300</onup>
 			<ondown>300</ondown>
 			<onleft>9000</onleft>
-			<onright>Plex.ActivateWindow(10051)</onright>
+			<onright>5000</onright>
 			<wraparound>true</wraparound>
 			<orientation>vertical</orientation>
 			<focusposition>4</focusposition>
@@ -24,7 +66,7 @@
 				<control type="group">
 					<control type="label">
 						<label>$INFO[ListItem.Label]</label>
-						<include>homeMenu</include>
+						<include>homeMenuUnfocused</include>
 					</control>
 				</control>
 			</itemlayout>
@@ -33,7 +75,7 @@
 				<control type="group">
 					<control type="label">
 						<width>870</width>
-						<label>[COLOR=greenlimelight]&#xB7; $INFO[ListItem.Label] [/COLOR]</label>
+						<label>&#xB7; $INFO[ListItem.Label] </label>
 						<include>homeMenuFocused</include>
 						<visible>IsEmpty(ListItem.Label2)</visible>
 					</control>
@@ -46,21 +88,13 @@
 						<visible>!IsEmpty(ListItem.Label2)</visible>
 					</control>
 					<control type="label">
-						<posx>105</posx>
-						<posy>240</posy>
-						<label>[COLOR=greenlimelight]&#xB7; $INFO[ListItem.Label] [/COLOR]</label>
-						<include>homeMenuFocused</include>
-						<animation effect="fade" start="20" end="30" time="0" condition="true">Conditional</animation>
-						<visible>!IsEmpty(ListItem.Label2)</visible>
-					</control>
-					<control type="label">
 						<posx>165</posx>
-						<posy>285</posy>
+						<posy>280</posy>
 						<label>&#xB7; $INFO[ListItem.Label2]</label>
-						<!--<label>&#xB7; this is a test label</label>-->
-						<font>qlassikSmall2</font>
+						<font>qlassikSmall</font>
 						<height>30</height>
 						<textcolor>ivory2</textcolor>
+						<shadowcolor>ff333333</shadowcolor>
 						<focusedcolor>Color1</focusedcolor>
 						<align>left</align>
 						<aligny>bottom</aligny>
@@ -71,262 +105,76 @@
 			</focusedlayout>
 			<!-- extra items -->
 			<content>
-				<item id="1">
+				<item id="4">
 					<label>$LOCALIZE[0]</label>
 					<onclick>ActivateWindow(Programs)</onclick>
 					<visible>Skin.HasSetting(showprogramsmainmenu)</visible>
 				</item>
-				<item id="2">
+				<item id="22">
 					<description>iTunes</description>
 					<onclick>Plex.ActivateWindow(10501,http://127.0.0.1:32400/music/iTunes/,return)</onclick>
 					<label>$LOCALIZE[41984]</label>
 					<visible>Skin.HasSetting(showitunesmainmenu)</visible>
 				</item>
-				<item id="3">
+				<item id="7">
 					<description>Search Menu</description>
 					<label>$LOCALIZE[41947]</label>
 					<onclick>Plex.ActivateWindow(10051)</onclick>
-					<visible>!Skin.HasSetting(hidesearchmainmenu)</visible>
+					<!--><visible>!Skin.HasSetting(hidesearchmainmenu)</visible>-->
 				</item>
-				<item id="4">
-					<description>Favourites</description>
-					<label>$LOCALIZE[1036]</label>
-					<onclick>ActivateWindow(Favourites)</onclick>
-					<visible>Skin.HasSetting(showfavouritesmainmenu)</visible>
-				</item>
-				<item id="5">
+				<item id="1">
 					<description>Video Plugins</description>
-					<label>$LOCALIZE[41981]</label>
-					<onclick>ActivateWindow(6)</onclick>
+					<label>Video Channels</label>
+					<onclick>ActivateWindow(24)</onclick>
 					<visible>Skin.HasSetting(showvideoplugsmainmenu)</visible>
 				</item>
-				<item id="6">
+				<item id="2">
 					<description>Music Plugins</description>
-					<label>$LOCALIZE[41982]</label>
+					<label>Music Channels</label>
 					<onclick>ActivateWindow(MyMusic)</onclick>
 					<visible>Skin.HasSetting(showmusicplugsmainmenu)</visible>
 				</item>
-				<item id="7">
+				<item id="3">
 					<description>Pictures Plugins</description>
-					<label>$LOCALIZE[41983]</label>
+					<label>Photo Channels</label>
 					<onclick>ActivateWindow(2)</onclick>
 					<visible>Skin.HasSetting(showpicturesplugsmainmenu)</visible>
 				</item>
-				<item id="8">
+				<item id="12">
 					<description>Plex Online</description>
-					<label>31976</label>
-					<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
+					<label>Plex Channels</label>
+					<onclick>Plex.ActivateWindow(1,plex://127.0.0.1/system/plexonline,return)</onclick>
 					<visible>!Skin.HasSetting(hideplexonlinemainmenu)</visible>
-				</item>
-				<item id="9">
-					<description>Weather</description>
-					<label>$LOCALIZE[8]</label>
-					<onclick>ActivateWindow(weather)</onclick>
-					<visible>Skin.HasSetting(showweathermainmenu)</visible>
 				</item>
 				<item id="9">
 					<description>Retroplex Help</description>
 					<label>$LOCALIZE[41938]</label>
-					<onclick>-</onclick>
+					<!--><onclick>ActivateWindow(4999)</onclick>-->
 					<onclick>Skin.ToggleSetting(showmainhelp)</onclick>
 					<visible>!Skin.HasSetting(hidehelpmainmenu)</visible>
 				</item>
-				<!--<item id="11">
-					<label>test</label>
-					<onclick>ActivateWindow(000)</onclick>
-				</item>-->
+				<item id="11">
+					<label>dev - network</label>
+					<onclick>ActivateWindow(18)</onclick>
+					<visible>false</visible>
+				</item>
+				<item id="13">
+					<label>dev - dialog</label>
+					<onclick>ActivateWindow(2002)</onclick>
+					<visible>false</visible>
+				</item>
+				<item id="15">
+					<label>dev - busy</label>
+					<onclick>ActivateWindow(busydialog)</onclick>
+					<visible>false</visible>
+				</item>
+				<item id="10">
+					<description>DVD Button</description>
+					<label>DVD</label>
+					<visible>false</visible>
+					<onclick>XBMC.PlayDVD</onclick>
+				</item>
 			</content>
-		</control>
-		<!--<include>leftMenu</include>-->
-		<!-- LEFT SIDE MENU -->
-		<control type="group" id="9000">
-			<posx>-378</posx>
-			<posy>64</posy>
-			<width>351</width>
-			<height>650</height>
-			<onup>9100</onup>
-			<ondown>9100</ondown>
-			<onright>300</onright>
-			<onleft>-</onleft>
-			<orientation>vertical</orientation>
-			<scrolltime>150</scrolltime>
-			<visible allowhiddenfocus="true">![ControlGroup(1100).HasFocus() | ControlGroup(4000).HasFocus() | ControlGroup(2100).HasFocus()]</visible>
-			<animation effect="slide" start="202" end="40" time="500" condition="Control.HasFocus(300)">Conditional</animation>
-			<animation effect="slide" start="40" end="202" time="500" condition="!Control.HasFocus(300)">Conditional</animation>
-			<include>homeMenuToggle</include>
-			<include>homeMenusLayout</include>
-			<control type="grouplist" id="9100">
-				<onup>9100</onup>
-				<ondown>9100</ondown>
-				<onleft>-</onleft>
-				<onright>300</onright>
-				<itemgap>0</itemgap>
-				<control type="button" id="9099">
-					<label>$LOCALIZE[41939]</label>
-					<include>leftMenuTitle</include>
-					<enable>false</enable>
-				</control>
-				<!-- spacing -->
-				<!--<control type="button" id="9097">
-					<label></label>
-					<include>leftMenuSpacing</include>
-					<enable>false</enable>
-				</control>-->
-				<!-- favorites-->
-				<control type="button" id="9001">
-					<label>$LOCALIZE[1036]</label>
-					<onclick>ActivateWindow(Favourites)</onclick>
-					<include>leftMenuViewOptions</include>
-					<visible>!Skin.HasSetting(showfavouritesmainmenu)</visible>
-				</control>
-				<control type="button" id="9081">
-					<label>$LOCALIZE[41947]</label>
-					<onclick>Plex.ActivateWindow(10051)</onclick>
-					<include>leftMenuViewOptions</include>
-					<visible>Skin.HasSetting(hidesearchmainmenu)</visible>
-				</control>
-				<control type="button" id="9080">
-					<label>$LOCALIZE[41984]</label>
-					<onclick>Plex.ActivateWindow(10501,http://127.0.0.1:32400/music/iTunes/,return)</onclick>
-					<include>leftMenuViewOptions</include>
-					<visible>!Skin.HasSetting(showitunesmainmenu)</visible>
-				</control>
-				<control type="button" id="9090">
-					<label>$LOCALIZE[41980]</label>
-					<onclick>ActivateWindow(MusicPlaylist)</onclick>
-					<visible>Player.HasAudio</visible>
-					<include>leftMenuViewOptions</include>
-				</control>
-				<control type="button" id="9003">
-					<description>go to Video Plug-Ins</description>
-					<label>$LOCALIZE[41981]</label>
-					<onclick>ActivateWindow(6)</onclick>
-					<include>leftMenuViewOptions</include>
-					<visible>!Skin.HasSetting(showvideoplugsmainmenu)</visible>
-				</control>
-				<control type="button" id="9004">
-					<description>go to Music Plug-Ins</description>
-					<label>$LOCALIZE[41982]</label>
-					<onclick>ActivateWindow(MyMusic)</onclick>
-					<include>leftMenuViewOptions</include>
-					<visible>!Skin.HasSetting(showmusicplugsmainmenu)</visible>
-				</control>
-				<control type="button" id="9005">
-					<description>go to Picture Plug-Ins</description>
-					<label>$LOCALIZE[41983]</label>
-					<onclick>ActivateWindow(2)</onclick>
-					<include>leftMenuViewOptions</include>
-					<visible>!Skin.HasSetting(showpicturesplugsmainmenu)</visible>
-				</control>
-				<!-- Plex Online -->
-				<control type="button" id="9006">
-					<label>31976</label>
-					<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
-					<include>leftMenuViewOptions</include>
-					<visible>Skin.HasSetting(hideplexonlinemainmenu)</visible>
-				</control>
-				<control type="button" id="9082">
-					<label>$LOCALIZE[0]</label>
-					<onclick>ActivateWindow(Programs)</onclick>
-					<include>leftMenuViewOptions</include>
-					<visible>!Skin.HasSetting(showprogramsmainmenu)</visible>
-				</control>
-				<!-- Weather -->
-				<control type="button" id="9008">
-					<label>$LOCALIZE[8]</label>
-					<onclick>ActivateWindow(weather)</onclick>
-					<include>leftMenuViewOptions</include>
-					<visible>!Skin.HasSetting(showweathermainmenu)</visible>
-				</control>
-				<!-- Home screen options -->
-				<control type="button" id="9011">
-					<label>$LOCALIZE[41940]</label>
-					<include>leftMenuTitle</include>
-					<enable>false</enable>
-				</control>
-				<!-- spacing -->
-				<!--<control type="button" id="9096">
-					<label></label>
-					<include>leftMenuSpacing</include>
-					<enable>false</enable>
-				</control>-->
-				<!--<control type="radiobutton" id="9021">
-					<description>hide rss</description>
-					<label>Hide RSS feed</label>
-					<onclick>Skin.ToggleSetting(enableRSSFeed)</onclick>
-					<selected>Skin.HasSetting(enableRSSFeed)</selected>
-					<include>leftMenuViewOptions</include>
-					<include>leftMenuRadioButton</include>
-					<visible>!Skin.HasSetting(originalhome)</visible>
-				</control>-->
-				<!--<control type="radiobutton" id="9022">
-					<description>deactivate fanart slideshow on home screen</description>
-					<label>Turn all slideshows OFF</label>
-					<onclick>Skin.ToggleSetting(FanartSlideShow)</onclick>
-					<selected>Skin.HasSetting(FanartSlideShow)</selected>
-					<include>leftMenuViewOptions</include>
-					<include>leftMenuRadioButton</include>
-				</control>-->
-				<control type="radiobutton" id="9021">
-					<description>Turn Retroplex slideshow ON</description>
-					<label>$LOCALIZE[41941]</label>
-					<onclick>Skin.ToggleSetting(RetroplexSlideShow)</onclick>
-					<selected>Skin.HasSetting(RetroplexSlideShow)</selected>
-					<enable>![Skin.HasSetting(FanartSlideShow) | Skin.HasSetting(personalSlideShow)]</enable>
-					<include>leftMenuViewOptions</include>
-					<include>leftMenuRadioButton</include>
-				</control>
-				<control type="radiobutton" id="9023">
-					<description>Set your own slideshow</description>
-					<label>$LOCALIZE[41942]</label>
-					<onclick>Skin.SetPath(SlideShow)</onclick>
-					<onclick>Skin.ToggleSetting(personalSlideShow)</onclick>
-					<selected>Skin.HasSetting(personalSlideShow)</selected>
-					<enable>![Skin.HasSetting(FanartSlideShow) | Skin.HasSetting(RetroplexSlideShow)]</enable>
-					<include>leftMenuViewOptions</include>
-					<include>leftMenuRadioButton</include>
-				</control>
-				<!-- EXTRAS -->
-				<control type="button" id="9094">
-					<label>$LOCALIZE[41943]</label>
-					<include>leftMenuTitle</include>
-					<enable>false</enable>
-				</control>
-				<!-- spacing -->
-				<!--<control type="button" id="9095">
-					<label></label>
-					<include>leftMenuSpacing</include>
-					<enable>false</enable>
-				</control>-->
-				<!-- Settings -->
-				<control type="button" id="9009">
-					<label>$LOCALIZE[5]</label>
-					<onclick>ActivateWindow(Settings)</onclick>
-					<include>leftMenuViewOptions</include>
-				</control>
-				<control type="button" id="9015">
-				    <description>Shutdown System</description>
-				    <label>$LOCALIZE[41944]</label>
-				    <onclick>Dialog.Close(shutdownmenu)</onclick>
-				    <onclick>XBMC.ShutDownSystem()</onclick>
-				    <include>leftMenuViewOptions</include>
-				</control>
-				<control type="button" id="9014">
-					<description>Sleep System</description>
-					<label>$LOCALIZE[41945]</label>
-					<onclick>Dialog.Close(shutdownmenu)</onclick>
-					<onclick>XBMC.SleepSystem()</onclick>
-					<include>leftMenuViewOptions</include>
-				</control>
-				<control type="button" id="9013">
-					<description>Quit Plex</description>
-					<label>$LOCALIZE[41946]</label>
-					<onclick>Dialog.Close(shutdownmenu)</onclick>
-					<onclick>dialog.close(all,true)</onclick>
-					<onclick>Plex.Shutdown()</onclick>
-					<include>leftMenuViewOptions</include>
-				</control>
-			</control>
 		</control>
 	</include>
 </includes>

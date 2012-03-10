@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <includes>
-	<include name="InfoDialogMenu">
+	<include name="InfoDialogMenu_">
 		<!-- menu bg & animations -->
 		<control type="group">
 			<animation effect="fade" start="100" end="20" time="350" condition="!ControlGroup(300).HasFocus + ![Window.IsActive(101) | Window.IsActive(filebrowser)]">Conditional</animation>
@@ -33,13 +33,15 @@
 			</control>
 		</control>
 		<!-- MENU -->
-		<control type="group" id="300">
+		<control type="group" id="300_">
 			<posx>-405</posx>
 			<posy>145</posy>
 			<width>400</width>
 			<height>650</height>
 			<onup>9100</onup>
 			<ondown>9100</ondown>
+			<onleft>-</onleft>
+			<onright>9000</onright>
 			<visible allowhiddenfocus="true">ControlGroup(300).HasFocus + ![Window.IsActive(101) | Window.IsActive(filebrowser)]</visible>
 			<orientation>vertical</orientation>
 			<include>transition2</include>
@@ -49,7 +51,7 @@
 				<onup>9100</onup>
 				<ondown>9100</ondown>
 				<onleft>-</onleft>
-				<onright>-</onright>
+				<onright>9000</onright>
 				<itemgap>0</itemgap>
 				<!-- options -->
 				<control type="button" id="9099">

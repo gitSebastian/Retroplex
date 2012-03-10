@@ -2,25 +2,14 @@
 <window id="500">
 	<defaultcontrol always="false">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+	<backgroundcolor>0</backgroundcolor>
 	<controls>
-		<include>themeBackground2</include>
+		<include>Backgrounds</include>
 		<include>frameOverlay</include>
 		<include>leftMenuBg</include>	
-		<include>grainyeditionback</include>		
+		<include>retroOverlay</include>		
 		<include>leftMenuDressing</include>
-		<!-- page label -->
-		<control type="label">
-			<label>$LOCALIZE[2] [COLOR=greenlime]$LOCALIZE[559][/COLOR]</label>
-			<posx>34</posx>
-			<posy>20</posy>
-			<width>950</width>
-			<aligny>center</aligny>
-			<font>qlassikMedium2</font>
-			<textcolor>ivory3</textcolor>
-			<include>transition3</include>
-			<include>PageLabelsLeftMenuSlide</include>
-			<visible>!Window.IsActive(2001)</visible>
-		</control>
+		<include>PageLabels</include>
 		<include>LibraryPlaylistMenu</include>
 		<include>info_MusicList</include>
 		<include>allscreens</include>
@@ -120,8 +109,8 @@
 				<focusedlayout condition="Window.IsActive(musicplaylist)" width="625" height="40">
 					<control type="image">
 						<posy>2</posy>
-						<posx>0</posx>
-						<width>785</width>
+						<posx>11</posx>
+						<width>774</width>
 						<height>40</height>
 						<texture flipx="true">dialogs/square_menu_background.png</texture>
 						<animation type="Conditional" condition="true">
@@ -148,175 +137,7 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<!-- now and next playing assembly -->
-			<control type="group">
-				<posy>-5</posy>
-				<posx>120</posx>
-				<!-- now playing progress bar and track information -->
-				<control type="group">
-					<posy>117</posy>
-					<posx>765</posx>
-					<include>transition2</include>
-					<animation type="Visible">
-						<effect type="fade" start="0" end="90" time="1000" delay="300"/>
-					</animation>
-					<!-- progress bar -->
-					<control type="progress" id="21">
-						<description>Progress bar</description>
-						<posy>-10</posy>
-						<posx>0</posx>
-						<height>1</height>
-						<width>324</width>
-						<info>Player.Progress</info>
-						<texturebg>dialogs/progressBackground_.png</texturebg>
-						<lefttexture>-</lefttexture>
-						<midtexture border="0">dialogs/progressSlider_.png</midtexture>
-						<righttexture>-</righttexture>
-						<animation effect="fade" start="0" end="100" time="1000">Visible</animation>
-						<animation effect="fade" start="100" end="0" time="1000">Hidden</animation>
-						<visible>Player.HasMusicPlaylist</visible>
-					</control>
-					<!-- now playing informations -->
-					<control type="group">
-						<posy>0</posy>
-						<posx>0</posx>
-						<visible>Player.HasMusicPlaylist</visible>
-						<control type="label">
-							<width>324</width>
-							<font>qlassikSmall</font>
-							<textcolor>ivory3</textcolor>
-							<label>$INFO[MusicPlayer.Artist]</label>
-							<align>left</align>
-						</control>
-						<control type="label">
-							<posy>20</posy>
-							<width>324</width>
-							<font>lobsterSmallest</font>
-							<textcolor>greenlime</textcolor>
-							<label>$INFO[MusicPlayer.Title]</label>
-							<align>left</align>
-						</control>
-					</control>
-				</control>
-				<!-- frame -->
-				<!--<control type="image">
-					<animation type="WindowOpen">
-						<effect type="slide" start="0,-500" time="1000" delay="200" tween="cubic" easing="out"/>
-						<effect type="fade" start="20" end="80" time="2000" delay="500"/>
-					</animation>
-					<animation type="WindowClose">
-						<effect type="slide" start="0,0" end="0,-500" time="700" tween="cubic" easing="in"/>
-						<effect type="fade" start="50" end="0" time="700"/>
-					</animation>
-					<animation type="Visible">
-						<effect type="fade" start="0" end="80" time="2000" delay="300"/>
-					</animation>
-					<posx>742</posx>
-					<posy>155</posy>
-					<width>350</width>
-					<height>382</height>
-					<include>transition2</include>
-					<include>infoDialogHide</include>
-					<include>grainypagefade</include>
-					<texture>frames/bannerFrame.png</texture>
-					<visible>Window.IsActive(musicplaylist) + Player.HasAudio</visible>
-				</control>-->
-				<!-- item image -->
-				<control type="group">
-					<include>transition2</include>
-					<animation type="Visible">
-						<effect type="fade" start="0" end="100" time="2000" delay="300"/>
-					</animation>
-					<posx>756</posx>
-					<posy>173</posy>
-					<fadetime>400</fadetime>
-					<include>transition2</include>
-					<include>infoDialogHide</include>
-					<include>grainypagefade</include>
-					<control type="image" id="99">
-						<width>322</width>
-						<height>322</height>					
-						<info>MusicPlayer.Cover</info>
-						<aspectratio scalediffuse="false" align="right">stretch</aspectratio>
-						<texture diffuse="frames/oldpaperMask2.png"/>
-						<visible>Window.IsActive(musicplaylist) + Player.HasAudio</visible>
-					</control>
-					<control type="image" id="99">
-						<width>322</width>
-						<height>322</height>					
-						<aspectratio scalediffuse="false" align="right">stretch</aspectratio>
-						<texture>frames/oldpaperOverlay2.png</texture>
-						<visible>Window.IsActive(musicplaylist) + Player.HasAudio</visible>
-					</control>
-				</control>
-				<!-- NEXT PLAYING -->
-				<control type="group">
-					<posx>740</posx>
-					<posy>524</posy>
-					<visible>Player.HasMusicPlaylist + MusicPlayer.HasNext</visible>
-					<!-- effects when closing/opening window -->
-					<include>transition2</include>
-					<!-- next playing informations -->
-					<control type="group">
-						<posy>75</posy>
-						<posx>205</posx>
-						<control type="label">
-							<posy>-2</posy>
-							<width>220</width>
-							<font>qlassikSmall</font>
-							<textcolor>ivory3</textcolor>
-							<label>$INFO[MusicPlayer.Offset(1).Artist]</label>
-							<align>right</align>
-						</control>
-						<control type="label">
-							<posy>21</posy>
-							<width>220</width>
-							<font>lobsterSmallest</font>
-							<textcolor>ivory3</textcolor>
-							<multilinewrap>true</multilinewrap>
-							<label>$INFO[MusicPlayer.Offset(1).Title]</label>
-							<align>right</align>
-						</control>
-					</control>
-					<!-- cover next playing -->
-					<control type="group">
-						<posx>220</posx>
-						<align>right</align>
-						<visible>MusicPlayer.HasNext</visible>
-						<!--<control type="image">
-							<posx>-7</posx>
-							<posy>-9</posy>
-							<width>132</width>
-							<height>145</height>
-							<texture>frames/bannerFrame.png</texture>
-							<visible>MusicPlayer.HasNext</visible>
-						</control>-->
-						<control type="image">
-							<width>118</width>
-							<height>118</height>
-							<info>MusicPlayer.NextNewCover</info>
-							<aspectratio scalediffuse="false" align="right">stretch</aspectratio>
-							<visible>MusicPlayer.HasNewCoverNext</visible>
-							<texture diffuse="frames/oldpaperDarkMask.png"/>
-						</control>
-						<control type="image">
-							<width>118</width>
-							<height>118</height>
-							<info>MusicPlayer.Cover</info>
-							<aspectratio scalediffuse="false" align="right">stretch</aspectratio>
-							<visible>!MusicPlayer.HasNewCoverNext</visible>
-							<texture diffuse="frames/oldpaperDarkMask.png"/>
-						</control>
-						<control type="image">
-							<width>118</width>
-							<height>118</height>
-							<aspectratio scalediffuse="false" align="right">stretch</aspectratio>
-							<texture>frames/oldpaperDarkOverlay.png</texture>
-							<animation effect="fade" start="60" end="100" time="0" condition="true">Conditional</animation>
-						</control>
-					</control>
-				</control>
 			</control>
-		</control>
+			<include>nowplayingplaylist</include>
 	</controls>
 </window>

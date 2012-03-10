@@ -29,9 +29,9 @@ Zonder jullie zou Retroplex nu niet zijn wat het is. Bedankt!
 	<string id="41007">Toon "Plex Online" in het hoofdmenu</string>
 	<string id="41008">Toon "iTunes" in het hoofdmenu</string>
 	<string id="41009">Toon "Favorieten" in het hoofdmenu</string>
-	<string id="41010">Toon "Video Plugins" in het hoofdmenu</string>
-	<string id="41011">Toon "Muziek Plugins" in het hoofdmenu</string>
-	<string id="41012">Toon "Afbeeldingen Plugins" in het hoofdmenu</string>
+	<string id="41010">Toon "Video Channels" in het hoofdmenu</string>
+	<string id="41011">Toon "Muziek Channels" in het hoofdmenu</string>
+	<string id="41012">Toon "Afbeeldingen Channels" in het hoofdmenu</string>
 	<string id="41013">Toon "Programma's" in het hoofdmenu</string>
 	<string id="41014">Toon "Het Weer" in het hoofdmenu</string>
 	<string id="41015">Toon "Retroplex Help" in het hoofdmenu</string>
@@ -90,7 +90,6 @@ Probeer het maar!
 	<string id="41937">
 3. Dit is het extra menu.[CR][CR]
 Hier vind je onderdelen die verborgen zijn in het hoofdmenu en specifieke opties voor de huidige schermweergave. Het werkt in ieder scherm hetzelfde.[CR][CR]
-Omdat je nu in het Hoofdmenu bent, vind je een aantal specifieke opties, waaronder een uitmuntende Retroplex slideshow die je mee terugneemt in de gouden tijden van de film. Probeer het zometeen zeker even uit![CR][CR]
 Dat is het belangrijkste wat je moet weten om met Retroplex overweg te kunnen! Makkelijk toch?[CR][CR]
 Veel plezier!
 	</string>
@@ -108,9 +107,9 @@ Veel plezier!
 	<string id="41947">Zoeken</string>
 	<!-- Home menu -->
 	<string id="41980">Playlist Now Playing</string>
-	<string id="41981">Plugins Video</string>
-	<string id="41982">Plugins Music</string>
-	<string id="41983">Plugins Picture</string>
+	<string id="41981">Video Channels</string>
+	<string id="41982">Music Channels</string>
+	<string id="41983">Picture Channels</string>
 	<string id="41984">iTunes</string>
 	<!-- Video views left-side menu -->
 	<string id="41948">Bekijk :</string>

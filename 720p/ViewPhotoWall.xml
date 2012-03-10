@@ -1,0 +1,177 @@
+<includes>
+	<include name="photosBottomLabel">
+		<width>680</width>
+		<font>lobsterSmall</font>
+		<textcolor>oldBlueLight</textcolor>
+		<shadowcolor>ff222222</shadowcolor>
+		<align>left</align>
+	</include>
+	<include name="view_PhotoWall">
+	<!-- THUMBNAILS VIEW -->
+	<control type="panel" id="572">
+		<viewtype label="Thumbnails">bigicons</viewtype>
+		<posx>550</posx>
+		<posy>70</posy>
+		<width>670</width>
+		<height>585</height>
+		<onleft>300</onleft>
+		<onright>572</onright>
+		<onup>572</onup>
+		<ondown>572</ondown>
+		<preloaditems>4</preloaditems>
+		<scrolltime>200</scrolltime>
+		<!--<pagecontrol>75</pagecontrol>-->
+		<include>transition2</include>
+		<include>infoDialogHide</include>
+		<include>contextMenuHide</include>
+		<include>ThumbnailsPhotosLeftMenuThumbsSlide</include>
+		<itemlayout height="195" width="166">
+			<control type="image">
+				<posx>16</posx>
+				<posy>17</posy>
+				<width>130</width>
+				<height>130</height>
+				<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+				<texture fallback="thumbs/pictureSmall.png" background="true" diffuse="frames/white.png">$INFO[ListItem.Thumb]</texture>
+				<include>focus_PhotosThumbs</include>
+			</control>
+			<control type="image">
+				<posx>16</posx>
+				<posy>17</posy>
+				<width>130</width>
+				<height>130</height>
+				<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+				<texture background="true" diffuse="frames/white.png">$INFO[ListItem.FileNameAndPath]</texture>
+				<include>focus_PhotosThumbs</include>
+				<visible>!IsEmpty(ListItem.FileNameAndPath)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>161</width>
+				<height>190</height>
+				<texture border="10">frames/polaroid3.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<include>focus_PhotosThumbs</include>
+				<colordiffuse>ivory3</colordiffuse>
+				<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="label">
+				<posx>13</posx>
+				<posy>152</posy>
+				<label> $INFO[ListItem.Label] </label>
+				<font>marketingSmallest</font>
+				<textcolor>ivoryBlack</textcolor>
+				<align>left</align>
+				<width>132</width>
+				<include>focus_PhotosThumbsText</include>
+			</control>
+		</itemlayout>
+		<focusedlayout height="195" width="166">
+			<control type="image">
+				<posx>16</posx>
+				<posy>17</posy>
+				<width>130</width>
+				<height>130</height>
+				<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+				<texture fallback="thumbs/pictureSmall.png" background="true" diffuse="frames/white.png">$INFO[ListItem.Thumb]</texture>
+			</control>
+			<control type="image">
+				<posx>16</posx>
+				<posy>17</posy>
+				<width>130</width>
+				<height>130</height>
+				<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+				<texture background="true" diffuse="frames/white.png">$INFO[ListItem.FileNameAndPath]</texture>
+				<visible>!IsEmpty(ListItem.FileNameAndPath)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>161</width>
+				<height>190</height>
+				<texture border="10">frames/polaroid3.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>oldBlueLight</colordiffuse>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="label">
+				<posx>13</posx>
+				<posy>152</posy>
+				<label> $INFO[ListItem.Label] </label>
+				<font>marketingSmallest</font>
+				<textcolor>FFffffff</textcolor>
+				<scroll>false</scroll>
+				<align>left</align>
+				<width>132</width>
+				<include>focus_PhotosThumbsText</include>
+			</control>
+		</focusedlayout>
+	</control>
+	<!-- INFOS BOTTOM -->
+	<!-- thumbnails -->
+	<control type="group">
+		<posx>53</posx>
+		<posy>70</posy>
+		<include>ThumbnailsPhotosLeftMenuThumbsSlide</include>
+	<control type="image">
+		<posx>5</posx>
+		<posy>5</posy>
+		<width>480</width>
+		<height>510</height>
+		<fadetime>200</fadetime>
+		<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+		<texture background="true" diffuse="frames/white.png" fallback="thumbs/pictureSmall.png">$INFO[ListItem.Thumb]</texture>
+		<include>focus_PhotosThumbs</include>
+		<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus() | Control.HasFocus(1110) | Control.HasFocus(1130) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
+	</control>
+	<control type="image">
+		<posx>5</posx>
+		<posy>5</posy>
+		<width>480</width>
+		<height>510</height>
+		<fadetime>200</fadetime>
+		<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+		<texture background="true" diffuse="frames/white.png">$INFO[ListItem.FileNameAndPath]</texture>
+		<visible>!IsEmpty(ListItem.FileNameAndPath)</visible>
+		<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus() | Control.HasFocus(1110) | Control.HasFocus(1130) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
+	</control>
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>491</width>
+		<height>580</height>
+		<texture border="100">frames/polaroid3.png</texture>
+		<aspectratio>stretch</aspectratio>
+		<include>focus_PhotosThumbs</include>
+		<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+	</control>
+	<control type="label">
+		<posx>25</posx>
+		<posy>520</posy>
+		<label> $INFO[ListItem.Label] </label>
+		<font>marketingMedium</font>
+		<textcolor>ivoryBlack</textcolor>
+		<align>center</align>
+		<width>425</width>
+		<angle>3</angle>
+		<include>focus_PhotosThumbsText</include>
+	</control>
+	</control>
+	
+	<control type="group">
+		<visible>Control.IsVisible(572)</visible>
+		<include>transition2</include>
+		<include>contextMenuHide</include>
+		<include>PageLabelsLeftMenuSlide</include>
+		<posx>35</posx>
+		<posy>650</posy>
+		<!--><control type="label">
+			<posy>20</posy>
+			<label>$INFO[ListItem.Label]</label>
+			<include>photosBottomLabel</include>
+			<visible>!IsEmpty(ListItem.Label)</visible>
+		</control>-->
+	</control>
+	</include>
+</includes>

@@ -4,26 +4,28 @@
 	<include>dialogOpen</include>
 	<coordinates>
 		<system>1</system>
-		<posx>315</posx>
-		<posy>60</posy>
+		<posx>295</posx>
+		<posy>50</posy>
 	</coordinates>
 	<controls>
 		<control type="group">
 			<animation effect="fade" start="400" end="50" time="500" condition="Window.IsActive(103)">Conditional</animation>
 			<control type="image">
-				<width>650</width>
-				<height>580</height>
-				<include>dialogWindow</include>
+				<width>690</width>
+				<height>620</height>
+				<include>dialogWindow3</include>
 			</control>
 			<control type="label" id="1">
+				<posy>40</posy>
+				<posx>40</posx>
 				<description>heading label</description>
 				<width>582</width>
 				<scroll>true</scroll>
 				<include>dialogHeading</include>
 			</control>
 			<control type="image">
-				<posx>19</posx>
-				<posy>75</posy>
+				<posx>39</posx>
+				<posy>95</posy>
 				<width>613</width>
 				<include>dialogSeparator</include>
 			</control>
@@ -50,7 +52,8 @@
 						<label>$INFO[ListItem.Label]</label>
 						<font>normalLow</font>
 						<aligny>center</aligny>
-						<textcolor>Color4</textcolor>
+						<textcolor>FFFFFFFF</textcolor>
+						<shadowcolor>ff555555</shadowcolor>
 					</control>
 				</itemlayout>
 				<focusedlayout height="40">
@@ -65,58 +68,57 @@
 						<height>35</height>
 						<font>normalLow</font>
 						<aligny>center</aligny>
-						<textcolor>Color6</textcolor>
+						<textcolor>ivory1</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</focusedlayout>
 			</control>
 			<control type="list" id="6">
-				<posx>19</posx>
-				<posy>76</posy>
+				<posx>39</posx>
+				<posy>96</posy>
 				<width>613</width>
-				<height>384</height>
+				<height>445</height>
 				<onleft>5</onleft>
 				<onright>5</onright>
 				<onup>6</onup>
 				<ondown>6</ondown>
 				<scrolltime>150</scrolltime>
-				<itemlayout width="600" height="128">
-					<control type="image">
+				<itemlayout width="600" height="50">
+					<!--><control type="image">
 						<width>613</width>
-						<height>128</height>
+						<height>50</height>
 						<texture border="3">dialogs/list-nofocus.png</texture>
-					</control>
-					<control type="image">
+					</control>-->
+					<!--><control type="image">
 						<width>613</width>
 						<height>30</height>
 						<texture border="3">1black.png</texture>
-					</control>
-					<control type="image">
+					</control>-->
+					<!--><control type="image">
 						<posx>43</posx>
 						<posy>22</posy>
 						<width>48</width>
 						<height>48</height>
 						<aspectratio align="center">keep</aspectratio>
 						<texture>$INFO[ListItem.ActualIcon]</texture>
-					</control>
-					<control type="image">
+					</control>-->
+					<!--><control type="image">
 						<width>128</width>
 						<height>128</height>
 						<aspectratio align="left">stretch</aspectratio>
 						<texture>$INFO[ListItem.Icon]</texture>
-					</control>
+					</control>-->
 					<control type="label">
-						<posx>150</posx>
-						<posy>15</posy>
+						<posx>50</posx>
+						<posy>10</posy>
 						<width>473</width>
 						<height>32</height>
-						<label>[B]$INFO[ListItem.Label][/B]</label>
-						<font>bigLow</font>
+						<label>$INFO[ListItem.Label]</label>
+						<font>qlassikMedium1</font>
 						<aligny>center</aligny>
-						<textcolor>Color4</textcolor>
+						<textcolor>FF222222</textcolor>
 					</control>
-					<!--                <control type="textbox"> -->
-					<control type="label">
+					<!--><control type="label">
 						<posx>150</posx>
 						<posy>42</posy>
 						<width>450</width>
@@ -127,7 +129,6 @@
 						<aligny>center</aligny>
 						<textcolor>Color4</textcolor>
 					</control>
-					<!--                <control type="textbox"> -->
 					<control type="label">
 						<posx>150</posx>
 						<posy>66</posy>
@@ -138,40 +139,40 @@
 						<font>mediumLow</font>
 						<aligny>center</aligny>
 						<textcolor>Color4</textcolor>
-					</control>
+					</control>-->
 				</itemlayout>
-				<focusedlayout width="600" height="128">
+				<focusedlayout width="600" height="50">
 					<control type="image">
 						<width>613</width>
-						<height>128</height>
+						<height>50</height>
 						<texture border="3">dialogs/list-focus.png</texture>
 					</control>
-					<control type="image">
+					<!--><control type="image">
 						<posx>43</posx>
 						<posy>22</posy>
 						<width>48</width>
 						<height>48</height>
 						<aspectratio align="center">keep</aspectratio>
 						<texture>$INFO[ListItem.ActualIcon]</texture>
-					</control>
-					<control type="image">
+					</control>-->
+					<!--><control type="image">
 						<width>128</width>
 						<height>128</height>
 						<aspectratio align="left">stretch</aspectratio>
 						<texture>$INFO[ListItem.Icon]</texture>
-					</control>
+					</control>-->
 					<control type="label">
-						<posx>150</posx>
-						<posy>15</posy>
+						<posx>50</posx>
+						<posy>0</posy>
 						<width>473</width>
-						<height>32</height>
-						<label>[B]$INFO[ListItem.Label][/B]</label>
-						<font>bigLow</font>
+						<height>50</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>qlassikMedium1</font>
 						<aligny>center</aligny>
-						<textcolor>Color1</textcolor>
+						<textcolor>ivory1</textcolor>
+						<shadowcolor>FF333333</shadowcolor>
 					</control>
-					<!--        <control type="textbox"> -->
-					<control type="label">
+					<!--><control type="label">
 						<posx>150</posx>
 						<posy>42</posy>
 						<width>450</width>
@@ -182,7 +183,6 @@
 						<aligny>center</aligny>
 						<textcolor>Color1</textcolor>
 					</control>
-					<!--        <control type="textbox"> -->
 					<control type="label">
 						<posx>150</posx>
 						<posy>66</posy>
@@ -193,7 +193,7 @@
 						<font>mediumLow</font>
 						<aligny>center</aligny>
 						<textcolor>Color1</textcolor>
-					</control>
+					</control>-->
 				</focusedlayout>
 			</control>
 			<control type="button" id="5">

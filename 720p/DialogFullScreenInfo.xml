@@ -5,22 +5,23 @@
 		<!-- video player -->
 		<control type="image" id="1">
 			<posx>-50</posx>
-			<posy>490</posy>
+			<posy>500</posy>
 			<width>1500</width>
 			<height>250</height>
-			<texture border="10">dialogs/square_dialog_background0.png</texture>
+			<texture border="10">black.png</texture>
 			<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + ![Window.IsActive(2901)]</visible>
+			<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
 			<include>videoFullScreenInfo</include>
 		</control>
 		<!-- audio player -->
 		<control type="image" id="1">
 			<posx>-50</posx>
-			<posy>490</posy>
+			<posy>500</posy>
 			<width>1500</width>
 			<height>250</height>
-			<texture border="10">dialogs/square_dialog_background.png</texture>
+			<texture border="10">black.png</texture>
 			<visible>VideoPlayer.Content(files) + ![Window.IsActive(2901)]</visible>
-			<animation effect="fade" start="0" end="90" time="250">WindowOpen</animation>
+			<animation effect="fade" start="100" end="70" time="0" condition="true">Conditional</animation>
 			<include>videoFullScreenInfo</include>
 		</control>
 		<control type="image" id="1">
@@ -55,7 +56,7 @@
 				<width>1000</width>
 				<label>$INFO[VideoPlayer.Title]</label>
 				<align>left</align>
-				<textcolor>greenlime</textcolor>
+				<textcolor>oldBlueLight</textcolor>
 				<font>lobsterMediumSmall</font>
 			</control>
 			<!-- movies : remaining time deleted, finish time separated and moved to right end -->
@@ -116,23 +117,24 @@
 				<font>qlassikSmallBold2</font>
 				<visible>VideoPlayer.Content(musicvideos)</visible>
 			</control>
-			<!-- plot separator -->
+			<!-- plot separators -->
 			<control type="image">
 				<posx>0</posx>
 				<posy>64</posy>
 				<width>1220</width>
-				<height>3</height>
-				<texture>dialogs/whiteline_h.png</texture>
-				<colordiffuse>Color4</colordiffuse>
+				<height>1</height>
+				<texture>frames/oldbluercorners.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 			</control>
-			<!-- second plot separator -->
 			<control type="image">
 				<posx>0</posx>
 				<posy>180</posy>
 				<width>1220</width>
 				<height>1</height>
-				<texture>dialogs/whiteline_h.png</texture>
-				<colordiffuse>Color4</colordiffuse>
+				<texture>frames/oldbluercorners.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 			</control>
 			<control type="textbox" id="8">
 				<posy>65</posy>

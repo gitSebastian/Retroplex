@@ -2,25 +2,25 @@
 <window id="6">
 	<defaultcontrol always="false">555</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>50,51,52,53,54,55,56,57,58,59,555,566,571</views>
+	<backgroundcolor>0</backgroundcolor>
+	<views>50,51,52,54,55,56,57,58,59,555,566,571</views>
 	<controls>		
-		<include>themeBackground2</include>
+		<include>Backgrounds</include>
+		<include>MultiBannerDressing</include>
 		<include>plotBoxesLibrary</include>
 		<include>listMenuFocusedBg</include>
 		<include>frameOverlay</include>
 		<include>leftMenuBg</include>	
-		<include>grainyeditionback</include>		
+		<include>retroOverlay</include>		
 		<include>leftMenuDressing</include>
 		<include>allscreens</include>
 		<include>AllViewCommonPageControls</include>
-		<include>videoFanartPageLabels</include>
+		<include>PageLabels</include>
 		<include>view_Banner</include>
 		<include>view_MultiBanner</include>
 		<include>view_BigList</include>
-		<include>view_GalleryFull</include>
 		<include>view_Poster</include>
 		<include>view_PosterInfo</include>
-		<include>view_ThumbWide</include>
 		<!-- FAKE INFO TRIGGER BUTTON -->
 		<control type="button" id="8000">
 			<label>SHOULD NOT SEE ME</label>
@@ -31,303 +31,10 @@
 			<width>500</width>
 			<visible allowhiddenfocus="true">false</visible>
 		</control>
-		<!-- LIST VIEW NEW -->
 		<include>view_List</include>
-		<!-- SLIDE VIEW MOVIES & TVSHOWS -->
 		<include>view_SlidePoster</include>
-		<include>view_SlideWide</include>
-		<include>view_SlideEpisode</include>
-		<!-- GALLERY VIEW -->
-		<!-- TITLES -->
-		<control type="group">
-			<description>normal view</description>
-			<visible>Control.IsVisible(53)</visible>
-			<include>transition3</include>
-			<include>contextMenuHide</include>
-			<include>infoDialogHide</include>
-			<posy>102</posy>
-			<control type="label">
-				<posx>265</posx>
-				<label>&#xB7; $INFO[ListItem.Title]</label>
-				<font>special3</font>
-				<textcolor>Color1</textcolor>
-				<align>left</align>
-				<width>750</width>
-				<visible>[Container.Content(movies) | Container.Content(episodes)] + ![Control.HasFocus(8000)]</visible>
-			</control>
-			<control type="label">
-				<posx>265</posx>
-				<label>&#xB7; $INFO[ListItem.TVShowTitle]</label>
-				<font>special3</font>
-				<textcolor>Color1</textcolor>
-				<align>left</align>
-				<width>750</width>
-				<visible>Container.Content(tvshows) + ![Control.HasFocus(8000)]</visible>
-			</control>
-			<control type="label">
-				<posx>1015</posx>
-				<label>&#xB7; $INFO[Container(53).ListItem(1).Title]</label>
-				<font>special3</font>
-				<textcolor>Color1</textcolor>
-				<width>750</width>
-				<visible>Container.Content(movies) + ![Control.HasFocus(8000)]</visible>
-				<animation effect="fade" start="100" end="30" time="0" condition="true">Conditional</animation>
-			</control>
-			<control type="label">
-				<posx>1015</posx>
-				<label>&#xB7; $INFO[Container(53).ListItem(1).TVShowTitle]</label>
-				<font>special3</font>
-				<textcolor>Color1</textcolor>
-				<width>750</width>
-				<visible>Container.Content(tvshows) + ![Control.HasFocus(8000)]</visible>
-				<animation effect="fade" start="100" end="30" time="0" condition="true">Conditional</animation>
-			</control>
-		</control>
-		<!-- PLOT and GENRE -->
-		<control type="group">
-			<posx>265</posx>
-			<posy>585</posy>
-			<visible>Control.IsVisible(53) + !IsEmpty(ListItem.Title)</visible>
-			<include>transition3</include>
-			<include>contextMenuHide</include>
-			<include>infoDialogHide</include>
-			<control type="grouplist">
-				<width>1020</width>
-				<height>200</height>
-				<align>left</align>
-				<textcolor>Color1</textcolor>
-				<visible>Container.Content(movies)</visible>
-				<!-- a fix for the movies that had more than one line of plot showing -->
-				<!-- and a mod for scrolling the plot -->
-				<control type="grouplist">
-					<height>24</height>
-					<control type="label">
-						<width>1020</width>
-						<label>$INFO[ListItem.Tagline]</label>
-						<font>normalCaps</font>
-						<aligny>top</aligny>
-						<visible>!IsEmpty(ListItem.Tagline)</visible>
-						<scroll>true</scroll>
-						<scrollspeed>40</scrollspeed>
-					</control>
-					<control type="label">
-						<width>1020</width>
-						<label>$INFO[ListItem.PlotOutline]</label>
-						<font>normalCaps</font>
-						<aligny>top</aligny>
-						<scroll>true</scroll>
-						<scrollspeed>40</scrollspeed>
-						<visible>IsEmpty(ListItem.Tagline) + !IsEmpty(ListItem.PlotOutline)</visible>
-					</control>
-					<control type="label">
-						<width>1020</width>
-						<label>$INFO[ListItem.Plot]</label>
-						<font>normalCaps</font>
-						<aligny>top</aligny>
-						<scroll>true</scroll>
-						<scrollspeed>40</scrollspeed>
-						<visible>IsEmpty(ListItem.Tagline) + IsEmpty(ListItem.PlotOutline) + !IsEmpty(ListItem.Plot)</visible>
-					</control>
-				</control>
-				<!-- movies : the block containing "genre + year + duration" -->
-				<!-- in a dynamic horiz list; shows only info that is available -->
-				<control type="grouplist">
-					<width>750</width>
-					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<orientation>horizontal</orientation>
-					<visible>Container.Content(movies)</visible>
-					<control type="label">
-						<label>&#xB7; $INFO[ListItem.Genre]</label>
-						<width min="5" max="720">auto</width>
-						<font>normalCaps</font>
-						
-						<visible>!IsEmpty(ListItem.Genre)</visible>
-					</control>
-					<control type="label">
-						<label>&#xB7; $INFO[ListItem.Year]</label>
-						<width min="5" max="100">auto</width>
-						<font>normalCaps</font>
-						
-						<visible>!IsEmpty(ListItem.Year)</visible>
-					</control>
-					<control type="label">
-						<label>&#xB7; $INFO[ListItem.Duration]</label>
-						<width min="5" max="100">auto</width>
-						<font>normalCaps</font>
-						
-						<visible>!IsEmpty(ListItem.Duration)</visible>
-					</control>
-				</control>
-				<!-- END block containing genre + year + duration -->
-			</control>
-			<control type="label">
-				<label>$LOCALIZE[16101] : $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[20360]</label>
-				<font>mediumCaps</font>
-				<textcolor>Color1</textcolor>
-				<align>left</align>
-				<width>900</width>
-				<visible>Container.Content(tvshows) + !IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
-			</control>
-			<control type="label">
-				<posy>23</posy>
-				<label>&#xB7; $INFO[ListItem.Genre]</label>
-				<font>mediumCaps</font>
-				
-				<align>left</align>
-				<width>750</width>
-				<visible>Container.Content(tvshows) + !IsEmpty(ListItem.Genre)</visible>
-			</control>
-			<control type="label">
-				<posy>47</posy>
-				<label>$INFO[ListItem.Premiered]</label>
-				<font>mediumCaps</font>
-				
-				<align>left</align>
-				<width>750</width>
-				<visible>Container.Content(tvshows)</visible>
-			</control>
-			<control type="label">
-				<posy>-20</posy>
-				<label>$LOCALIZE[31087] $INFO[ListItem.Season] &#xB7; $LOCALIZE[31088] $INFO[ListItem.Episode] &#xB7; $INFO[ListItem.Premiered]</label>
-				<font>special3</font>
-				<textcolor>Color1</textcolor>
-				<align>left</align>
-				<width>750</width>
-				<visible>Container.Content(episodes)</visible>
-			</control>
-		</control>
-		<control type="group">
-			<posx>285</posx>
-			<posy>585</posy>
-			<visible>Control.IsVisible(59) + Container.Content(seasons)</visible>
-			<include>transition3</include>
-			<include>contextMenuHide</include>
-			<include>infoDialogHide</include>
-			<control type="label">
-				<label>$INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[16101] $LOCALIZE[20360]</label>
-				<font>normalCaps</font>
-				
-				<align>left</align>
-				<width>900</width>
-				<visible>!IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
-			</control>
-		</control>
-		<include>view_Gallery</include>
-		<!-- fullscreen / expanded -->
-		<control type="image">
-			<include>screentype</include>
-			<aspectratio align="left">stretch</aspectratio>
-			<texture>home/menuBackground.png</texture>
-			<include>fadeinout</include>
-			<visible>Control.IsVisible(56) + ControlGroup(300).HasFocus()</visible>
-		</control>
-		<control type="image">
-			<posx>-20</posx>
-			<posy>505</posy>
-			<width>1320</width>
-			<height>215</height>
-			<visible>!IsEmpty(ListItem.Title) + [Control.IsVisible(53) + Control.HasFocus(8000)] | [Control.IsVisible(56) + !Control.HasFocus(8000)] + !ControlGroup(300).HasFocus()</visible>
-			<texture border="0,0,0,15">osd/fullscreenInfo.png</texture>
-			<animation effect="slide" start="0,600" end="0,0" easing="Out" tween="Quadratic" time="350">Visible</animation>
-			<animation effect="slide" start="0,0" end="0,600" easing="Out" tween="Quadratic" time="350">Hidden</animation>
-			<include>transition2</include>
-			<include>infoDialogHide</include>
-		</control>
-		<control type="group">
-			<posy>336</posy>
-			<visible>[Control.IsVisible(56) + !ControlGroup(300).HasFocus() + System.IdleTime(5)]</visible>
-			<control type="image">
-				<posx>20</posx>
-				<width>48</width>
-				<height>48</height>
-				<texture>views/scrollLeftIndicator.png</texture>
-				<aspectratio>keep</aspectratio>
-				<include>fadeinout</include>
-			</control>
-			<control type="image">
-				<posx>68r</posx>
-				<width>48</width>
-				<height>48</height>
-				<texture>views/scrollRightIndicator.png</texture>
-				<aspectratio>keep</aspectratio>
-				<include>fadeinout</include>
-			</control>
-		</control>
-		<control type="group">
-			<posx>0</posx>
-			<posy>550</posy>
-			<visible>[Control.IsVisible(53) + Control.HasFocus(8000)] | [Control.IsVisible(56) + !Control.HasFocus(8000)] + !ControlGroup(300).HasFocus()</visible>
-			<animation effect="slide" start="0,600" end="0,0" easing="Out" tween="Quadratic" time="350">Visible</animation>
-			<animation effect="slide" start="0,0" end="0,600" easing="Out" tween="Quadratic" time="350">Hidden</animation>
-			<include>transition2</include>
-			<include>infoDialogHide</include>
-			<control type="label">
-				<posx>20</posx>
-				<label>$INFO[ListItem.Title]</label>
-				<font>osd1</font>
-				<align>left</align>
-				<textcolor>Color5</textcolor>
-				<include>screenwidth</include>
-				<include>Heading</include>
-				<visible>Container.Content(movies)</visible>
-			</control>
-			<control type="label">
-				<posx>20</posx>
-				<label>$INFO[ListItem.TVShowTitle]</label>
-				<font>osd1</font>
-				<align>left</align>
-				<textcolor>Color6</textcolor>
-				<include>screenwidth</include>
-				<include>Heading</include>
-				<visible>Container.Content(tvshows)</visible>
-			</control>
-			<control type="group">
-				<posx>410r</posx>
-				<posy>-6</posy>
-				<include>typeFlags56</include>
-			</control>
-			<control type="image">
-				<posx>-250</posx>
-				<posy>39</posy>
-				<width>1530</width>
-				<height>1</height>
-				<texture>views/separatorFaded.png</texture>
-				<colordiffuse>Color4</colordiffuse>
-				<visible>!IsEmpty(ListItem.Title)</visible>
-			</control>
-			<!-- original small case -->
-			<control type="textbox" id="4">
-				<posx>20</posx>
-				<posy>41</posy>
-				<width>1240</width>
-				<height>120</height>
-				<align>left</align>
-				<label>$INFO[ListItem.Plot]</label>
-				<font>normalLow</font>
-				<textcolor>Color6</textcolor>
-				<visible>Skin.HasSetting(usesmallcase)</visible>
-			</control>
-			<!-- use mixed case -->
-			<control type="textbox" id="4">
-				<posx>20</posx>
-				<posy>41</posy>
-				<width>1240</width>
-				<height>120</height>
-				<align>left</align>
-				<label>$INFO[ListItem.Plot]</label>
-				<font>normal</font>
-				<textcolor>Color6</textcolor>
-				<visible>!Skin.HasSetting(usesmallcase)</visible>
-			</control>
-		</control>
-		<!-- ICONVIEW ADD-ONS -->
-		<!--<include>view_ListPrograms</include>
-		<include>view_ThumbList</include>-->
-		<!-- PAGE INCLUDES -->
-		<include>LibraryVideoMenu</include>
-		<include>videoLibPageLabels</include>
+		<include>LeftSideMenu</include>
+		<include>leftMenuViewPreviews</include>
 		<include>debugInfos</include>
 		<include>musicOSDInfoNew</include>
 	</controls>

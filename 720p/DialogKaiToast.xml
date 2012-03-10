@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <window id="107">
 	<controls>
-			<control type="group">
+		<!--	<control type="group">
 				<include>dialogWindow</include>
 				<visible>!Window.IsActive(12999)</visible>
 				<include>transition2</include>
@@ -24,6 +24,6 @@
 					<height>40</height>
 					<aligny>center</aligny>
 				</control>
-			</control>
+			</control>-->
 	</controls>
 </window>

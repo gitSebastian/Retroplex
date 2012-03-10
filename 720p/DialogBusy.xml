@@ -3,8 +3,8 @@
 
 	<coordinates>
 		<system>1</system>
-		<posx>20</posx>
-		<posy>20</posy>
+		<posx>0</posx>
+		<posy>0</posy>
 	</coordinates>
 	
 	<include>fadeinout</include>
@@ -12,16 +12,51 @@
 	<controls>
 		<control type="group">
 			<control type="image">
+				<include>fullScreenScale</include>
+				<texture background="true">black.png</texture>
+				<animation type="WindowOpen">
+					<effect type="fade" start="0" end="100" time="700"/>
+				</animation>				
+			</control>
+			<control type="image">
+				<include>fullScreenScale</include>
+				<texture background="true">busy/drivein.jpg</texture>
+				<animation type="WindowOpen">
+					<effect type="fade" start="0" end="60" time="700"/>
+				</animation>
+			</control>
+			<control type="image">
+				<posx>600</posx>
+				<posy>440</posy>
 				<width>48</width>
 				<height>48</height>
-				<texture>busy/busy.png</texture>
+				<texture>busy/busy2.png</texture>
 				<aspectratio>keep</aspectratio>
-				<animation effect="rotate" start="0" end="360" center="24,24" time="1200" loop="true" condition="true">conditional</animation>
+				<colordiffuse>FF888888</colordiffuse>
+				<animation effect="rotate" start="0" end="-360" center="624,464" time="1500" loop="true" condition="true">conditional</animation>
+				<animation type="WindowOpen">
+					<effect type="fade" start="0" end="100" time="700"/>
+				</animation>
 			</control>
+			
 			<control type="button" id="99">
-				<label>SHOULD NOT SEE ME</label>
+				<posx>380</posx>
+				<posy>518</posy>
+				<font>lobsterMediumSmall</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<height>30</height>
 				<width>500</width>
-				<visible allowhiddenfocus="true">false</visible>
+				<textcolor>black</textcolor>
+				<focusedcolor>ivory2</focusedcolor>
+				<shadowcolor>ff555555</shadowcolor>
+				<scroll>false</scroll>
+				<label>Loading...</label>
+				<animation type="WindowOpen">
+					<effect type="fade" start="0" end="100" time="700"/>
+				</animation>
+				<visible>true</visible>
+				<pulseonselect>true</pulseonselect>
 			</control>
 		</control>
 	</controls>

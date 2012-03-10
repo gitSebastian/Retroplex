@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<window type="dialog" id="4999">
+	<defaultcontrol always="true">100</defaultcontrol>
+	<controls>
+		<control type="button" id="100">
+			<onleft>101</onleft>			
+			<onright>-</onright>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onclick>-</onclick>
+		</control>
+		<control type="button" id="101">
+			<onleft>-</onleft>
+			<onright>100</onright>
+			<onfocus>SendClick(0,9100)</onfocus>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onclick>-</onclick>
+		</control>
+		<control type="group">
+			<!-- HELP pin-up -->
+			<control type="image">
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="350"/>
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="450"/>
+				</animation>
+				<width>500</width>
+				<height>500</height>
+				<posx>710</posx>
+				<posy>199</posy>
+				<aligny>bottom</aligny>
+				<aspectratio>keep</aspectratio>
+				<include>transition2</include>
+				<texture background="true" align="left">help/natalie2.png</texture>
+			</control>
+			<!-- blue bubble -->
+			<control type="image">
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="350"/>
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="350"/>
+				</animation>
+				<width>467</width>
+				<height>204</height>
+				<posx>640</posx>
+				<posy>20</posy>
+				<aligny>bottom</aligny>
+				<aspectratio>stretch</aspectratio>
+				<include>transition2</include>
+				<texture background="true" align="left" border="80">help/homebluebubble2.png</texture>
+			</control>
+			<control type="group">
+				<posx>660</posx>
+				<posy>5</posy>
+				<include>transition2</include>				
+				<control type="textbox" id="8">
+					<width>450</width>
+					<height>200</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<label>$LOCALIZE[41934]</label>
+					<textcolor>ivory1</textcolor>
+					<font>titilliumMedium</font>
+					<animation type="Visible">
+						<effect type="fade" start="0" end="100" time="350"/>
+					</animation>
+					<animation type="Hidden">
+						<effect type="fade" start="100" end="0" time="250"/>
+					</animation>
+				</control>
+			</control>
+			<!-- red bubble -->
+			<control type="image">
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="350" delay="500"/>
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="350"/>
+				</animation>
+				<width>523</width>
+				<height>175</height>
+				<posx>300</posx>
+				<posy>530</posy>
+				<aligny>bottom</aligny>
+				<aspectratio>stretch</aspectratio>
+				<include>transition2</include>
+				<texture background="true" align="left" border="70">help/homeredbubble2.png</texture>
+				<visible>Control.HasFocus(100)</visible>
+			</control>
+			<control type="group">
+				<posx>320</posx>
+				<posy>560</posy>
+				<include>transition2</include>
+				
+				<control type="textbox" id="8">
+					<width>500</width>
+					<height>200</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<label>$LOCALIZE[41935]</label>
+					<textcolor>ivory2</textcolor>
+					<font>titilliumMedium</font>
+					<animation type="Visible">
+						<effect type="fade" start="0" end="100" time="350" delay="500"/>
+					</animation>
+					<animation type="Hidden">
+						<effect type="fade" start="100" end="0" time="250"/>
+					</animation>
+					<visible>Control.HasFocus(100)</visible>
+				</control>
+			</control>
+			<!-- ivory bubble -->
+			<control type="image">
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="350" delay="1000"/>
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="350"/>
+				</animation>
+				<width>515</width>
+				<height>160</height>
+				<posx>10</posx>
+				<posy>200</posy>
+				<aligny>bottom</aligny>
+				<aspectratio>stretch</aspectratio>
+				<include>transition2</include>
+				<texture background="true" align="left" border="80">help/homeivorybubble2.png</texture>
+				<visible>Control.HasFocus(100)</visible>
+			</control>
+			<control type="group">
+				<posx>110</posx>
+				<posy>190</posy>
+				<include>transition2</include>
+				
+				<control type="textbox" id="8">
+					<width>390</width>
+					<height>200</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<label>$LOCALIZE[41936]</label>
+					<textcolor>ivoryBlack</textcolor>
+					<font>titilliumMedium</font>
+					<animation type="Visible">
+						<effect type="fade" start="0" end="100" time="350" delay="1000"/>
+					</animation>
+					<animation type="Hidden">
+						<effect type="fade" start="100" end="0" time="250"/>
+					</animation>
+					<visible>Control.HasFocus(100)</visible>
+				</control>
+			</control>
+			<!-- left menu red bubble -->
+			<control type="image">
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="350" delay="500"/>
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="250"/>
+				</animation>
+				<width>453</width>
+				<height>464</height>
+				<posx>280</posx>
+				<posy>180</posy>
+				<aligny>bottom</aligny>
+				<aspectratio>stretch</aspectratio>
+				<include>transition2</include>
+				<texture background="true" align="left">help/leftmenuredbubble2.png</texture>
+				<visible>Control.HasFocus(101)</visible>
+			</control>
+			<control type="group">
+				<posx>360</posx>
+				<posy>175</posy>
+				<include>transition2</include>				
+				<control type="textbox" id="8">
+					<width>340</width>
+					<height>480</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<label>$LOCALIZE[41937]</label>
+					<textcolor>ivory2</textcolor>
+					<font>titilliumMedium</font>
+					<animation type="Visible">
+						<effect type="fade" start="0" end="100" time="350" delay="500"/>
+					</animation>
+					<animation type="Hidden">
+						<effect type="fade" start="100" end="0" time="250"/>
+					</animation>
+					<visible>Control.HasFocus(101)</visible>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

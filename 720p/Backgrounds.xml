@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<includes>
+	<!-- base templates -->
+	<include name="fullScreenScale">
+		<width>1280</width>
+		<height>720</height>
+		<aspectratio>scale</aspectratio>
+	</include>
+	<include name="fullScreenStretch">
+		<width>1280</width>
+		<height>720</height>
+		<aspectratio>stretch</aspectratio>
+	</include>
+	<include name="Backgrounds">
+		<!-- Queue -->
+		<control type="image">
+			<description>queue window</description>
+			<include>fullScreenScale</include>
+			<texture background="true">backgrounds/queuebg1.jpg</texture>
+			<visible>Window.IsActive(24) + !Control.IsVisible(1000)</visible>
+		</control>
+		<!-- default fanart bg -->
+		<control type="largeimage" id="1000">
+			<include>fullScreenScale</include>
+			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<include>fanartFadeTime</include>
+			<!--><visible>!Skin.HasSetting(FanartGlobal) + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)] + ![Control.IsVisible(56)] + ![Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(2)]</visible>-->
+			<visible>!IsEmpty(ListItem.Property(Fanart_Image))</visible>
+			<include>transition2</include>
+			<animation type="OnFocus">
+				<effect type="fade" start="0" end="100" time="200" delay="300"/>
+			</animation>
+		</control>
+		<!-- Plex Online & Programs -->
+		<control type="image">
+			<include>fullScreenScale</include>
+			<texture background="true">backgrounds/programs02.jpg</texture>
+			<visible>[Window.IsActive(1)]</visible>
+		</control>
+		<!-- Settings dressing -->
+		<control type="group">
+			<visible>[Window.IsActive(59) | Window.IsActive(4000) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings)]</visible>
+			<include>transition2</include>
+			<control type="image">
+				<include>fullScreenStretch</include>
+				<texture background="true">backgrounds/chocolate.png</texture>
+			</control>
+			<control type="image">
+				<include>fullScreenStretch</include>
+				<texture background="true">backgrounds/ivoryrounded.png</texture>
+			</control>
+			<control type="image">
+				<include>fullScreenStretch</include>
+				<texture background="true">backgrounds/ivoryrounded.png</texture>
+			</control>
+			<control type="image">
+				<posx>15</posx>
+				<posy>13</posy>
+				<height>695</height>
+				<width>340</width>
+				<aspectratio>stretch</aspectratio>
+				<texture background="true" border="100">backgrounds/redcontour.png</texture>
+				<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
+			</control>
+			<!-- Separator -->
+			<control type="image">
+				<posx>326</posx>
+				<posy>-200</posy>
+				<height>1120</height>
+				<width>29</width>
+				<texture background="true">settings/separator.png</texture>
+				<aspectratio align="right">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>-925</posx>
+				<posy>0</posy>
+				<texture background="true">backgrounds/chocolate.png</texture>
+				<animation effect="fade" start="60" end="80" time="0" condition="true">Conditional</animation>
+			</control>
+		</control>
+		<!-- Settings -->
+		<control type="image">
+			<include>fullScreenStretch</include>
+			<texture background="true">backgrounds/background.jpg</texture>
+			<visible>[Window.IsActive(4000) | Window.IsActive(40) | Window.IsActive(10019) | Window.IsActive(10018) | Window.IsActive(10017) | Window.IsActive(10016) | Window.IsActive(10015) | Window.IsActive(10014) | Window.IsActive(10013) | Window.IsActive(10012) | Window.IsActive(10003) | Window.IsActive(10004) | Window.IsActive(10007) | Window.IsActive(10034)]</visible>
+		</control>
+		<!-- Music -->
+		<control type="image">
+			<description>music bg</description>
+			<include>fullScreenScale</include>
+			<texture background="true">backgrounds/iTunes07.jpg</texture>
+			<visible>[Window.IsActive(501) | Window.IsActive(502)] + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
+		</control>
+		<!-- Photos -->
+		<control type="image">
+			<description>pictures bg</description>
+			<include>fullScreenScale</include>
+			<texture background="true">backgrounds/iPhoto02.jpg</texture>
+			<visible>!Skin.HasSetting(FanartGlobal) + Window.IsActive(2) + ![Player.HasVideo + Skin.HasSetting(backgroundVideoGlobal)]</visible>
+		</control>
+		<!-- Shared Content -->
+		<control type="image">
+			<description>shared bg</description>
+			<include>fullScreenScale</include>
+			<texture background="true">backgrounds/queuebg.jpg</texture>
+			<visible>Window.IsActive(mysharedcontent)</visible>
+		</control>
+		<!-- Playlist now playing -->
+		<control type="image">
+			<description>playlist now bg</description>
+			<include>fullScreenScale</include>
+			<texture background="true">backgrounds/iTunes07.jpg</texture>
+			<visible>Window.IsActive(musicplaylist)</visible>
+		</control>
+		<!-- Now Playing -->
+		<control type="image">
+			<description>NOW PLAYING bg</description>
+			<include>fullScreenScale</include>
+			<texture background="true">backgrounds/iTunes07.jpg</texture>
+			<visible>Window.IsActive(50) + !Skin.HasSetting(retroplexmusicslideshow)</visible>
+		</control>
+	</include>
+</includes>

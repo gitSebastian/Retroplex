@@ -1,65 +1,134 @@
 <window id="0">
 	<defaultcontrol always="true">300</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+	<allowoverlay>yes</allowoverlay>
+	<backgroundcolor>0</backgroundcolor>
 	<controls>
 		<!-- BACKGROUND MEDIA -->
+		<control type="group">
+			<visible>Window.IsActive(0) + Skin.HasSetting(RetroplexSlideShow) + ![Skin.HasSetting(FanartSlideShow) | Skin.HasSetting(personalSlideShow)] + ![Player.HasVideo + !Skin.HasSetting(backgroundVideo)]</visible>
+			<!-- generic autopopulated fanart slideshow -->
+			<control type="multiimage" id="10101">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+				<aligny>top</aligny>
+				<timeperimage>8000</timeperimage>
+				<fadetime>1000</fadetime>
+				<randomize>true</randomize>
+				<loop>yes</loop>
+				<visible>[Window.IsActive(0) + Skin.HasSetting(RetroplexSlideShow) + !ControlGroup(5000).HasFocus] | [ControlGroup(5000).HasFocus + Skin.HasSetting(RetroplexSlideShow) + System.IdleTime(58)]</visible>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<animation type="WindowClose">
+					<effect type="fade" start="100" end="0" time="800"/>
+				</animation>
+			</control>
+			<!-- "new list" focused item fanart while using inside the list -->
+			<!-- on deck -->
+			<control type="multiimage">
+				<visible>ControlGroup(7001).HasFocus + !Container(11000).ListItem(0).Type(Photo)</visible>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<info background="true">Container(11000).ListItem.Property(fanart_image)</info>
+				<aspectratio>scale</aspectratio>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" start="100" end="0" time="350" condition="System.IdleTime(60)">Conditional</animation>
+			</control>
+			<!-- recently added -->
+			<control type="multiimage">
+				<visible>ControlGroup(7002).HasFocus</visible>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<info background="true">Container(11001).ListItem.Property(fanart_image)</info>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" start="100" end="0" time="350" condition="System.IdleTime(60)">Conditional</animation>
+			</control>
+			<!-- recently used -->
+			<control type="multiimage">
+				<visible>ControlGroup(7004).HasFocus</visible>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<info background="true">Container(11002).ListItem.Property(fanart_image)</info>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<fadetime>400</fadetime>
+			</control>
+			<!-- SILLY HACKS -->
+			<!-- photos hack -->
+			<control type="multiimage">
+				<visible>ControlGroup(7001).HasFocus + [Container(11000).ListItem(0).Type(Photo)]</visible>
+				<animation effect="fade" end="70" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<info background="true">Container(11000).ListItem.Thumb</info>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" start="70" end="0" time="350" condition="System.IdleTime(60)">Conditional</animation>
+			</control>
+			<!-- queue hack -->
+			<control type="multiimage">
+				<visible>ControlGroup(7003).HasFocus + [Container(11003).ListItem(0).Type(Clip)]</visible>
+				<animation effect="fade" end="70" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<info background="true">Container(11003).ListItem.Thumb</info>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<fadetime>400</fadetime>
+				<animation effect="fade" start="70" end="0" time="350" condition="System.IdleTime(60)">Conditional</animation>
+			</control>
+		</control>
 		<include>slideshows</include>
 		<!-- test image -->
-		<!--<control type="image" id="21">
+		<!--><control type="image" id="21">
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
 			<aspectratio>scale</aspectratio>
-			<aligny>center</aligny>
-			<texture>retroslide/000.jpg</texture>
+			<aligny>top</aligny>
+			<texture>slideshows/24.jpg</texture>
 		</control>-->
 		<include>homeMenuFocusedBg</include>
 		<!--<include>plotBoxesLibrary</include>-->
 		<include>frameOverlay</include>
 		<include>leftMenuBg</include>
-		<include>nostalgiaOverlay</include>
+		<include>retroOverlay</include>
 		<include>leftMenuDressing</include>
-		<control type="group">
-			<include>HomeScreenLeftMenuSlide</include>
-			<include>homelogo</include>
-			<include>hometypologo</include>
-		</control>
+		<include>RetroplexLogo</include>
 		<!-- time and date -->
-		<include condition="![Window.IsActive(10112) | Window.IsActive(10133) | Window.IsActive(107)]">libClock</include>
-		<!-- HOME MENU -->
-		<include>HomeMenu</include>	
-		<!-- now playing for home screen -->	
-		<include>nowplayinghome</include>
-		<!-- weather widget for home screen -->	
-		<include>weatherhome</include>
-		<!-- RSS FEED -->
 		<control type="group">
-			<posy>687</posy>
-			<visible>Skin.HasSetting(showhomerss) + ![Window.IsActive(10133) | Window.IsActive(10112)]</visible>			
-			<animation effect="slide" start="0,100" end="0,0" time="200" tween="Quadratic" easing="In">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="0,100" time="200" tween="Quadratic" easing="Out">WindowClose</animation>
-			<control type="image">
-				<animation effect="fade" start="0" end="50" time="250" delay="0" condition="true">Conditional</animation>
-				<height>38</height>
-				<texture>dialogs/square_menu_background.png</texture>
-				<include>screenwidth</include>
-			</control>
-			<control type="rss" id="1">
-				<posy>7</posy>
-				<include>screenwidth</include>
-				<font>qlassikSmall</font>
-				<urlset>1</urlset>
-				<height>32</height>
-				<aligny>bottom</aligny>
-				<textcolor>ivory3</textcolor>
-				<titlecolor>ffA1927F</titlecolor>
-				<headlinecolor>Color1</headlinecolor>
-				<highlightcolor>Focused</highlightcolor>
-				<include>fadeinout</include>
-			</control>
-		</control>		
+		<include condition="![Window.IsActive(10112) | Window.IsActive(10133) | Window.IsActive(107)]">libClock</include>
+		<animation effect="fade" start="100" end="0" time="200" condition="Skin.HasSetting(showmainhelp)">Conditional</animation>
+		</control>
+		<!-- HOME MENU -->
+		<include>HomeMenu</include>
+		<include>newHomeLists</include>
+		<include>HomeLeftSideMenu</include>
+		<!-- now playing for home screen -->	
+		<include>nowPlayingTopSmall</include>
+		<include>nowPlayingBottomWide</include>
 		<!-- HELP -->
 		<include>RetroplexHelp</include>
+		
 	</controls>
 </window>

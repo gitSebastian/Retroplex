@@ -38,7 +38,7 @@
 			<include>dialogLine</include>
 		</control>
 		<control type="group">
-			<posy>174</posy>
+			<posy>200</posy>
 			<posx>150</posx>
 			<control type="button" id="11">
 				<description>Yes button</description>

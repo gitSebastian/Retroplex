@@ -2,6 +2,7 @@
 <includes>
 	<include name="RetroplexHelp">
 		<control type="group">
+			<visible>!Skin.HasSetting(hidehelpmainmenu)</visible>
 			<!-- HELP pin-up -->
 			<control type="image">
 				<animation type="Visible">
@@ -40,9 +41,8 @@
 			</control>
 			<control type="group">
 				<posx>660</posx>
-				<posy>25</posy>
-				<include>transition2</include>
-				<visible>Skin.HasSetting(showmainhelp)</visible>
+				<posy>5</posy>
+				<include>transition2</include>				
 				<control type="textbox" id="8">
 					<width>450</width>
 					<height>200</height>
@@ -57,12 +57,13 @@
 					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="250"/>
 					</animation>
+					<visible>Skin.HasSetting(showmainhelp)</visible>
 				</control>
 			</control>
 			<!-- red bubble -->
 			<control type="image">
 				<animation type="Visible">
-					<effect type="fade" start="0" end="100" time="350"/>
+					<effect type="fade" start="0" end="100" time="350" delay="500"/>
 				</animation>
 				<animation type="Hidden">
 					<effect type="fade" start="100" end="0" time="350"/>
@@ -79,9 +80,9 @@
 			</control>
 			<control type="group">
 				<posx>320</posx>
-				<posy>580</posy>
+				<posy>560</posy>
 				<include>transition2</include>
-				<visible>Skin.HasSetting(showmainhelp) + Control.HasFocus(300)</visible>
+				
 				<control type="textbox" id="8">
 					<width>500</width>
 					<height>200</height>
@@ -91,17 +92,18 @@
 					<textcolor>ivory2</textcolor>
 					<font>titilliumMedium</font>
 					<animation type="Visible">
-						<effect type="fade" start="0" end="100" time="350"/>
+						<effect type="fade" start="0" end="100" time="350" delay="500"/>
 					</animation>
 					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="250"/>
 					</animation>
+					<visible>Skin.HasSetting(showmainhelp) + Control.HasFocus(300)</visible>
 				</control>
 			</control>
 			<!-- ivory bubble -->
 			<control type="image">
 				<animation type="Visible">
-					<effect type="fade" start="0" end="100" time="350"/>
+					<effect type="fade" start="0" end="100" time="350" delay="1000"/>
 				</animation>
 				<animation type="Hidden">
 					<effect type="fade" start="100" end="0" time="350"/>
@@ -118,9 +120,9 @@
 			</control>
 			<control type="group">
 				<posx>110</posx>
-				<posy>210</posy>
+				<posy>190</posy>
 				<include>transition2</include>
-				<visible>Skin.HasSetting(showmainhelp) + Control.HasFocus(300)</visible>
+				
 				<control type="textbox" id="8">
 					<width>390</width>
 					<height>200</height>
@@ -130,17 +132,18 @@
 					<textcolor>ivoryBlack</textcolor>
 					<font>titilliumMedium</font>
 					<animation type="Visible">
-						<effect type="fade" start="0" end="100" time="350"/>
+						<effect type="fade" start="0" end="100" time="350" delay="1000"/>
 					</animation>
 					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="250"/>
 					</animation>
+					<visible>Skin.HasSetting(showmainhelp) + Control.HasFocus(300)</visible>
 				</control>
 			</control>
 			<!-- left menu red bubble -->
 			<control type="image">
 				<animation type="Visible">
-					<effect type="fade" start="0" end="100" time="350"/>
+					<effect type="fade" start="0" end="100" time="350" delay="500"/>
 				</animation>
 				<animation type="Hidden">
 					<effect type="fade" start="100" end="0" time="250"/>
@@ -148,7 +151,7 @@
 				<width>453</width>
 				<height>464</height>
 				<posx>280</posx>
-				<posy>200</posy>
+				<posy>180</posy>
 				<aligny>bottom</aligny>
 				<aspectratio>stretch</aspectratio>
 				<include>transition2</include>
@@ -157,23 +160,23 @@
 			</control>
 			<control type="group">
 				<posx>360</posx>
-				<posy>210</posy>
-				<include>transition2</include>
-				<visible>Skin.HasSetting(showmainhelp) + !Control.HasFocus(300)</visible>
+				<posy>175</posy>
+				<include>transition2</include>				
 				<control type="textbox" id="8">
 					<width>340</width>
-					<height>450</height>
+					<height>480</height>
 					<align>left</align>
 					<aligny>top</aligny>
 					<label>$LOCALIZE[41937]</label>
 					<textcolor>ivory2</textcolor>
 					<font>titilliumMedium</font>
 					<animation type="Visible">
-						<effect type="fade" start="0" end="100" time="350"/>
+						<effect type="fade" start="0" end="100" time="350" delay="500"/>
 					</animation>
 					<animation type="Hidden">
 						<effect type="fade" start="100" end="0" time="250"/>
 					</animation>
+					<visible>Skin.HasSetting(showmainhelp) + !Control.HasFocus(300)</visible>
 				</control>
 			</control>
 		</control>

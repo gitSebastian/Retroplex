@@ -1,9 +1,77 @@
 <?xml version="1.0"?>
 <includes>
+	<!-- base title -->
+	<include name="PageTitle">
+		<width min="1" max="400">auto</width>
+		<aligny>center</aligny>
+		<font>qlassikMedium2</font>
+		<include>transition3</include>
+	</include>
+	<!-- colors -->
+	<include name="FirstTitleColor">
+		<textcolor>ivory3</textcolor>
+	</include>
+	<include name="SecondTitleColor">
+		<textcolor>oldBlue</textcolor>
+	</include>
+	<include name="ThirdTitleColor">
+		<textcolor>ivory3</textcolor>
+	</include>
+	<!-- labels -->
+	<!-- page labels -->
+	<include name="PageLabels">
+		<control type="grouplist">
+			<posx>34</posx>
+			<posy>20</posy>
+			<width>950</width>
+			<orientation>horizontal</orientation>
+			<itemgap>10</itemgap>
+			<!-- animation if letter offset indicator is activated -->
+			<animation effect="slide" time="500" delay="600" tween="cubic" easing="in" start="0,0" end="30,0" condition="Skin.HasSetting(showscrolloffset) + Container.Scrolling">Conditional</animation>
+			<animation effect="slide" time="500" tween="cubic" easing="out" start="30,0" end="0,0" condition="Skin.HasSetting(showscrolloffset) + !Container.Scrolling">Conditional</animation>
+			<!-- mypics.xml -->
+			<control type="label">
+				<label>$LOCALIZE[1]</label>
+				<include>PageTitle</include>
+				<include>FirstTitleColor</include>
+				<include>PageLabelsLeftMenuSlide</include>
+				<visible>Window.IsActive(2)</visible>
+			</control>
+			<!-- myprograms.xml -->
+			<control type="label">
+				<label>$LOCALIZE[0]</label>
+				<include>PageTitle</include>
+				<include>FirstTitleColor</include>
+				<include>PageLabelsLeftMenuSlide</include>
+				<visible>Window.IsActive(Programs)</visible>
+			</control>
+			<!-- mymusicplaylist.xml -->
+			<control type="label">
+				<label>Playlist Now Playing</label>
+				<include>PageTitle</include>
+				<include>FirstTitleColor</include>
+				<include>PageLabelsLeftMenuSlide</include>
+				<visible>Window.IsActive(500)</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[Container.FirstTitle]</label>
+				<include>PageTitle</include>
+				<include>SecondTitleColor</include>
+				<include>PageLabelsLeftMenuSlide</include>
+			</control>
+			<control type="label">
+				<label>$INFO[Container.SecondTitle]</label>
+				<include>PageTitle</include>
+				<include>ThirdTitleColor</include>
+				<include>PageLabelsLeftMenuSlide</include>
+			</control>
+		</control>
+	</include>
+	
 	<include name="settingsPageLabel">
-		<posx>430</posx>
-		<posy>60</posy>
-		<width>800</width>
+		<posx>355</posx>
+		<posy>50</posy>
+		<width>925</width>
 		<aligny>center</aligny>
 		<align>center</align>
 		<font>qlassikMedium2</font>
@@ -11,17 +79,22 @@
 		<include>transition3</include>
 		<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 	</include>
+	<!--
 	<include name="PageLabel">
-		<posx>34</posx>
-		<posy>20</posy>
-		<width>950</width>
+		<width min="1" max="400">auto</width>
 		<aligny>center</aligny>
 		<font>qlassikMedium2</font>
-		<textcolor>Color1</textcolor>
 		<include>transition3</include>
-		<animation effect="fade" start="20" end="70" time="0" condition="true">Conditional</animation>
 	</include>
-	<!-- VIDEO PAGELABELS -->
+	<include name="PageLabelFirstTitle">
+		<textcolor>ivory3</textcolor>
+	</include>
+	<include name="PageLabelSecondTitle">
+		<textcolor>oldBlue</textcolor>
+	</include>
+	<include name="PageLabelThirdTitle">
+		<textcolor>ivory3</textcolor>
+	</include>
 	<include name="videoPageLabel">
 		<posx>34</posx>
 		<posy>25</posy>
@@ -43,7 +116,6 @@
 		<animation effect="fade" start="20" end="70" time="0" condition="true">Conditional</animation>
 	</include>
 	<include name="videoLibPageLabels">
-		<!-- page titles with scrolloffset visible -->
 		<control type="group">
 			<include>PageLabelsLeftMenuSlide</include>
 		<control type="label">
@@ -62,7 +134,6 @@
 			<animation effect="slide" time="500" delay="600" tween="cubic" easing="in" start="0,0" end="30,0" condition="Container.Scrolling">Conditional</animation>
 			<animation effect="slide" time="500" tween="cubic" easing="out" start="30,0" end="0,0" condition="!Container.Scrolling">Conditional</animation>
 		</control>
-		<!-- page titles without scrolloffset visible -->
 		<control type="label">
 			<label>$INFO[Container.FirstTitle]</label>
 			<include>videoPageLabel</include>
@@ -75,33 +146,23 @@
 			<include>infoDialogHide</include>
 			<visible>!Window.IsActive(502) + !Skin.HasSetting(showscrolloffset) + !IsEmpty(Container.SecondTitle)</visible>
 		</control>
-		<!-- full info screen movies -->
 		<control type="label">
 			<label>$INFO[ListItem.Title]</label>
 			<include>videoPageLabel</include>
 			<visible>Window.IsActive(2003) + Container.Content(movies)</visible>
 		</control>
-		<!-- full info screen tv shows -->
 		<control type="label">
 			<description>tv shows</description>
 			<label>$INFO[ListItem.TVShowTitle]</label>
 			<include>videoPageLabel</include>
 			<visible>Window.IsActive(2003) + Container.Content(tvshows)</visible>
 		</control>
-		<!-- full info screen episodes -->
 		<control type="label">
 			<description>episodes</description>
 			<label>$INFO[ListItem.TVShowTitle]</label>
 			<include>videoPageLabel</include>
 			<visible>Window.IsActive(2003) + Container.Content(episodes)</visible>
 		</control>
-		<!-- music -->
-		<!--<control type="label">
-			<label>[COLOR=ffA1927F]$INFO[Container.FirstTitle][/COLOR] $INFO[Container.SecondTitle]</label>
-			<include>videoPageLabel</include>
-			<visible>!Window.IsActive(502)</visible>
-		</control>-->
-		<!-- pictures -->
 		<control type="label">
 			<description>programs</description>
 			<label>[UPPERCASE]$LOCALIZE[1][/UPPERCASE]</label>
@@ -113,7 +174,6 @@
 	<include name="videoLibPageLabels2">
 		<control type="group">
 			<include>PageLabelsLeftMenuSlide</include>
-		<!-- video -->
 		<control type="label">
 			<label>$INFO[Container.FirstTitle]</label>
 			<include>videoPageLabel</include>
@@ -124,7 +184,6 @@
 			<include>videoPageLabel</include>
 			<visible>!Window.IsActive(2003) + !IsEmpty(Container.SecondTitle)</visible>
 		</control>
-		<!-- pictures -->
 		<control type="label">
 			<description>programs</description>
 			<label>[UPPERCASE]$LOCALIZE[1][/UPPERCASE]</label>
@@ -133,4 +192,5 @@
 		</control>
 		</control>
 	</include>
+	-->
 </includes>

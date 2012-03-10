@@ -1,43 +1,48 @@
 <?xml version="1.0"?>
 <fonts>
 	<fontset id="Default" unicode="true">
-		<!-- NOSTALGIA FONTS -->
-	<!--	<font>
-			<name>bauhausBackTitle</name>
-			<filename>Bauhaus93.ttf</filename>
-			<size>200</size>
-		</font>
-		<font>
-			<name>offsetHuge2</name>
-			<filename>OLHOBOITRIAL2011.ttf</filename>
-			<size>500</size>
-		</font>
-		<font>
-			<name>osdBg</name>
-			<filename>Bauhaus93.ttf</filename>
-			<size>270</size>
-		</font>
-		<font>
-			<name>logoBig</name>
-			<filename>Bauhaus93.ttf</filename>
-			<size>700</size>
-		</font>
-		<font>
-			<name>caviarHuge</name>
-			<filename>CaviarDreams.ttf</filename>
-			<size>100</size>
-		</font>
-		<font>
-			<name>geoBig</name>
-			<filename>GeosansLight.ttf</filename>
-			<size>60</size>
-		</font>
-		<font>
-			<name>geoMiddle</name>
-			<filename>GeoSansLight.ttf</filename>
-			<size>40</size>
-		</font>-->
 		<!-- UPDATED -->
+		<font>
+			<name>dejavutest</name>
+			<filename>DejaVuUniversal.ttf</filename>
+			<size>16</size>
+		</font>
+		<font>
+			<name>marketingSmallest2</name>
+			<filename>MarketingScript.ttf</filename>
+			<size>14</size>
+		</font>
+		<font>
+			<name>marketingSmallest</name>
+			<filename>MarketingScript.ttf</filename>
+			<size>16</size>
+		</font>
+		<font>
+			<name>marketingSmall2</name>
+			<filename>MarketingScript.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>marketingSmall</name>
+			<filename>MarketingScript.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>marketingMedium</name>
+			<filename>MarketingScript.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>wisdomMedium</name>
+			<filename>Wisdom_Script.otf</filename>
+			<size>22</size>
+		</font>
+		
+		<font>
+			<name>UnicodeFont</name>
+			<filename>UKIJQolyazma.ttf</filename>
+			<size>30</size>
+		</font>
 		<font>
 			<name>lobsterBig</name>
 			<filename>Lobster 1.4.otf</filename>
@@ -67,6 +72,11 @@
 			<name>lobsterSmall</name>
 			<filename>Lobster 1.4.otf</filename>
 			<size>24</size>
+		</font>
+		<font>
+			<name>lobsterSmall3</name>
+			<filename>Lobster 1.4.otf</filename>
+			<size>20</size>
 		</font>
 		<font>
 			<name>lobsterSmallest</name>
@@ -169,19 +179,14 @@
 			<size>18</size>
 		</font>
 		<font>
-			<name>marketingBig</name>
-			<filename>MarketingScript.ttf</filename>
-			<size>40</size>
+			<name>dockSmall2</name>
+			<filename>dock11.otf</filename>
+			<size>20</size>
 		</font>
 		<font>
-			<name>marketingMedium</name>
-			<filename>MarketingScript.ttf</filename>
-			<size>28</size>
-		</font>
-		<font>
-			<name>marketingMediumSmall</name>
-			<filename>MarketingScript.ttf</filename>
-			<size>22</size>
+			<name>dockSmallest</name>
+			<filename>dock11.otf</filename>
+			<size>16</size>
 		</font>
 		<font>
 			<name>telegraficoSmall</name>
@@ -193,113 +198,18 @@
 			<filename>Telegrafico.ttf</filename>
 			<size>16</size>
 		</font>
-		<!--<font>
-			<name>test</name>
-			<filename>MarketingScript.ttf</filename>
-			<size>22</size>
-		</font>-->
-		<!-- END UPDATED -->
-		<!--<font>
-			<name>geoMiddle2</name>
-			<filename>GeoSansLight.ttf</filename>
-			<size>35</size>
-		</font>
-		<font>
-			<name>geoSmall3</name>
-			<filename>GeosansLight.ttf</filename>
-			<size>25</size>
-		</font>
-		<font>
-			<name>geoSmall2</name>
-			<filename>GeosansLight.ttf</filename>
-			<size>30</size>
-		</font>
-		<font>
-			<name>geoSmall</name>
-			<filename>GeosansLight.ttf</filename>
-			<size>20</size>
-		</font>
-		<font>
-			<name>petitaBig</name>
-			<filename>PetitaMedium.ttf</filename>
-			<size>36</size>
-		</font>
-		<font>
-			<name>petitaMedium</name>
-			<filename>PetitaMedium.ttf</filename>
-			<size>22</size>
-		</font>
-		<font>
-			<name>petitaSmall2</name>
-			<filename>PetitaMedium.ttf</filename>
-			<size>20</size>
-		</font>
-		<font>
-			<name>petitaSmall3</name>
-			<filename>PetitaMedium.ttf</filename>
-			<size>18</size>
-		</font>
-		<font>
-			<name>petitaSmall</name>
-			<filename>PetitaMedium.ttf</filename>
-			<size>16</size>
-		</font>
-		<font>
-			<name>caviarMedium</name>
-			<filename>CaviarDreams.ttf</filename>
-			<size>40</size>
-		</font>
-		<font>
-			<name>bauhausMedium</name>
-			<filename>Bauhaus.ttf</filename>
-			<size>20</size>
-		</font>-->
-		<!-- END NOSTALGIA FONTS -->
-		<!-- pagelabels -->
-		<!--<font>
-			<name>special</name>
-			<filename>Light.ttf</filename>
-			<size>52</size>
-			<aspect>0.95</aspect>
-		</font>-->
 		<!-- dialogvideoinfo -->
 		<font>
 			<name>special6</name>
 			<filename>RegularCaps.ttf</filename>
 			<size>22</size>
 		</font>
-		<!--<font>
-			<name>special5</name>
-			<filename>LightCaps.ttf</filename>
-			<size>42</size>
-		</font>
-		<font>
-			<name>special2</name>
-			<filename>Light.ttf</filename>
-			<size>32</size>
-		</font>
-		<font>
-			<name>special3</name>
-			<filename>LightAlt.ttf</filename>
-			<size>26</size>
-		</font>
-		<font>
-			<name>special3</name>
-			<filename>LightAlt.ttf</filename>
-			<size>28</size>
-		</font>-->
 		<!-- pagemenu -->
 		<font>
 			<name>pagemenu</name>
 			<filename>ZegoeLight-U-L.ttf</filename>
 			<size>34</size>
 		</font>
-		<!--<font>
-			<name>normalBoldLow</name>
-			<filename>Light.ttf</filename>
-			<style>bold</style>
-			<size>22</size>
-		</font>-->
 		<!-- settings -->
 		<font>
 			<name>category</name>
@@ -311,21 +221,6 @@
 			<filename>ZegoeLight-U-L.ttf</filename>
 			<size>40</size>
 		</font>
-		<!--<font>
-			<name>special2Low</name>
-			<filename>Light.ttf</filename>
-			<size>42</size>
-		</font>
-		<font>
-			<name>homeMenu</name>
-			<filename>Light.ttf</filename>
-			<size>55</size>
-		</font>
-		<font>
-			<name>homeMenuInfo</name>
-			<filename>Light.ttf</filename>
-			<size>42</size>
-		</font>-->
 		<!-- general -->
 		<font>
 			<name>normal</name>
@@ -429,16 +324,6 @@
 		</font>
 		<!-- End Capitalization addition -->
 		<!-- osd -->
-		<!--<font>
-			<name>osd1</name>
-			<filename>LightCaps.ttf</filename>
-			<size>36</size>
-		</font>
-		<font>
-			<name>osd2</name>
-			<filename>BoldCaps.ttf</filename>
-			<size>20</size>
-		</font>-->
 		<font>
 			<name>osd3</name>
 			<filename>RegularCaps.ttf</filename>

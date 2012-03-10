@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<includes>
+	<include name="debugInfos">
+		<control type="group">
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<include>grainypagefade</include>
+			<visible>Skin.HasSetting(showdebug)</visible>
+			<!-- debug infos -->
+			<control type="grouplist">
+				<posx>34</posx>
+				<posy>60</posy>
+				<width>950</width>
+				<orientation>vertical</orientation>
+				<itemgap>10</itemgap>
+				<control type="label">
+					<font>smallsmallcase</font>
+					<label>window : $INFO[System.CurrentWindow]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<textcolor>Color1</textcolor>
+					<align>left</align>
+					<visible>!IsEmpty(System.CurrentWindow)</visible>
+				</control>
+				<control type="label">
+					<font>smallsmallcase</font>
+					<label>xml : $INFO[Window.Property(xmlfile)]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<textcolor>Color1</textcolor>
+					<align>left</align>
+					<visible>!IsEmpty(xmlfile)</visible>
+				</control>
+				<control type="label">
+					<font>smallsmallcase</font>
+					<label>resolution : $INFO[System.Screenresolution]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<textcolor>Color1</textcolor>
+					<align>left</align>
+					<visible>!IsEmpty(System.Screenresolution)</visible>
+				</control>
+				<control type="label">
+					<font>smallsmallcase</font>
+					<label>$LOCALIZE[158] : $INFO[System.FreeMemory]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<textcolor>Color1</textcolor>
+					<align>left</align>
+					<visible>!IsEmpty(System.FreeMemory)</visible>
+				</control>
+				<control type="label">
+					<font>smallsmallcase</font>
+					<label>currentcontrol : $INFO[System.CurrentControl]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<textcolor>Color1</textcolor>
+					<align>left</align>
+					<visible>!IsEmpty(System.CurrentControl)</visible>
+				</control>
+				<control type="label">
+					<font>smallsmallcase</font>
+					<label>container first title : $INFO[Container.FirstTitle]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<textcolor>Color1</textcolor>
+					<align>left</align>
+					<visible>!IsEmpty(Container.FirstTitle)</visible>
+				</control>
+				<control type="label">
+					<font>smallsmallcase</font>
+					<label>container second title : $INFO[Container.SecondTitle]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<textcolor>Color1</textcolor>
+					<align>left</align>
+					<visible>!IsEmpty(Container.SecondTitle)</visible>
+				</control>
+				<control type="label">
+					<font>smallsmallcase</font>
+					<label>listitem container : $INFO[ListItem.Type]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<textcolor>Color1</textcolor>
+					<align>left</align>
+					<visible>!IsEmpty(ListItem.Type)</visible>
+				</control>
+				<control type="label">
+					<font>smallsmallcase</font>
+					<label>listitem name and path : $INFO[ListItem.FileNameAndPath]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<textcolor>Color1</textcolor>
+					<align>left</align>
+					<visible>!IsEmpty(ListItem.FileNameAndPath)</visible>
+				</control>
+				<control type="label">
+					<font>smallsmallcase</font>
+					<label>listitem folder name : $INFO[ListItem.FolderName]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<textcolor>Color1</textcolor>
+					<align>left</align>
+					<visible>!IsEmpty(ListItem.FolderName)</visible>
+				</control>
+				<control type="label">
+					<font>smallsmallcase</font>
+					<label>contentrating flag : $INFO[Listitem.Property(mediaTag-contentRating),flags/contentrating/,.png] / $INFO[Listitem.MPAA,flags/contentrating/,.png]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<textcolor>Color1</textcolor>
+					<align>left</align>
+					<visible>!IsEmpty(System.CurrentWindow)</visible>
+				</control>
+				<control type="label">
+					<font>smallsmallcase</font>
+					<label>container plugin name : $INFO[Container.PluginName]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<textcolor>Color1</textcolor>
+					<align>left</align>
+					<visible>!IsEmpty(Container.PluginName)</visible>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

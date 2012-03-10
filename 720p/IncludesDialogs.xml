@@ -2,14 +2,20 @@
 <includes>
 	<!-- DIALOG INCLUDES -->
 	<include name="dialogWindow">
-		<texture border="20">dialogs/square_dialog_background0.png</texture>
+		<texture border="60">dialogs/bigbg3.png</texture>
+	</include>
+	<include name="dialogWindow2">
+		<texture border="60">dialogs/bigbg4.png</texture>
+	</include>
+	<include name="dialogWindow3">
+		<texture border="100">dialogs/bigbg6.png</texture>
 	</include>
 	<include name="contextMenuButton">
 		<font>qlassikSmallBold2</font>
-		<textcolor>Color1</textcolor>
-		<focusedcolor>Color6</focusedcolor>
-		<texturenofocus border="1">dialogs/list-nofocus2.png</texturenofocus>
-		<texturefocus border="10">dialogs/list-focus.png</texturefocus>
+		<textcolor>FFFFFFFF</textcolor>
+		<focusedcolor>ivory1</focusedcolor>
+		<texturefocus border="20">dialogs/list-focus.png</texturefocus>		
+		<shadowcolor>ff444444</shadowcolor>
 		<height>40</height>
 		<align>left</align>
 		<aligny>center</aligny>
@@ -33,7 +39,8 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<height>30</height>
-		<textcolor>ivory3</textcolor>
+		<textcolor>ivory2</textcolor>
+		<shadowcolor>ff555555</shadowcolor>
 		<scroll>false</scroll>
 	</include>
 	<include name="dialogLine">
@@ -67,14 +74,30 @@
 		<textoffsety>9</textoffsety>
 		<texturenofocus border="20">dialogs/buttonD.png</texturenofocus>
 		<texturefocus border="20,16,20,16">dialogs/buttonD-focus.png</texturefocus>
-		<textcolor>Color4</textcolor>
+		<textcolor>FF999999</textcolor>
+		<focusedcolor>ivory1</focusedcolor>
+		<shadowcolor>ff555555</shadowcolor>
+		<pulseonselect>false</pulseonselect>
+	</include>
+	<include name="dialogConfirmButton2">
+		<posy>26</posy>
+		<width>120</width>
+		<height>42</height>
+		<font>qlassikSmallBold2</font>
+		<align>center</align>
+		<aligny>-</aligny>
+		<textoffsety>9</textoffsety>
+		<texturenofocus border="20">dialogs/buttonD.png</texturenofocus>
+		<texturefocus border="20,16,20,16">dialogs/buttonD-focus.png</texturefocus>
+		<textcolor>FF999999</textcolor>
 		<focusedcolor>ivory1</focusedcolor>
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="dialogListButton">
-		<textcolor>Color1</textcolor>
+		<textcolor>FFFFFFFF</textcolor>
+		<shadowcolor>ff555555</shadowcolor>
 		<textoffsetx>15</textoffsetx>
-		<focusedcolor>Color6</focusedcolor>
+		<focusedcolor>ivory1</focusedcolor>
 		<font>qlassikSmallBold2</font>
 		<aligny>center</aligny>
 		<height>40</height>
@@ -89,14 +112,15 @@
 		<textoffsety>5</textoffsety>
 		<texturenofocus border="10,0,10,0">dialogs/textField.png</texturenofocus>
 		<texturefocus border="10,0,10,0">dialogs/textFieldFocus.png</texturefocus>
-		<textcolor>Color1</textcolor>
-		<shadowcolor>fff4f4f4</shadowcolor>
-		<focusedcolor>Color6</focusedcolor>
+		<textcolor>FFFFFFFF</textcolor>
+		<shadowcolor>ff555555</shadowcolor>
+		<focusedcolor>ivory1</focusedcolor>
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="dialogRadio">
-		<textcolor>Color1</textcolor>
-		<focusedcolor>Color6</focusedcolor>
+		<textcolor>FFFFFFFF</textcolor>
+		<shadowcolor>ff555555</shadowcolor>
+		<focusedcolor>ivory1</focusedcolor>
 		<font>qlassikSmallBold2</font>
 		<texturefocus border="10">dialogs/list-focus.png</texturefocus>
 		<texturenofocus border="3">dialogs/list-nofocus.png</texturenofocus>
@@ -106,9 +130,10 @@
 		<radiowidth>48</radiowidth>
 	</include>
 	<include name="dialogSpin">
-		<textcolor>Color1</textcolor>
+		<textcolor>FFFFFFFF</textcolor>
+		<shadowcolor>ff555555</shadowcolor>
 		<textoffsetx>15</textoffsetx>
-		<focusedcolor>Color6</focusedcolor>
+		<focusedcolor>ivory1</focusedcolor>
 		<font>qlassikSmallBold2</font>
 		<textoffsetx>15</textoffsetx>
 		<textoffsety>-3</textoffsety>
@@ -116,10 +141,10 @@
 		<height>40</height>
 		<texturefocus border="10">dialogs/list-focus.png</texturefocus>
 		<texturenofocus border="3">dialogs/list-nofocus.png</texturenofocus>
-		<textureup>settings/scrollUp.png</textureup>
-		<texturedown>settings/scrollDown.png</texturedown>
-		<textureupfocus>settings/scrollUp-focus.png</textureupfocus>
-		<texturedownfocus>settings/scrollDown-focus.png</texturedownfocus>
+		<textureup>settings/scrollUp-focus.png</textureup>
+		<texturedown>settings/scrollDown-focus.png</texturedown>
+		<textureupfocus>settings/scrollUp.png</textureupfocus>
+		<texturedownfocus>settings/scrollDown.png</texturedownfocus>
 		<reverse>yes</reverse>
 		<spinwidth>22</spinwidth>
 		<spinheight>44</spinheight>
@@ -128,12 +153,13 @@
 		<texturefocus border="10">dialogs/list-focus.png</texturefocus>
 		<texturenofocus border="3">dialogs/list-nofocus.png</texturenofocus>
 		<texturesliderbar border="10">dialogs/sliderBackground.png</texturesliderbar>
-		<textureslidernib border="0,3,0,3">dialogs/sliderNib.png</textureslidernib>
-		<textureslidernibfocus border="0">dialogs/sliderNib.png</textureslidernibfocus>
+		<textureslidernib border="0,9,0,9">dialogs/sliderNib.png</textureslidernib>
+		<textureslidernibfocus border="0,9,0,9">dialogs/sliderNib.png</textureslidernibfocus>
 		<font>qlassikSmallBold2</font>
+		<shadowcolor>ff555555</shadowcolor>
 		<height>40</height>
-		<textcolor>Color1</textcolor>
-		<focusedcolor>Color6</focusedcolor>
+		<textcolor>FFFFFFFF</textcolor>
+		<focusedcolor>ivory1</focusedcolor>
 		<textoffsetx>15</textoffsetx>
 		<textoffsety>15</textoffsety>
 		<pulseonselect>false</pulseonselect>
@@ -154,9 +180,9 @@
 	<include name="keyboardButton">
 		<font>qlassikMedium1</font>
 		<texturenofocus border="5">-</texturenofocus>
-		<texturefocus border="5">dialogs/buttonKB-focus.png</texturefocus>
-		<textcolor>ivory3</textcolor>
-		<focusedcolor>ivory2</focusedcolor>
+		<texturefocus border="5">dialogs/buttonD-focus.png</texturefocus>
+		<textcolor>FF222222</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
 		<width>48</width>
 		<height>48</height>
 		<align>center</align>

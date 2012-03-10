@@ -2,6 +2,7 @@
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+	<backgroundcolor>0</backgroundcolor>
 	<controls>		
 		<control type="button" id="10">
 			<onfocus>ReplaceWindow(7777)</onfocus>

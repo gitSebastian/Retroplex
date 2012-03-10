@@ -3,7 +3,7 @@
 	<allowoverlay>yes</allowoverlay>
 	
 	<controls>
-		<include>themeBackground2</include>
+		<include>Backgrounds</include>
 		<include>allscreens</include>
 		
 		<control type="label">

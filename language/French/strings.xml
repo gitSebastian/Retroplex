@@ -31,9 +31,9 @@ Sans vous Retroplex ne serait pas ce qu'il est aujourd'hui. Merci.
 	<string id="41007">Montrer "Plex Online" dans le menu principal</string>
 	<string id="41008">Montrer "iTunes" dans le menu principal</string>
 	<string id="41009">Montrer "Favorites" dans le menu principal</string>
-	<string id="41010">Montrer "Plugins Vidéo" dans le menu principal</string>
-	<string id="41011">Montrer "Plugins Musique" dans le menu principal</string>
-	<string id="41012">Montrer "Plugins Images" dans le menu principal</string>
+	<string id="41010">Montrer "Vidéo Channels" dans le menu principal</string>
+	<string id="41011">Montrer "Musique Channels" dans le menu principal</string>
+	<string id="41012">Montrer "Images Channels" dans le menu principal</string>
 	<string id="41013">Montrer "Applications" dans le menu principal</string>
 	<string id="41014">Montrer "Météo" dans le menu principal</string>
 	<string id="41015">Montrer "Aide Retroplex" dans le menu principal</string>
@@ -75,10 +75,8 @@ En cas de problème, merci de prendre contact avec Natalie de notre service clie
 	<!-- !!! NOTE : please be careful about the total length of each translation, the "bubbles" are not dynamic
 	 				and ideally a wording is found that maintains their visual aspect to how it appears in english -->
 	<string id="41934">
-Bonjour et bienvenue dans Retroplex ![CR][CR]
-Je m'appelle Natalie et je suis là pour vous guider.[CR]
-C'est très simple, lisez juste ces quelques conseils.[CR]
-Pour quitter l'aide, cliquez sur "Aide Retroplex" à nouveau.</string>
+Bonjour et bienvenue dans Retroplex ![CR]
+Je m'appelle Natalie et je suis là pour vous guider.[CR]C'est très simple, lisez juste ces quelques conseils.[CR]Pour quitter l'aide, cliquez sur "Aide Retroplex" à nouveau.</string>
 	<string id="41935">
 1. Ceci est le menu principal. Il est assez vide pour le moment, mais vous pouvez entièrement personnaliser ce qui doit apparaître dans les paramètres du thème. Il disparaît automatiquement après 30 secondes d'inactivité et réapparaît au moindre mouvement.
 	</string>
@@ -88,7 +86,6 @@ Pour quitter l'aide, cliquez sur "Aide Retroplex" à nouveau.</string>
 	<string id="41937">
 3. Ceci est le menu secondaire de Retroplex.[CR][CR]
 Ici, vous pouvez accéder à tout ce qui n'est pas disponible dans le menu principal, ainsi qu'à des options spécifiques concernant la présente fenêtre. Le fonctionnement reste le même partout.[CR][CR]
-Ici vous êtes à l'Accueil, et voyez donc les options spécifiques à l'Accueil, dont le diaporama Retroplex qui vous ramène à l'âge d'or du cinéma. Vous devriez vraiment l'essayer. [CR][CR]
 C'est tout ce que vous devez savoir pour maîtriser pleinement Retroplex.[CR][CR]
 Facile, non ?</string>
 	<!-- Home main menu -->

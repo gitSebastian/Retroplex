@@ -5,12 +5,12 @@
 		<!--<include condition="IsEmpty(MusicPlayer.Property(Fanart_Image) + !Skin.HasSetting(musicVis) | !Skin.HasSetting(musicVisBlend)">goHome</include>-->
 		<control type="visualisation" id="2">
 			<description>visualisation</description>
-			<include>screentype</include>
+			<include>fullScreenScale</include>
 			<visible>IsEmpty(MusicPlayer.Property(Fanart_Image) + !Skin.HasSetting(musicVis) | Skin.HasSetting(musicVisBlend)</visible>
 		</control>
 		<control type="image">
 			<description>Fanart image</description>
-			<include>screentype</include>
+			<include>fullScreenScale</include>
 			<texture fallback="special://skin/backgrounds/library/artistNoFanart.png">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
 			<visible>Skin.HasSetting(musicVis)</visible>
 			<include>fadeinout</include>

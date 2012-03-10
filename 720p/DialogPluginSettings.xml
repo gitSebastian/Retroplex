@@ -68,7 +68,7 @@
 					<onright>10</onright>
 					<onup>2</onup>
 					<ondown>11</ondown>
-					<include>dialogConfirmButton</include>
+					<include>dialogConfirmButton2</include>
 				</control>
 				<control type="button" id="10">
 					<description>OK button</description>
@@ -78,7 +78,7 @@
 					<onright>11</onright>
 					<onup>2</onup>
 					<ondown>11</ondown>
-					<include>dialogConfirmButton</include>
+					<include>dialogConfirmButton2</include>
 				</control>
 				<control type="button" id="11">
 					<description>Cancel button</description>
@@ -88,7 +88,7 @@
 					<onright>12</onright>
 					<onup>2</onup>
 					<ondown>11</ondown>
-					<include>dialogConfirmButton</include>
+					<include>dialogConfirmButton2</include>
 				</control>
 			</control>
 		</control>

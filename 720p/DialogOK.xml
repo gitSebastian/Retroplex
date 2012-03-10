@@ -41,7 +41,7 @@
 			</control>
 			<control type="button" id="10">
 				<posx>223</posx>
-				<posy>175</posy>
+				<posy>200</posy>
 				<label>186</label>
 				<include>dialogConfirmButton</include>
 			</control>

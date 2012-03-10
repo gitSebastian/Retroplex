@@ -2,25 +2,23 @@
 <window id="1">
 	<defaultcontrol always="true">555</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+	<backgroundcolor>0</backgroundcolor>
 	<previouswindow>Home</previouswindow>
 	<views>555</views>
-	<controls>		
-		<include>themeBackground2</include>
+	<controls>
+		<include>Backgrounds</include>
 		<include>plotBoxesLibrary</include>
 		<include>listMenuFocusedBg</include>
 		<include>frameOverlay</include>
-		<include>leftMenuBg</include>	
-		<include>grainyeditionback</include>		
+		<include>leftMenuBg</include>
+		<include>retroOverlay</include>
 		<include>leftMenuDressing</include>
 		<include>transition2</include>
 		<include>contextMenuHide</include>
 		<include>allscreens</include>
-		<control type="label">
-			<label>$INFO[Container.FirstTitle] [COLOR=greenlime]$INFO[Container.SecondTitle][/COLOR]</label>
-			<include>PageLabel</include>
-			<include>PageLabelsLeftMenuSlide</include>
-		</control>
-		<include>LibraryVideoMenu</include>
+		<include>PageLabels</include>
+		<include>LeftSideMenu</include>
+		<include>view_List</include>
 		<control type="group">
 			<include>ListLeftMenuSlide</include>
 			<!-- vertical separator -->
@@ -38,232 +36,6 @@
 					<include>infoDialogHide</include>
 				</control>
 			</control>
-			<!-- LIST -->
-			<control type="fixedlist" id="555">
-				<viewtype label="555">list</viewtype>
-				<posx>0</posx>
-				<posy>98</posy>
-				<height>520</height>
-				<width>1260</width>
-				<onup>555</onup>
-				<ondown>555</ondown>
-				<onleft>300</onleft>
-				<onright>23</onright>
-				<orientation>vertical</orientation>
-				<focusposition>4</focusposition>
-				<pagecontrol>23</pagecontrol>
-				<wraparound>true</wraparound>
-				<include>transition2</include>
-				<include>infoDialogHide</include>
-				<include>contextMenuHide</include>
-				<include>grainypagefade</include>
-				<!-- non-focused -->
-				<itemlayout width="1240" height="56">
-					<control type="label">
-						<posx>710</posx>
-						<posy>0</posy>
-						<width>740</width>
-						<height>46</height>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>qlassikMedium2</font>
-						<label>$INFO[ListItem.Label]</label>
-						<selectedcolor>ivory3</selectedcolor>
-						<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
-					</control>
-				</itemlayout>
-				<!-- focused -->
-				<focusedlayout width="800" height="120">
-					<control type="label">
-						<posx>710</posx>
-						<posy>30</posy>
-						<width>730</width>
-						<height>50</height>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>lobsterMedium</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textcolor>ivory3</textcolor>
-						<selectedcolor>ivory3</selectedcolor>
-						<scroll>true</scroll>
-						<visible>IsEmpty(ListItem.Year)</visible>					
-					</control>
-					<control type="label">
-						<posx>710</posx>
-						<posy>30</posy>
-						<width>730</width>
-						<height>50</height>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>lobsterMedium</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textcolor>greenlime</textcolor>
-						<selectedcolor>ivory3</selectedcolor>
-						<scroll>true</scroll>
-						<visible>IsEmpty(ListItem.Year)</visible>
-						<animation effect="fade" start="20" end="20" time="0" condition="true">Conditional</animation>					
-					</control>
-					<control type="label">
-						<posx>710</posx>
-						<posy>13</posy>
-						<width>730</width>
-						<height>50</height>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>lobsterMedium</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textcolor>ivory3</textcolor>
-						<selectedcolor>ivory3</selectedcolor>
-						<scroll>true</scroll>
-						<visible>!IsEmpty(ListItem.Year)</visible>					
-					</control>
-					<control type="label">
-						<posx>710</posx>
-						<posy>13</posy>
-						<width>730</width>
-						<height>50</height>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>lobsterMedium</font>
-						<label>$INFO[ListItem.Label]</label>
-						<textcolor>greenlime</textcolor>
-						<selectedcolor>ivory3</selectedcolor>
-						<scroll>true</scroll>
-						<visible>!IsEmpty(ListItem.Year)</visible>
-						<animation effect="fade" start="20" end="20" time="0" condition="true">Conditional</animation>					
-					</control>
-					<!-- plug-in "update" date -->
-					<control type="label">
-						<posx>710</posx>
-						<posy>70</posy>
-						<width>340</width>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>qlassikSmallBold</font>
-						<label>$INFO[ListItem.Year]</label>
-						<textcolor>ivory3</textcolor>
-						<selectedcolor>ivory3</selectedcolor>
-						<visible>!IsEmpty(ListItem.Year)</visible>
-					</control>
-				</focusedlayout>
-			</control>
-			<!-- infos / "plot" -->
-			<control type="group">
-				<posx>85</posx>
-				<posy>70</posy>
-				<include>transition2</include>
-				<include>infoDialogHide</include>
-				<include>contextMenuHide</include>
-				<include>grainypagefade</include>
-				<visible>!IsEmpty(ListItem.Plot)</visible>
-				<control type="group">
-					<posx>700</posx>
-					<posy>465</posy>
-					<include>transition2</include>
-					<control type="textbox" id="8">
-						<width>450</width>
-						<height>92</height>
-						<align>left</align>
-						<aligny>top</aligny>
-						<label>$INFO[ListItem.Plot]</label>
-						<textcolor>ivory3</textcolor>
-						<font>titilliumMedium</font>
-					</control>
-				</control>
-			</control>
-			<!-- faux frame without plot -->
-			<control type="image">
-				<animation type="WindowOpen">
-					<effect type="fade" start="0" end="20" time="2000" delay="300"/>
-				</animation>
-				<animation type="WindowClose">
-					<effect type="fade" start="20" end="0" time="700"/>
-				</animation>
-				<animation type="Visible">
-					<effect type="fade" start="0" end="20" time="1000" delay="300"/>
-				</animation>
-				<posx>821</posx>
-				<posy>146</posy>
-				<width>373</width>
-				<height>368</height>
-				<fadetime>400</fadetime>
-				<include>transition2</include>
-				<include>infoDialogHide</include>
-				<include>contextMenuHide</include>
-				<include>grainypagefade</include>
-				<aspectratio align="right" aligny="center">keep</aspectratio>
-				<texture background="true" diffuse="frames/albumFrameMask.png">$INFO[Container(555).ListItem.Icon]</texture>
-				<visible>IsEmpty(ListItem.Plot)</visible>
-			</control>
-			<!-- icon without plot -->
-			<control type="image" id="5555">
-				<posx>830</posx>
-				<posy>150</posy>
-				<width>360</width>
-				<height>360</height>
-				<fadetime>400</fadetime>
-				<include>transition2</include>
-				<include>infoDialogHide</include>
-				<include>contextMenuHide</include>
-				<include>grainypagefade</include>
-				<aspectratio align="right" aligny="center">keep</aspectratio>
-				<texture background="true" diffuse="frames/albumFrameMask.png">$INFO[Container(555).ListItem.Icon]</texture>
-				<visible>IsEmpty(ListItem.Plot)</visible>
-			</control>
-			<!-- faux frame with plot -->
-			<control type="image">
-				<animation type="WindowOpen">
-					<effect type="fade" start="0" end="20" time="2000" delay="300"/>
-				</animation>
-				<animation type="WindowClose">
-					<effect type="fade" start="20" end="0" time="700"/>
-				</animation>
-				<animation type="Visible">
-					<effect type="fade" start="0" end="20" time="1000" delay="300"/>
-				</animation>
-				<posx>821</posx>
-				<posy>96</posy>
-				<width>373</width>
-				<height>368</height>
-				<fadetime>400</fadetime>
-				<include>transition2</include>
-				<include>infoDialogHide</include>
-				<include>contextMenuHide</include>
-				<include>grainypagefade</include>
-				<aspectratio align="right" aligny="center">keep</aspectratio>
-				<texture background="true" diffuse="frames/albumFrameMask.png">$INFO[Container(555).ListItem.Icon]</texture>
-				<visible>!IsEmpty(ListItem.Plot)</visible>
-			</control>
-			<!-- icon with plot -->
-			<control type="image" id="5555">
-				<posx>830</posx>
-				<posy>100</posy>
-				<width>360</width>
-				<height>360</height>
-				<fadetime>400</fadetime>
-				<include>transition2</include>
-				<include>infoDialogHide</include>
-				<include>contextMenuHide</include>
-				<include>grainypagefade</include>
-				<aspectratio align="right" aligny="center">keep</aspectratio>
-				<texture background="true" diffuse="frames/albumFrameMask.png">$INFO[Container(555).ListItem.Icon]</texture>
-				<visible>!IsEmpty(ListItem.Plot)</visible>
-			</control>
-		</control>
-		<!-- infos for new list -->
-		<control type="group">
-			<posx>120</posx>
-			<posy>0</posy>
-			<include>transition3</include>
-			<include>infoDialogHide</include>
-			<include>contextMenuHide</include>
-			<visible>Control.IsVisible(555)</visible>
-			<!--<control type="label">
-				<width>1080</width>
-				<label>$INFO[ListItem.Title]</label>
-				<textcolor>title</textcolor>
-				<include>Heading</include>
-			</control>-->
 		</control>
 	</controls>
 </window>

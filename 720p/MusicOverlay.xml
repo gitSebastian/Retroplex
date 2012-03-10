@@ -19,7 +19,7 @@
 			<posy>30</posy>
 			<posx>28r</posx>
 			<include>transition2</include>
-			<visible>Player.HasAudio + !Skin.HasSetting(overlay) + ![Window.IsActive(107) | Window.IsActive(104) | Window.IsActive(10133) | Window.IsActive(10112) | Window.IsActive(0) | Window.IsActive(500) | Window.IsActive(50)] + ![Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
+			<visible>Player.HasAudio + !Skin.HasSetting(overlay) + ![Window.IsActive(107) | Window.IsActive(104) | Window.IsActive(10133) | Window.IsActive(10112) | Window.IsActive(0) | Window.IsActive(500) | Window.IsActive(50)] + ![Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings)]</visible>
 			<control type="label" id="200">				
 				<label>[COLOR=greenlime]$INFO[MusicPlayer.Title][/COLOR]</label>
 				<width>800</width>
@@ -45,7 +45,7 @@
 			<posy>45</posy>
 			<posx>20r</posx>
 			<include>transition2</include>
-			<visible>Player.HasAudio + !Skin.HasSetting(overlay) + [Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings) | Window.IsActive(weathersettings)]</visible>
+			<visible>Player.HasAudio + !Skin.HasSetting(overlay) + [Window.IsActive(59) | Window.IsActive(settings) | Window.IsActive(systemsettings) | Window.IsActive(appearancesettings) | Window.IsActive(videossettings) | Window.IsActive(programssettings) | Window.IsActive(musicsettings) | Window.IsActive(picturessettings) | Window.IsActive(networksettings)]</visible>
 			<control type="label" id="200">				
 				<label>[COLOR=greenlime]$INFO[MusicPlayer.Title][/COLOR]</label>
 				<width>800</width>

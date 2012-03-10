@@ -1,0 +1,800 @@
+<?xml version="1.0"?>
+<includes>
+	<!-- FORMATTING -->
+	<include name="newHomeMenuListTitle">
+		<font>lobsterSmall</font>
+		<textcolor>oldBlueLight</textcolor>
+		<shadowcolor>ff333333</shadowcolor>
+		<width>350</width>
+		<height>30</height>
+		<align>right</align>
+	</include>
+	<include name="newHomeMenuItemTitle1">
+		<align>left</align>
+		<font>marketingMedium</font>
+		<scroll>false</scroll>
+		<textcolor>ivory2</textcolor>
+		<shadowcolor>ff222222</shadowcolor>
+		<wrapmultiline>false</wrapmultiline>
+		<width min="1" max="170">auto</width>
+	</include>
+	<include name="newHomeMenuItemTitle2">
+		<align>left</align>
+		<font>qlassikSmall</font>
+		<scroll>false</scroll>
+		<textcolor>FFFFFFFF</textcolor>
+		<shadowcolor>ff222222</shadowcolor>
+		<wrapmultiline>false</wrapmultiline>
+		<width min="1" max="200">auto</width>
+	</include>
+	<include name="newHomeMenuItemTitle3">
+		<align>left</align>
+		<font>marketingMedium</font>
+		<scroll>false</scroll>
+		<textcolor>ivory2</textcolor>
+		<shadowcolor>ff222222</shadowcolor>
+		<wrapmultiline>false</wrapmultiline>
+		<width min="1" max="320">auto</width>
+	</include>
+	<include name="homeMenuSquare">
+		<visible>ListItem.Type(photo) | ListItem.Type(album) | ListItem.Type(channel)</visible>
+		<posx>27</posx>
+		<posy>44</posy>
+		<width>146</width>
+		<height>146</height>
+		<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+		<include>homeMenuUnfocusedBorder</include>
+		<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
+	</include>
+	<include name="homeMenuSquareTopFocused">
+		<visible>ListItem.Type(photo) | ListItem.Type(album)</visible>
+		<posx>35</posx>
+		<posy>52</posy>
+		<width>122</width>
+		<height>122</height>
+		<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+		<include>homeMenuFocusedBorder</include>
+		<include>focus_newlist_top</include>
+	</include>
+	<include name="homeMenuSquareBottomFocused">
+		<visible>ListItem.Type(photo) | ListItem.Type(album) | ListItem.Type(channel)</visible>
+		<posx>27</posx>
+		<posy>44</posy>
+		<width>146</width>
+		<height>146</height>
+		<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+		<include>homeMenuFocusedBorder</include>
+		<include>focus_newlist_square_bottom</include>
+	</include>
+	<include name="homeMenuWide">
+		<posx>13</posx>
+		<posy>40</posy>
+		<width>196</width>
+		<height>146</height>
+		<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+		<include>homeMenuUnfocusedBorder</include>
+		<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
+	</include>
+	<include name="homeMenuWideTopFocused">
+		<posx>13</posx>
+		<posy>40</posy>
+		<width>196</width>
+		<height>146</height>
+		<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+		<include>homeMenuFocusedBorder</include>
+		<include>focus_newlist_wide_top</include>
+	</include>
+	<include name="homeMenuWideBottomFocused">
+		<posx>13</posx>
+		<posy>40</posy>
+		<width>196</width>
+		<height>146</height>
+		<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+		<include>homeMenuFocusedBorder</include>
+		<include>focus_newlist_wide_bottom</include>
+	</include>
+	<include name="homeMenuPoster">
+		<posx>28</posx>
+		<posy>40</posy>
+		<width>119</width>
+		<height>166</height>
+		<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+		<animation effect="fade" start="60" end="60" time="0" condition="true">Conditional</animation>
+		<include>homeMenuUnfocusedBorder</include>
+	</include>
+	<include name="homeMenuPosterTopFocused">
+		<posx>28</posx>
+		<posy>40</posy>
+		<width>119</width>
+		<height>166</height>
+		<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+		<include>homeMenuFocusedBorder</include>
+		<include>focus_newlist_top</include>
+	</include>
+	<include name="homeMenuPosterBottomFocused">
+		<posx>28</posx>
+		<posy>40</posy>
+		<width>119</width>
+		<height>166</height>
+		<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+		<include>homeMenuFocusedBorder</include>
+		<include>focus_newlist_bottom</include>
+	</include>
+	<include name="homeMenuUnfocusedBorder">
+		<bordertexture border="25">frames/oldbluercorners3b.png</bordertexture>
+		<bordersize>15</bordersize>
+	</include>
+	<include name="homeMenuFocusedBorder">
+		<bordertexture border="25">frames/oldgreyrcorners.png</bordertexture>
+		<bordersize>14</bordersize>
+	</include>
+	<!-- THE NEW LISTS -->
+	<include name="newHomeLists">
+		<!-- Home Menu focused section title when in new lists -->
+		<control type="group">
+			<posx>-40</posx>
+			<posy>240</posy>
+			<visible>ControlGroup(5000).HasFocus</visible>
+			<include>homeMenuFade2</include>
+			<control type="label">
+				<label>&#xB7; $INFO[Container(300).ListItem(0).Label] </label>
+				<include>homeMenuFocused</include>
+				<visible>IsEmpty(Container(300).ListItem(0).Label2)</visible>
+			</control>
+			<!-- with Label2 -->
+			<control type="label">
+				<posx>105</posx>
+				<posy>240</posy>
+				<label>&#xB7; $INFO[Container(300).ListItem(0).Label] </label>
+				<include>homeMenuFocused</include>
+				<visible>!IsEmpty(Container(300).ListItem(0).Label2)</visible>
+			</control>
+			<control type="label">
+				<posx>165</posx>
+				<posy>280</posy>
+				<label>&#xB7; $INFO[Container(300).ListItem(0).Label2]</label>
+				<font>qlassikSmall</font>
+				<height>30</height>
+				<textcolor>ivory2</textcolor>
+				<shadowcolor>ff333333</shadowcolor>
+				<focusedcolor>Color1</focusedcolor>
+				<align>left</align>
+				<aligny>bottom</aligny>
+				<width>278</width>
+				<visible>!IsEmpty(Container(300).ListItem(0).Label2)</visible>
+			</control>
+		</control>			
+		<control type="group" id="5000">
+			<visible>[Control.IsVisible(11000) | Control.IsVisible(11001) | Control.IsVisible(11002) | Control.IsVisible(11003) | Control.IsVisible(11004) | Control.IsVisible(12000)]</visible>
+			<include>homeMenuFade2</include>
+			<include>homelistsfade</include>
+			<include>HomeScreenLeftMenuSlideFade</include>
+			<posx>730</posx>
+			<posy>135</posy>
+			<width>830</width>
+			<height>640</height>
+			<!-- list titles -->
+			<control type="group">
+				<posy>353</posy>
+				<posx>525</posx>
+				<control type="label">
+					<posy>20</posy>
+					<label>Recently Added</label>
+					<visible>Control.IsVisible(11000)</visible>
+					<include>newHomeMenuListTitle</include>
+					<animation effect="fade" start="100" end="50" time="350" condition="Control.HasFocus(11001)">Conditional</animation>
+				</control>
+				<control type="label">
+					<posy>-20</posy>
+					<label>On Deck</label>
+					<visible>Control.IsVisible(11001)</visible>
+					<include>newHomeMenuListTitle</include>
+					<animation effect="fade" start="100" end="50" time="350" condition="Control.HasFocus(11000)">Conditional</animation>
+				</control>
+				<control type="label">
+					<posy>20</posy>
+					<label>Recently Used</label>
+					<visible>Control.IsVisible(11002)</visible>
+					<include>newHomeMenuListTitle</include>
+				</control>
+				<control type="label">
+					<posy>20</posy>
+					<label>Queue</label>
+					<visible>Control.IsVisible(11003)</visible>
+					<include>newHomeMenuListTitle</include>
+					<animation effect="fade" start="100" end="50" time="350" condition="Control.HasFocus(11004)">Conditional</animation>
+				</control>
+				<control type="label">
+					<posy>-20</posy>
+					<label>hip</label>
+					<visible>Control.IsVisible(11004)</visible>
+					<include>newHomeMenuListTitle</include>
+					<animation effect="fade" start="100" end="50" time="350" condition="Control.HasFocus(11003)">Conditional</animation>
+				</control>				
+			</control>
+			<control type="image">
+				<posx>349</posx>
+				<posy>370</posy>
+				<width>190</width>
+				<height>1</height>
+				<texture>frames/oldbluercorners.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+			</control>
+			<!-- list selected item titles -->
+			<control type="group">
+				<posx>10</posx>
+				<posy>360</posy>
+				<height>25</height>
+				<!-- On Deck -->
+				<control type="group">
+					<visible>Control.HasFocus(11001)</visible>
+					<control type="grouplist">
+						<orientation>horizontal</orientation>
+						<itemgap>0</itemgap>
+						<control type="label">
+							<label>$INFO[Container(11001).ListItem(0).TVShowTitle]</label>
+							<include>newHomeMenuItemTitle1</include>
+							<visible>!IsEmpty(Container(11001).ListItem(0).TVShowTitle) + !Container(11001).ListItem(0).Type(movie)</visible>
+						</control>
+						<!--><control type="label">
+							<label> &#xB7; S $INFO[Container(11001).ListItem(0).Season] &#xB7; E $INFO[Container(11001).ListItem(0).Episode]</label>
+							<include>newHomeMenuItemTitle2</include>
+							<visible>!IsEmpty(Container(11001).ListItem(0).Season)</visible>
+						</control>-->
+						<control type="label">
+							<label>$INFO[Container(11001).ListItem(0).Title]</label>
+							<include>newHomeMenuItemTitle1</include>
+							<visible>![Container(11001).ListItem(0).Type(episode) | Container(11001).ListItem(0).Type(album)] + !Container(11001).ListItem(0).Type(movie)</visible>
+						</control>
+						<control type="label">
+							<label>$INFO[Container(11001).ListItem(0).Artist]</label>
+							<include>newHomeMenuItemTitle1</include>
+							<visible>!IsEmpty(Container(11001).ListItem(0).Artist)</visible>
+						</control>
+						<control type="label">
+							<label> &#xB7; $INFO[Container(11001).ListItem(0).Album]</label>
+							<include>newHomeMenuItemTitle2</include>
+							<visible>!IsEmpty(Container(11001).ListItem(0).Album)</visible>
+						</control>
+						<control type="label">
+							<label>$INFO[Container(11001).ListItem(0).Title]</label>
+							<include>newHomeMenuItemTitle3</include>
+							<visible>Container(11001).ListItem(0).Type(movie)</visible>
+						</control>
+					</control>
+				</control>
+				<!-- Recently Added -->
+				<control type="group">
+					<visible>Control.HasFocus(11000)</visible>
+					<control type="grouplist">
+						<orientation>horizontal</orientation>
+						<itemgap>0</itemgap>
+						<control type="label">
+							<label>$INFO[Container(11000).ListItem(0).TVShowTitle]</label>
+							<include>newHomeMenuItemTitle1</include>
+							<visible>!IsEmpty(Container(11000).ListItem(0).TVShowTitle) + !Container(11000).ListItem(0).Type(album)</visible>
+						</control>
+						<!--><control type="label">
+							<label> &#xB7; S $INFO[Container(11000).ListItem(0).Season] &#xB7; E $INFO[Container(11000).ListItem(0).Episode]</label>
+							<include>newHomeMenuItemTitle2</include>
+							<visible>!IsEmpty(Container(11000).ListItem(0).Season) + !Container(11000).ListItem(0).Type(album)</visible>
+						</control>-->
+						<control type="label">
+							<label>$INFO[Container(11000).ListItem(0).Title]</label>
+							<include>newHomeMenuItemTitle1</include>
+							<visible>[!Container(11000).ListItem(0).Type(episode) + !Container(11000).ListItem(0).Type(album)] + !Container(11001).ListItem(0).Type(movie)</visible>
+						</control>
+						<control type="label">
+							<label>$INFO[Container(11000).ListItem(0).Artist]</label>
+							<include>newHomeMenuItemTitle1</include>
+							<visible>!IsEmpty(Container(11000).ListItem(0).Artist)</visible>
+						</control>
+						<control type="label">
+							<label> &#xB7; $INFO[Container(11000).ListItem(0).Album]</label>
+							<include>newHomeMenuItemTitle1</include>
+							<visible>!IsEmpty(Container(11000).ListItem(0).Album)</visible>
+						</control>
+						<control type="label">
+							<label>$INFO[Container(11000).ListItem(0).Title]</label>
+							<include>newHomeMenuItemTitle3</include>
+							<visible>Container(11000).ListItem(0).Type(movie)</visible>
+						</control>
+					</control>
+				</control>
+				<!-- Recently Used -->
+				<control type="group">
+					<visible>Control.HasFocus(11002)</visible>
+					<control type="grouplist">
+						<orientation>horizontal</orientation>
+						<itemgap>0</itemgap>
+						<control type="label">
+							<label>$INFO[Container(11002).ListItem(0).Title]</label>
+							<include>newHomeMenuItemTitle1</include>
+						</control>
+					</control>
+				</control>
+				<!-- Queue -->
+				<control type="group">
+					<visible>Control.HasFocus(11003)</visible>
+					<control type="grouplist">
+						<orientation>horizontal</orientation>
+						<itemgap>0</itemgap>
+						<control type="label">
+							<label>$INFO[Container(11003).ListItem(0).TVShowTitle]</label>
+							<include>newHomeMenuItemTitle1</include>
+							<visible>!IsEmpty(Container(11003).ListItem(0).TVShowTitle)</visible>
+						</control>
+						<control type="label">
+							<label> &#xB7; S $INFO[Container(11003).ListItem(0).Season] &#xB7; E $INFO[Container(11003).ListItem(0).Episode]</label>
+							<include>newHomeMenuItemTitle2</include>
+							<visible>!IsEmpty(Container(11003).ListItem(0).Season)</visible>
+						</control>
+						<control type="label">
+							<label>$INFO[Container(11003).ListItem(0).Title]</label>
+							<include>newHomeMenuItemTitle1</include>
+							<visible>![Container(11003).ListItem(0).Type(album)]</visible>
+						</control>
+						<control type="label">
+							<label> &#xB7; $INFO[Container(11003).ListItem(0).Property(sourceTitle)]</label>
+							<include>newHomeMenuItemTitle2</include>
+						</control>
+						<control type="label">
+							<label>$INFO[Container(11003).ListItem(0).Artist]</label>
+							<include>newHomeMenuItemTitle1</include>
+							<visible>!IsEmpty(Container(11003).ListItem(0).Artist)</visible>
+						</control>
+						<control type="label">
+							<label> &#xB7; $INFO[Container(11003).ListItem(0).Album]</label>
+							<include>newHomeMenuItemTitle2</include>
+							<visible>!IsEmpty(Container(11003).ListItem(0).Album)</visible>
+						</control>
+					</control>
+				</control>
+				<!-- 11004 -->
+				<control type="group">
+					<visible>Control.HasFocus(11004)</visible>
+					<control type="grouplist">
+						<orientation>horizontal</orientation>
+						<itemgap>0</itemgap>
+						<control type="label">
+							<label>$INFO[Container(11004).ListItem(0).TVShowTitle]</label>
+							<include>newHomeMenuItemTitle1</include>
+							<visible>!IsEmpty(Container(11004).ListItem(0).TVShowTitle)</visible>
+						</control>
+						<control type="label">
+							<label> &#xB7; S $INFO[Container(11004).ListItem(0).Season] &#xB7; E $INFO[Container(11004).ListItem(0).Episode]</label>
+							<include>newHomeMenuItemTitle2</include>
+							<visible>!IsEmpty(Container(11004).ListItem(0).Season)</visible>
+						</control>
+						<control type="label">
+							<label>$INFO[Container(11004).ListItem(0).Title]</label>
+							<include>newHomeMenuItemTitle1</include>
+							<visible>![Container(11004).ListItem(0).Type(episode) | Container(11004).ListItem(0).Type(album)]</visible>
+						</control>
+						<control type="label">
+							<label> &#xB7; $INFO[Container(11004).ListItem(0).Property(sourceTitle)]</label>
+							<include>newHomeMenuItemTitle2</include>
+						</control>
+						<control type="label">
+							<label>$INFO[Container(11004).ListItem(0).Artist]</label>
+							<include>newHomeMenuItemTitle1</include>
+							<visible>!IsEmpty(Container(11004).ListItem(0).Artist)</visible>
+						</control>
+						<control type="label">
+							<label> &#xB7; $INFO[Container(11004).ListItem(0).Album]</label>
+							<include>newHomeMenuItemTitle2</include>
+							<visible>!IsEmpty(Container(11004).ListItem(0).Album)</visible>
+						</control>
+					</control>
+				</control>
+			</control>
+			<!-- Container for the new lists -->
+			<!-- "On Deck" & "Recently Added" -->
+			<control type="grouplist" id="5100">
+				<visible>true</visible>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>890</width>
+				<height>720</height>
+				<ondown>5200</ondown>
+				<onup>310</onup>
+				<onright>350</onright>
+				<onleft>350</onleft>
+				<orientation>vertical</orientation>
+				<!-- On Deck (11001) -->
+				<control type="group" id="7002">
+					<height>230</height>
+					<control type="fixedlist" id="11001">
+						<visible allowhiddenfocus="false">false</visible>
+						<orientation>horizontal</orientation>
+						<ondown>7001</ondown>
+						<onup>-</onup>
+						<onright>-</onright>
+						<onleft>300</onleft>
+						<posx>-14</posx>
+						<posy>121</posy>
+						<width>550</width>
+						<height>250</height>
+						<wraparound>false</wraparound>
+						<animation effect="fade" start="100" end="50" time="350" condition="ControlGroup(7001).HasFocus">Conditional</animation>
+						<!-- poster -->
+						<itemlayout width="103" height="230" condition="Container(11001).ListItem(0).Type(movie) | Container(11001).ListItem(0).Type(episode)">
+							<control type="group">
+								<control type="image">
+									<include>homeMenuPoster</include>
+									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<visible>ListItem.Type(movie)</visible>
+								</control>
+								<control type="image">
+									<include>homeMenuPoster</include>
+									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.GrandparentThumb]</texture>
+									<visible>ListItem.Type(episode)</visible>
+								</control>
+							</control>
+							<control type="image">
+								<posx>43</posx>
+								<posy>165</posy>
+								<width>89</width>
+								<height>26</height>
+								<texture>frames/postercard4.png</texture>
+								<visible>ListItem.Type(episode)</visible>
+								<colordiffuse>oldGreyLight</colordiffuse>
+								<animation effect="fade" start="60" end="80" time="0" condition="true">Conditional</animation>
+							</control>
+							<control type="label">
+								<posx>85</posx>
+								<posy>166</posy>
+								<label> S $INFO[ListItem.Season] &#xB7; E $INFO[ListItem.Episode]</label>
+								<align>center</align>
+								<font>marketingSmallest2</font>
+								<scroll>false</scroll>
+								<textcolor>ivory1</textcolor>
+								<wrapmultiline>false</wrapmultiline>
+								<width min="1" max="200">auto</width>
+								<visible>ListItem.Type(episode)</visible>
+							</control>
+						</itemlayout>
+						<!-- square -->
+						<itemlayout width="129" height="230" condition="!Container(11001).ListItem(0).Type(movie) | !Container(11001).ListItem(0).Type(episode)">
+							<!-- movie + episode -->
+							<control type="group">
+								<control type="image">
+									<include>homeMenuPoster</include>
+									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<visible>ListItem.Type(movie)</visible>
+								</control>
+								<control type="image">
+									<include>homeMenuPoster</include>
+									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.GrandparentThumb]</texture>
+									<visible>ListItem.Type(episode)</visible>
+								</control>
+							</control>
+						</itemlayout>
+						<!-- poster -->
+						<focusedlayout width="103" height="250" condition="Container(11001).ListItem(0).Type(movie) | Container(11001).ListItem(0).Type(episode)">
+							<control type="group">
+								<control type="image">
+									<include>homeMenuPosterTopFocused</include>
+									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<visible>ListItem.Type(movie)</visible>
+								</control>
+								<control type="image">
+									<include>homeMenuPosterTopFocused</include>
+									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.GrandparentThumb]</texture>
+									<visible>ListItem.Type(episode)</visible>
+								</control>
+							</control>
+							<control type="image">
+								<posx>22</posx>
+								<posy>189</posy>
+								<width>110</width>
+								<height>30</height>
+								<texture>frames/postercard4.png</texture>
+								<colordiffuse>oldBlue</colordiffuse>
+								<animation effect="fade" start="60" end="100" time="0" condition="true">Conditional</animation>
+								<include>focus_newlist_top_card</include>
+								<visible>ListItem.Type(episode)</visible>
+							</control>
+							<control type="label">
+								<posx>74</posx>
+								<posy>192</posy>
+								<label> S $INFO[ListItem.Season] &#xB7; E $INFO[ListItem.Episode] </label>
+								<align>center</align>
+								<font>marketingSmall2</font>
+								<scroll>false</scroll>
+								<textcolor>ivory1</textcolor>
+								<shadowcolor>ff555555</shadowcolor>
+								<wrapmultiline>false</wrapmultiline>
+								<width min="1" max="200">auto</width>
+								<visible>ListItem.Type(episode)</visible>
+								<include>focus_newlist_top_text</include>
+							</control>
+						</focusedlayout>
+						<!-- square -->
+						<focusedlayout width="129" height="250" condition="!Container(11001).ListItem(0).Type(movie) | !Container(11001).ListItem(0).Type(episode)">
+							<control type="group">
+								<control type="image">
+									<include>homeMenuPosterTopFocused</include>
+									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<visible>ListItem.Type(movie)</visible>
+								</control>
+								<control type="image">
+									<include>homeMenuPosterTopFocused</include>
+									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.GrandparentThumb]</texture>
+									<visible>ListItem.Type(episode)</visible>
+								</control>
+							</control>
+						</focusedlayout>
+						<height>200</height>
+					</control>
+				</control>
+				<!-- Recently Added (11000) -->
+				<control type="group" id="7001">
+					<height>230</height>
+					<visible allowhiddenfocus="false">true</visible>
+					<control type="fixedlist" id="11000">
+						<visible allowhiddenfocus="false">false</visible>
+						<orientation>horizontal</orientation>
+						<ondown>-</ondown>
+						<onup>7002</onup>
+						<onright>-</onright>
+						<onleft>300</onleft>
+						<posx>-14</posx>
+						<posy>-6</posy>
+						<width>550</width>
+						<height>400</height>
+						<animation effect="fade" start="100" end="50" time="350" condition="ControlGroup(7002).HasFocus">Conditional</animation>
+						<!-- poster -->
+						<itemlayout width="103" height="190" condition="Container(11000).ListItem(0).Type(movie) | Container(11000).ListItem(0).Type(episode)">
+							<!-- movie + episode -->
+							<control type="group">
+								<posy>144</posy>
+								<control type="image">
+									<include>homeMenuPoster</include>
+									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<visible>ListItem.Type(movie)</visible>
+								</control>
+								<control type="image">
+									<include>homeMenuPoster</include>
+									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.GrandparentThumb]</texture>
+									<visible>ListItem.Type(episode)</visible>
+									
+								</control>
+							</control>
+							<control type="image">
+								<posx>43</posx>
+								<posy>309</posy>
+								<width>89</width>
+								<height>26</height>
+								<texture>frames/postercard4.png</texture>
+								<visible>ListItem.Type(episode)</visible>
+								<colordiffuse>oldGreyLight</colordiffuse>
+								<animation effect="fade" start="60" end="80" time="0" condition="true">Conditional</animation>
+							</control>
+							<control type="label">
+								<posx>85</posx>
+								<posy>310</posy>
+								<label> S $INFO[ListItem.Season] &#xB7; E $INFO[ListItem.Episode]</label>
+								<align>center</align>
+								<font>marketingSmallest2</font>
+								<scroll>false</scroll>
+								<textcolor>ivory1</textcolor>
+								<wrapmultiline>false</wrapmultiline>
+								<width min="1" max="200">auto</width>
+								<visible>ListItem.Type(episode)</visible>
+							</control>
+						</itemlayout>
+						<!-- square -->
+						<itemlayout width="129" height="190" condition="!Container(11000).ListItem(0).Type(movie) | !Container(11000).ListItem(0).Type(episode)">
+							<!-- photos & albums -->
+							<control type="group">
+								<posy>144</posy>
+								<control type="image">
+									<include>homeMenuSquare</include>
+									<texture diffuse="frames/squareMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+								</control>
+							</control>
+						</itemlayout>
+						<!-- poster -->
+						<focusedlayout width="103" height="250" condition="Container(11000).ListItem(0).Type(movie) | Container(11000).ListItem(0).Type(episode)">
+							<!-- movie + episode -->
+							<control type="group">
+								<posy>144</posy>
+								<control type="image">
+									<include>homeMenuPosterBottomFocused</include>
+									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<visible>ListItem.Type(movie)</visible>
+								</control>
+								<control type="image">
+									<include>homeMenuPosterBottomFocused</include>
+									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.GrandparentThumb]</texture>
+									<visible>ListItem.Type(episode)</visible>
+								</control>
+								
+							</control>
+							<control type="image">
+								<posx>22</posx>
+								<posy>306</posy>
+								<width>110</width>
+								<height>30</height>
+								<texture>frames/postercard4.png</texture>
+								<colordiffuse>oldBlue</colordiffuse>
+								<animation effect="fade" start="60" end="100" time="0" condition="true">Conditional</animation>
+								<include>focus_newlist_bottom_card</include>
+								<visible>ListItem.Type(episode)</visible>
+							</control>
+							<control type="label">
+								<posx>74</posx>
+								<posy>309</posy>
+								<label> S $INFO[ListItem.Season] &#xB7; E $INFO[ListItem.Episode] </label>
+								<align>center</align>
+								<font>marketingSmall2</font>
+								<scroll>false</scroll>
+								<textcolor>ivory1</textcolor>
+								<shadowcolor>ff555555</shadowcolor>
+								<wrapmultiline>false</wrapmultiline>
+								<width min="1" max="200">auto</width>
+								<visible>ListItem.Type(episode)</visible>
+								<include>focus_newlist_bottom_text</include>
+							</control>
+						</focusedlayout>
+						<!-- square -->
+						<focusedlayout width="129" height="250" condition="!Container(11000).ListItem(0).Type(movie) | !Container(11000).ListItem(0).Type(episode)">
+							<!-- photos & albums -->
+							<control type="group">
+								<posy>144</posy>
+								<control type="image">
+									<include>homeMenuSquareBottomFocused</include>
+									<texture diffuse="frames/squareMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+								</control>
+							</control>
+						</focusedlayout>
+						<height>200</height>
+					</control>
+				</control>
+			</control>
+			<!-- "11004" & "queue" -->
+			<control type="grouplist" id="5100">
+				<visible>true</visible>
+				<posx>-10</posx>
+				<posy>0</posy>
+				<width>890</width>
+				<height>720</height>
+				<ondown>5200</ondown>
+				<onup>310</onup>
+				<onright>350</onright>
+				<onleft>350</onleft>
+				<orientation>vertical</orientation>
+				<!-- 11004 (11004) -->
+				<control type="group" id="7005">
+					<height>230</height>
+					<control type="fixedlist" id="11004">
+						<visible allowhiddenfocus="false">false</visible>
+						<orientation>horizontal</orientation>
+						<ondown>7003</ondown>
+						<onup>-</onup>
+						<onright>-</onright>
+						<onleft>300</onleft>
+						<posx>-14</posx>
+						<posy>141</posy>
+						<width>560</width>
+						<height>250</height>
+						<wraparound>false</wraparound>
+						<animation effect="fade" start="100" end="50" time="350" condition="ControlGroup(7003).HasFocus">Conditional</animation>
+						<!-- wide -->
+						<itemlayout width="180" height="230">
+							<control type="group">
+								<control type="image">
+									<include>homeMenuWide</include>
+									<texture diffuse="frames/bigPosterHorizMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+								</control>
+							</control>
+						</itemlayout>
+						<!-- wide -->
+						<focusedlayout width="180" height="250">
+							<control type="group">
+								<control type="image">
+									<include>homeMenuWideTopFocused</include>
+									<texture diffuse="frames/bigPosterHorizMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+								</control>
+							</control>
+						</focusedlayout>
+						<height>200</height>
+					</control>
+				</control>
+				<!-- queue (11003) -->
+				<control type="group" id="7003">
+					<height>230</height>
+					<visible allowhiddenfocus="false">true</visible>
+					<control type="fixedlist" id="11003">
+						<visible allowhiddenfocus="false">false</visible>
+						<orientation>horizontal</orientation>
+						<ondown>-</ondown>
+						<onup>7005</onup>
+						<onright>-</onright>
+						<onleft>300</onleft>
+						<posx>-14</posx>
+						<posy>-6</posy>
+						<width>560</width>
+						<height>400</height>
+						<animation effect="fade" start="100" end="50" time="350" condition="ControlGroup(7005).HasFocus">Conditional</animation>
+						<!-- wide -->
+						<itemlayout width="180" height="190">
+							<control type="group">
+								<posy>144</posy>
+								<control type="image">
+									<include>homeMenuWide</include>
+									<texture diffuse="frames/bigPosterHorizMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+								</control>
+							</control>
+						</itemlayout>
+						<!-- wide -->
+						<focusedlayout width="180" height="250">
+							<control type="group">
+								<posy>144</posy>
+								<control type="image">
+									<include>homeMenuWideBottomFocused</include>
+									<texture diffuse="frames/bigPosterHorizMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+								</control>
+							</control>
+						</focusedlayout>
+						<height>200</height>
+					</control>
+				</control>
+			</control>
+			<!-- "Recently Accessed" -->
+			<control type="grouplist" id="5300">
+				<visible>true</visible>
+				<posx>0</posx>
+				<posy>234</posy>
+				<width>550</width>
+				<height>720</height>
+				<ondown>-</ondown>
+				<onup>-</onup>
+				<onright>350</onright>
+				<onleft>350</onleft>
+				<orientation>vertical</orientation>
+				<control type="group" id="7004">
+					<height>230</height>
+					<visible allowhiddenfocus="false">true</visible>
+					<control type="fixedlist" id="11002">
+						<visible allowhiddenfocus="false">false</visible>
+						<orientation>horizontal</orientation>
+						<ondown>-</ondown>
+						<onup>7004</onup>
+						<onright>-</onright>
+						<onleft>300</onleft>
+						<posx>-14</posx>
+						<posy>-6</posy>
+						<width>550</width>
+						<height>400</height>
+						<!-- square -->
+						<itemlayout width="129" height="190">
+							<!-- channels -->
+							<control type="group">
+								<posy>144</posy>
+								<control type="image">
+									<include>homeMenuSquare</include>
+									<texture diffuse="frames/squareMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+								</control>
+							</control>
+						</itemlayout>
+						<!-- square -->
+						<focusedlayout width="129" height="250">
+							<!-- channels -->
+							<control type="group">
+								<posy>144</posy>
+								<control type="image">
+									<include>homeMenuSquareBottomFocused</include>
+									<texture diffuse="frames/squareMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+								</control>
+							</control>
+						</focusedlayout>
+						<height>200</height>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

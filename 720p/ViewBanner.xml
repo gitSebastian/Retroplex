@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<includes>
+	<!-- formatting -->
+	<include name="BannerMenuUnfocused">
+		<!-- opacity -->
+		<animation effect="fade" start="100" end="100" time="350" condition="true">Conditional</animation>
+		<posx>710</posx>
+		<posy>-3</posy>
+		<width>700</width>
+		<height>46</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>qlassikMedium2</font>
+		<textcolor>ivory2</textcolor>
+		<shadowcolor>ff333333</shadowcolor>
+	</include>
+	<include name="BannerMenuFocused">
+		<width>600</width>
+		<height>50</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>lobsterSmall2</font>
+		<scroll>true</scroll>
+		<textcolor>oldBlue2</textcolor>
+		<shadowcolor>ff444444</shadowcolor>
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" center="400,100" start="80" end="100" time="250" tween="Cubik" easing="out"/>
+			<effect type="fade" start="0" end="100" time="250"/>
+		</animation>
+	</include>
+	<include name="BannerMenuFocused2">
+		<width>600</width>
+		<height>50</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>lobsterMedium</font>
+		<scroll>true</scroll>
+		<textcolor>oldBlue2</textcolor>
+		<shadowcolor>ff444444</shadowcolor>
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" center="400,100" start="80" end="100" time="250" tween="Cubik" easing="out"/>
+			<effect type="fade" start="0" end="100" time="250"/>
+		</animation>
+	</include>
+	<include name="BannerMenuFocusedLabel2">
+		<width>770</width>
+		<font>qlassikMedium2</font>
+		<textcolor>ivory2</textcolor>
+		<shadowcolor>ff222222</shadowcolor>
+		<align>left</align>
+	</include>
+	<include name="BannerMenuFocusedLabel2Small">
+		<width>500</width>
+		<font>qlassikSmall</font>
+		<textcolor>ivory2</textcolor>
+		<shadowcolor>ff222222</shadowcolor>
+		<align>left</align>
+	</include>
+	<include name="BannerUnfocusedBorder">
+		<bordertexture border="30">frames/oldbluercorners3b.png</bordertexture>
+		<bordersize>14</bordersize>
+	</include>
+	<include name="BannerFocusedBorder">
+		<bordertexture border="30">frames/oldgreyrcorners.png</bordertexture>
+		<bordersize>16</bordersize>
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" center="0,100" start="80" end="100" time="250" tween="Cubik" easing="out"/>
+			<effect type="fade" start="0" end="100" time="350"/>
+		</animation>
+	</include>
+	<include name="BannerFocusedBorder2">
+		<bordertexture border="30">frames/oldbluercorners5.png</bordertexture>
+		<bordersize>16</bordersize>
+	</include>
+	<include name="MultiBannerDressing">
+		<!-- Multi Banners left bar -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>298</posy>
+			<width>600</width>
+			<height>140</height>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<include>grainypagefade</include>
+			<include>MultibannersLeftMenuSlide</include>
+			<texture flipx="true" border="10">dialogs/square_menu_background.png</texture>
+			<animation effect="fade" start="50" end="100" time="0" condition="true">Conditional</animation>
+			<visible>Control.IsVisible(566) + Container.Content(tvshows)</visible>
+		</control>
+		<!-- Multi Banners right bar -->
+		<control type="image">
+			<posx>803</posx>
+			<posy>380</posy>
+			<width>600</width>
+			<height>140</height>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<include>grainypagefade</include>
+			<include>MultibannersLeftMenuSlide</include>
+			<texture>frames/bannerMask.png</texture>
+			<colordiffuse>theRed</colordiffuse>
+			<aspectratio align="right">stretch</aspectratio>
+			<animation effect="fade" start="50" end="100" time="0" condition="true">Conditional</animation>
+			<visible>Control.IsVisible(566) + Container.Content(tvshows)</visible>
+		</control>
+	</include>
+	<!-- BANNER VIEW (tv shows) -->
+	<include name="view_Banner">
+		<control type="group">
+			<include>BannersLeftMenuSlide</include>
+			<control type="fixedlist" id="54">
+				<viewtype label="535">List</viewtype>
+				<posx>201</posx>
+				<posy>76</posy>
+				<width>900</width>
+				<height>570</height>
+				<onleft>300</onleft>
+				<onright>76</onright>
+				<onup>54</onup>
+				<ondown>54</ondown>
+				<scrolltime>250</scrolltime>
+				<focusposition>3</focusposition>
+				<wraparound>true</wraparound>
+				<pagecontrol>76</pagecontrol>
+				<include>infoDialogHide</include>
+				<include>contextMenuHide</include>
+				<include>grainypagefade</include>
+				<visible>!Window.IsActive(progressdialog) + Container.Content(tvshows)</visible>
+				<itemlayout condition="Container.Content(tvshows)" width="560" height="50">
+					<control type="label">
+						<posx>130</posx>
+						<posy>10</posy>
+						<label>$INFO[ListItem.Title]</label>
+						<include>BannerMenuUnfocused</include>
+					</control>
+					<control type="label">
+						<posx>130</posx>
+						<posy>10</posy>
+						<label>$INFO[ListItem.Label]</label>
+						<include>BannerMenuUnfocused</include>
+						<visible>IsEmpty(ListItem.Title)</visible>
+					</control>
+				</itemlayout>
+				<!-- FOCUSED BANNER -->
+				<focusedlayout condition="Container.Content(tvshows)" width="560" height="270">
+					<control type="image">
+						<posx>30</posx>
+						<posy>18</posy>
+						<width>774</width>
+						<height>156</height>
+						<texture diffuse="frames/bannerMask.png" fallback="thumbs/bannerTV.png" background="true">$INFO[ListItem.Banner]</texture>
+						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+						<include>BannerFocusedBorder</include>
+						<include>focus_Banner</include>
+						<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
+					</control>
+					<control type="label">
+						<posx>77</posx>
+						<posy>165</posy>
+						<label>$INFO[ListItem.Title]</label>
+						<include>BannerMenuFocused2</include>
+						<visible>!IsEmpty(ListItem.Title)</visible>
+					</control>
+					<control type="label">
+						<posx>77</posx>
+						<posy>180</posy>
+						<label>$INFO[ListItem.Label]</label>
+						<include>BannerMenuFocused2</include>
+						<visible>IsEmpty(ListItem.Title)</visible>
+					</control>
+					<control type="label">
+						<posx>107</posx>
+						<posy>218</posy>
+						<label>$LOCALIZE[16101] : $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[20360]</label>
+						<include>BannerMenuFocusedLabel2Small</include>
+						<visible>!IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
+						<visible>![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Property(UnWatchedEpisodes))]</visible>
+					</control>
+					<control type="image">
+						<posx>660</posx>
+						<posy>188</posy>
+						<width>128</width>
+						<height>45</height>
+						<align>right</align>
+						<aspectratio align="right" aligny="center">keep</aspectratio>
+						<texture>$INFO[Listitem.Property(mediaTag::Studio)]</texture>
+						<colordiffuse>ivory3</colordiffuse>
+						<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+	</include>
+	<!-- MULTI-BANNER VIEW (tv shows) -->
+	<include name="view_MultiBanner">
+		<visible>Control.IsVisible(566) + Container.Content(tvshows)</visible>
+		<control type="group">
+			<include>MultibannersLeftMenuSlide</include>
+			<control type="fixedlist" id="566">
+				<viewtype label="535">List</viewtype>
+				<posx>191</posx>
+				<posy>38</posy>
+				<width>900</width>
+				<height>630</height>
+				<onleft>300</onleft>
+				<onright>76</onright>
+				<onup>566</onup>
+				<ondown>566</ondown>
+				<scrolltime>250</scrolltime>
+				<focusposition>2</focusposition>
+				<wraparound>true</wraparound>
+				<pagecontrol>76</pagecontrol>
+				<include>transition2</include>
+				<include>infoDialogHide</include>
+				<include>contextMenuHide</include>
+				<include>grainypagefade</include>
+				<visible>!Window.IsActive(progressdialog) + Container.Content(tvshows)</visible>
+				<itemlayout condition="Container.Content(tvshows)" width="560" height="112">
+					<control type="image">
+						<posx>40</posx>
+						<posy>18</posy>
+						<width>575</width>
+						<height>126</height>
+						<texture diffuse="frames/bannerMask.png" fallback="thumbs/bannerTV.png" background="true">$INFO[ListItem.Banner]</texture>
+						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+						<include>BannerUnfocusedBorder</include>
+						<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
+						<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
+					</control>
+				</itemlayout>
+				<!-- FOCUSED BANNER -->
+				<focusedlayout condition="Container.Content(tvshows)" width="560" height="160">
+					<control type="image">
+						<posx>30</posx>
+						<posy>19</posy>
+						<width>790</width>
+						<height>172</height>
+						<texture diffuse="frames/bannerMask.png" fallback="thumbs/bannerTV.png" background="true">$INFO[ListItem.Banner]</texture>
+						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+						<include>BannerFocusedBorder</include>
+						<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		<!-- titles + unwatched + studio logo -->
+		<control type="group">
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<include>grainypagefade</include>			
+			<visible>Control.IsVisible(566) + Container.Content(tvshows)</visible>
+			<control type="group">
+				<include>MultibannersInfosRightSlide</include>
+			<control type="label">
+				<posx>827</posx>
+				<posy>438</posy>
+				<label>$INFO[ListItem.Title]</label>
+				<include>BannerMenuFocused</include>
+				<visible>!IsEmpty(ListItem.Title)</visible>
+			</control>
+			<control type="label">
+				<posx>77</posx>
+				<posy>165</posy>
+				<label>$INFO[ListItem.Label]</label>
+				<include>BannerMenuFocused</include>
+				<visible>IsEmpty(ListItem.Title)</visible>
+			</control>
+			<control type="label">
+				<posx>828</posx>
+				<posy>483</posy>
+				<label>$LOCALIZE[16101] : $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[20360]</label>
+				<include>BannerMenuFocusedLabel2Small</include>
+				<visible>!IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
+				<include>BigListLeftMenuRightSlide</include>
+			</control>
+			</control>
+			<control type="image">
+				<posx>55</posx>
+				<posy>325</posy>
+				<width>128</width>
+				<height>88</height>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<colordiffuse>ivory2</colordiffuse>
+				<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/tvshows/,.png]</texture>
+				<include>MultibannersStudioLogoLeftMenuSlide</include>
+			</control>
+		</control>
+	</include>
+</includes>

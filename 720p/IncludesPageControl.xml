@@ -3,20 +3,21 @@
 	<include name="AllViewCommonPageControls">
 		<control type="scrollbar" id="23">
 			<description>list</description>
-			<posx>1265</posx>
+			<posx>1256</posx>
 			<posy>92</posy>
 			<height>580</height>
 			<onleft>555</onleft>
 			<include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
+			<colordiffuse>oldBlueLight</colordiffuse>
 			<visible allowhiddenfocus="true">Control.IsVisible(555) + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide)] | [Skin.HasSetting(scrollbarHide) + Control.HasFocus(23)]</visible>
 			<enable>Skin.HasSetting(scrollbar)</enable>
 			<include>ListLeftMenuSlide</include>
 		</control>
 		<control type="scrollbar" id="64">
 			<description>thumbnails</description>
-			<posx>1250</posx>
+			<posx>1256</posx>
 			<posy>97</posy>
 			<height>497</height>
 			<onleft>57</onleft>
@@ -24,6 +25,7 @@
 			<include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
+			<colordiffuse>oldBlueLight</colordiffuse>
 			<animation effect="slide" start="0" end="-35" time="200" condition="Window.IsActive(2)">Conditional</animation>
 			<enable>Skin.HasSetting(scrollbar)</enable>
 			<include>ThumbnailsSmallLeftMenuThumbsSlide</include>
@@ -38,13 +40,14 @@
 			<include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
+			<colordiffuse>oldBlueLight</colordiffuse>
 			<enable>Skin.HasSetting(scrollbar)</enable>
 			<include>ThumbnailsSmallLeftMenuRightSlide</include>
 		</control>
 		<control type="scrollbar" id="65">
 			<description>slide posters</description>
 			<posx>30</posx>
-			<posy>397</posy>
+			<posy>700</posy>
 			<width>1220</width>
 			<onup>52</onup>
 			<ondown>52</ondown>
@@ -55,6 +58,7 @@
 			<include>xScroller</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
+			<colordiffuse>oldBlueLight</colordiffuse>
 			<enable>Skin.HasSetting(scrollbar)</enable>
 			<include>SlidePostersLeftMenuThumbsSlide</include>
 		</control>
@@ -132,11 +136,12 @@
 			<include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
+			<colordiffuse>oldBlueLight</colordiffuse>
 			<enable>Skin.HasSetting(scrollbar)</enable>
 		</control>
 		<control type="scrollbar" id="76">
 			<description>banners</description>
-			<posx>1240</posx>
+			<posx>1256</posx>
 			<posy>85</posy>
 			<height>596</height>
 			<onleft>54</onleft>
@@ -144,6 +149,7 @@
 			<include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
+			<colordiffuse>oldBlueLight</colordiffuse>
 			<enable>Skin.HasSetting(scrollbar)</enable>
 			<include>BannersLeftMenuSlide</include>
 		</control>
@@ -156,6 +162,7 @@
 			<include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
+			<colordiffuse>oldBlueLight</colordiffuse>
 			<visible allowhiddenfocus="true">Control.IsVisible(51) + [Skin.HasSetting(scrollbar) + !Skin.HasSetting(scrollbarHide)] | [Skin.HasSetting(scrollbarHide) + Control.HasFocus(78)]</visible>
 			<enable>Skin.HasSetting(scrollbar)</enable>
 			<include>BigListLeftMenuSlide</include>

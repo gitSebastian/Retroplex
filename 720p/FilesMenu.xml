@@ -30,7 +30,7 @@
 			<scrolltime>150</scrolltime>
 			<visible allowhiddenfocus="true">ControlGroup(300).HasFocus</visible>
 			<include>homeMenuToggle</include>
-			<include>homeMenusLayout</include>
+			<include>MenuLayout1</include>
 			<!-- white separators top and bottom sub-menu -->
 			<control type="image">
 				<posx>356</posx>
@@ -124,14 +124,14 @@
 				<!-- AVAILABLE -->
 				<control type="button" id="9013">
 					<label>$LOCALIZE[8]</label>
-					<onclick>ActivateWindow(weather)</onclick>
+					<onclick>ActivateWindow()</onclick>
 					<include>-</include>
 					<visible>false</visible>
 				</control>
 				<!-- AVAILABLE -->
 				<control type="button" id="9014">
 					<label>$LOCALIZE[8]</label>
-					<onclick>ActivateWindow(weather)</onclick>
+					<onclick>ActivateWindow()</onclick>
 					<include>-</include>
 					<include>newHomeMenuCategoryNoFocusBg</include>
 					<visible>false</visible>
@@ -265,7 +265,7 @@
 						<description>Add to favorites</description>
 						<label>$LOCALIZE[1036]</label>
 						<onclick>ActivateWindow(Favourites)</onclick>
-						<include>newHomeMenuSubSettingsButton</include>
+						<include>MenuSubSettingsButton</include>
 					</control>
 					<!-- slide -->
 					<control type="button" id="202">
@@ -273,7 +273,7 @@
 						<label>$LOCALIZE[31061]</label>
 						<onclick>Container.SetViewMode(52)</onclick>
 						<onclick>Skin.ToggleSetting(slideViewFanart)</onclick>
-						<include>newHomeMenuSubSettingsButton</include>
+						<include>MenuSubSettingsButton</include>
 						<visible>[Control.IsVisible(52) | Control.IsVisible(55)] + !Skin.HasSetting(slideViewFanart) + !Container.Content(seasons)</visible>
 					</control>
 					<control type="button" id="203">
@@ -281,7 +281,7 @@
 						<label>$LOCALIZE[31039]</label>
 						<onclick>Container.SetViewMode(55)</onclick>
 						<onclick>Skin.ToggleSetting(slideViewFanart)</onclick>
-						<include>newHomeMenuSubSettingsButton</include>
+						<include>MenuSubSettingsButton</include>
 						<visible>[Control.IsVisible(52) | Control.IsVisible(55)] + Skin.HasSetting(slideViewFanart) + !Container.Content(seasons)</visible>
 					</control>					
 					<control type="radiobutton" id="205">
@@ -289,7 +289,7 @@
 						<onclick>Container.SetViewMode(52)</onclick>
 						<onclick>Skin.ToggleSetting(slidehiderating)</onclick>
 						<selected>Skin.HasSetting(slidehiderating)</selected>
-						<include>newHomeMenuSubSettingsButton</include>
+						<include>MenuSubSettingsButton</include>
 						<visible>[Control.IsVisible(52) | Control.IsVisible(55)] + !Container.Content(seasons)</visible>
 					</control>
 					<control type="radiobutton" id="206">
@@ -297,7 +297,7 @@
 						<onclick>Container.SetViewMode(52)</onclick>
 						<onclick>Skin.ToggleSetting(slidehideresolution)</onclick>
 						<selected>Skin.HasSetting(slidehideresolution)</selected>
-						<include>newHomeMenuSubSettingsButton</include>
+						<include>MenuSubSettingsButton</include>
 						<visible>[Control.IsVisible(52) | Control.IsVisible(55)] + !Container.Content(seasons)</visible>
 					</control>
 					<control type="radiobutton" id="208">
@@ -305,7 +305,7 @@
 						<onclick>Container.SetViewMode(52)</onclick>
 						<onclick>Skin.ToggleSetting(slidehideaspectratio)</onclick>
 						<selected>Skin.HasSetting(slidehideaspectratio)</selected>
-						<include>newHomeMenuSubSettingsButton</include>
+						<include>MenuSubSettingsButton</include>
 						<visible>[Control.IsVisible(52) | Control.IsVisible(55)] + !Container.Content(seasons)</visible>
 					</control>
 					<control type="radiobutton" id="213">
@@ -313,7 +313,7 @@
 						<onclick>Container.SetViewMode(52)</onclick>
 						<onclick>Skin.ToggleSetting(slidehideframerate)</onclick>
 						<selected>Skin.HasSetting(slidehideframerate)</selected>
-						<include>newHomeMenuSubSettingsButton</include>
+						<include>MenuSubSettingsButton</include>
 						<visible>[Control.IsVisible(52) | Control.IsVisible(55)] + !Container.Content(seasons)</visible>
 					</control>
 					<control type="radiobutton" id="207">
@@ -321,7 +321,7 @@
 						<onclick>Container.SetViewMode(52)</onclick>
 						<onclick>Skin.ToggleSetting(slidehidevideoinfo)</onclick>
 						<selected>Skin.HasSetting(slidehidevideoinfo)</selected>
-						<include>newHomeMenuSubSettingsButton</include>
+						<include>MenuSubSettingsButton</include>
 						<visible>[Control.IsVisible(52) | Control.IsVisible(55)] + !Container.Content(seasons)</visible>
 					</control>					
 					<control type="radiobutton" id="209">
@@ -329,7 +329,7 @@
 						<onclick>Container.SetViewMode(52)</onclick>
 						<onclick>Skin.ToggleSetting(slidehideaudioinfo)</onclick>
 						<selected>Skin.HasSetting(slidehideaudioinfo)</selected>
-						<include>newHomeMenuSubSettingsButton</include>
+						<include>MenuSubSettingsButton</include>
 						<visible>[Control.IsVisible(52) | Control.IsVisible(55)] + !Container.Content(seasons)</visible>
 					</control>
 					<control type="radiobutton" id="204">
@@ -337,7 +337,7 @@
 						<onclick>Container.SetViewMode(52)</onclick>
 						<onclick>Skin.ToggleSetting(slidehidecontentrating)</onclick>
 						<selected>Skin.HasSetting(slidehidecontentrating)</selected>
-						<include>newHomeMenuSubSettingsButton</include>
+						<include>MenuSubSettingsButton</include>
 						<visible>[Control.IsVisible(52) | Control.IsVisible(55)] + !Container.Content(seasons)</visible>
 					</control>
 					<!-- list -->
@@ -345,14 +345,14 @@
 						<description>LIST : use posters</description>
 						<label>$LOCALIZE[31061]</label>
 						<onclick>Skin.ToggleSetting(ListViewFanart)</onclick>
-						<include>newHomeMenuSubSettingsButton</include>
+						<include>MenuSubSettingsButton</include>
 						<visible>Control.IsVisible(50) + Skin.HasSetting(ListViewFanart)</visible>
 					</control>
 					<control type="button" id="211">
 						<description>LIST : use fanart</description>
 						<label>use fanart</label>
 						<onclick>Skin.ToggleSetting(ListViewFanart)</onclick>
-						<include>newHomeMenuSubSettingsButton</include>
+						<include>MenuSubSettingsButton</include>
 						<visible>Control.IsVisible(50) + !Skin.HasSetting(ListViewFanart)</visible>
 					</control>-->
 					<!-- big thumbnails -->
@@ -361,7 +361,7 @@
 						<onclick>Container.SetViewMode(57)</onclick>
 						<onclick>Skin.ToggleSetting(thumbnailsshowstudioflag)</onclick>
 						<selected>Skin.HasSetting(thumbnailsshowstudioflag)</selected>
-						<include>newHomeMenuSubSettingsButton</include>
+						<include>MenuSubSettingsButton</include>
 						<visible>Control.IsVisible(57) + Container.Content(movies)</visible>
 					</control>
 				</control>
