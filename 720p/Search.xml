@@ -18,8 +18,8 @@
 		<align>right</align>
 	</include>
 	<include name="Search_Keyboard_Button">
-		<width>46</width>
-		<height>46</height>
+		<width>47</width>
+		<height>47</height>
 		<font>dockMedium</font>
 		<textcolor>ivory2</textcolor>
 		<focusedcolor>ivory2</focusedcolor>
