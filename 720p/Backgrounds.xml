@@ -80,10 +80,10 @@
 		</control>
 		<!-- Settings -->
 		<control type="image">
-			<include>fullScreenStretch</include>
-			<texture background="true">backgrounds/background.jpg</texture>
-			<visible>[Window.IsActive(4000) | Window.IsActive(40) | Window.IsActive(10019) | Window.IsActive(10018) | Window.IsActive(10017) | Window.IsActive(10016) | Window.IsActive(10015) | Window.IsActive(10014) | Window.IsActive(10013) | Window.IsActive(10012) | Window.IsActive(10003) | Window.IsActive(10004) | Window.IsActive(10007) | Window.IsActive(10034)]</visible>
-		</control>
+		<include>fullScreenStretch</include>
+		<texture background="true">backgrounds/background.jpg</texture>
+		<visible>[Window.IsActive(4000) | Window.IsActive(40) | Window.IsActive(10019) | Window.IsActive(10018) | Window.IsActive(10017) | Window.IsActive(10016) | Window.IsActive(10015) | Window.IsActive(10014) | Window.IsActive(10013) | Window.IsActive(10012) | Window.IsActive(10003) | Window.IsActive(10004) | Window.IsActive(10007) | Window.IsActive(10034)]</visible>
+		</control>		
 		<!-- Music -->
 		<control type="image">
 			<description>music bg</description>

@@ -37,10 +37,10 @@
 		<shadowcolor>ff333333</shadowcolor>
 		<align>left</align>
 		<width>1100</width>
-		<animation type="Focus" reversible="false">
+		<!--><animation type="Focus" reversible="false">
 			<effect type="zoom" center="85,250" start="60" end="100" time="450" tween="Cubic" easing="out"/>
 			<effect type="fade" start="0" end="100" time="550"/>
-		</animation>
+		</animation>-->
 	</include>
 	<include name="HomeMenu">
 		<!-- HOME MENU -->
@@ -53,8 +53,6 @@
 			<ondown>300</ondown>
 			<onleft>9000</onleft>
 			<onright>5000</onright>
-			<wraparound>true</wraparound>
-			<orientation>vertical</orientation>
 			<focusposition>4</focusposition>
 			<scrolltime>300</scrolltime>
 			<include>transition2</include>

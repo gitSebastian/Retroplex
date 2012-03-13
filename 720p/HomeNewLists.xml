@@ -283,7 +283,7 @@
 						<control type="label">
 							<label>$INFO[Container(11000).ListItem(0).Title]</label>
 							<include>newHomeMenuItemTitle1</include>
-							<visible>[!Container(11000).ListItem(0).Type(episode) + !Container(11000).ListItem(0).Type(album)] + !Container(11001).ListItem(0).Type(movie)</visible>
+							<visible>[!Container(11000).ListItem(0).Type(episode) + !Container(11000).ListItem(0).Type(album)] + !Container(11000).ListItem(0).Type(movie)</visible>
 						</control>
 						<control type="label">
 							<label>$INFO[Container(11000).ListItem(0).Artist]</label>
