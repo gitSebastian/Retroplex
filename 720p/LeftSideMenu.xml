@@ -296,6 +296,14 @@
 					<visible>Player.HasAudio</visible>
 					<include>leftMenuViewOptions</include>
 				</control>
+				<control type="button" id="9096">
+					<!-- label to do -->
+					<!--><label>$LOCALIZE[41980]</label>-->
+					<label>Now Playing Visualizer</label>
+					<onclick>ActivateWindow(nowplaying)</onclick>
+					<visible>Player.HasAudio</visible>
+					<include>leftMenuViewOptions</include>
+				</control>
 				<control type="button" id="9003">
 					<description>go to Video Plug-Ins</description>
 					<label>$LOCALIZE[41981]</label>
@@ -446,6 +454,14 @@
 					<label>$LOCALIZE[41980]</label>
 					<onclick>SetFocus(555)</onclick>
 					<onclick>ActivateWindow(MusicPlaylist)</onclick>
+					<visible>Player.HasAudio</visible>
+					<include>leftMenuViewOptions</include>
+				</control>
+				<control type="button" id="9096">
+					<!-- label to do -->
+					<!--><label>$LOCALIZE[41980]</label>-->
+					<label>Now Playing Visualizer</label>
+					<onclick>ActivateWindow(nowplaying)</onclick>
 					<visible>Player.HasAudio</visible>
 					<include>leftMenuViewOptions</include>
 				</control>
@@ -807,6 +823,14 @@
 					<label>$LOCALIZE[41980]</label>
 					<onclick>SetFocus(555)</onclick>
 					<onclick>ActivateWindow(MusicPlaylist)</onclick>
+					<visible>Player.HasAudio</visible>
+					<include>leftMenuViewOptions</include>
+				</control>
+				<control type="button" id="9096">
+					<!-- label to do -->
+					<!--><label>$LOCALIZE[41980]</label>-->
+					<label>Now Playing Visualizer</label>
+					<onclick>ActivateWindow(nowplaying)</onclick>
 					<visible>Player.HasAudio</visible>
 					<include>leftMenuViewOptions</include>
 				</control>
