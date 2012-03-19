@@ -380,7 +380,7 @@
 						<width>20</width>
 						<height>18</height>
 						<include>watchedOverlay</include>
-						<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)]</visible>
+						<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + !Skin.HasSetting(overlayTVShows)]</visible>
 						<animation effect="fade" start="100" end="90" time="0" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
@@ -422,7 +422,7 @@
 						<width>20</width>
 						<height>18</height>
 						<include>watchedOverlay</include>
-						<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)]</visible>
+						<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + !Skin.HasSetting(overlayTVShows)]</visible>
 						<animation effect="fade" start="100" end="90" time="0" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
