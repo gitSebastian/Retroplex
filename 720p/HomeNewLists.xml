@@ -234,7 +234,7 @@
 						<itemgap>0</itemgap>
 						<control type="label">
 							<label>$INFO[Container(11001).ListItem(0).TVShowTitle]</label>
-							<include>newHomeMenuItemTitle1</include>
+							<include>newHomeMenuItemTitle3</include>
 							<visible>!IsEmpty(Container(11001).ListItem(0).TVShowTitle) + !Container(11001).ListItem(0).Type(movie)</visible>
 						</control>
 						<!--><control type="label">
