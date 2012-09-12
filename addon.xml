@@ -6,7 +6,7 @@
 	</requires>
 	<extension  
 		point="xbmc.gui.skin" 
-		defaultresolution="720p" 
+		defaultresolution="1080i" 
 		defaultresolutionwide="720p" 
 		defaultthemename="Textures.xbt" 
 		effectslowdown="0.8" 
