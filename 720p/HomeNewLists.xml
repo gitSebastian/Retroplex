@@ -454,6 +454,15 @@
 								<width min="1" max="200">auto</width>
 								<visible>ListItem.Type(episode)</visible>
 							</control>
+							<control type="image">
+								<posx>114</posx>
+								<posy>174</posy>
+								<width>16</width>
+								<height>16</height>
+								<texture>$INFO[ListItem.Overlay]</texture>
+								<visible>[ListItem.Type(movie) + Skin.HasSetting(overlayMovies)] | [ListItem.Type(episode) + !Skin.HasSetting(overlayTVShows)]</visible>
+								<animation effect="fade" start="100" end="90" time="0" condition="true">Conditional</animation>
+							</control>
 						</itemlayout>
 						<!-- square -->
 						<itemlayout width="129" height="230" condition="!Container(11001).ListItem(0).Type(movie) | !Container(11001).ListItem(0).Type(episode)">
@@ -509,6 +518,16 @@
 								<width min="1" max="200">auto</width>
 								<visible>ListItem.Type(episode)</visible>
 								<include>focus_newlist_top_text</include>
+							</control>
+							<control type="image">
+								<posx>114</posx>
+								<posy>174</posy>
+								<width>16</width>
+								<height>16</height>
+								<texture>$INFO[ListItem.Overlay]</texture>
+								<visible>[ListItem.Type(movie) + Skin.HasSetting(overlayMovies)] | [ListItem.Type(episode) + !Skin.HasSetting(overlayTVShows)]</visible>
+								<animation effect="fade" start="100" end="90" time="0" condition="true">Conditional</animation>
+								<include>focus_newlist_top</include>
 							</control>
 						</focusedlayout>
 						<!-- square -->
@@ -584,6 +603,15 @@
 								<width min="1" max="200">auto</width>
 								<visible>ListItem.Type(episode)</visible>
 							</control>
+							<control type="image">
+								<posx>114</posx>
+								<posy>318</posy>
+								<width>16</width>
+								<height>16</height>
+								<texture>$INFO[ListItem.Overlay]</texture>
+								<visible>[ListItem.Type(movie) + Skin.HasSetting(overlayMovies)] | [ListItem.Type(episode) + !Skin.HasSetting(overlayTVShows)]</visible>
+								<animation effect="fade" start="100" end="90" time="0" condition="true">Conditional</animation>
+							</control>
 						</itemlayout>
 						<!-- square -->
 						<itemlayout width="129" height="190" condition="!Container(11000).ListItem(0).Type(movie) | !Container(11000).ListItem(0).Type(episode)">
@@ -637,6 +665,23 @@
 								<width min="1" max="200">auto</width>
 								<visible>ListItem.Type(episode)</visible>
 								<include>focus_newlist_bottom_text</include>
+							</control>
+							<control type="image">
+								<posx>114</posx>
+								<posy>318</posy>
+								<width>16</width>
+								<height>16</height>
+								<texture>$INFO[ListItem.Overlay]</texture>
+								<visible>[ListItem.Type(movie) + Skin.HasSetting(overlayMovies)] | [ListItem.Type(episode) + !Skin.HasSetting(overlayTVShows)]</visible>
+								<animation effect="fade" start="100" end="90" time="0" condition="true">Conditional</animation>
+								<animation type="focus">
+									<effect type="zoom" center="140,335" tween="Linear" start="100,100" end="120,120" easing="out" reversible="true" time="200"/>
+									<animation effect="fade" start="0" end="100" time="200" condition="true">Conditional</animation>
+								</animation>
+								<animation type="unfocus">
+									<effect type="zoom" center="140,335" tween="Linear" start="120,120" end="100,100" easing="in" reversible="true" time="200"/>
+									<animation effect="fade" start="100" end="0" time="100" condition="true">Conditional</animation>
+								</animation>
 							</control>
 						</focusedlayout>
 						<!-- square -->
