@@ -12,6 +12,8 @@ Additional credits :[CR][CR]A huge thanks to [COLOR=ivory2]gedoode[/COLOR] for a
 	</string>
 	<!-- Settings Home -->
 	<string id="31124">Homescreen</string><!-- -->
+	<string id="31128">General</string>
+	<string id="31129">Don't show Pinups in the left side menu</string>
 	<string id="41001">Show Weather pin-up</string>
 	<string id="41002">Show RSS feed</string>
 	<string id="41003">Turn all slideshows OFF</string>

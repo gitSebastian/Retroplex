@@ -150,6 +150,7 @@
 		<control type="group">
 			<include>cutieLeftMenuSlide</include>
 			<include>transition2</include>
+			<visible>!Skin.HasSetting(ShowCutiesNoLove)</visible>
 			<!-- home -->
 			<control type="image">
 				<width>270</width>
