@@ -144,7 +144,7 @@
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
 				<include>grainypagefade</include>
-				<aspectratio align="right" aligny="center">stretch</aspectratio>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				<texture diffuse="frames/oldpaperDarkMask.png" background="true">$INFO[Container(555).ListItem.Icon]</texture>
 				<visible>!ControlGroup(300).HasFocus + Control.IsVisible(555) + !Window.IsActive(musicplaylist) + !Control.IsVisible(100)</visible>
 			</control>
