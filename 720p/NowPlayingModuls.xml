@@ -9,6 +9,9 @@
 			<align>right</align>
 			<include>homeMenuFade2</include>
 			<visible>Player.HasAudio + [[!System.IdleTime(30) + !ControlGroup(5000).HasFocus()] | [!System.IdleTime(119) + ControlGroup(5000).HasFocus()]]</visible>
+			<animation condition="Window.IsActive(107)" type="Conditional">
+				<effect type="slide" start="0,0" end="0,50" time="300" tween="cubic" easing="inout"/>
+			</animation>
 			<animation condition="!Player.Paused" type="Conditional">
 			<!--	<effect type="rotatey" center="1085" start="-180" end="0" time="500" easing="out" reversible="false"/>-->
 				<effect type="fade" start="80" end="100" time="250" delay="0"/>
