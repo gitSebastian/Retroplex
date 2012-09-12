@@ -8,7 +8,7 @@
 			<posy>80</posy>
 			<align>right</align>
 			<include>homeMenuFade2</include>
-			<visible>Player.HasAudio + [[!System.IdleTime(59) + !ControlGroup(5000).HasFocus()] | [!System.IdleTime(119) + ControlGroup(5000).HasFocus()]]</visible>
+			<visible>Player.HasAudio + [[!System.IdleTime(30) + !ControlGroup(5000).HasFocus()] | [!System.IdleTime(119) + ControlGroup(5000).HasFocus()]]</visible>
 			<animation condition="!Player.Paused" type="Conditional">
 			<!--	<effect type="rotatey" center="1085" start="-180" end="0" time="500" easing="out" reversible="false"/>-->
 				<effect type="fade" start="80" end="100" time="250" delay="0"/>
@@ -135,7 +135,7 @@
 			<posx>462r</posx>
 			<posy>590</posy>
 			<align>right</align>
-			<visible>Player.HasAudio + [Window.IsActive(0) + [System.IdleTime(60) + !Skin.HasSetting(showmainhelp) + !ControlGroup(5000).HasFocus()] | [System.IdleTime(120) + !Skin.HasSetting(showmainhelp) + ControlGroup(5000).HasFocus()]] | [Window.IsActive(50) + Skin.HasSetting(retroplexmusicslideshow)]</visible>
+			<visible>Player.HasAudio + [Window.IsActive(0) + [System.IdleTime(31) + !Skin.HasSetting(showmainhelp) + !ControlGroup(5000).HasFocus()] | [System.IdleTime(120) + !Skin.HasSetting(showmainhelp) + ControlGroup(5000).HasFocus()]] | [Window.IsActive(50) + Skin.HasSetting(retroplexmusicslideshow)]</visible>
 			<animation condition="!Player.Paused" type="Conditional">
 				<!--><effect type="rotatey" center="1085" start="-180" end="0" time="500" easing="out" reversible="false"/>-->
 				<effect type="fade" start="90" end="100" time="250" delay="0"/>
