@@ -461,7 +461,8 @@
 								<height>16</height>
 								<texture>$INFO[ListItem.Overlay]</texture>
 								<visible>[ListItem.Type(movie) + Skin.HasSetting(overlayMovies)] | [ListItem.Type(episode) + !Skin.HasSetting(overlayTVShows)]</visible>
-								<animation effect="fade" start="100" end="90" time="0" condition="true">Conditional</animation>
+								<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+								<animation effect="fade" start="50" end="50" time="0" condition="!ControlGroup(5000).HasFocus">Conditional</animation>
 							</control>
 						</itemlayout>
 						<!-- square -->
@@ -610,7 +611,8 @@
 								<height>16</height>
 								<texture>$INFO[ListItem.Overlay]</texture>
 								<visible>[ListItem.Type(movie) + Skin.HasSetting(overlayMovies)] | [ListItem.Type(episode) + !Skin.HasSetting(overlayTVShows)]</visible>
-								<animation effect="fade" start="100" end="90" time="0" condition="true">Conditional</animation>
+								<animation effect="fade" start="90" end="90" time="0" condition="true">Conditional</animation>
+								<animation effect="fade" start="50" end="50" time="0" condition="!ControlGroup(5000).HasFocus">Conditional</animation>
 							</control>
 						</itemlayout>
 						<!-- square -->
