@@ -265,7 +265,107 @@
 			<posx>20</posx>
 			<posy>18</posy>
 			<include>HomeScreenLeftMenuSlide</include>
-			<visible>[Window.IsActive(0) + !Skin.HasSetting(hidetheawesomelogo)] | [Window.IsActive(50)]</visible>
+			<visible>[Window.IsActive(0) + !Skin.HasSetting(hidetheawesomelogo)]</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<texture background="true">logos/Retroplexlogo2.png</texture>
+				<colordiffuse>red1</colordiffuse>
+				<animation effect="fade" start="0" end="30" time="0" condition="true">Conditional</animation>
+			</control>
+			<control type="group">
+				<posx>27</posx>
+				<posy>13</posy>
+				<control type="label">
+					<posx>42</posx>
+					<posy>14</posy>
+					<width>200</width>
+					<label>ORIGINAL</label>
+					<font>telegraficoSmallest</font>
+					<height>40</height>
+					<textcolor>ivory2</textcolor>
+				</control>
+				<control type="label">
+					<posx>3</posx>
+					<posy>38</posy>
+					<width>200</width>
+					<label>RETROPLEX</label>
+					<font>dock24</font>
+					<height>40</height>
+					<textcolor>ivory2</textcolor>
+				</control>
+				<control type="label">
+					<posx>39</posx>
+					<posy>63</posy>
+					<width>600</width>
+					<label>UNLIMITED</label>
+					<font>telegraficoSmallest</font>
+					<height>40</height>
+					<textcolor>ivory2</textcolor>
+				</control>
+			</control>
+		</control>
+		<!-- now playing standard -->
+		<control type="group">
+			<posx>20</posx>
+			<posy>18</posy>
+			<visible>[Window.IsActive(50) + !MusicPlayer.NowPlayingFlipped]</visible>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="1000" delay="1000" reversible="false"/>
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="1000" reversible="false"/>
+			</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<texture background="true">logos/Retroplexlogo2.png</texture>
+				<colordiffuse>red1</colordiffuse>
+				<animation effect="fade" start="0" end="30" time="0" condition="true">Conditional</animation>				
+			</control>
+			<control type="group">
+				<posx>27</posx>
+				<posy>13</posy>
+				<control type="label">
+					<posx>42</posx>
+					<posy>14</posy>
+					<width>200</width>
+					<label>ORIGINAL</label>
+					<font>telegraficoSmallest</font>
+					<height>40</height>
+					<textcolor>ivory2</textcolor>
+				</control>
+				<control type="label">
+					<posx>3</posx>
+					<posy>38</posy>
+					<width>200</width>
+					<label>RETROPLEX</label>
+					<font>dock24</font>
+					<height>40</height>
+					<textcolor>ivory2</textcolor>
+				</control>
+				<control type="label">
+					<posx>39</posx>
+					<posy>63</posy>
+					<width>600</width>
+					<label>UNLIMITED</label>
+					<font>telegraficoSmallest</font>
+					<height>40</height>
+					<textcolor>ivory2</textcolor>
+				</control>
+			</control>
+		</control>
+		<!-- now playing flipped -->
+		<control type="group">
+			<posx>20</posx>
+			<posy>558</posy>
+			<visible>[Window.IsActive(50) + MusicPlayer.NowPlayingFlipped]</visible>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="1000" delay="1000" reversible="false"/>
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="1000" reversible="false"/>
+			</animation>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
