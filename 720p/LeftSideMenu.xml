@@ -385,14 +385,14 @@
 					<description>Shutdown System</description>
 					<label>$LOCALIZE[41944]</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
-					<onclick>XBMC.ShutDownSystem()</onclick>
+					<onclick>Powerdown</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
 				<control type="button" id="9014">
 					<description>Sleep System</description>
 					<label>$LOCALIZE[41945]</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
-					<onclick>XBMC.SleepSystem()</onclick>
+					<onclick>Suspend</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
 				<control type="button" id="9013">
