@@ -30,6 +30,7 @@ Additional credits :[CR][CR]A huge thanks to [COLOR=ivory2]gedoode[/COLOR] for a
 	<string id="41013">Show "Programs" in main menu</string>
 	<string id="41014">Show "Weather" in main menu</string>
 	<string id="41015">Show "Retroplex Help" in main menu</string>
+	<string id="41040">Show "On Deck" and "Recently Added" in main menu</string>
 	<!-- Settings Fanart -->
 	<string id="41931">Fanart</string>
 	<string id="41016">Turn OFF fanart in library views</string>

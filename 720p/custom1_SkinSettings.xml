@@ -423,6 +423,13 @@
 					<selected>!Skin.HasSetting(hidehelpmainmenu)</selected>
 					<include>MenuSubSettingsButton</include>
 				</control>
+				<control type="radiobutton" id="221">
+					<description>hide On Deck and Recently Added</description>
+					<label>$LOCALIZE[41040]</label>
+					<onclick>Skin.ToggleSetting(hidenewlistsmainmenu)</onclick>
+					<selected>!Skin.HasSetting(hidenewlistsmainmenu)</selected>
+					<include>MenuSubSettingsButton</include>
+				</control>
 			</control>
 		</control>
 		<include>RetroplexLogo</include>
