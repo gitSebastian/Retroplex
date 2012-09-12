@@ -1,29 +1,31 @@
 <?xml version="1.0"?>
 <window id="107">
 	<controls>
-		<!--	<control type="group">
+			<control type="group">
 				<include>dialogWindow</include>
 				<visible>!Window.IsActive(12999)</visible>
 				<include>transition2</include>
 				<control type="label" id="401">
 					<posx>28r</posx>
-					<posy>30</posy>
+					<posy>40</posy>
 					<width>800</width>
 					<align>right</align>
 					<height>40</height>
-					<font>lobsterSmallest</font>
+					<font>lobsterSmall</font>
 					<aligny>center</aligny>
-					<textcolor>greenlime</textcolor>
+					<textcolor>oldBlueLight</textcolor>
+					<shadowcolor>ff333333</shadowcolor>
 				</control>
 				<control type="label" id="402">
 					<posx>28r</posx>
-					<posy>50</posy>
+					<posy>70</posy>
 					<width>550</width>
 					<align>right</align>
 					<font>qlassikSmallest</font>
 					<height>40</height>
 					<aligny>center</aligny>
+					<shadowcolor>ff333333</shadowcolor>
 				</control>
-			</control>-->
+			</control>
 	</controls>
 </window>
