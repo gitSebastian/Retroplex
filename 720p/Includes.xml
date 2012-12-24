@@ -508,7 +508,7 @@
 	<!-- VIEWS GLOBAL FORMATTING -->
 	<include name="posterUnfocused">
 		<control type="image">
-			<texture diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+			<texture diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 			<visible>ListItem.Type(movie) | Container.Content(tvshows)</visible>
 		</control>
 		<control type="image">
@@ -776,17 +776,17 @@
 					<texture border="55">frames/albumFrame.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<include>thumbFadeTime</include>
-					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<visible>!IsEmpty(ListItem.Art(thumb))</visible>
 				</control>
 				<control type="image">
 					<posx>26</posx>
 					<posy>27</posy>
 					<width>400</width>
 					<height>400</height>
-					<texture background="true" diffuse="frames/albumFrameMask.png" fallback="thumbs/album.png" scalediffuse="false">$INFO[ListItem.Thumb]</texture>
+					<texture background="true" diffuse="frames/albumFrameMask.png" fallback="thumbs/album.png" scalediffuse="false">$INFO[ListItem.Art(thumb)]</texture>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 					<include>thumbFadeTime</include>
-					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<visible>!IsEmpty(ListItem.Art(thumb))</visible>
 				</control>
 			</control>
 		</control>

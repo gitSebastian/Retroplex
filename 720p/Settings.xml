@@ -64,7 +64,7 @@
 						<height>100</height>
 						<posx>0</posx>
 						<posy>5</posy>
-						<info>ListItem.thumb</info>
+						<info>ListItem.Art(thumb)</info>
 					</control>
 					<control type="label">
 						<posx>120</posx>
@@ -106,7 +106,7 @@
 						<posy>5</posy>
 						<width>100</width>
 						<height>100</height>
-						<info>ListItem.thumb</info>
+						<info>ListItem.Art(thumb)</info>
 					</control>
 					<control type="label">
 						<posx>120</posx>

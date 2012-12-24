@@ -690,7 +690,7 @@
 										<posy>52</posy>
 										<width>107</width>
 										<height>160</height>
-										<info>ListItem.Thumb</info>
+										<info>ListItem.Art(thumb)</info>
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 									</control>
@@ -709,7 +709,7 @@
 										<posy>52</posy>
 										<width>107</width>
 										<height>160</height>
-										<info>ListItem.Thumb</info>
+										<info>ListItem.Art(thumb)</info>
 										<align>center</align>
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
@@ -792,7 +792,7 @@
 										<posy>52</posy>
 										<width>107</width>
 										<height>160</height>
-										<info>ListItem.Thumb</info>
+										<info>ListItem.Art(thumb)</info>
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 									</control>
@@ -811,7 +811,7 @@
 										<posy>52</posy>
 										<width>107</width>
 										<height>160</height>
-										<info>ListItem.Thumb</info>
+										<info>ListItem.Art(thumb)</info>
 										<align>center</align>
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
@@ -896,7 +896,7 @@
 										<posy>52</posy>
 										<width>128</width>
 										<height>60</height>
-										<info>ListItem.Thumb</info>
+										<info>ListItem.Art(thumb)</info>
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 									</control>
@@ -941,7 +941,7 @@
 										<posy>52</posy>
 										<width>138</width>
 										<height>100</height>
-										<info>ListItem.Thumb</info>
+										<info>ListItem.Art(thumb)</info>
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 									</control>
@@ -1043,7 +1043,7 @@
 										<posy>52</posy>
 										<width>107</width>
 										<height>140</height>
-										<info>ListItem.Thumb</info>
+										<info>ListItem.Art(thumb)</info>
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 									</control>
@@ -1074,7 +1074,7 @@
 										<posy>52</posy>
 										<width>107</width>
 										<height>160</height>
-										<info>ListItem.Thumb</info>
+										<info>ListItem.Art(thumb)</info>
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 									</control>
@@ -1158,7 +1158,7 @@
 										<posy>52</posy>
 										<width>128</width>
 										<height>80</height>
-										<info>ListItem.Thumb</info>
+										<info>ListItem.Art(thumb)</info>
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
 									</control>
@@ -1203,7 +1203,7 @@
 										<posy>52</posy>
 										<width>138</width>
 										<height>132</height>
-										<info>ListItem.Thumb</info>
+										<info>ListItem.Art(thumb)</info>
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
 									</control>
@@ -1299,7 +1299,7 @@
 										<posy>52</posy>
 										<width>128</width>
 										<height>80</height>
-										<info>ListItem.Thumb</info>
+										<info>ListItem.Art(thumb)</info>
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
 									</control>
@@ -1344,7 +1344,7 @@
 										<posy>52</posy>
 										<width>138</width>
 										<height>132</height>
-										<info>ListItem.Thumb</info>
+										<info>ListItem.Art(thumb)</info>
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
 									</control>
@@ -1446,7 +1446,7 @@
 										<posy>52</posy>
 										<width>107</width>
 										<height>140</height>
-										<info>ListItem.Thumb</info>
+										<info>ListItem.Art(thumb)</info>
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 									</control>
@@ -1477,7 +1477,7 @@
 										<posy>52</posy>
 										<width>107</width>
 										<height>160</height>
-										<info>ListItem.Thumb</info>
+										<info>ListItem.Art(thumb)</info>
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 									</control>
@@ -1559,7 +1559,7 @@
 										<posy>18</posy>
 										<width>189</width>
 										<height>104</height>
-										<info>ListItem.Thumb</info>
+										<info>ListItem.Art(thumb)</info>
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 									</control>
@@ -1631,7 +1631,7 @@
 										<posy>16</posy>
 										<width>189</width>
 										<height>104</height>
-										<info>ListItem.Thumb</info>
+										<info>ListItem.Art(thumb)</info>
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 									</control>

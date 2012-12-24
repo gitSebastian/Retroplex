@@ -423,7 +423,7 @@
 							<control type="group">
 								<control type="image">
 									<include>homeMenuPoster</include>
-									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 									<visible>ListItem.Type(movie)</visible>
 								</control>
 								<control type="image">
@@ -471,7 +471,7 @@
 							<control type="group">
 								<control type="image">
 									<include>homeMenuPoster</include>
-									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 									<visible>ListItem.Type(movie)</visible>
 								</control>
 								<control type="image">
@@ -486,7 +486,7 @@
 							<control type="group">
 								<control type="image">
 									<include>homeMenuPosterTopFocused</include>
-									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 									<visible>ListItem.Type(movie)</visible>
 								</control>
 								<control type="image">
@@ -536,7 +536,7 @@
 							<control type="group">
 								<control type="image">
 									<include>homeMenuPosterTopFocused</include>
-									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 									<visible>ListItem.Type(movie)</visible>
 								</control>
 								<control type="image">
@@ -572,7 +572,7 @@
 								<posy>144</posy>
 								<control type="image">
 									<include>homeMenuPoster</include>
-									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 									<visible>ListItem.Type(movie)</visible>
 								</control>
 								<control type="image">
@@ -612,7 +612,7 @@
 								<posy>144</posy>
 								<control type="image">
 									<include>homeMenuSquare</include>
-									<texture diffuse="frames/squareMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<texture diffuse="frames/squareMask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 								</control>
 							</control>
 						</itemlayout>
@@ -623,7 +623,7 @@
 								<posy>144</posy>
 								<control type="image">
 									<include>homeMenuPosterBottomFocused</include>
-									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<texture diffuse="frames/posterMaskSmall.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 									<visible>ListItem.Type(movie)</visible>
 								</control>
 								<control type="image">
@@ -666,7 +666,7 @@
 								<posy>144</posy>
 								<control type="image">
 									<include>homeMenuSquareBottomFocused</include>
-									<texture diffuse="frames/squareMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<texture diffuse="frames/squareMask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 								</control>
 							</control>
 						</focusedlayout>
@@ -707,7 +707,7 @@
 							<control type="group">
 								<control type="image">
 									<include>homeMenuWide</include>
-									<texture diffuse="frames/bigPosterHorizMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<texture diffuse="frames/bigPosterHorizMask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 								</control>
 							</control>
 						</itemlayout>
@@ -716,7 +716,7 @@
 							<control type="group">
 								<control type="image">
 									<include>homeMenuWideTopFocused</include>
-									<texture diffuse="frames/bigPosterHorizMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<texture diffuse="frames/bigPosterHorizMask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 								</control>
 							</control>
 						</focusedlayout>
@@ -745,7 +745,7 @@
 								<posy>144</posy>
 								<control type="image">
 									<include>homeMenuWide</include>
-									<texture diffuse="frames/bigPosterHorizMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<texture diffuse="frames/bigPosterHorizMask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 								</control>
 							</control>
 						</itemlayout>
@@ -755,7 +755,7 @@
 								<posy>144</posy>
 								<control type="image">
 									<include>homeMenuWideBottomFocused</include>
-									<texture diffuse="frames/bigPosterHorizMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<texture diffuse="frames/bigPosterHorizMask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 								</control>
 							</control>
 						</focusedlayout>
@@ -796,7 +796,7 @@
 								<posy>144</posy>
 								<control type="image">
 									<include>homeMenuSquare</include>
-									<texture diffuse="frames/squareMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<texture diffuse="frames/squareMask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 								</control>
 							</control>
 						</itemlayout>
@@ -807,7 +807,7 @@
 								<posy>144</posy>
 								<control type="image">
 									<include>homeMenuSquareBottomFocused</include>
-									<texture diffuse="frames/squareMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+									<texture diffuse="frames/squareMask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 								</control>
 							</control>
 						</focusedlayout>

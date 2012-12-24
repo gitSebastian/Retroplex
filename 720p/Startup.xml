@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<backgroundcolor>0</backgroundcolor>
-	<controls>		
+	<controls>
 		<control type="button" id="10">
 			<onfocus>ReplaceWindow(7777)</onfocus>
 			<texturenofocus>-</texturenofocus>
@@ -16,5 +16,5 @@
 			<texturefocus>-</texturefocus>
 			<visible>Skin.HasSetting(DisableStartupSound)</visible>
 		</control>
-		</controls>
+	</controls>
 </window>

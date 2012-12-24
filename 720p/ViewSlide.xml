@@ -79,7 +79,7 @@
 						<width>196</width>
 						<height>290</height>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture diffuse="frames/bigPosterMask.png" fallback="thumbs/movieSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+						<texture diffuse="frames/bigPosterMask.png" fallback="thumbs/movieSmall.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 						<include>PosterUnfocusedBorder</include>
 						<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 					</control>
@@ -113,7 +113,7 @@
 						<width>196</width>
 						<height>290</height>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture diffuse="frames/bigPosterMask.png" fallback="thumbs/movieSmall.png" background="true">$INFO[ListItem.Thumb]</texture>
+						<texture diffuse="frames/bigPosterMask.png" fallback="thumbs/movieSmall.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 						<include>PosterFocusedBorder</include>
 						<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 						<include>focus_SlidePoster</include>

@@ -32,7 +32,7 @@
 				<width>130</width>
 				<height>130</height>
 				<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
-				<texture fallback="thumbs/pictureSmall.png" background="true" diffuse="frames/white.png">$INFO[ListItem.Thumb]</texture>
+				<texture fallback="thumbs/pictureSmall.png" background="true" diffuse="frames/white.png">$INFO[ListItem.Art(thumb)]</texture>
 				<include>focus_PhotosThumbs</include>
 			</control>
 			<control type="image">
@@ -74,7 +74,7 @@
 				<width>130</width>
 				<height>130</height>
 				<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
-				<texture fallback="thumbs/pictureSmall.png" background="true" diffuse="frames/white.png">$INFO[ListItem.Thumb]</texture>
+				<texture fallback="thumbs/pictureSmall.png" background="true" diffuse="frames/white.png">$INFO[ListItem.Art(thumb)]</texture>
 			</control>
 			<control type="image">
 				<posx>16</posx>
@@ -121,7 +121,7 @@
 		<height>510</height>
 		<fadetime>200</fadetime>
 		<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
-		<texture background="true" diffuse="frames/white.png" fallback="thumbs/pictureSmall.png">$INFO[ListItem.Thumb]</texture>
+		<texture background="true" diffuse="frames/white.png" fallback="thumbs/pictureSmall.png">$INFO[ListItem.Art(thumb)]</texture>
 		<include>focus_PhotosThumbs</include>
 		<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(200).HasFocus() | ControlGroup(9100).HasFocus() | Control.HasFocus(1110) | Control.HasFocus(1130) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
 	</control>

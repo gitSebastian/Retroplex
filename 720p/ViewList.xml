@@ -560,7 +560,7 @@
 					<height>392</height>
 					<include>ListFocusedBorder</include>
 					<fadetime>500</fadetime>
-					<texture diffuse="frames/bigPosterMask.png" fallback="thumbs/movie.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<texture diffuse="frames/bigPosterMask.png" fallback="thumbs/movie.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 					<visible>[Container.Content(movies) | Container.Content(tvshows)]</visible>
 				</control>
@@ -571,7 +571,7 @@
 					<height>496</height>
 					<fadetime>500</fadetime>
 					<include>ListFocusedBorder</include>
-					<texture diffuse="frames/bigPosterMask.png" fallback="thumbs/movie.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<texture diffuse="frames/bigPosterMask.png" fallback="thumbs/movie.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 					<visible>[Container.Content(seasons)]</visible>
 				</control>
@@ -582,7 +582,7 @@
 					<height>247</height>
 					<fadetime>500</fadetime>
 					<include>ListFocusedBorder</include>
-					<texture diffuse="frames/bannerMask.png" fallback="backgrounds/library/TVShowsNoFanartSmall.png">$INFO[ListItem.Thumb]</texture>
+					<texture diffuse="frames/bannerMask.png" fallback="backgrounds/library/TVShowsNoFanartSmall.png">$INFO[ListItem.Art(thumb)]</texture>
 					<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 					<visible>Container.Content(episodes)</visible>
 				</control>

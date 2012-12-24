@@ -493,7 +493,7 @@
 					<width>400</width>
 					<height>605</height>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<texture diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 					<bordertexture border="30">frames/oldgreyrcorners.png</bordertexture>
 					<bordersize>16</bordersize>
 					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
@@ -536,7 +536,7 @@
 						<width>440</width>
 						<height>281</height>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+						<texture diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 						<bordertexture border="30">frames/oldgreyrcorners.png</bordertexture>
 						<bordersize>16</bordersize>
 					</control>

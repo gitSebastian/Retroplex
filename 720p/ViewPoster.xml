@@ -165,7 +165,7 @@
 						<width>189</width>
 						<height>267</height>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture fallback="thumbs/tvshowSmall.png" diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+						<texture fallback="thumbs/tvshowSmall.png" diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 						<include>PosterUnfocusedBorder</include>
 						<visible>[Container.Content(tvshows) | Container.Content(seasons)]</visible>
 					</control>
@@ -175,7 +175,7 @@
 						<width>189</width>
 						<height>267</height>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture fallback="thumbs/movieSmall.png" diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+						<texture fallback="thumbs/movieSmall.png" diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 						<include>PosterUnfocusedBorder</include>
 						<visible>Container.Content(movies)</visible>
 					</control>
@@ -205,7 +205,7 @@
 						<width>189</width>
 						<height>267</height>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture fallback="thumbs/tvshowSmall.png" diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+						<texture fallback="thumbs/tvshowSmall.png" diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 						<include>PostersFocusedBorder2</include>
 						<visible>[Container.Content(tvshows) | Container.Content(seasons)]</visible>
 					</control>
@@ -215,7 +215,7 @@
 						<width>189</width>
 						<height>267</height>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture fallback="thumbs/movieSmall.png" diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+						<texture fallback="thumbs/movieSmall.png" diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 						<include>PostersFocusedBorder2</include>
 						<visible>Container.Content(movies)</visible>
 					</control>
@@ -360,7 +360,7 @@
 						<width>144</width>
 						<height>206</height>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture fallback="thumbs/tvshowSmall.png" diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+						<texture fallback="thumbs/tvshowSmall.png" diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 						<include>PosterUnfocusedBorder</include>
 						<visible>Container.Content(tvshows)</visible>
 					</control>
@@ -370,7 +370,7 @@
 						<width>144</width>
 						<height>206</height>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture fallback="thumbs/movieSmall.png" diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+						<texture fallback="thumbs/movieSmall.png" diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 						<include>PosterUnfocusedBorder</include>
 						<visible>Container.Content(movies)</visible>
 					</control>
@@ -402,7 +402,7 @@
 						<width>144</width>
 						<height>206</height>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture fallback="thumbs/tvshow.png" diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+						<texture fallback="thumbs/tvshow.png" diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 						<include>PostersFocusedBorder2</include>
 						<visible>Container.Content(tvshows)</visible>
 					</control>
@@ -412,7 +412,7 @@
 						<width>144</width>
 						<height>206</height>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Thumb]</texture>
+						<texture diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 						<include>PostersFocusedBorder2</include>
 						<visible>Container.Content(movies) + Window.IsActive(24)</visible>
 					</control>
