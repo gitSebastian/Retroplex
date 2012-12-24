@@ -185,7 +185,7 @@
 						<height>45</height>
 						<align>right</align>
 						<aspectratio align="right" aligny="center">keep</aspectratio>
-						<texture>$INFO[Listitem.Property(mediaTag::Studio)]</texture>
+						<texture>$INFO[ListItem.Art(mediaTag::Studio)]</texture>
 						<colordiffuse>ivory3</colordiffuse>
 						<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
 					</control>
@@ -284,7 +284,7 @@
 				<height>88</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<colordiffuse>ivory2</colordiffuse>
-				<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/tvshows/,.png]</texture>
+				<texture>$INFO[ListItem.Art(mediaTag-Studio),flags/tvshows/,.png]</texture>
 				<include>MultibannersStudioLogoLeftMenuSlide</include>
 			</control>
 		</control>

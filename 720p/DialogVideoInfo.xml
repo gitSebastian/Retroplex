@@ -79,9 +79,9 @@
 				</control>
 				<control type="label" id="1">
 					<width>740</width>
-					<label>$LOCALIZE[572]  [COLOR=Color1]$INFO[Listitem.Property(mediaTag-Studio)][/COLOR]</label>
+					<label>$LOCALIZE[572]  [COLOR=Color1]$INFO[ListItem.Art(mediaTag-Studio)][/COLOR]</label>
 					<include>infoDialogMeta</include>
-					<visible>!IsEmpty(Listitem.Property(mediaTag-Studio))</visible>
+					<visible>!IsEmpty(ListItem.Art(mediaTag-Studio))</visible>
 					<include>VideoInfoLeftMenuPosterSlide</include>
 				</control>
 				<control type="label" id="1">
@@ -132,7 +132,7 @@
 					<width>740</width>
 					<label/>
 					<include>infoDialogMeta</include>
-					<visible>IsEmpty(Listitem.Property(mediaTag-Studio))</visible>
+					<visible>IsEmpty(ListItem.Art(mediaTag-Studio))</visible>
 				</control>
 				<control type="label" id="1">
 					<width>740</width>

@@ -96,7 +96,7 @@
 				</control>
 				<control type="label">
 					<font>smallsmallcase</font>
-					<label>contentrating flag : $INFO[Listitem.Property(mediaTag-contentRating),flags/contentrating/,.png] / $INFO[Listitem.MPAA,flags/contentrating/,.png]</label>
+					<label>contentrating flag : $INFO[ListItem.Art(mediaTag-contentRating),flags/contentrating/,.png] / $INFO[Listitem.MPAA,flags/contentrating/,.png]</label>
 					<wrapmultiline>true</wrapmultiline>
 					<textcolor>Color1</textcolor>
 					<align>left</align>

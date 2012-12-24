@@ -98,7 +98,7 @@
 						<posy>267</posy>
 						<width>48</width>
 						<height>18</height>
-						<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+						<texture>$INFO[ListItem.Art(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 						<aspectratio align="left">keep</aspectratio>
 						<include>focus_SlidePosterOverlay</include>
 						<visible>!Control.HasFocus(8000) + [Skin.HasSetting(onlyfocusflagpanel) | Skin.HasSetting(enablehdflags)] + Container.Content(movies)</visible>
@@ -133,7 +133,7 @@
 						<posy>269</posy>
 						<width>48</width>
 						<height>18</height>
-						<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+						<texture>$INFO[ListItem.Art(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 						<aspectratio align="left">keep</aspectratio>
 						<include>focus_SlidePoster</include>
 						<visible>!Control.HasFocus(8000) + [Skin.HasSetting(onlyfocusflagpanel) | Skin.HasSetting(enablehdflags)] + Container.Content(movies)</visible>

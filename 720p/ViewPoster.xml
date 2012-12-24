@@ -192,7 +192,7 @@
 						<posy>232</posy>
 						<width>48</width>
 						<height>18</height>
-						<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+						<texture>$INFO[ListItem.Art(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 						<aspectratio align="left">keep</aspectratio>
 						<visible>Skin.HasSetting(enablehdflags)</visible>
 					</control>
@@ -240,7 +240,7 @@
 						<posy>232</posy>
 						<width>48</width>
 						<height>18</height>
-						<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+						<texture>$INFO[ListItem.Art(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 						<aspectratio align="left">keep</aspectratio>
 						<visible>[Skin.HasSetting(onlyfocusflagpanel) | Skin.HasSetting(enablehdflags)]</visible>
 					</control>
@@ -388,7 +388,7 @@
 						<posy>168</posy>
 						<width>48</width>
 						<height>18</height>
-						<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+						<texture>$INFO[ListItem.Art(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 						<aspectratio align="left">keep</aspectratio>
 						<visible>Skin.HasSetting(enablehdflags)</visible>
 						<animation effect="fade" start="100" end="90" time="0" condition="true">Conditional</animation>
@@ -430,7 +430,7 @@
 						<posy>168</posy>
 						<width>48</width>
 						<height>18</height>
-						<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+						<texture>$INFO[ListItem.Art(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 						<aspectratio align="left">keep</aspectratio>
 						<visible>Skin.HasSetting(enablehdflags)</visible>
 						<animation effect="fade" start="100" end="90" time="0" condition="true">Conditional</animation>
@@ -501,13 +501,13 @@
 					</control>
 					<control type="label" id="1">
 						<width min="10" max="460">auto</width>
-						<label>[COLOR=oldBlue]$LOCALIZE[572] :[/COLOR] $INFO[Listitem.Property(mediaTag-Studio)]</label>
+						<label>[COLOR=oldBlue]$LOCALIZE[572] :[/COLOR] $INFO[ListItem.Art(mediaTag-Studio)]</label>
 						<textcolor>ivory2</textcolor>
 						<shadowcolor>ff333333</shadowcolor>
 						<font>qlassikMedium1</font>
 						<scroll>true</scroll>
 						<scrollspeed>40</scrollspeed>
-						<visible>!IsEmpty(Listitem.Property(mediaTag-Studio)) + Container.Content(movies)</visible>
+						<visible>!IsEmpty(ListItem.Art(mediaTag-Studio)) + Container.Content(movies)</visible>
 					</control>
 					<control type="label" id="1">
 						<width>450</width>
@@ -647,7 +647,7 @@
 						<height>45</height>
 						<align>right</align>
 						<colordiffuse>ivory3</colordiffuse>
-						<texture>$INFO[Listitem.Property(mediaTag::Studio)]</texture>
+						<texture>$INFO[ListItem.Art(mediaTag::Studio)]</texture>
 						<aspectratio align="right">keep</aspectratio>
 					</control>
 				</control>

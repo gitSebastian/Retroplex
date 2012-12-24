@@ -540,7 +540,7 @@
 					<width>48</width>
 					<height>27</height>
 					<include>focus_Banner</include>
-					<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+					<texture>$INFO[ListItem.Art(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>Skin.HasSetting(enableepisodehdflags) + Container.Content(episodes)</visible>
 				</control>
@@ -758,7 +758,7 @@
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
 				<include>grainypagefade</include>
-				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+				<texture>$INFO[ListItem.Art(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<include>focus_PosterFlagsNoEffect_GrainyEdition</include>
 				<visible>Control.IsVisible(555) + [Skin.HasSetting(onlyfocusflagpanel) | Skin.HasSetting(enablehdflags)] + !Container.Content(episodes)</visible>
@@ -771,7 +771,7 @@
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
 				<include>grainypagefade</include>
-				<visible>Control.IsVisible(555) + Skin.HasSetting(debugstudioflags) + [Container.Content(movies) | Container.Content(tvshows)] + !IsEmpty(Listitem.Property(mediaTag-Studio))</visible>
+				<visible>Control.IsVisible(555) + Skin.HasSetting(debugstudioflags) + [Container.Content(movies) | Container.Content(tvshows)] + !IsEmpty(ListItem.Art(mediaTag-Studio))</visible>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -801,7 +801,7 @@
 						<posy>28</posy>
 						<width>550</width>
 						<align>left</align>
-						<label>$INFO[Listitem.Property(mediaTag-Studio)].png</label>
+						<label>$INFO[ListItem.Art(mediaTag-Studio)].png</label>
 						<font>normal</font>
 						<height>40</height>
 						<aligny>center</aligny>
