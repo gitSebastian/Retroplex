@@ -440,6 +440,7 @@
 				</control>
 			</control>
 			<!-- CAST LIST -->
+			<!--
 			<control type="group" id="9001">
 				<control type="list" id="50">
 					<posx>429</posx>
@@ -479,6 +480,7 @@
 					</focusedlayout>
 				</control>
 			</control>
+			-->
 			<!-- IMAGES -->
 			<control type="group">
 				<posy>65</posy>
