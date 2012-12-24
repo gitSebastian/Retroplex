@@ -123,19 +123,19 @@
 				<item id="1">
 					<description>Video Plugins</description>
 					<label>Video Channels</label>
-					<onclick>ActivateWindow(24)</onclick>
+					<onclick>ActivateWindow(24, Root)</onclick>
 					<visible>Skin.HasSetting(showvideoplugsmainmenu)</visible>
 				</item>
 				<item id="2">
 					<description>Music Plugins</description>
 					<label>Music Channels</label>
-					<onclick>ActivateWindow(MyMusic)</onclick>
+					<onclick>ActivateWindow(MyMusic, Root)</onclick>
 					<visible>Skin.HasSetting(showmusicplugsmainmenu)</visible>
 				</item>
 				<item id="3">
 					<description>Pictures Plugins</description>
 					<label>Photo Channels</label>
-					<onclick>ActivateWindow(2)</onclick>
+					<onclick>ActivateWindow(2, Root)</onclick>
 					<visible>Skin.HasSetting(showpicturesplugsmainmenu)</visible>
 				</item>
 				<item id="12">

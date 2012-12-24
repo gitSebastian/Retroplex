@@ -308,21 +308,21 @@
 				<control type="button" id="9003">
 					<description>go to Video Plug-Ins</description>
 					<label>$LOCALIZE[41981]</label>
-					<onclick>ActivateWindow(6)</onclick>
+					<onclick>ActivateWindow(6, Root)</onclick>
 					<include>leftMenuViewOptions</include>
 					<visible>!Skin.HasSetting(showvideoplugsmainmenu)</visible>
 				</control>
 				<control type="button" id="9004">
 					<description>go to Music Plug-Ins</description>
 					<label>$LOCALIZE[41982]</label>
-					<onclick>ActivateWindow(MyMusic)</onclick>
+					<onclick>ActivateWindow(MyMusic, Root)</onclick>
 					<include>leftMenuViewOptions</include>
 					<visible>!Skin.HasSetting(showmusicplugsmainmenu)</visible>
 				</control>
 				<control type="button" id="9005">
 					<description>go to Picture Plug-Ins</description>
 					<label>$LOCALIZE[41983]</label>
-					<onclick>ActivateWindow(2)</onclick>
+					<onclick>ActivateWindow(2, Root)</onclick>
 					<include>leftMenuViewOptions</include>
 					<visible>!Skin.HasSetting(showpicturesplugsmainmenu)</visible>
 				</control>
