@@ -139,7 +139,7 @@
 				<posy>217</posy>
 				<width>324</width>
 				<height>324</height>
-				<fadetime>400</fadetime>
+				<fadetime>200</fadetime>
 				<include>transition2</include>
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
@@ -153,7 +153,7 @@
 				<posy>217</posy>
 				<width>324</width>
 				<height>324</height>
-				<fadetime>400</fadetime>
+				<fadetime>200</fadetime>
 				<include>transition2</include>
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
@@ -168,7 +168,7 @@
 				<posy>223</posy>
 				<width>256</width>
 				<height>256</height>
-				<fadetime>400</fadetime>
+				<fadetime>200</fadetime>
 				<include>transition2</include>
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
