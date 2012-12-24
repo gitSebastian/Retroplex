@@ -414,7 +414,7 @@
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 						<texture diffuse="frames/bigPosterMask.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
 						<include>PostersFocusedBorder2</include>
-						<visible>Container.Content(movies) + Window.IsActive(24)</visible>
+						<visible>Container.Content(movies)</visible>
 					</control>
 					<control type="image">
 						<posx>119</posx>
