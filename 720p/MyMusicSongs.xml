@@ -198,7 +198,7 @@
 				<posy>545</posy>
 				<width>360</width>
 				<font>qlassikSmall</font>
-				<label>$INFO[ListItem.Duration]</label>
+				<label>$INFO[ListItem.DurationStr]</label>
 				<textcolor>ivory1</textcolor>
 				<shadowcolor>ff333333</shadowcolor>
 				<align>right</align>

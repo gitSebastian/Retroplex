@@ -511,11 +511,11 @@
 					</control>
 					<control type="label" id="1">
 						<width>450</width>
-						<label>[COLOR=oldBlue]$LOCALIZE[180] :[/COLOR] $INFO[ListItem.Duration]</label>
+						<label>[COLOR=oldBlue]$LOCALIZE[180] :[/COLOR] $INFO[ListItem.DurationStr]</label>
 						<textcolor>ivory2</textcolor>
 						<shadowcolor>ff333333</shadowcolor>
 						<font>qlassikMedium1</font>
-						<visible>!IsEmpty(ListItem.Duration) + Container.Content(movies)</visible>
+						<visible>!IsEmpty(ListItem.DurationStr) + Container.Content(movies)</visible>
 					</control>
 					<control type="label" id="1">
 						<label/>
@@ -548,9 +548,9 @@
 						<posx>790</posx>
 						<posy>395</posy>
 						<width>450</width>
-						<label>$LOCALIZE[180] : $INFO[ListItem.Duration]</label>
+						<label>$LOCALIZE[180] : $INFO[ListItem.DurationStr]</label>
 						<include>PosterFocusedLabel2Small</include>
-						<visible>!IsEmpty(ListItem.Duration)</visible>
+						<visible>!IsEmpty(ListItem.DurationStr)</visible>
 					</control>
 				</control>
 				<!-- fanart image tv shows -->

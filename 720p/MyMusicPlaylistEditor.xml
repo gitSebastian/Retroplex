@@ -114,7 +114,7 @@
 						<height>40</height>
 						<font>normalLow</font>
 						<align>right</align>
-						<label>$INFO[ListItem.Duration]</label>
+						<label>$INFO[ListItem.DurationStr]</label>
 						<textcolor>Color2</textcolor>
 					</control>
 				</itemlayout>
@@ -138,7 +138,7 @@
 						<height>40</height>
 						<font>normalLow</font>
 						<align>right</align>
-						<label>$INFO[ListItem.Duration]</label>
+						<label>$INFO[ListItem.DurationStr]</label>
 						<textcolor>Focused</textcolor>
 					</control>
 				</focusedlayout>

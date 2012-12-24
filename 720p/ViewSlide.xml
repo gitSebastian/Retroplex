@@ -232,12 +232,12 @@
 						<visible>!IsEmpty(ListItem.Year) + Container.Content(movies)</visible>
 					</control>
 					<control type="label">
-						<label>&#xB7; $INFO[ListItem.Duration]</label>
+						<label>&#xB7; $INFO[ListItem.DurationStr]</label>
 						<width min="5" max="100">auto</width>
 						<font>qlassikSmall2</font>
 						<textcolor>ivory1</textcolor>
 						<shadowcolor>ff444444</shadowcolor>
-						<visible>!IsEmpty(ListItem.Duration) + Container.Content(movies)</visible>
+						<visible>!IsEmpty(ListItem.DurationStr) + Container.Content(movies)</visible>
 					</control>
 				</control>
 				<!-- END block containing genre + year + duration -->

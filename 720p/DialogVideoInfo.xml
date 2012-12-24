@@ -86,10 +86,10 @@
 				</control>
 				<control type="label" id="1">
 					<width>740</width>
-					<label>$LOCALIZE[180]  [COLOR=Color1]$INFO[ListItem.Duration][/COLOR]</label>
+					<label>$LOCALIZE[180]  [COLOR=Color1]$INFO[ListItem.DurationStr][/COLOR]</label>
 					<scroll>true</scroll>
 					<include>infoDialogMeta</include>
-					<visible>!IsEmpty(ListItem.Duration)</visible>
+					<visible>!IsEmpty(ListItem.DurationStr)</visible>
 					<include>VideoInfoLeftMenuPosterSlide</include>
 				</control>
 				<control type="label" id="1">
@@ -138,7 +138,7 @@
 					<width>740</width>
 					<label/>
 					<include>infoDialogMeta</include>
-					<visible>IsEmpty(ListItem.Duration)</visible>
+					<visible>IsEmpty(ListItem.DurationStr)</visible>
 				</control>
 				<control type="label" id="1">
 					<width>740</width>
@@ -281,7 +281,7 @@
 					<posy>40</posy>
 					<posx>-460</posx>
 					<width>690</width>
-					<label>$LOCALIZE[31074,,]$INFO[ListItem.date, &#xB7; ] &#xB7; $INFO[ListItem.Duration,, ]</label>
+					<label>$LOCALIZE[31074,,]$INFO[ListItem.date, &#xB7; ] &#xB7; $INFO[ListItem.DurationStr,, ]</label>
 					<textcolor>Color1</textcolor>
 					<include>infoDialogMeta</include>
 					<include>VideoInfoLeftMenuPosterSlide</include>

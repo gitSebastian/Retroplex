@@ -721,7 +721,7 @@
 										<align>left</align>
 										<aligny>center</aligny>
 										<scroll>false</scroll>
-										<label>$INFO[ListItem.Title] &#xB7; $INFO[ListItem.Year] &#xB7; $INFO[ListItem.Duration] </label>
+										<label>$INFO[ListItem.Title] &#xB7; $INFO[ListItem.Year] &#xB7; $INFO[ListItem.DurationStr] </label>
 										<font>qlassikSmall2</font>
 										<textcolor>ivory2</textcolor>
 										<wrapmultiline>false</wrapmultiline>
@@ -952,7 +952,7 @@
 										<align>left</align>
 										<aligny>center</aligny>
 										<scroll>false</scroll>
-										<label>$INFO[ListItem.tvshowtitle] &#xB7; $LOCALIZE[31074,,]$INFO[ListItem.date, &#xB7; ] &#xB7; $INFO[ListItem.Duration,, ]</label>
+										<label>$INFO[ListItem.tvshowtitle] &#xB7; $LOCALIZE[31074,,]$INFO[ListItem.date, &#xB7; ] &#xB7; $INFO[ListItem.DurationStr,, ]</label>
 										<font>qlassikSmall2</font>
 										<textcolor>ivory2</textcolor>
 										<wrapmultiline>false</wrapmultiline>
@@ -1355,7 +1355,7 @@
 										<align>left</align>
 										<aligny>center</aligny>
 										<scroll>false</scroll>
-										<label>$INFO[ListItem.Title] &#xB7; $INFO[ListItem.Duration]</label>
+										<label>$INFO[ListItem.Title] &#xB7; $INFO[ListItem.DurationStr]</label>
 										<font>qlassikSmall2</font>
 										<textcolor>ivory2</textcolor>
 										<wrapmultiline>false</wrapmultiline>
@@ -1584,7 +1584,7 @@
 										<align>left</align>
 										<aligny>top</aligny>
 										<scroll>false</scroll>
-										<label>$INFO[ListItem.Property(originallyAvailableAt)] &#x2022; $INFO[ListItem.duration] &#x2022; $INFO[ListItem.Property(sourceTitle)]</label>
+										<label>$INFO[ListItem.Property(originallyAvailableAt)] &#x2022; $INFO[ListItem.DurationStr] &#x2022; $INFO[ListItem.Property(sourceTitle)]</label>
 										<font>qlassikSmallest</font>
 										<textcolor>ivory3</textcolor>
 										<wrapmultiline>false</wrapmultiline>
@@ -1656,7 +1656,7 @@
 										<align>left</align>
 										<aligny>top</aligny>
 										<scroll>false</scroll>
-										<label>$INFO[ListItem.Property(originallyAvailableAt)] &#x2022; $INFO[ListItem.duration] &#x2022; $INFO[ListItem.Property(sourceTitle)]</label>
+										<label>$INFO[ListItem.Property(originallyAvailableAt)] &#x2022; $INFO[ListItem.DurationStr] &#x2022; $INFO[ListItem.Property(sourceTitle)]</label>
 										<font>qlassikSmallest</font>
 										<textcolor>ivory3</textcolor>
 										<wrapmultiline>false</wrapmultiline>

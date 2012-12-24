@@ -979,7 +979,7 @@
 				<colordiffuse>Color4</colordiffuse>
 			</control>
 			<control type="label">
-				<label>$INFO[ListItem.Duration]</label>
+				<label>$INFO[ListItem.DurationStr]</label>
 				<font>osd1</font>
 				<align>left</align>
 				<height>36</height>

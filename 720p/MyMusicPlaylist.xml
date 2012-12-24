@@ -98,7 +98,7 @@
 						<posy>10</posy>
 						<posx>740</posx>
 						<width>500</width>
-						<label>$INFO[ListItem.Duration]</label>
+						<label>$INFO[ListItem.DurationStr]</label>
 						<align>right</align>
 						<font>qlassikSmall</font>
 						<textcolor>ivory2</textcolor>
@@ -129,7 +129,7 @@
 						<posy>10</posy>
 						<posx>740</posx>
 						<width>500</width>
-						<label>[COLOR=greenlime]$INFO[ListItem.Duration][/COLOR]</label>
+						<label>[COLOR=greenlime]$INFO[ListItem.DurationStr][/COLOR]</label>
 						<align>right</align>
 						<textcolor>ivory3</textcolor>
 						<font>qlassikSmall</font>
