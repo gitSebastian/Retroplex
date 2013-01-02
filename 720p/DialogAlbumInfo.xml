@@ -52,7 +52,7 @@
 				<width>348</width>
 				<height>348</height>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture background="true" fallback="thumbs/album.png" diffuse="frames/wideFrameMask.png">$INFO[ListItem.Thumb]</texture>
+				<texture background="true" fallback="thumbs/album.png" diffuse="frames/wideFrameMask.png">$INFO[ListItem.Art(thumb)]</texture>
 				<visible>Container.Content(albums)</visible>
 			</control>
 			<control type="image">
@@ -61,7 +61,7 @@
 				<width>348</width>
 				<height>348</height>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture background="true" fallback="thumbs/artist.png" diffuse="frames/wideFrameMask.png">$INFO[ListItem.Thumb]</texture>
+				<texture background="true" fallback="thumbs/artist.png" diffuse="frames/wideFrameMask.png">$INFO[ListItem.Art(thumb)]</texture>
 				<visible>Container.Content(artists)</visible>
 			</control>
 		</control>
@@ -235,7 +235,7 @@
 						<height>35</height>
 						<width>720</width>
 						<align>right</align>
-						<label>$INFO[ListItem.Duration]</label>
+						<label>$INFO[ListItem.DurationStr]</label>
 						<font>normalLow</font>
 						<textcolor>Color1</textcolor>
 					</control>
@@ -260,7 +260,7 @@
 						<height>35</height>
 						<width>720</width>
 						<align>right</align>
-						<label>$INFO[ListItem.Duration]</label>
+						<label>$INFO[ListItem.DurationStr]</label>
 						<font>normalLow</font>
 						<textcolor>Focused</textcolor>
 					</control>
