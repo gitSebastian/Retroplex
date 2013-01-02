@@ -64,7 +64,6 @@
 			<animation type="Conditional" condition="True">
 				<effect type="fade" start="100" end="100" time="3000" delay="100"/>
 			</animation>
-			<visible>-</visible>
 		</control>
 	</include>
 	<include name="retroOverlay">
