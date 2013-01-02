@@ -394,6 +394,7 @@
 					<label>$LOCALIZE[41945]</label>
 					<onclick>Dialog.Close(shutdownmenu)</onclick>
 					<onclick>Suspend</onclick>
+					<onclick>SetFocus(300)</onclick>
 					<include>leftMenuViewOptions</include>
 				</control>
 				<control type="button" id="9013">
