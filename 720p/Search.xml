@@ -958,7 +958,7 @@
 										<wrapmultiline>false</wrapmultiline>
 									</control>
 									<control type="label">
-										<posx>12</posx>
+										<posx>17</posx>
 										<posy>170</posy>
 										<width>120</width>
 										<height>30</height>
@@ -1220,7 +1220,7 @@
 										<wrapmultiline>false</wrapmultiline>
 									</control>
 									<control type="label">
-										<posx>12</posx>
+										<posx>17</posx>
 										<posy>195</posy>
 										<width>120</width>
 										<height>30</height>
@@ -1361,7 +1361,7 @@
 										<wrapmultiline>false</wrapmultiline>
 									</control>
 									<control type="label">
-										<posx>12</posx>
+										<posx>17</posx>
 										<posy>195</posy>
 										<width>120</width>
 										<height>30</height>
