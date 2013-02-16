@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <window id="123">
-	<defaultcontrol>2</defaultcontrol>
+	<defaultcontrol>5</defaultcontrol>
 	<coordinates>
 		<system>1</system>
 		<posx>340</posx>
