@@ -140,7 +140,8 @@
 		<height>64</height>
 		<aspectratio align="center">keep</aspectratio>
 		<colordiffuse>ivory3</colordiffuse>
-		<texture>$INFO[ListItem.Art(mediaTag::Studio)]</texture>
+		<!--<texture>$INFO[ListItem.Art(mediaTag::Studio)]</texture>-->
+		<texture>$INFO[ListItem.Property(mediaTag-Studio),flags/studios/,.png]</texture>
 	</control>
 	</include>
 	<!-- -->
