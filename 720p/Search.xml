@@ -1234,6 +1234,13 @@
 									</control>
 								</focusedlayout>
 							</control>
+							<control type="image">
+								<posx>193</posx>
+								<posy>182</posy>
+								<height>1</height>
+								<width>690</width>
+								<texture>dialogs/whiteline_h.png</texture>
+							</control>
 						</control>
 						<!-- Tracks -->
 						<control type="group" id="7010">
