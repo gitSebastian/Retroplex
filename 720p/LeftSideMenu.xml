@@ -255,7 +255,7 @@
 			<onleft>-</onleft>
 			<orientation>vertical</orientation>
 			<scrolltime>150</scrolltime>
-			<visible allowhiddenfocus="true">![ControlGroup(4000).HasFocus() | ControlGroup(2100).HasFocus() | ControlGroup(5000).HasFocus()]</visible>
+			<visible allowhiddenfocus="true">![ControlGroup(4000).HasFocus() | ControlGroup(2100).HasFocus() | ControlGroup(5000).HasFocus() | Window.IsActive(2003)]</visible>
 			<animation effect="slide" start="202" end="40" time="500" condition="!ControlGroup(9000).HasFocus()">Conditional</animation>
 			<animation effect="slide" start="40" end="202" time="500" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
 			<!--<include>homeMenuToggle</include>-->

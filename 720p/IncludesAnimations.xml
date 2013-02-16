@@ -273,7 +273,7 @@
 	<include name="leftMenuSlide">
 		<!-- HOME -->
 		<animation effect="slide" start="162" end="0" time="500" condition="Window.IsActive(0) + [Control.HasFocus(300) | [ControlGroup(5000).HasFocus()]]">Conditional</animation>
-		<animation effect="slide" start="0" end="162" time="500" condition="Window.IsActive(0) + !Control.HasFocus(300) + ![ControlGroup(5000).HasFocus()]">Conditional</animation>
+		<animation effect="slide" start="0" end="162" time="500" condition="Window.IsActive(0) + !Control.HasFocus(300) + ![ControlGroup(5000).HasFocus()] + !Window.IsActive(2003)">Conditional</animation>
 		<!-- -->
 		<animation effect="slide" start="162" end="0" time="500" condition="!ControlGroup(300).HasFocus() | Window.IsVisible(134) + ![ControlGroup(5000).HasFocus()]">Conditional</animation>
 		<animation effect="slide" start="0" end="162" time="500" condition="ControlGroup(300).HasFocus()">Conditional</animation>

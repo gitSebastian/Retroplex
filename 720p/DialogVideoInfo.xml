@@ -38,7 +38,7 @@
 			<visible allowhiddenfocus="true">false</visible>
 		</control>
 		<control type="group" id="555">
-			<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes)] + ![Window.IsActive(101) | Window.IsActive(0)]</visible>
+			<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes)] + ![Window.IsActive(101)]</visible>
 			<!-- MOVIES -->
 			<control type="grouplist" id="555">
 				<visible>Container.Content(movies) + !Window.IsActive(101)</visible>
