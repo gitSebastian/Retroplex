@@ -22,7 +22,7 @@
 		<textcolor>oldBlue2</textcolor>
 		<shadowcolor>ff222222</shadowcolor>
 		<animation type="Focus" reversible="false">
-			<effect type="zoom" center="100,100" start="80" end="100" time="250" tween="Cubik" easing="out"/>
+			<effect type="zoom" center="100,100" start="95" end="100" time="250" tween="Cubik" easing="out"/>
 			<effect type="fade" start="0" end="100" delay="0" time="450"/>
 		</animation>
 	</include>
@@ -246,7 +246,11 @@
 						<texture diffuse="frames/bannerMask.png" fallback="backgrounds/library/TVShowsNoFanartSmall.png">$INFO[ListItem.Art(thumb)]</texture>
 						<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 						<include>BiglistFocusedBorder</include>
-						<include>focus_Banner</include>
+						<!--<include>focus_Banner</include>-->
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="360,100" start="50" end="100" time="0" tween="Cubic" easing="out"/>
+							<effect type="fade" start="40" end="100" time="550"/>
+						</animation>
 					</control>
 					<control type="image">
 						<posx>203</posx>
@@ -254,7 +258,10 @@
 						<width>25</width>
 						<height>25</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
-						<include>focus_Banner</include>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="360,100" start="80" end="100" time="0" tween="Cubic" easing="out"/>
+							<effect type="fade" start="20" end="100" time="750"/>
+						</animation>
 						<visible>!Skin.HasSetting(overlayEpisodes)</visible>
 					</control>
 					<control type="image">
