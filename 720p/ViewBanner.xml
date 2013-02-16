@@ -142,6 +142,13 @@
 						<include>BannerMenuUnfocused</include>
 						<visible>IsEmpty(ListItem.Title)</visible>
 					</control>
+					<control type="image">
+						<posx>100</posx>
+						<posy>25</posy>
+						<include>watchedOverlaySmall</include>
+						<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(overlayTVShows)]</visible>
+						<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
+					</control>
 				</itemlayout>
 				<!-- FOCUSED BANNER -->
 				<focusedlayout condition="Container.Content(tvshows)" width="560" height="270">
@@ -171,12 +178,19 @@
 						<visible>IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="label">
-						<posx>107</posx>
+						<posx>130</posx>
 						<posy>218</posy>
 						<label>$LOCALIZE[16101] : $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[20360]</label>
 						<include>BannerMenuFocusedLabel2Small</include>
 						<visible>!IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
 						<visible>![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Property(UnWatchedEpisodes))]</visible>
+					</control>
+					<control type="image">
+						<posx>100</posx>
+						<posy>220</posy>
+						<include>watchedOverlaySmall</include>
+						<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(overlayTVShows)]</visible>
+						<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
 						<posx>660</posx>
@@ -229,6 +243,13 @@
 						<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
 						<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
 					</control>
+					<control type="image">
+						<posx>580</posx>
+						<posy>110</posy>
+						<include>watchedOverlaySmall</include>
+						<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(overlayTVShows)]</visible>
+						<animation effect="fade" start="100" end="40" time="0" condition="true">Conditional</animation>
+					</control>
 				</itemlayout>
 				<!-- FOCUSED BANNER -->
 				<focusedlayout condition="Container.Content(tvshows)" width="560" height="160">
@@ -269,12 +290,19 @@
 				<visible>IsEmpty(ListItem.Title)</visible>
 			</control>
 			<control type="label">
-				<posx>828</posx>
+				<posx>855</posx>
 				<posy>483</posy>
 				<label>$LOCALIZE[16101] : $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[20360]</label>
 				<include>BannerMenuFocusedLabel2Small</include>
 				<visible>!IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
 				<include>BigListLeftMenuRightSlide</include>
+			</control>
+			<control type="image">
+				<posx>828</posx>
+				<posy>485</posy>
+				<include>watchedOverlaySmall</include>
+				<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(overlayTVShows)]</visible>
+				<animation effect="fade" start="100" end="40" time="0" condition="true">Conditional</animation>
 			</control>
 			</control>
 			<control type="image">
