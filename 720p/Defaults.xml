@@ -29,8 +29,8 @@
 	<default type="button">
 		<width>110</width>
 		<height>40</height>
-		<texturefocus border="2">list-focus.png</texturefocus>
-		<texturenofocus border="2">list-nofocus.png</texturenofocus>
+		<texturefocus border="5">dialogs/list-focus1.png</texturefocus>
+		<texturenofocus border="5">dialogs/list-nofocus.png</texturenofocus>
 		<font>small</font>
 		<textcolor>Color1</textcolor>
 		<focusedcolor>Focused</focusedcolor>
@@ -49,8 +49,8 @@
 		<height>40</height>
 		<textureradiofocus>settings/radioOn.png</textureradiofocus>
 		<textureradionofocus>settings/radioOff.png</textureradionofocus>
-		<texturefocus border="2">list-focus.png</texturefocus>
-		<texturenofocus border="2">list-nofocus.png</texturenofocus>
+		<texturefocus border="5">dialogs/list-focus1.png</texturefocus>
+		<texturenofocus border="5">dialogs/list-nofocus.png</texturenofocus>
 		<font>normal</font>
 		<textcolor>Color2</textcolor>
 		<focusedcolor>Focused</focusedcolor>
@@ -91,8 +91,8 @@
 		<texturedown>scroll-down.png</texturedown>
 		<textureupfocus>scroll-up-focus.png</textureupfocus>
 		<texturedownfocus>scroll-down-focus.png</texturedownfocus>
-		<texturefocus>list-focus.png</texturefocus>
-		<texturenofocus>list-nofocus.png</texturenofocus>
+		<texturefocus border="5">dialogs/list-focus1.png</texturefocus>
+		<texturenofocus border="5">dialogs/list-nofocus.png</texturenofocus>
 		<image>-</image>
 		<textureheight>34</textureheight>
 		<font>h2D</font>
@@ -198,8 +198,8 @@
 	</default>
 	<default type="sliderex">
 		<height>40</height>
-		<texturefocus border="3">list-focus.png</texturefocus>
-		<texturenofocus border="3">list-nofocus.png</texturenofocus>
+		<texturefocus border="5">dialogs/list-focus1.png</texturefocus>
+		<texturenofocus border="5">dialogs/list-nofocus.png</texturenofocus>
 		<sliderwidth>100</sliderwidth>
 		<sliderheight>20</sliderheight>
 		<texturesliderbar>sliderBackground.png</texturesliderbar>
@@ -231,8 +231,8 @@
 		<width>300</width>
 		<font>small</font>
 		<height>46</height>
-		<texturefocus border="2">list-focus.png</texturefocus>
-		<texturenofocus border="2">list-nofocus.png</texturenofocus>
+		<texturefocus border="5">dialogs/list-focus1.png</texturefocus>
+		<texturenofocus border="5">dialogs/list-nofocus.png</texturenofocus>
 		<textureup>settings/scrollUp.png</textureup>
 		<texturedown>settings/scrollDown.png</texturedown>
 		<textureupfocus>settings/scrollUp-focus.png</textureupfocus>
@@ -255,8 +255,8 @@
 		<height>40</height>
 		<label>132</label>
 		<font>h2D</font>
-		<texturefocus border="2">list-focus.png</texturefocus>
-		<texturenofocus border="2">list-nofocus.png</texturenofocus>
+		<texturefocus border="5">dialogs/list-focus1.png</texturefocus>
+		<texturenofocus border="5">dialogs/list-nofocus.png</texturenofocus>
 		<texturebg>button-menu-background.png</texturebg>
 		<textureleft>scroll-left.png</textureleft>
 		<textureleftfocus>scroll-left-focus.png</textureleftfocus>
