@@ -105,7 +105,7 @@
 			<content>
 				<item id="4">
 					<label>$LOCALIZE[0]</label>
-					<onclick>ActivateWindow(Programs)</onclick>
+					<onclick>ActivateWindow(Programs, Root)</onclick>
 					<visible>Skin.HasSetting(showprogramsmainmenu)</visible>
 				</item>
 				<item id="22">
@@ -117,7 +117,7 @@
 				<item id="7">
 					<description>Search Menu</description>
 					<label>$LOCALIZE[41947]</label>
-					<onclick>Plex.ActivateWindow(10051)</onclick>
+					<onclick>Plex.ActivateWindow(10051, Root)</onclick>
 					<!--><visible>!Skin.HasSetting(hidesearchmainmenu)</visible>-->
 				</item>
 				<item id="1">
