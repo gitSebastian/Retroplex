@@ -45,7 +45,7 @@
 			<texture border="100" flipx="true" flipy="true">search/activesectionbgbasic.png</texture>
 			<colordiffuse>red1</colordiffuse>
 			<include>homeMenuFade2</include>
-			<visible>Window.IsActive(0)</visible>
+			<visible>Window.IsActive(0) + !Window.IsActive(2003)</visible>
 		</control>
 		<control type="image">
 			<posy>400</posy>
@@ -56,7 +56,7 @@
 			<texture>backgrounds/red.png</texture>
 			<colordiffuse>red1</colordiffuse>
 			<include>homeMenuFade2</include>
-			<visible>Window.IsActive(0)</visible>
+			<visible>Window.IsActive(0) + !Window.IsActive(2003)</visible>
 		</control>
 		<control type="image">
 			<include>fullScreenStretch</include>
