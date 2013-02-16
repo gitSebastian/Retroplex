@@ -11,9 +11,9 @@
 	</include>
 	<include name="newHomeMenuItemTitle1">
 		<align>left</align>
-		<font>marketingMedium</font>
+		<font>qlassikSmall</font>
 		<scroll>false</scroll>
-		<textcolor>ivory2</textcolor>
+		<textcolor>oldBlueLight</textcolor>
 		<shadowcolor>ff222222</shadowcolor>
 		<wrapmultiline>false</wrapmultiline>
 		<width min="1" max="170">auto</width>
@@ -22,16 +22,16 @@
 		<align>left</align>
 		<font>qlassikSmall</font>
 		<scroll>false</scroll>
-		<textcolor>FFFFFFFF</textcolor>
+		<textcolor>oldBlueLight</textcolor>
 		<shadowcolor>ff222222</shadowcolor>
 		<wrapmultiline>false</wrapmultiline>
 		<width min="1" max="200">auto</width>
 	</include>
 	<include name="newHomeMenuItemTitle3">
 		<align>left</align>
-		<font>marketingMedium</font>
+		<font>qlassikSmall</font>
 		<scroll>false</scroll>
-		<textcolor>ivory2</textcolor>
+		<textcolor>oldBlueLight</textcolor>
 		<shadowcolor>ff222222</shadowcolor>
 		<wrapmultiline>false</wrapmultiline>
 		<width min="1" max="320">auto</width>
@@ -206,7 +206,7 @@
 				</control>
 				<control type="label">
 					<posy>-20</posy>
-					<label>hip</label>
+					<label>Recommended</label>
 					<visible>Control.IsVisible(11004)</visible>
 					<include>newHomeMenuListTitle</include>
 					<animation effect="fade" start="100" end="50" time="350" condition="Control.HasFocus(11003)">Conditional</animation>
@@ -226,6 +226,15 @@
 				<posx>10</posx>
 				<posy>360</posy>
 				<height>25</height>
+				<control type="image">
+					<posx>-8</posx>
+					<posy>-6</posy>
+					<width>335</width>
+					<height>32</height>
+					<texture border="5">dialogs/list-focus2.png</texture>
+					<animation effect="fade" start="60" end="20" time="0" condition="true">Conditional</animation>
+					<visible>ControlGroup(5000).HasFocus</visible>
+				</control>
 				<!-- On Deck -->
 				<control type="group">
 					<visible>Control.HasFocus(11001)</visible>
