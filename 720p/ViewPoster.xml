@@ -188,11 +188,11 @@
 						<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + !Skin.HasSetting(overlayTVShows)] | [Container.Content(seasons) + !Skin.HasSetting(overlayTVShows)]</visible>
 					</control>
 					<control type="image">
-						<posx>22</posx>
-						<posy>232</posy>
+						<posx>24</posx>
+						<posy>230</posy>
 						<width>48</width>
 						<height>18</height>
-						<texture>$INFO[ListItem.Art(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+						<texture>$INFO[ListItem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 						<aspectratio align="left">keep</aspectratio>
 						<visible>Skin.HasSetting(enablehdflags)</visible>
 					</control>
@@ -236,11 +236,11 @@
 						<visible>!Skin.HasSetting(overlayTVSHows) + Container.Content(seasons)</visible>
 					</control>
 					<control type="image">
-						<posx>22</posx>
-						<posy>232</posy>
+						<posx>24</posx>
+						<posy>230</posy>
 						<width>48</width>
 						<height>18</height>
-						<texture>$INFO[ListItem.Art(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+						<texture>$INFO[ListItem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 						<aspectratio align="left">keep</aspectratio>
 						<visible>[Skin.HasSetting(onlyfocusflagpanel) | Skin.HasSetting(enablehdflags)]</visible>
 					</control>
@@ -388,7 +388,7 @@
 						<posy>168</posy>
 						<width>48</width>
 						<height>18</height>
-						<texture>$INFO[ListItem.Art(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+						<texture>$INFO[ListItem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 						<aspectratio align="left">keep</aspectratio>
 						<visible>Skin.HasSetting(enablehdflags)</visible>
 						<animation effect="fade" start="100" end="90" time="0" condition="true">Conditional</animation>
@@ -430,7 +430,7 @@
 						<posy>168</posy>
 						<width>48</width>
 						<height>18</height>
-						<texture>$INFO[ListItem.Art(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+						<texture>$INFO[ListItem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 						<aspectratio align="left">keep</aspectratio>
 						<visible>Skin.HasSetting(enablehdflags)</visible>
 						<animation effect="fade" start="100" end="90" time="0" condition="true">Conditional</animation>

@@ -94,11 +94,11 @@
 						<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
-						<posx>38</posx>
-						<posy>267</posy>
+						<posx>40</posx>
+						<posy>265</posy>
 						<width>48</width>
 						<height>18</height>
-						<texture>$INFO[ListItem.Art(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+						<texture>$INFO[ListItem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 						<aspectratio align="left">keep</aspectratio>
 						<include>focus_SlidePosterOverlay</include>
 						<visible>!Control.HasFocus(8000) + [Skin.HasSetting(onlyfocusflagpanel) | Skin.HasSetting(enablehdflags)] + Container.Content(movies)</visible>
@@ -129,11 +129,11 @@
 						<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
-						<posx>36</posx>
-						<posy>269</posy>
+						<posx>38</posx>
+						<posy>267</posy>
 						<width>48</width>
 						<height>18</height>
-						<texture>$INFO[ListItem.Art(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+						<texture>$INFO[ListItem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 						<aspectratio align="left">keep</aspectratio>
 						<include>focus_SlidePoster</include>
 						<visible>!Control.HasFocus(8000) + [Skin.HasSetting(onlyfocusflagpanel) | Skin.HasSetting(enablehdflags)] + Container.Content(movies)</visible>

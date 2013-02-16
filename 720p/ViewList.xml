@@ -535,12 +535,12 @@
 				
 				<!-- HD Label -->
 				<control type="image">
-					<posx>382</posx>
-					<posy>207</posy>
+					<posx>384</posx>
+					<posy>205</posy>
 					<width>48</width>
 					<height>27</height>
 					<include>focus_Banner</include>
-					<texture>$INFO[ListItem.Art(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+					<texture>$INFO[ListItem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>Skin.HasSetting(enableepisodehdflags) + Container.Content(episodes)</visible>
 				</control>
@@ -750,15 +750,15 @@
 				</control>
 			</control>
 			<control type="image">
-				<posx>772</posx>
-				<posy>420</posy>
+				<posx>774</posx>
+				<posy>418</posy>
 				<width>48</width>
 				<height>27</height>
 				<include>transition2</include>
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
 				<include>grainypagefade</include>
-				<texture>$INFO[ListItem.Art(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+				<texture>$INFO[ListItem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<include>focus_PosterFlagsNoEffect_GrainyEdition</include>
 				<visible>Control.IsVisible(555) + [Skin.HasSetting(onlyfocusflagpanel) | Skin.HasSetting(enablehdflags)] + !Container.Content(episodes)</visible>
