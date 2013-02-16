@@ -694,6 +694,13 @@
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 									</control>
+									<control type="image">
+										<posx>121</posx>
+										<posy>192</posy>
+										<width>20</width>
+										<height>18</height>
+										<include>watchedOverlay</include>
+									</control>
 								</itemlayout>
 								<focusedlayout width="155" height="200">
 									<control type="image">
@@ -713,6 +720,13 @@
 										<align>center</align>
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+									</control>
+									<control type="image">
+										<posx>121</posx>
+										<posy>192</posy>
+										<width>20</width>
+										<height>18</height>
+										<include>watchedOverlay</include>
 									</control>
 									<control type="label">
 										<posx>26</posx>
@@ -796,6 +810,13 @@
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 									</control>
+									<control type="image">
+										<posx>121</posx>
+										<posy>192</posy>
+										<width>20</width>
+										<height>18</height>
+										<include>watchedOverlay</include>
+									</control>
 								</itemlayout>
 								<focusedlayout width="155" height="200">
 									<control type="image">
@@ -815,6 +836,13 @@
 										<align>center</align>
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+									</control>
+									<control type="image">
+										<posx>121</posx>
+										<posy>192</posy>
+										<width>20</width>
+										<height>18</height>
+										<include>watchedOverlay</include>
 									</control>
 									<control type="label">
 										<posx>26</posx>
@@ -900,6 +928,13 @@
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 									</control>
+									<control type="image">
+										<posx>123</posx>
+										<posy>93</posy>
+										<width>20</width>
+										<height>18</height>
+										<include>watchedOverlay</include>
+									</control>
 									<control type="label">
 										<posx>17</posx>
 										<posy>115</posy>
@@ -945,6 +980,13 @@
 										<texture diffuse="search/posterMask2.png"/>
 										<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 									</control>
+										<control type="image">
+											<posx>127</posx>
+											<posy>132</posy>
+											<width>20</width>
+											<height>18</height>
+											<include>watchedOverlay</include>
+										</control>
 									<control type="label">
 										<posx>26</posx>
 										<posy>5</posy>
