@@ -40,7 +40,7 @@
 		<aligny>center</aligny>
 		<height>30</height>
 		<textcolor>ivory2</textcolor>
-		<shadowcolor>ff555555</shadowcolor>
+		<shadowcolor>ff444444</shadowcolor>
 		<scroll>false</scroll>
 	</include>
 	<include name="dialogLine">
@@ -76,7 +76,7 @@
 		<texturefocus border="20,16,20,16">dialogs/buttonD-focus.png</texturefocus>
 		<textcolor>FF999999</textcolor>
 		<focusedcolor>ivory1</focusedcolor>
-		<shadowcolor>ff555555</shadowcolor>
+		<shadowcolor>ff444444</shadowcolor>
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="dialogConfirmButton2">
@@ -95,7 +95,7 @@
 	</include>
 	<include name="dialogListButton">
 		<textcolor>FFFFFFFF</textcolor>
-		<shadowcolor>ff555555</shadowcolor>
+		<shadowcolor>ff444444</shadowcolor>
 		<textoffsetx>15</textoffsetx>
 		<focusedcolor>ivory1</focusedcolor>
 		<font>qlassikSmallBold2</font>
@@ -113,13 +113,13 @@
 		<texturenofocus border="10,0,10,0">dialogs/textField.png</texturenofocus>
 		<texturefocus border="10,0,10,0">dialogs/textFieldFocus.png</texturefocus>
 		<textcolor>FFFFFFFF</textcolor>
-		<shadowcolor>ff555555</shadowcolor>
+		<shadowcolor>ff444444</shadowcolor>
 		<focusedcolor>ivory1</focusedcolor>
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="dialogRadio">
 		<textcolor>FFFFFFFF</textcolor>
-		<shadowcolor>ff555555</shadowcolor>
+		<shadowcolor>ff444444</shadowcolor>
 		<focusedcolor>ivory1</focusedcolor>
 		<font>qlassikSmallBold2</font>
 		<texturefocus border="10">dialogs/list-focus.png</texturefocus>
@@ -131,7 +131,7 @@
 	</include>
 	<include name="dialogSpin">
 		<textcolor>FFFFFFFF</textcolor>
-		<shadowcolor>ff555555</shadowcolor>
+		<shadowcolor>ff444444</shadowcolor>
 		<textoffsetx>15</textoffsetx>
 		<focusedcolor>ivory1</focusedcolor>
 		<font>qlassikSmallBold2</font>
@@ -150,18 +150,18 @@
 		<spinheight>44</spinheight>
 	</include>
 	<include name="dialogSlider">
-		<texturefocus border="10">dialogs/list-focus.png</texturefocus>
+		<texturefocus border="20">dialogs/list-focus.png</texturefocus>
 		<texturenofocus border="3">dialogs/list-nofocus.png</texturenofocus>
 		<texturesliderbar border="10">dialogs/sliderBackground.png</texturesliderbar>
 		<textureslidernib border="0,9,0,9">dialogs/sliderNib.png</textureslidernib>
 		<textureslidernibfocus border="0,9,0,9">dialogs/sliderNib.png</textureslidernibfocus>
 		<font>qlassikSmallBold2</font>
-		<shadowcolor>ff555555</shadowcolor>
+		<shadowcolor>ff444444</shadowcolor>
 		<height>40</height>
 		<textcolor>FFFFFFFF</textcolor>
 		<focusedcolor>ivory1</focusedcolor>
 		<textoffsetx>15</textoffsetx>
-		<textoffsety>15</textoffsety>
+		<textoffsety>8</textoffsety>
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="dialogScroller">
