@@ -58,7 +58,7 @@
 					<font>-</font>
 					<texturefocus>osd/osd-button-audiosettings-focus.png</texturefocus>
 					<texturenofocus>osd/osd-button-audiosettings.png</texturenofocus>
-					<onleft>711</onleft>
+					<onleft>709</onleft>
 					<onright>703</onright>
 					<onup>702</onup>
 					<ondown>709</ondown>
@@ -154,12 +154,12 @@
 					<texturefocus>osd/osd-button-stop-focus.png</texturefocus>
 					<texturenofocus>osd/osd-button-stop.png</texturenofocus>
 					<onleft>708</onleft>
-					<onright>711</onright>
+					<onright>702</onright>
 					<onup>702</onup>
 					<ondown>709</ondown>
 					<onclick>PlayerControl(Stop)</onclick>
 				</control>
-				<control type="button" id="711">
+				<!--<control type="button" id="711">
 					<posx>495</posx>
 					<posy>0</posy>
 					<width>48</width>
@@ -174,7 +174,7 @@
 					<onclick>PlayerControl(ShowVideoMenu)</onclick>
 					<enable>VideoPlayer.HasMenu</enable>
 					<animation effect="fade" start="100" end="50" time="100" condition="!VideoPlayer.HasMenu">Conditional</animation>
-				</control>
+				</control>-->
 			</control>
 		</control>
 	</controls>
