@@ -84,8 +84,8 @@
 						<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 					</control>
 					<control type="image">
-						<posx>183</posx>
-						<posy>267</posy>
+						<posx>181</posx>
+						<posy>265</posy>
 						<width>26</width>
 						<height>18</height>
 						<include>watchedOverlay</include>
@@ -119,8 +119,8 @@
 						<include>focus_SlidePoster</include>
 					</control>
 					<control type="image">
-						<posx>185</posx>
-						<posy>269</posy>
+						<posx>183</posx>
+						<posy>267</posy>
 						<width>26</width>
 						<height>18</height>
 						<include>watchedOverlay</include>

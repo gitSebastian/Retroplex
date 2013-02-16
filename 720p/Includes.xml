@@ -867,13 +867,11 @@
 		<width>26</width>
 		<height>26</height>
 		<texture>$INFO[ListItem.Overlay]</texture>
-		<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)] | [Container.Content(episodes) + Skin.HasSetting(overlayEpisodes)] | [Container.Content(seasons) + Skin.HasSetting(overlayTVShows)] | Window.IsVisible(VideoFiles)</visible>
 	</include>
 	<include name="watchedOverlaySmall">
 		<width>18</width>
 		<height>18</height>
 		<texture>$INFO[ListItem.Overlay]</texture>
-		<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)] | [Container.Content(episodes) + Skin.HasSetting(overlayEpisodes)] | [Container.Content(seasons) + Skin.HasSetting(overlayTVShows)] | Window.IsVisible(VideoFiles)</visible>
 	</include>
 	<include name="contextButton">
 		<textcolor>Color1</textcolor>

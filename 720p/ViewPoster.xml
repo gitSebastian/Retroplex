@@ -180,8 +180,8 @@
 						<visible>Container.Content(movies)</visible>
 					</control>
 					<control type="image">
-						<posx>163</posx>
-						<posy>232</posy>
+						<posx>161</posx>
+						<posy>230</posy>
 						<width>20</width>
 						<height>18</height>
 						<include>watchedOverlay</include>
@@ -220,16 +220,16 @@
 						<visible>Container.Content(movies)</visible>
 					</control>
 					<control type="image">
-						<posx>163</posx>
-						<posy>232</posy>
+						<posx>161</posx>
+						<posy>230</posy>
 						<width>20</width>
 						<height>18</height>
 						<include>watchedOverlay</include>
 						<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + !Skin.HasSetting(overlayTVShows)]</visible>
 					</control>
 					<control type="image">
-						<posx>163</posx>
-						<posy>232</posy>
+						<posx>161</posx>
+						<posy>230</posy>
 						<width>20</width>
 						<height>18</height>
 						<include>watchedOverlay</include>
@@ -375,8 +375,8 @@
 						<visible>Container.Content(movies)</visible>
 					</control>
 					<control type="image">
-						<posx>119</posx>
-						<posy>168</posy>
+						<posx>117</posx>
+						<posy>166</posy>
 						<width>20</width>
 						<height>18</height>
 						<include>watchedOverlay</include>
@@ -417,8 +417,8 @@
 						<visible>Container.Content(movies)</visible>
 					</control>
 					<control type="image">
-						<posx>119</posx>
-						<posy>168</posy>
+						<posx>117</posx>
+						<posy>166</posy>
 						<width>20</width>
 						<height>18</height>
 						<include>watchedOverlay</include>

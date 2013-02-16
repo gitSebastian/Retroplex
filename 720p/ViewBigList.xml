@@ -100,8 +100,8 @@
 						<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 					</control>
 					<control type="image">
-						<posx>215</posx>
-						<posy>99</posy>
+						<posx>213</posx>
+						<posy>97</posy>
 						<include>watchedOverlaySmall</include>
 						<visible>!Skin.HasSetting(overlayEpisodes)</visible>
 					</control>
@@ -249,8 +249,8 @@
 						<include>focus_Banner</include>
 					</control>
 					<control type="image">
-						<posx>205</posx>
-						<posy>206</posy>
+						<posx>203</posx>
+						<posy>204</posy>
 						<width>25</width>
 						<height>25</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
