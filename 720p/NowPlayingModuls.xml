@@ -468,10 +468,9 @@
 						<height>292</height>
 						<aspectratio scalediffuse="false" align="right">keep</aspectratio>
 						<texture>nowplaying/tonearm.png</texture>
-						<animation effect="rotate" start="15" end="0" center="340,55" time="700" loop="false" reversible="false" tween="Quadratic" easing="out" condition="Player.HasAudio + Player.Playing">Conditional</animation>
-						<animation effect="rotate" start="15" end="0" center="340,55" time="700" loop="false" reversible="false" tween="Quadratic" easing="out" condition="WindowOpen">Conditional</animation>
-					<animation effect="rotate" start="-15" end="-38" center="340,55" time="160000" delay="700" loop="true" reversible="true" tween="Quadratic" easing="in" condition="Player.HasAudio + Player.Playing">Conditional</animation>
-						<animation effect="rotate" start="-15" end="0" center="340,55" time="1000" loop="false" reversible="false" tween="Quadratic" easing="in" condition="Player.HasAudio + Player.Paused">Conditional</animation>
+						<animation effect="rotate" start="15" end="0" center="340,55" time="700" loop="false" reversible="false" tween="Quadratic" easing="out" condition="Player.Playing">Conditional</animation>
+						<animation effect="rotate" start="-15" end="-38" center="340,55" time="160000" delay="700" loop="true" reversible="false" tween="Quadratic" easing="in" condition="Player.Playing">Conditional</animation>
+						<animation effect="rotate" start="-15" end="0" center="340,55" time="1000" loop="false" reversible="false" tween="Quadratic" easing="in" condition="Player.Paused">Conditional</animation>
 					</control>
 				</control>
 				<!-- covers & info -->
