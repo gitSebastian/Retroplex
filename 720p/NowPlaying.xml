@@ -15,7 +15,7 @@
 		<!--><include>nowplayingminimalist</include>
 		<include>nowPlayingBottomWide</include>-->
 		<control type="group">
-			<visible>!Skin.HasSetting(retroplexmusiclogo)</visible>
+			<visible>!Skin.HasSetting(hidetheawesomelogo)</visible>
 			<include>RetroplexLogo</include>
 		</control>
 		</controls>
