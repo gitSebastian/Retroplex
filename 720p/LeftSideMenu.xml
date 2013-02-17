@@ -126,6 +126,7 @@
 			<effect type="fade" start="0" end="100"/>
 		</animation>
 		<texturefocus>settings/chocolate50.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
 		<textoffsety>1</textoffsety>
 		<textoffsetx>40</textoffsetx>
 		<font>qlassikMedium1</font>
