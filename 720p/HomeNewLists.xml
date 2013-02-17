@@ -418,7 +418,7 @@
 						<visible allowhiddenfocus="false">false</visible>
 						<orientation>horizontal</orientation>
 						<ondown>7001</ondown>
-						<onup>-</onup>
+						<onup>300</onup>
 						<onright>-</onright>
 						<onleft>300</onleft>
 						<posx>-14</posx>
@@ -565,7 +565,7 @@
 					<control type="fixedlist" id="11000">
 						<visible allowhiddenfocus="false">false</visible>
 						<orientation>horizontal</orientation>
-						<ondown>-</ondown>
+						<ondown>300</ondown>
 						<onup>7002</onup>
 						<onright>-</onright>
 						<onleft>300</onleft>
@@ -683,7 +683,7 @@
 					</control>
 				</control>
 			</control>
-			<!-- "11004" & "queue" -->
+			<!-- "Recommended" & "Queue" -->
 			<control type="grouplist" id="5100">
 				<visible>true</visible>
 				<posx>-10</posx>
@@ -695,14 +695,14 @@
 				<onright>350</onright>
 				<onleft>350</onleft>
 				<orientation>vertical</orientation>
-				<!-- 11004 (11004) -->
+				<!-- Recommended (11004) -->
 				<control type="group" id="7005">
 					<height>230</height>
 					<control type="fixedlist" id="11004">
 						<visible allowhiddenfocus="false">false</visible>
 						<orientation>horizontal</orientation>
 						<ondown>7003</ondown>
-						<onup>-</onup>
+						<onup>300</onup>
 						<onright>-</onright>
 						<onleft>300</onleft>
 						<posx>-14</posx>
@@ -739,7 +739,7 @@
 					<control type="fixedlist" id="11003">
 						<visible allowhiddenfocus="false">false</visible>
 						<orientation>horizontal</orientation>
-						<ondown>-</ondown>
+						<ondown>300</ondown>
 						<onup>7005</onup>
 						<onright>-</onright>
 						<onleft>300</onleft>
@@ -779,8 +779,8 @@
 				<posy>234</posy>
 				<width>550</width>
 				<height>720</height>
-				<ondown>-</ondown>
-				<onup>-</onup>
+				<ondown>300</ondown>
+				<onup>300</onup>
 				<onright>350</onright>
 				<onleft>350</onleft>
 				<orientation>vertical</orientation>
