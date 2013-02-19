@@ -202,7 +202,7 @@
 						<posx>270</posx>
 						<posy>82</posy>
 						<width>975</width>
-						<label>$LOCALIZE[31074,,]$INFO[ListItem.Date, &#xB7; ]</label>
+						<label>$LOCALIZE[31074,,]$INFO[ListItem.Date, &#xB7; ]$INFO[ListItem.DurationStr, &#xB7; ]</label>
 						<font>qlassikSmall</font>
 						<textcolor>ivory3</textcolor>
 					</control>
