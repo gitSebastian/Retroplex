@@ -29,7 +29,7 @@
 	<default type="button">
 		<width>110</width>
 		<height>40</height>
-		<texturefocus border="5">dialogs/list-focus1.png</texturefocus>
+		<texturefocus border="5">-</texturefocus>
 		<texturenofocus border="5">dialogs/list-nofocus.png</texturenofocus>
 		<font>small</font>
 		<textcolor>Color1</textcolor>
