@@ -44,6 +44,11 @@
 			<size>30</size>
 		</font>
 		<font>
+			<name>lobsterBiggest</name>
+			<filename>Lobster 1.4.otf</filename>
+			<size>140</size>
+		</font>
+		<font>
 			<name>lobsterBig</name>
 			<filename>Lobster 1.4.otf</filename>
 			<size>56</size>
@@ -147,6 +152,11 @@
 			<name>nymphetteMedium</name>
 			<filename>Nymphette.ttf</filename>
 			<size>40</size>
+		</font>
+		<font>
+			<name>dockBiggest</name>
+			<filename>dock11.otf</filename>
+			<size>50</size>
 		</font>
 		<font>
 			<name>dockBig</name>
